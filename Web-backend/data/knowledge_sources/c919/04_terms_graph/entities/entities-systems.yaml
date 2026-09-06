@@ -1,0 +1,133 @@
+# C919 系统实体
+# 按机载系统拆分：发动机、APU、飞控、液压、航电等
+# node_type: system
+# node_id 前缀：sys_
+
+entities:
+  - node_id: "sys_leap1c"
+    node_type: "system"
+    canonical_name: "LEAP-1C 发动机"
+    aliases: ["LEAP-1C", "LEAP-1C28", "LEAP-1C30", "CFM LEAP-1C"]
+    description: "CFM 国际为 C919 定制的涡扇发动机，涵道比约 11:1，LEAP-1C28 最大起飞推力 129.98 kN"
+    supplier: "CFM 国际（GE 与赛峰合资）"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sys_cj1000a"
+    node_type: "system"
+    canonical_name: "CJ-1000A 发动机"
+    aliases: ["CJ-1000A", "长江-1000A", "长江 1000A"]
+    description: "中国航发集团研制的 C919 国产替代涡扇发动机，技术路线参考 LEAP-1C"
+    supplier: "中国航发 AECC"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sys_apu"
+    node_type: "system"
+    canonical_name: "APU"
+    aliases: ["APU", "辅助动力装置", "HGT750", "Honeywell APU"]
+    description: "Honeywell HGT750 辅助动力装置，安装于后机身尾椎，提供地面电源和气源"
+    supplier: "Honeywell"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sys_flight_control"
+    node_type: "system"
+    canonical_name: "飞控系统"
+    aliases: ["飞行控制系统", "电传飞控", "FBW"]
+    description: "C919 全权限数字式电传飞行控制系统，四余度架构，含主飞控计算机和作动器电子控制"
+    supplier: "中国商飞/Parker"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sys_hydraulic"
+    node_type: "system"
+    canonical_name: "液压系统"
+    aliases: ["hydraulic", "三余度液压", "液压动力系统"]
+    description: "C919 三余度液压系统，工作压力 3000 psi，驱动飞控舵面、起落架等关键作动器"
+    supplier: "Parker Aerospace"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sys_fuel"
+    node_type: "system"
+    canonical_name: "燃油系统"
+    aliases: ["fuel system", "燃油供给系统", "燃油箱系统"]
+    description: "C919 燃油储存与供给系统，含机翼油箱和中央油箱，总容量约 19,156 升"
+    supplier: "Parker Aerospace"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sys_avionics"
+    node_type: "system"
+    canonical_name: "航电系统"
+    aliases: ["avionics", "IMA", "综合模块化航电"]
+    description: "C919 综合模块化航电系统，采用 AFDX 千兆以太网总线，集成显示、处理、通信导航功能"
+    supplier: "昂际航电 AVICAES"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sys_electrical"
+    node_type: "system"
+    canonical_name: "电气系统"
+    aliases: ["electrical power", "电源系统", "EPS"]
+    description: "C919 电力生成与分配系统，含 115V AC 恒频发电机和 28V DC 变压整流器"
+    supplier: "Hamilton Sundstrand"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sys_ecs"
+    node_type: "system"
+    canonical_name: "环控系统"
+    aliases: ["ECS", "环境控制系统", "空调增压系统"]
+    description: "C919 客舱空调与增压系统，由发动机引气驱动，维持客舱相当于 2400 米以下高度气压"
+    supplier: "Liebherr"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sys_fire_protection"
+    node_type: "system"
+    canonical_name: "防火系统"
+    aliases: ["fire protection", "火警系统", "灭火系统"]
+    description: "C919 发动机/APU/货舱火警探测与灭火系统，含火警探测器、灭火瓶"
+    supplier: "Meggitt"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sys_lighting"
+    node_type: "system"
+    canonical_name: "照明系统"
+    aliases: ["lighting", "客舱照明", "外部照明"]
+    description: "C919 内外部照明系统，含 LED 情景照明、外部航行灯、防撞灯和着陆灯"
+    supplier: "Diehl Aerospace"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sys_cabin"
+    node_type: "system"
+    canonical_name: "客舱系统"
+    aliases: ["cabin", "座舱", "客舱内饰"]
+    description: "C919 乘客舱室与内饰系统，典型 3-3 经济舱布局，含座椅、行李箱、厨房、盥洗室"
+    supplier: "B/E Aerospace 等"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sys_ice_protection"
+    node_type: "system"
+    canonical_name: "防冰系统"
+    aliases: ["ice protection", "防冰除冰系统", "结冰保护系统"]
+    description: "C919 机翼前缘和发动机进气道防冰系统，采用发动机引气热防冰方式"
+    supplier: "Liebherr/Goodrich"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sys_oxygen"
+    node_type: "system"
+    canonical_name: "氧气系统"
+    aliases: ["oxygen system", "供氧系统", "旅客供氧"]
+    description: "C919 旅客与机组供氧系统，含化学氧气发生器和机组便携式氧气瓶"
+    supplier: "B/E Aerospace"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sys_comm_nav"
+    node_type: "system"
+    canonical_name: "通信导航系统"
+    aliases: ["通信导航", "comm nav", "CNS"]
+    description: "C919 通信与导航系统，含 VHF/HF 电台、SATCOM、GPS、惯导、无线电导航"
+    supplier: "Collins Aerospace"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sys_weather_radar"
+    node_type: "system"
+    canonical_name: "气象雷达"
+    aliases: ["weather radar", "WXR", "机载气象雷达"]
+    description: "C919 机载气象雷达系统，探测航路气象状况和风切变，集成于航电系统"
+    supplier: "Collins Aerospace"
+    applicable_aircraft: ["c919"]

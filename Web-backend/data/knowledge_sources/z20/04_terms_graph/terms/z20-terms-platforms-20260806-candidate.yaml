@@ -1,0 +1,33 @@
+# z20-terms-platforms-20260806-candidate
+
+terms:
+  - canonical_name: "UH-60 黑鹰"
+    aliases: ["UH-60", "黑鹰", "Black Hawk"]
+    node_type: "aircraft"
+    definition: "美国10吨级通用直升机"
+    source_id: "z20-science-vs-uh60-v1"
+  - canonical_name: "米-17"
+    aliases: ["米-17", "Mi-17"]
+    node_type: "aircraft"
+    definition: "俄罗斯中型运输直升机"
+    source_id: "z20-science-vs-mi17-v1"
+  - canonical_name: "直-8"
+    aliases: ["直-8", "Z-8"]
+    node_type: "aircraft"
+    definition: "中国13吨级运输直升机"
+    source_id: "z20-science-vs-z8-v1"
+  - canonical_name: "NH90"
+    aliases: ["NH90"]
+    node_type: "aircraft"
+    definition: "欧洲中型通用直升机"
+    source_id: "z20-science-vs-nh90-v1"
+  - canonical_name: "哈尔滨飞机工业集团"
+    aliases: ["哈飞", "HAIG"]
+    node_type: "concept"
+    definition: "直-20研制单位"
+    source_id: "z20-science-overview-v1"
+  - canonical_name: "直-20反潜型"
+    aliases: ["直-20反潜型", "反潜型"]
+    node_type: "aircraft"
+    definition: "舰载反潜改型"
+    source_id: "z20-science-utility-platform-v1"

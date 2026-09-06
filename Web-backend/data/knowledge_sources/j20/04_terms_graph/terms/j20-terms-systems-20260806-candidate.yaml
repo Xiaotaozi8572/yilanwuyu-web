@@ -1,0 +1,48 @@
+# j20-terms-systems-20260806-candidate
+
+terms:
+  - canonical_name: "动力系统"
+    aliases: ["动力系统", "发动机系统"]
+    node_type: "system"
+    definition: "双发动力体系"
+    source_id: "j20-science-powerplant-v1"
+  - canonical_name: "航电系统"
+    aliases: ["航电系统", "综合航电"]
+    node_type: "system"
+    definition: "综合航电架构"
+    source_id: "j20-science-avionics-weapons-v1"
+  - canonical_name: "飞控系统"
+    aliases: ["飞控系统", "电传飞控"]
+    node_type: "system"
+    definition: "全权限电传飞控"
+    source_id: "j20-science-overview-v1"
+  - canonical_name: "雷达系统"
+    aliases: ["雷达系统", "AESA雷达"]
+    node_type: "system"
+    definition: "Type 1475 相控阵雷达"
+    source_id: "j20-science-avionics-weapons-v1"
+  - canonical_name: "光电系统"
+    aliases: ["光电系统", "EOTS", "IRST"]
+    node_type: "system"
+    definition: "被动光电探测体系"
+    source_id: "j20-science-avionics-weapons-v1"
+  - canonical_name: "电子战系统"
+    aliases: ["电子战系统", "ECM"]
+    node_type: "system"
+    definition: "电子对抗设备"
+    source_id: "j20-science-overview-v1"
+  - canonical_name: "武器系统"
+    aliases: ["武器系统"]
+    node_type: "system"
+    definition: "弹舱+外挂武器体系"
+    source_id: "j20-science-avionics-weapons-v1"
+  - canonical_name: "燃油系统"
+    aliases: ["燃油系统"]
+    node_type: "system"
+    definition: "内置油箱系统"
+    source_id: "j20-science-overview-v1"
+  - canonical_name: "数据链"
+    aliases: ["数据链", "机载数据链"]
+    node_type: "system"
+    definition: "平台间数据共享"
+    source_id: "j20-science-overview-v1"

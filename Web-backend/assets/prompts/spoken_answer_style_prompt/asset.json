@@ -1,0 +1,25 @@
+{
+  "template_id": "spoken_answer_style_prompt",
+  "title": "Spoken answer style prompt",
+  "task_type": "spoken_answer_style",
+  "status": "active",
+  "active_version": "v2",
+  "activation_scope": [
+    "spoken_answer_style"
+  ],
+  "concept_scope": [
+    "voice_delivery"
+  ],
+  "scene_scope": [
+    "voice",
+    "text"
+  ],
+  "constraints": [
+    "preserve_supported_claims",
+    "prefer_short_sentences",
+    "keep_follow_up_optional"
+  ],
+  "risk_boundaries": [
+    "no_new_facts_for_fluency"
+  ]
+}

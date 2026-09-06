@@ -1,0 +1,374 @@
+# C919 关系种子
+# 字段对齐 GraphEdge
+# relation_type: part_of / depends_on / derives_from / parameter_of / compared_with
+# source_node_id 与 target_node_id 均对应 entities.yaml 中的 node_id
+
+relations:
+  # ========== part_of（部件属于系统/系统属于飞机）30 条 ==========
+  - edge_id: "E001"
+    source_node_id: "c919_wing"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "机翼是 C919 的主要气动结构部件，属于机体结构"
+
+  - edge_id: "E002"
+    source_node_id: "c919_fuselage"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "机身是 C919 的主体结构，承载乘客、货物和各系统"
+
+  - edge_id: "E003"
+    source_node_id: "c919_empennage"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "尾翼是 C919 尾部的翼面组合，属于机体结构"
+
+  - edge_id: "E004"
+    source_node_id: "c919_landing_gear"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "起落架是 C919 地面支撑装置，属于机体结构"
+
+  - edge_id: "E005"
+    source_node_id: "c919_propulsion"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "动力系统（含两台 LEAP-1C 发动机）是 C919 的核心系统之一"
+
+  - edge_id: "E006"
+    source_node_id: "c919_flight_control"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "飞控系统是 C919 的核心机载系统之一"
+
+  - edge_id: "E007"
+    source_node_id: "c919_hydraulic"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "液压系统是 C919 的核心机载系统之一"
+
+  - edge_id: "E008"
+    source_node_id: "c919_fuel"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "燃油系统是 C919 的核心机载系统之一"
+
+  - edge_id: "E009"
+    source_node_id: "c919_avionics"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "航电系统是 C919 的核心机载系统之一"
+
+  - edge_id: "E010"
+    source_node_id: "c919_electrical"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "电气系统是 C919 的核心机载系统之一"
+
+  - edge_id: "E011"
+    source_node_id: "c919_ecs"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "环控系统是 C919 的核心机载系统之一"
+
+  - edge_id: "E012"
+    source_node_id: "c919_fire_protection"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "防火系统是 C919 的安全保障系统之一"
+
+  - edge_id: "E013"
+    source_node_id: "c919_lighting"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "照明系统是 C919 的机载系统之一"
+
+  - edge_id: "E014"
+    source_node_id: "c919_cabin"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "客舱系统是 C919 的机载系统之一"
+
+  - edge_id: "E015"
+    source_node_id: "c919_apu"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "APU 安装于 C919 尾椎内，属于机载辅助动力设备"
+
+  - edge_id: "E016"
+    source_node_id: "c919_leap1c"
+    target_node_id: "c919_propulsion"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "LEAP-1C 是 C919 动力系统的核心部件，左右各一台"
+
+  - edge_id: "E017"
+    source_node_id: "c919_fadec"
+    target_node_id: "c919_leap1c"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "FADEC 是 LEAP-1C 发动机的电子控制子系统"
+
+  - edge_id: "E018"
+    source_node_id: "c919_flap"
+    target_node_id: "c919_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "襟翼安装于机翼后缘内侧，属于机翼增升装置"
+
+  - edge_id: "E019"
+    source_node_id: "c919_aileron"
+    target_node_id: "c919_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "副翼安装于机翼后缘外侧，属于机翼操纵面"
+
+  - edge_id: "E020"
+    source_node_id: "c919_slat"
+    target_node_id: "c919_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "前缘缝翼安装于机翼前缘，属于机翼增升装置"
+
+  - edge_id: "E021"
+    source_node_id: "c919_spoiler"
+    target_node_id: "c919_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "扰流板安装于机翼上表面，属于机翼减速和滚转辅助面"
+
+  - edge_id: "E022"
+    source_node_id: "c919_winglet"
+    target_node_id: "c919_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "翼尖小翼安装于机翼翼尖，属于机翼气动优化部件"
+
+  - edge_id: "E023"
+    source_node_id: "c919_rudder"
+    target_node_id: "c919_empennage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "方向舵安装于垂直尾翼后缘，属于尾翼操纵面"
+
+  - edge_id: "E024"
+    source_node_id: "c919_elevator"
+    target_node_id: "c919_empennage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "升降舵安装于水平尾翼后缘，属于尾翼操纵面"
+
+  - edge_id: "E025"
+    source_node_id: "c919_fan"
+    target_node_id: "c919_leap1c"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "风扇是 LEAP-1C 涡扇发动机前部的核心旋转部件"
+
+  - edge_id: "E026"
+    source_node_id: "c919_compressor"
+    target_node_id: "c919_leap1c"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "压气机是 LEAP-1C 涡扇发动机内涵道的核心压缩部件"
+
+  - edge_id: "E027"
+    source_node_id: "c919_combustor"
+    target_node_id: "c919_leap1c"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "燃烧室是 LEAP-1C 涡扇发动机的核心燃烧部件，采用 TAPS 技术"
+
+  - edge_id: "E028"
+    source_node_id: "c919_turbine"
+    target_node_id: "c919_leap1c"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "涡轮是 LEAP-1C 涡扇发动机的核心做功部件，驱动风扇和压气机"
+
+  - edge_id: "E029"
+    source_node_id: "c919_nacelle"
+    target_node_id: "c919_leap1c"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "短舱包裹 LEAP-1C 发动机，采用 Nexcelle 整体式设计"
+
+  - edge_id: "E030"
+    source_node_id: "c919_thrust_reverser"
+    target_node_id: "c919_nacelle"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "反推装置集成于发动机短舱内，着陆时产生反向推力"
+
+  # ========== depends_on（系统依赖）7 条 ==========
+  - edge_id: "E031"
+    source_node_id: "c919_flight_control"
+    target_node_id: "c919_hydraulic"
+    relation_type: "depends_on"
+    confidence: 0.9
+    description: "飞控舵面作动器由液压系统驱动，飞控系统依赖液压提供作动力"
+
+  - edge_id: "E032"
+    source_node_id: "c919_ecs"
+    target_node_id: "c919_propulsion"
+    relation_type: "depends_on"
+    confidence: 0.9
+    description: "环控系统需要发动机引气作为气源，依赖动力系统提供压缩空气"
+
+  - edge_id: "E033"
+    source_node_id: "c919_landing_gear"
+    target_node_id: "c919_hydraulic"
+    relation_type: "depends_on"
+    confidence: 0.9
+    description: "起落架收放机构由液压系统驱动，依赖液压提供作动力"
+
+  - edge_id: "E034"
+    source_node_id: "c919_leap1c"
+    target_node_id: "c919_fuel"
+    relation_type: "depends_on"
+    confidence: 0.9
+    description: "LEAP-1C 发动机运行依赖燃油系统提供持续燃料供给"
+
+  - edge_id: "E035"
+    source_node_id: "c919_fadec"
+    target_node_id: "c919_electrical"
+    relation_type: "depends_on"
+    confidence: 0.8
+    description: "FADEC 电子控制单元依赖电气系统提供工作电源"
+
+  - edge_id: "E036"
+    source_node_id: "c919_avionics"
+    target_node_id: "c919_electrical"
+    relation_type: "depends_on"
+    confidence: 0.9
+    description: "航电系统各计算和处理模块依赖电气系统提供电源"
+
+  - edge_id: "E037"
+    source_node_id: "c919_fire_protection"
+    target_node_id: "c919_electrical"
+    relation_type: "depends_on"
+    confidence: 0.8
+    description: "防火系统的火警探测和灭火装置依赖电气系统供电"
+
+  # ========== derives_from（技术派生）2 条 ==========
+  - edge_id: "E038"
+    source_node_id: "c919_cj1000a"
+    target_node_id: "c919_leap1c"
+    relation_type: "derives_from"
+    confidence: 0.8
+    description: "CJ-1000A 国产发动机在技术路线上参考 LEAP-1C 的设计理念"
+
+  - edge_id: "E039"
+    source_node_id: "c919_aircraft"
+    target_node_id: "arj21_aircraft"
+    relation_type: "derives_from"
+    confidence: 0.8
+    description: "C919 继承并发展了 ARJ21 项目积累的研制经验和供应商管理体系"
+
+  # ========== compared_with（对比关系）3 条 ==========
+  - edge_id: "E040"
+    source_node_id: "c919_aircraft"
+    target_node_id: "a320_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    description: "C919 与空客 A320 同属窄体干线客机，是直接对标机型"
+
+  - edge_id: "E041"
+    source_node_id: "c919_aircraft"
+    target_node_id: "b737_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    description: "C919 与波音 737 同属窄体干线客机，是主要竞争机型"
+
+  - edge_id: "E042"
+    source_node_id: "c919_aircraft"
+    target_node_id: "arj21_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    description: "C919（干线客机）与 ARJ21（支线客机）同为 COMAC 产品，定位不同"
+
+  # ========== parameter_of（参数属于部件/飞机）10 条 ==========
+  - edge_id: "E043"
+    source_node_id: "c919_wing"
+    target_node_id: "c919_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "翼展约 35.8 米，是 C919 机翼的关键几何参数"
+
+  - edge_id: "E044"
+    source_node_id: "c919_fuselage"
+    target_node_id: "c919_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "机长约 38.9 米，是 C919 机身的总体尺寸参数"
+
+  - edge_id: "E045"
+    source_node_id: "c919_aircraft"
+    target_node_id: "c919_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.7
+    description: "最大起飞重量约 77,300 kg（MTOW），需官方精确值确认"
+
+  - edge_id: "E046"
+    source_node_id: "c919_aircraft"
+    target_node_id: "c919_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "标准航程 4,075 km，延程航程 5,555 km"
+
+  - edge_id: "E047"
+    source_node_id: "c919_aircraft"
+    target_node_id: "c919_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "巡航速度约 Mach 0.785，最大使用高度 12,200 m"
+
+  - edge_id: "E048"
+    source_node_id: "c919_cabin"
+    target_node_id: "c919_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "典型客载 158-168 座，采用 3-3 经济舱布局"
+
+  - edge_id: "E049"
+    source_node_id: "c919_leap1c"
+    target_node_id: "c919_propulsion"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "LEAP-1C28 最大起飞推力 129.98 kN，LEAP-1C30 为 137.14 kN"
+
+  - edge_id: "E050"
+    source_node_id: "c919_leap1c"
+    target_node_id: "c919_propulsion"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "涵道比约 11:1，是 LEAP-1C 涡扇发动机的核心循环参数"
+
+  - edge_id: "E051"
+    source_node_id: "c919_fuselage"
+    target_node_id: "c919_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "机身复合材料占比约 12%，铝锂合金占比约 8.8%"
+
+  - edge_id: "E052"
+    source_node_id: "c919_wing"
+    target_node_id: "c919_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "C919 采用超临界机翼设计，翼尖配备小翼以降低诱导阻力"

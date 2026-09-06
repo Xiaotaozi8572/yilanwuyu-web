@@ -1,0 +1,80 @@
+# C919 环控专项类比素材库
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / concept / analogy / explanation
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+analogies:
+  - id: "ecs-ana-001-bleed-air-borrow-engine"
+    concept: "引气系统（Bleed Air System）"
+    analogy: "从发动机"借"空气——高温高压引出"
+    explanation: >
+      C919 客舱空气来自发动机或 APU 的"引气"——从发动机压气机引出一部分高温高压空气（约 200℃）。
+      像从发动机"借"空气——不消耗额外燃料，是发动机压气的副产品。引气经压力调节阀+预冷器降温后进入空调组件。
+      由 Liebherr 提供环控系统。
+
+  - id: "ecs-ana-002-pack-air-conditioner"
+    concept: "空调组件（Air Conditioning Pack）"
+    analogy: "家用空调的室外机+室内机——降温除湿"
+    explanation: >
+      空调组件把引气处理成适合客舱的空气：降温（热交换器+空气循环制冷机）、除湿（水汽凝结分离）、过滤（HEPA）。
+      像家用空调的室外机+室内机——降温除湿。C919 配 2 台 Pack，处理后的空气温度约 0-10℃，再与热引气混合调到舒适温度。
+
+  - id: "ecs-ana-003-air-cycle-no-freon"
+    concept: "空气循环制冷（Air Cycle Refrigeration）"
+    analogy: "不用氟利昂——用空气膨胀制冷"
+    explanation: >
+      C919 空调组件用空气循环制冷（逆布雷顿循环），不用氟利昂。像用空气膨胀制冷——
+      压缩机+涡轮+风扇同轴（ACM），涡轮膨胀做功降温到 0℃。环保、重量轻，是民航主流方案。
+      传统家用空调用蒸汽压缩循环（氟利昂），飞机用空气循环。
+
+  - id: "ecs-ana-004-pressurization-cabin-altitude"
+    concept: "座舱增压（Cabin Pressurization）"
+    analogy: "让客舱像在 1,830 米海拔——不是 -56℃ 的高空"
+    explanation: >
+      高空空气稀薄（含氧量约为地面 1/4），不增压乘客会缺氧。C919 通过增压让客舱气压保持在 1,830 米海拔等效。
+      像让客舱像在 1,830 米海拔（如昆明）——不是 -56℃ 的高空。低于传统 2,400m（8,000ft），气压更高氧气更多，长途更不疲劳。
+
+  - id: "ecs-ana-005-outflow-valve-pressure-control"
+    concept: "外流阀（Outflow Valve）"
+    analogy: "高压锅的出气孔——控制放气量调节压力"
+    explanation: >
+      客舱压力由外流阀控制——开大放气多压力低（客舱压力高度上升），关小放气少压力高（客舱压力高度下降）。
+      像高压锅的出气孔——控制放气量调节压力。C919 外流阀由双电机驱动（正常+应急），按预设计划自动调节。
+
+  - id: "ecs-ana-006-1830m-vs-2400m"
+    concept: "客舱压力高度 1,830m vs. 2,400m"
+    analogy: "昆明 vs. 西宁——海拔更低更舒服"
+    explanation: >
+      C919 客舱压力高度约 1,830m（6,000ft），低于传统 2,400m（8,000ft）。等效海拔：1,830m≈昆明，2,400m≈西宁。
+      海拔更低气压更高氧气更多，血氧饱和度更高，长途飞行更不疲劳。新一代客机（B787/A350/C919）都采用 6,000ft。
+
+  - id: "ecs-ana-007-hepa-filter-mask"
+    concept: "HEPA 过滤器（HEPA Filter）"
+    analogy: "口罩+空气净化器——滤除 99.97% 颗粒"
+    explanation: >
+      C919 客舱空气经 HEPA（High Efficiency Particulate Air）过滤器，滤除 99.97% 的 0.3 微米以上颗粒
+      （包括细菌、病毒）。像口罩+空气净化器——保证客舱空气质量。每分钟换气约 20-30 次，部分新风+部分再循环。
+
+  - id: "ecs-ana-008-led-mood-lighting"
+    concept: "LED 情景照明（LED Mood Lighting）"
+    analogy: "智能情景灯——模拟日出/日落/星空"
+    explanation: >
+      C919 客舱用 LED 情景照明，可编程场景：登机（明亮白光）、起飞/降落（调暗）、巡航（柔和暖光）、
+      晨曦/黄昏（渐变模拟）。像智能情景灯——帮助调整生物钟，降低时差反应和长途疲劳。
+
+  - id: "ecs-ana-009-oxygen-chemical-generator"
+    concept: "化学氧气发生器（Chemical Oxygen Generator）"
+    analogy: "暖宝宝——拉下激活化学反应供氧"
+    explanation: >
+      客舱压力高度超过 4,300m 时氧气面罩自动落下，由化学氧气发生器供氧。像暖宝宝——拉下激活化学反应
+      （氯酸钠+铁粉反应产生氧气），可持续 12-15 分钟，足够飞机下降到可呼吸高度。一次性使用，激活后需更换。
+
+  - id: "ecs-ana-010-emergency-descent"
+    concept: "应急下降（Emergency Descent）"
+    analogy: "紧急下楼——失压后迅速下降到可呼吸高度"
+    explanation: >
+      客舱失压时飞行员紧急下降到 3,000m 以下，像紧急下楼——迅速下降到可呼吸高度。
+      氧气面罩供氧 12-15 分钟，足够飞机从巡航高度（11,000m）下降到 3,000m。
+      C919 设计保证失压后机组+乘客有足够氧气完成下降+备降。

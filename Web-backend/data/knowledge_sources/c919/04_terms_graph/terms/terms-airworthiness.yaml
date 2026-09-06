@@ -1,0 +1,89 @@
+# C919 适航类术语
+# 按领域拆分：覆盖适航审定、合规验证与持续适航
+# node_type 统一为 concept
+# ID 前缀：airw_
+
+terms:
+  - term_id: "airw_001"
+    canonical_name: "适航"
+    aliases: ["适航", "airworthiness", "适航审定", "适航性"]
+    node_type: "concept"
+    definition: "航空器符合批准的型号设计并处于安全运行状态的品质，是民用航空器投入运营的法定前提"
+    source_ref: "c919-graph-airworthiness-v1"
+
+  - term_id: "airw_002"
+    canonical_name: "型号合格证"
+    aliases: ["型号合格证", "TC", "Type Certificate"]
+    node_type: "concept"
+    definition: "适航当局证明航空器设计符合适航标准的官方批准文件，C919 于 2022-09-29 取得 CAAC 颁发的 TC"
+    source_ref: "c919-graph-airworthiness-v1"
+
+  - term_id: "airw_003"
+    canonical_name: "生产许可证"
+    aliases: ["生产许可证", "PC", "Production Certificate"]
+    node_type: "concept"
+    definition: "适航当局批准制造企业按批准设计批量生产航空器的许可文件，C919 项目已取得 PC"
+    source_ref: "c919-graph-airworthiness-v1"
+
+  - term_id: "airw_004"
+    canonical_name: "适航指令"
+    aliases: ["适航指令", "AD", "Airworthiness Directive", "CAD"]
+    node_type: "concept"
+    definition: "适航当局针对已发现的不安全状态发布的强制纠正措施文件，运营人必须按期执行"
+    source_ref: "c919-graph-airworthiness-v1"
+
+  - term_id: "airw_005"
+    canonical_name: "CCAR-25"
+    aliases: ["CCAR-25", "CCAR25", "运输类飞机适航标准", "R4"]
+    node_type: "concept"
+    definition: "中国民航局运输类飞机适航标准，等效 FAA Part 25 / EASA CS-25，是 C919 审定的主要法规依据"
+    source_ref: "c919-graph-airworthiness-v1"
+
+  - term_id: "airw_006"
+    canonical_name: "符合性方法"
+    aliases: ["符合性方法", "MC", "Method of Compliance", "符合性验证方法"]
+    node_type: "concept"
+    definition: "表明型号设计满足适航条款要求的方法，包括分析、试验、检查、演示等十余种符合性方法"
+    source_ref: "c919-graph-airworthiness-v1"
+
+  - term_id: "airw_007"
+    canonical_name: "型号检查授权"
+    aliases: ["型号检查授权", "TIA", "Type Inspection Authorization"]
+    node_type: "concept"
+    definition: "适航当局在审定试验阶段授权正式型号检查的文件，标志审定进入正式验证试验阶段"
+    source_ref: "c919-graph-airworthiness-v1"
+
+  - term_id: "airw_008"
+    canonical_name: "审定基础"
+    aliases: ["审定基础", "certification basis", "适用规章"]
+    node_type: "concept"
+    definition: "特定型号航空器审定所依据的适航规章及其修正案清单，C919 审定基础包含 CCAR-25 R4 等"
+    source_ref: "c919-graph-airworthiness-v1"
+
+  - term_id: "airw_009"
+    canonical_name: "持续适航"
+    aliases: ["持续适航", "continued airworthiness", "持续适航管理"]
+    node_type: "concept"
+    definition: "航空器在使用寿命周期内持续保持适航状态的过程，含维修、AD 执行和结构补充检查"
+    source_ref: "c919-graph-airworthiness-v1"
+
+  - term_id: "airw_010"
+    canonical_name: "维修审查委员会"
+    aliases: ["维修审查委员会", "MRB", "Maintenance Review Board"]
+    node_type: "concept"
+    definition: "由适航当局组织的委员会，负责审查和批准新机型初始维修要求（MRBR）"
+    source_ref: "c919-graph-airworthiness-v1"
+
+  - term_id: "airw_011"
+    canonical_name: "飞行标准化委员会"
+    aliases: ["飞行标准化委员会", "FSB", "Flight Standardization Board"]
+    node_type: "concept"
+    definition: "适航当局负责确定机型飞行员型别等级训练和检查标准的机构，C919 已建立 FSB"
+    source_ref: "c919-graph-airworthiness-v1"
+
+  - term_id: "airw_012"
+    canonical_name: "CRI"
+    aliases: ["CRI", "Certification Review Item", "审定审查项目"]
+    node_type: "concept"
+    definition: "审定审查项目，记录审定过程中技术问题讨论和符合性方法结论的正式文件"
+    source_ref: "c919-graph-airworthiness-v1"

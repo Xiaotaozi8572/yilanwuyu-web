@@ -1,0 +1,117 @@
+# C919 关键参数实体
+# 机型主要性能及尺寸参数
+# node_type: parameter
+# node_id 前缀：param_
+
+entities:
+  - node_id: "param_mtow"
+    node_type: "parameter"
+    canonical_name: "最大起飞重量"
+    aliases: ["MTOW", "Maximum Takeoff Weight", "最大起飞重量"]
+    description: "C919 标准型最大起飞重量 77300kg，延程型提升至 78900kg，决定起降载荷"
+    specifications:
+      standard_kg: 77300
+      er_kg: 78900
+    applicable_aircraft: ["c919"]
+
+  - node_id: "param_mlw"
+    node_type: "parameter"
+    canonical_name: "最大着陆重量"
+    aliases: ["MLW", "Maximum Landing Weight", "最大着陆重量"]
+    description: "C919 最大着陆重量，约 66000kg，决定起落架和机翼着陆载荷设计"
+    specifications:
+      mlw_kg: 66000
+    applicable_aircraft: ["c919"]
+
+  - node_id: "param_mzfw"
+    node_type: "parameter"
+    canonical_name: "最大零油重量"
+    aliases: ["MZFW", "Maximum Zero Fuel Weight", "最大零油重量"]
+    description: "C919 最大零油重量，约 58000kg，限制商载与运营空重之和"
+    specifications:
+      mzwf_kg: 58000
+    applicable_aircraft: ["c919"]
+
+  - node_id: "param_wingspan"
+    node_type: "parameter"
+    canonical_name: "翼展"
+    aliases: ["wingspan", "翼展", "翼展长度"]
+    description: "C919 翼展 33.6m，含小翼 35.8m，决定滑行道间距及机库尺寸要求"
+    specifications:
+      wingspan_m: 33.6
+      wingspan_with_winglet_m: 35.8
+    applicable_aircraft: ["c919"]
+
+  - node_id: "param_length"
+    node_type: "parameter"
+    canonical_name: "机长"
+    aliases: ["length", "机身长度", "机长"]
+    description: "C919 机身长度 38.9m，决定停机位长度及登机桥对接"
+    specifications:
+      length_m: 38.9
+    applicable_aircraft: ["c919"]
+
+  - node_id: "param_height"
+    node_type: "parameter"
+    canonical_name: "机高"
+    aliases: ["height", "机身高度", "机高"]
+    description: "C919 机高 11.95m，决定机库高度及垂直尾翼顶点离地高度"
+    specifications:
+      height_m: 11.95
+    applicable_aircraft: ["c919"]
+
+  - node_id: "param_range"
+    node_type: "parameter"
+    canonical_name: "航程"
+    aliases: ["range", "航程", "设计航程"]
+    description: "C919 标准型航程 4075km，延程型 5555km，决定航线覆盖范围"
+    specifications:
+      standard_range_km: 4075
+      er_range_km: 5555
+    applicable_aircraft: ["c919"]
+
+  - node_id: "param_cruise_speed"
+    node_type: "parameter"
+    canonical_name: "巡航速度"
+    aliases: ["cruise speed", "巡航速度", "巡航 Mach"]
+    description: "C919 巡航速度 Mach 0.785，对应约 830km/h 真空速，与 A320/B737 同级"
+    specifications:
+      cruise_mach: 0.785
+    applicable_aircraft: ["c919"]
+
+  - node_id: "param_ceiling"
+    node_type: "parameter"
+    canonical_name: "升限"
+    aliases: ["ceiling", "升限", "最大飞行高度"]
+    description: "C919 最大巡航高度 12100m，决定座舱增压及发动机高空性能设计"
+    specifications:
+      ceiling_m: 12100
+    applicable_aircraft: ["c919"]
+
+  - node_id: "param_payload"
+    node_type: "parameter"
+    canonical_name: "商载"
+    aliases: ["payload", "商载", "有效载荷"]
+    description: "C919 商载约 18000-20000kg，受 MZFW 限制，决定旅客及货物总承载能力"
+    specifications:
+      payload_kg: 19000
+    applicable_aircraft: ["c919"]
+
+  - node_id: "param_seats"
+    node_type: "parameter"
+    canonical_name: "座位数"
+    aliases: ["seats", "座位数", "客座数"]
+    description: "C919 标准座位数 158-168 座，3-3 布局，机身宽度 3.96m 支持单通道 6 列"
+    specifications:
+      seats: "158-168"
+      layout: "3-3"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "param_fuel_capacity"
+    node_type: "parameter"
+    canonical_name: "油箱容量"
+    aliases: ["fuel capacity", "油箱容量", "燃油容量"]
+    description: "C919 总燃油容量约 19000L，分布于中央油箱及左右机翼油箱，决定航程"
+    specifications:
+      fuel_capacity_l: 19000
+    applicable_aircraft: ["c919"]

@@ -1,0 +1,352 @@
+partition: "c919/01_science/04_history_milestones"
+partition_owner: "科普证据组"
+sources:
+  - source_id: "c919-science-development-v1"
+    source_type: "text"
+    title: "C919 项目立项与研发历程"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "milestone_event"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    timeline:
+      event_date: "2008-05-11"
+    files:
+      - path: "c919-history-approval-development-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "milestone_event"
+      source_statement: "综合 Wikipedia、新华社报道，2007-2017 年资料"
+      verification: "新华社 2008-05-11 报道确认中国商飞成立日期"
+      stale: false
+
+  - source_id: "c919-science-maiden-flight-v1"
+    source_type: "text"
+    title: "C919 首飞与试飞取证历程"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "milestone_event"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    timeline:
+      event_date: "2017-05-05"
+    files:
+      - path: "c919-history-maiden-flight-testing-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "milestone_event"
+      source_statement: "CAAC 适航审定公告（caac.gov.cn）、新华社报道"
+      verification: "首飞日期 2017-05-05 经新华社、Wikipedia 等多来源交叉核对"
+      stale: false
+
+  - source_id: "c919-science-certification-v1"
+    source_type: "text"
+    title: "C919 适航取证与交付运营"
+    authority_level: "official"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "milestone_event"
+    original_uri: "https://www.caac.gov.cn/XXGK/XXGKZCFD/202209/t20220929.html"
+    timeline:
+      event_date: "2022-09-29"
+    files:
+      - path: "c919-history-certification-delivery-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "milestone_event"
+      source_statement: "CAAC 型号合格证公告 2022-09-29；新华社报道"
+      verification: "2022-09-29 型号合格证日期经 CAAC 公告、新华社、Wikipedia 交叉核对一致"
+      stale: false
+
+  - source_id: "c919-science-operations-v1"
+    source_type: "text"
+    title: "C919 商业运营扩展史（2023-2026）"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "milestone_event"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    timeline:
+      event_date: "2023-05-28"
+    files:
+      - path: "c919-history-operations-expansion-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "milestone_event"
+      source_statement: "Wikipedia Comac C919 与三大航公开运营报道，2026-07 访问"
+      verification: "交付数据经 Wikipedia 与行业报道交叉核对；运营小时数为行业估算"
+      stale: false
+
+  - source_id: "c919-science-history-2008-2011-v1"
+    source_type: "text"
+    title: "C919 历史：2008-2011 立项与初步设计"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "milestone_event"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    timeline:
+      event_date: "2008-01-01"
+    files:
+      - path: "c919-history-2008-2011-approval-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "milestone_event"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "2008 立项、580 亿预算、吴光辉设计师、2010-10-28 TC 申请、2011-11-24 JDP 完成、2011-12-09 首架原型机开始生产经 Wikipedia 核对"
+      stale: false
+
+  - source_id: "c919-science-history-2011-2015-v1"
+    source_type: "text"
+    title: "C919 历史：2011-2015 详细设计与总装"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "milestone_event"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    timeline:
+      event_date: "2011-11-24"
+    files:
+      - path: "c919-history-2011-2015-detailed-design-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "milestone_event"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "机身/机翼参数、材料占比、超临界机翼数据、2015-11-02 总装下线经 Wikipedia 核对"
+      stale: false
+
+  - source_id: "c919-science-history-2015-rollout-v1"
+    source_type: "text"
+    title: "C919 历史：2015 年 11 月 2 日总装下线"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "milestone_event"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    timeline:
+      event_date: "2015-11-02"
+    files:
+      - path: "c919-history-2015-rollout-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "milestone_event"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "2015-11-02 总装下线、供应商清单经 Wikipedia 核对一致"
+      stale: false
+
+  - source_id: "c919-science-history-2017-first-flight-v1"
+    source_type: "text"
+    title: "C919 历史：2017 年 5 月 5 日首飞详细"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "milestone_event"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    timeline:
+      event_date: "2017-05-05"
+    files:
+      - path: "c919-history-2017-first-flight-detail-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "milestone_event"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "2017-05-05 首飞、6 架原型机首飞日期、试飞 4200 小时经 Wikipedia 核对"
+      stale: false
+
+  - source_id: "c919-science-history-2017-2022-flight-test-v1"
+    source_type: "text"
+    title: "C919 历史：2017-2022 试飞取证历程"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "milestone_event"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    timeline:
+      event_date: "2022-09-29"
+    files:
+      - path: "c919-history-2017-2022-flight-test-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "milestone_event"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "TIA 2020-11-27、首架交付前试飞 2022-05-14 B-001J MSN107、TC 2022-09-29 经 Wikipedia 核对"
+      stale: false
+
+  - source_id: "c919-science-history-2022-2026-delivery-v1"
+    source_type: "text"
+    title: "C919 历史：2022-2026 交付与商业运营"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "milestone_event"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    timeline:
+      event_date: "2022-12-09"
+    files:
+      - path: "c919-history-2022-2026-delivery-operations-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "milestone_event"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "2022-12-09 交付、2023-05-28 商业首航 MU9191、2024-08-29 国航接收、2026-01-08 C919-600 出厂、2026-07-29 高原型首飞经 Wikipedia 核对"
+      stale: false
+
+  - source_id: "c919-science-history-2010-tc-v1"
+    source_type: "text"
+    title: "C919 历史：2010 年型号合格证申请"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "tc_application"
+    knowledge_type: "milestone_event"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    timeline:
+      event_date: "2010-10-28"
+    files:
+      - path: "c919-history-2010-tc-application-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "milestone_event"
+      source_statement: "Wikipedia Comac C919 与 CAAC 公开适航资料，2026-07-29 访问"
+      verification: "2010-10-28 TC 申请、580 亿预算、2300 架目标来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-history-2011-bombardier-v1"
+    source_type: "text"
+    title: "C919 历史：2011-2012 Bombardier 合作"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "international_cooperation"
+    knowledge_type: "milestone_event"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    timeline:
+      event_date: "2011-03-01"
+    files:
+      - path: "c919-history-2011-bombardier-cooperation-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "milestone_event"
+      source_statement: "Wikipedia Comac C919 与 Bombardier/空客公开资料，2026-07-29 访问"
+      verification: "Bombardier 合作时间线、C Series 转 A220 来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-history-2017-second-prototype-v1"
+    source_type: "text"
+    title: "C919 历史：2017 年第二架原型机首飞"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "prototype_first_flight"
+    knowledge_type: "milestone_event"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    timeline:
+      event_date: "2017-12-17"
+    files:
+      - path: "c919-history-2017-second-prototype-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "milestone_event"
+      source_statement: "Wikipedia Comac C919 与空客/波音公开试飞资料，2026-07-29 访问"
+      verification: "2017-12-17 第二架机首飞、6 架原型机首飞日期来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-history-2018-static-test-v1"
+    source_type: "text"
+    title: "C919 历史：2018 年静力试验"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "static_test"
+    knowledge_type: "milestone_event"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    timeline:
+      event_date: "2018-07-12"
+    files:
+      - path: "c919-history-2018-static-test-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "milestone_event"
+      source_statement: "Wikipedia Comac C919 与 CCAR-25 部适航标准，2026-07-29 访问"
+      verification: "2018-07-12 静力试验、2.5g 载荷、150% 极限载荷、翼尖弯曲 3m 来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-history-2019-six-prototypes-v1"
+    source_type: "text"
+    title: "C919 历史：2019 年六架原型机齐备"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "prototypes_completion"
+    knowledge_type: "milestone_event"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    timeline:
+      event_date: "2019-12-27"
+    files:
+      - path: "c919-history-2019-six-prototypes-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "milestone_event"
+      source_statement: "Wikipedia Comac C919 与 CAAC 公开适航审定资料，2026-07-29 访问"
+      verification: "2019 年三架原型机首飞日期、6 架原型机齐备、4,200 试飞小时来自 Wikipedia"
+      stale: false

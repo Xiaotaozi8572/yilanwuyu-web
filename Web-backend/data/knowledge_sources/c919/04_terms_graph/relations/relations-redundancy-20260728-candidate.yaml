@@ -1,0 +1,79 @@
+# C919 余度关系
+# 描述关键系统的余度配置以提升安全性
+# relation_type: redundant_with
+# edge_id 前缀：rred_
+
+relations:
+  # ========== 飞控计算机余度 ==========
+  - edge_id: "rred_001"
+    source_node_id: "comp_fcc_a"
+    target_node_id: "comp_fcc_b"
+    relation_type: "redundant_with"
+    confidence: 1.0
+    description: "FCC-A 与 FCC-B 互为余度，三余度配置保证单一失效仍能维持飞控功能"
+
+  - edge_id: "rred_002"
+    source_node_id: "comp_fcc_b"
+    target_node_id: "comp_fcc_c"
+    relation_type: "redundant_with"
+    confidence: 1.0
+    description: "FCC-B 与 FCC-C 互为余度，配合 FCC-A 形成三余度飞控计算"
+
+  # ========== 液压系统余度 ==========
+  - edge_id: "rred_003"
+    source_node_id: "sys_hydraulic_a"
+    target_node_id: "sys_hydraulic_b"
+    relation_type: "redundant_with"
+    confidence: 1.0
+    description: "液压系统 A 与液压系统 B 互为余度，任一失效仍可维持飞控与起落架基本功能"
+
+  # ========== 电力系统余度 ==========
+  - edge_id: "rred_004"
+    source_node_id: "comp_idg_left"
+    target_node_id: "comp_idg_right"
+    relation_type: "redundant_with"
+    confidence: 1.0
+    description: "左发动机 IDG 与右发动机 IDG 互为余度，单发失效仍可供电"
+
+  - edge_id: "rred_005"
+    source_node_id: "comp_apu_generator"
+    target_node_id: "comp_idg_left"
+    relation_type: "redundant_with"
+    confidence: 0.95
+    description: "APU 发电机与 IDG 互为备用，APU 可在 IDG 失效时接替供电"
+
+  - edge_id: "rred_006"
+    source_node_id: "comp_battery"
+    target_node_id: "comp_rat"
+    relation_type: "redundant_with"
+    confidence: 0.9
+    description: "蓄电池与 RAT 互为应急电源余度，多重保险保证关键系统供电"
+
+  # ========== 航电系统余度 ==========
+  - edge_id: "rred_007"
+    source_node_id: "comp_display_unit_left"
+    target_node_id: "comp_display_unit_right"
+    relation_type: "redundant_with"
+    confidence: 1.0
+    description: "左显示单元与右显示单元互为余度，单侧失效仍可显示关键信息"
+
+  - edge_id: "rred_008"
+    source_node_id: "comp_adc_left"
+    target_node_id: "comp_adc_right"
+    relation_type: "redundant_with"
+    confidence: 1.0
+    description: "左大气数据计算机与右大气数据计算机互为余度，提供双套大气数据"
+
+  - edge_id: "rred_009"
+    source_node_id: "comp_irs_left"
+    target_node_id: "comp_irs_right"
+    relation_type: "redundant_with"
+    confidence: 1.0
+    description: "左惯性基准系统与右惯性基准系统互为余度，提供双套姿态航向"
+
+  - edge_id: "rred_010"
+    source_node_id: "comp_fmc_left"
+    target_node_id: "comp_fmc_right"
+    relation_type: "redundant_with"
+    confidence: 0.95
+    description: "左 FMC 与右 FMC 互为余度，单套失效仍可维持飞行管理功能"

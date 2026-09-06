@@ -1,0 +1,112 @@
+# C919 派生与时间线关系
+# 描述 C919 系列派生型号与项目重大里程碑
+# relation_type: derives_from / milestone
+# edge_id 前缀：rderiv_
+
+relations:
+  # ========== derives_from 派生型号 ==========
+  - edge_id: "rderiv_001"
+    source_node_id: "c919_100std"
+    target_node_id: "c919_aircraft"
+    relation_type: "derives_from"
+    confidence: 1.0
+    description: "C919-100STD 标准型是 C919 的基本型，航程约 4073 公里"
+
+  - edge_id: "rderiv_002"
+    source_node_id: "c919_600"
+    target_node_id: "c919_100std"
+    relation_type: "derives_from"
+    confidence: 0.85
+    description: "C919-600 缩短型派生自 C919-100STD 标准型，缩短机身适配中短程市场"
+
+  - edge_id: "rderiv_003"
+    source_node_id: "c919_800"
+    target_node_id: "c919_100std"
+    relation_type: "derives_from"
+    confidence: 0.85
+    description: "C919-800 加长型派生自 C919-100STD 标准型，加长机身适配大客流市场"
+
+  - edge_id: "rderiv_004"
+    source_node_id: "c919_100er"
+    target_node_id: "c919_100std"
+    relation_type: "derives_from"
+    confidence: 0.9
+    description: "C919-100ER 延程型派生自 C919-100STD，增加燃油容量提升航程"
+
+  - edge_id: "rderiv_005"
+    source_node_id: "c919_cj1000a"
+    target_node_id: "sys_leap1c"
+    relation_type: "derives_from"
+    confidence: 0.8
+    description: "CJ-1000A 国产发动机在技术路线上参考 LEAP-1C 的设计理念，目标是替代进口"
+
+  # ========== milestone 项目重大里程碑 ==========
+  - edge_id: "rderiv_006"
+    source_node_id: "c919_aircraft"
+    target_node_id: "milestone_2008_11_28_project_launch"
+    relation_type: "milestone"
+    confidence: 1.0
+    description: "2008-11-28 C919 大型客机项目正式启动，标志中国自主研制大型客机立项"
+
+  - edge_id: "rderiv_007"
+    source_node_id: "c919_aircraft"
+    target_node_id: "milestone_2011_12_19_engineering_dev"
+    relation_type: "milestone"
+    confidence: 1.0
+    description: "2011-12-19 C919 项目进入工程研发阶段，详细设计与供应商冻结"
+
+  - edge_id: "rderiv_008"
+    source_node_id: "c919_aircraft"
+    target_node_id: "milestone_2015_11_02_rollout"
+    relation_type: "milestone"
+    confidence: 1.0
+    description: "2015-11-02 首架 C919 完成总装下线，进入地面测试阶段"
+
+  - edge_id: "rderiv_009"
+    source_node_id: "c919_aircraft"
+    target_node_id: "milestone_2017_05_05_first_flight"
+    relation_type: "milestone"
+    confidence: 1.0
+    description: "2017-05-05 C919 首架机在上海浦东成功首飞，标志研制进入试飞阶段"
+
+  - edge_id: "rderiv_010"
+    source_node_id: "c919_aircraft"
+    target_node_id: "milestone_2022_12_09_first_delivery"
+    relation_type: "milestone"
+    confidence: 1.0
+    description: "2022-12-09 首架 C919 正式交付首家客户中国东方航空"
+
+  - edge_id: "rderiv_011"
+    source_node_id: "c919_aircraft"
+    target_node_id: "milestone_2023_05_28_commercial_service"
+    relation_type: "milestone"
+    confidence: 1.0
+    description: "2023-05-28 C919 执行首个商业航班 MU9191，正式投入商业运营"
+
+  - edge_id: "rderiv_012"
+    source_node_id: "c919_aircraft"
+    target_node_id: "milestone_2024_03_01_type_certificate"
+    relation_type: "milestone"
+    confidence: 0.85
+    description: "C919 在 2024 年获得中国民航局型号合格证(TC)扩展，纳入更多构型"
+
+  - edge_id: "rderiv_013"
+    source_node_id: "c919_aircraft"
+    target_node_id: "milestone_2024_05_28_first_anniversary"
+    relation_type: "milestone"
+    confidence: 0.85
+    description: "2024 年 C919 商业运营一周年，机队规模与航线持续扩展"
+
+  - edge_id: "rderiv_014"
+    source_node_id: "c919_aircraft"
+    target_node_id: "milestone_2025_12_31_fleet_growth"
+    relation_type: "milestone"
+    confidence: 0.7
+    description: "2025 年 C919 累计交付数量继续增长，多架机投入多条国内航线运营"
+
+  - edge_id: "rderiv_015"
+    source_node_id: "c919_aircraft"
+    target_node_id: "milestone_2026_01_01_international_route"
+    relation_type: "milestone"
+    confidence: 0.6
+    description: "C919 后续规划拓展国际航线与海外客户，进一步走向全球市场"

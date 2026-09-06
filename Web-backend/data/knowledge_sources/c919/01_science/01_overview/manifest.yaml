@@ -1,0 +1,332 @@
+partition: "c919/01_science/01_overview"
+partition_owner: "科普证据组"
+sources:
+  - source_id: "c919-science-overview-v1"
+    source_type: "text"
+    title: "C919 型号概述"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "overview"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-overview-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "factual_overview"
+      source_statement: "综合 Wikipedia（en.wikipedia.org/wiki/Comac_C919）与 Airport Technology（airport-technology.com/projects/comac-c919）资料，2024-06 数据"
+      verification: "Wikipedia 与 Airport Technology 交叉核对，数据一致"
+      stale: false
+
+  - source_id: "c919-science-parameters-v1"
+    source_type: "table"
+    title: "C919 基本参数表"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "basic_parameter"
+    knowledge_type: "parameter_fact"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-basic-parameters-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "parameter_fact"
+      source_statement: "综合 Wikipedia、Airport Technology、FlightGlobal 数据库，2024 年度数据"
+      verification: "Wikipedia 与 Airport Technology 对机长/翼展/机高交叉核对一致；MTOW 缺少官方精确数值，降级为 candidate"
+      unverified: true
+      stale: false
+
+  - source_id: "c919-science-design-tech-v1"
+    source_type: "text"
+    title: "C919 设计目标与技术特征"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "design_goal"
+    knowledge_type: "overview"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-design-and-technology-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "factual_overview"
+      source_statement: "综合 Wikipedia 与行业媒体报道，2024-2025 年资料"
+      verification: "与 Wikipedia 发动机/材料数据交叉核对一致"
+      stale: false
+
+  - source_id: "c919-science-variants-v1"
+    source_type: "text"
+    title: "C919 型号系列与发展改型"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "model_overview"
+    knowledge_type: "overview"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-variants-derivatives-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "factual_overview"
+      source_statement: "Wikipedia Comac C919 与行业报道，2026-07 访问"
+      verification: "变异型数据为行业估算，非 COMAC 官方确认"
+      stale: false
+
+  - source_id: "c919-science-manufacturing-v1"
+    source_type: "text"
+    title: "C919 制造技术与总装工艺"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "technology_highlight"
+    knowledge_type: "overview"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-manufacturing-assembly-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "factual_overview"
+      source_statement: "综合 COMAC 与 AVIC 公开报道，2026-07 访问"
+      verification: "制造工艺描述基于通用民机生产知识和公开报道"
+      stale: false
+
+  - source_id: "c919-science-project-background-v1"
+    source_type: "text"
+    title: "C919 项目背景与立项决策"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "project_background"
+    knowledge_type: "overview"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-project-background-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "factual_overview"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "立项预算 580 亿、设计师吴光辉经 Wikipedia 核对；实际投入为行业估算"
+      stale: false
+
+  - source_id: "c919-science-variants-family-v1"
+    source_type: "table"
+    title: "C919 系列变体：-100 STD / -100 ER / -600 / -800"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "model_overview"
+    knowledge_type: "parameter_fact"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-variants-family-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "parameter_fact"
+      source_statement: "Wikipedia Comac C919 与 CFM International 公开资料，2026-07-29 访问"
+      verification: "四个变体座位数、发动机推力数据经 Wikipedia 与 CFM 资料交叉核对"
+      stale: false
+
+  - source_id: "c919-science-certification-basis-v1"
+    source_type: "text"
+    title: "C919 适航取证基础：CCAR-25、CAAC TC、EASA 验证"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "certification_basis"
+    knowledge_type: "milestone_event"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-certification-basis-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "factual_overview"
+      source_statement: "Wikipedia Comac C919 与 CAAC 公告，2026-07-29 访问"
+      verification: "TC/TIA 日期经 Wikipedia 与 CAAC 公告交叉核对一致；EASA 认可时间为预测值"
+      stale: false
+
+  - source_id: "c919-science-supplier-system-v1"
+    source_type: "table"
+    title: "C919 供应商体系总览：合资模式与国产化率"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "supplier_system"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-supplier-system-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919 与 CFM International 公开资料，2026-07-29 访问"
+      verification: "供应商清单与合资公司构成经 Wikipedia 核对；国产化率 60% 为按成本计算的行业估算"
+      stale: false
+
+  - source_id: "c919-science-specifications-summary-v1"
+    source_type: "table"
+    title: "C919 技术规格参数总表"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "specifications_summary"
+    knowledge_type: "parameter_fact"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-specifications-summary-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "parameter_fact"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "全部规格参数、时间线、供应商数据均来自 Wikipedia 已验证数据"
+      stale: false
+
+  - source_id: "c919-science-design-philosophy-v1"
+    source_type: "text"
+    title: "C919 设计哲学与技术路线"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "design_philosophy"
+    knowledge_type: "overview"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-design-philosophy-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "factual_overview"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "参数、供应商、时间线均来自 Wikipedia 已验证数据"
+      stale: false
+
+  - source_id: "c919-science-market-positioning-v1"
+    source_type: "text"
+    title: "C919 市场定位与窄体客机市场竞争"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "market_positioning"
+    knowledge_type: "overview"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-market-positioning-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "factual_overview"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "订单、目录价、运营数据来自 Wikipedia；竞争对手参数参考空客/波音公开资料"
+      stale: false
+
+  - source_id: "c919-science-program-organization-v1"
+    source_type: "text"
+    title: "C919 项目组织与研制体系"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "program_organization"
+    knowledge_type: "overview"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-program-organization-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "factual_overview"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "合资公司清单、时间线、试飞数据均来自 Wikipedia 已验证数据"
+      stale: false
+
+  - source_id: "c919-science-international-certification-v1"
+    source_type: "text"
+    title: "C919 国际认证进展：EASA 验证与 FAA 缺位"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "international_certification"
+    knowledge_type: "milestone_event"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-international-certification-status-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "milestone_event"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "EASA/FAA 认证状态、BASA 生效年份、关税数据均来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-passenger-experience-v1"
+    source_type: "text"
+    title: "C919 乘客体验：客舱设计与舒适性"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "passenger_experience"
+    knowledge_type: "overview"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-passenger-experience-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "factual_overview"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "客舱尺寸、座椅型号、IFE 供应商均来自 Wikipedia 已验证数据"
+      stale: false

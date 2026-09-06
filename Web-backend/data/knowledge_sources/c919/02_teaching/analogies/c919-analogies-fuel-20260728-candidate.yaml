@@ -1,0 +1,83 @@
+# C919 燃油专项类比素材库
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / concept / analogy / explanation
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+analogies:
+  - id: "fuel-ana-001-wing-tank-hollow-wing"
+    concept: "机翼油箱（Wing Tank）"
+    analogy: "机翼像两个大水壶——内部空心正好装油"
+    explanation: >
+      C919 油箱主要在机翼里——机翼内部本来就是空心结构空间，正好装油。像机翼像两个大水壶。
+      三个油箱（左/右机翼+中央）总容量约 19,000 升。把油箱放机翼里省空间、减重结构（燃油重力卸载机翼弯矩）、保持平衡。
+
+  - id: "fuel-ana-002-center-tank-first"
+    concept: "中央油箱优先耗油（Center Tank First）"
+    analogy: "先喝中间的水壶——保持重心稳定"
+    explanation: >
+      C919 先耗中央油箱（机身中部），再耗左右机翼油箱。像先喝中间的水壶——
+      中央油箱离重心近，燃油消耗对重心影响小。先消耗中央油箱可以让机翼油箱燃油继续卸载机翼弯矩。
+
+  - id: "fuel-ana-003-crossfeed-crossover"
+    concept: "交输供油（Crossfeed）"
+    analogy: "两个水壶通过管道互通——一侧故障另一侧供油"
+    explanation: >
+      C919 左机翼油箱可以供右发动机、右机翼油箱可以供左发动机。像两个水壶通过管道互通——
+      万一某侧油泵故障，可打开交输阀让对侧油箱供油给两侧发动机。保证任一油泵故障仍能供油。
+
+  - id: "fuel-ana-004-capacitive-sensor-water-level"
+    concept: "电容式油量传感器（Capacitive Fuel Quantity Sensor）"
+    analogy: "油箱里的"水位计"——测油面高度"
+    explanation: >
+      油箱内布置电容式油量传感器（探杆），利用燃油和空气的介电常数差异测量油面高度。
+      像油箱里的"水位计"——燃油浸入传感器改变电容值，电容值与浸入高度成正比。
+      C919 每个油箱多根传感器分布在不同位置，应对飞机俯仰/横滚姿态变化。
+
+  - id: "fuel-ana-005-pressure-refueling-high-pressure"
+    concept: "压力加油（Pressure Refueling）"
+    analogy: "高压水枪注水——不是漏斗自流"
+    explanation: >
+      C919 采用压力加油（不是汽车那种自流加油），加油车通过压力加油接头把燃油压入油箱。
+      像高压水枪注水——不是漏斗自流。加油压力约 50 psi，速度可达 1,000+ 升/分钟。
+      加油面板可设置加油量，自动分配到各油箱。
+
+  - id: "fuel-ana-006-igs-inert-gas"
+    concept: "惰性气体系统（IGS，Inert Gas System）"
+    analogy: "灭火器喷氮气——降低氧气浓度防爆"
+    explanation: >
+      油箱内燃油蒸汽与空气混合遇火源可能爆炸（TWA 800 事故）。C919 配 IGS 惰性气体系统，
+      把发动机引气通过中空纤维膜分离出富氮空气（NEA，氮气 > 95%），充入油箱上方空间。
+      像灭火器喷氮气——把油箱上方氧气浓度降到 12% 以下，燃油蒸汽就点不着了。
+
+  - id: "fuel-ana-007-hollow-fiber-membrane"
+    concept: "中空纤维膜分离（Hollow Fiber Membrane Separation）"
+    analogy: "筛子分大小颗粒——氧气渗透快氮气渗透慢"
+    explanation: >
+      IGS 用中空纤维膜分离空气：膜组件由数千根中空纤维管组成，对不同气体有选择性渗透。
+      氧气（O₂）渗透速率快，氮气（N₂）渗透速率慢。像筛子分大小颗粒——氧气"漏出"，氮气"留下"。
+      渗透侧排出富氧空气（OEA），非渗透侧得到富氮空气（NEA）充入油箱。
+
+  - id: "fuel-ana-008-jet-a1-kerosene"
+    concept: "航空煤油 Jet A-1（Aviation Kerosene）"
+    analogy: "不是汽油——是煤油，冰点 -47℃"
+    explanation: >
+      C919 使用 Jet A-1 或国产 RP-3 航空煤油，不是汽车汽油。航空煤油冰点 -47℃，
+      闪点约 38℃，能量密度约 35 MJ/L。高空巡航时外界温度可达 -56℃，但燃油温度通常 -20℃ 到 0℃，
+      不会接近冰点（除非长时间极地航线）。
+
+  - id: "fuel-ana-009-fuel-cooling-engine-oil"
+    concept: "燃油冷却发动机滑油（Fuel-Cooled Oil Cooler）"
+    analogy: "用油当冷却液——一举两得"
+    explanation: >
+      部分机型用燃油/滑油热交换器冷却发动机滑油，同时给燃油加热。像用油当冷却液——
+      一举两得：滑油降温、燃油升温（防止燃油过冷结蜡）。C919 也采用类似设计，保证燃油温度在安全范围。
+
+  - id: "fuel-ana-010-fuel-unload-wing-bending"
+    concept: "燃油卸载机翼弯矩（Fuel Unloads Wing Bending）"
+    analogy: "挑扁担两头挂重物反而省力——升力与燃油重力对冲"
+    explanation: >
+      油箱放机翼里的另一个好处：燃油重量直接作用在机翼上，机翼产生升力时燃油重力帮助卸载机翼根部弯矩。
+      像挑扁担两头挂重物反而省力——升力向上、燃油重力向下，两者在机翼上"对冲"，减轻结构负担。
+      这也是为什么先耗中央油箱——让机翼油箱燃油继续卸载弯矩。

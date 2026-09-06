@@ -1,0 +1,118 @@
+# C919 供应商与部件关系
+# 描述各部件级供应商与对应机体结构件的供应关系
+# relation_type: supplies / produces
+# edge_id 前缀：rsupc_
+
+relations:
+  # ========== AVIC 机体部件 ==========
+  - edge_id: "rsupc_001"
+    source_node_id: "supplier_avic"
+    target_node_id: "comp_fuselage"
+    relation_type: "supplies"
+    confidence: 1.0
+    description: "中航工业(AVIC)供应 C919 机身分段，含前机身、中机身与后机身"
+
+  - edge_id: "rsupc_002"
+    source_node_id: "supplier_avic"
+    target_node_id: "comp_center_wingbox"
+    relation_type: "supplies"
+    confidence: 1.0
+    description: "AVIC 供应中央翼盒，是机翼与机身的主承力传力部件"
+
+  - edge_id: "rsupc_003"
+    source_node_id: "supplier_avic"
+    target_node_id: "comp_fwd_fuselage"
+    relation_type: "supplies"
+    confidence: 0.95
+    description: "AVIC 供应前机身段，含驾驶舱与前起落架舱"
+
+  - edge_id: "rsupc_004"
+    source_node_id: "supplier_avic"
+    target_node_id: "comp_aft_fuselage"
+    relation_type: "supplies"
+    confidence: 0.95
+    description: "AVIC 供应后机身段，含尾椎与 APU 舱"
+
+  - edge_id: "rsupc_005"
+    source_node_id: "supplier_avic"
+    target_node_id: "comp_vertical_stabilizer"
+    relation_type: "supplies"
+    confidence: 0.95
+    description: "AVIC 供应垂直尾翼部件"
+
+  - edge_id: "rsupc_006"
+    source_node_id: "supplier_avic"
+    target_node_id: "comp_horizontal_stabilizer"
+    relation_type: "supplies"
+    confidence: 0.95
+    description: "AVIC 供应水平尾翼部件"
+
+  # ========== COMAC 自研部件 ==========
+  - edge_id: "rsupc_007"
+    source_node_id: "supplier_comac"
+    target_node_id: "comp_wing"
+    relation_type: "supplies"
+    confidence: 0.95
+    description: "中国商飞(COMAC)自主承担 C919 机翼设计与总装"
+
+  - edge_id: "rsupc_008"
+    source_node_id: "supplier_comac"
+    target_node_id: "comp_winglet"
+    relation_type: "supplies"
+    confidence: 0.9
+    description: "COMAC 自主研制翼尖小翼，优化机翼气动性能"
+
+  # ========== Moog 增升系统 ==========
+  - edge_id: "rsupc_009"
+    source_node_id: "supplier_moog"
+    target_node_id: "sys_high_lift"
+    relation_type: "supplies"
+    confidence: 0.95
+    description: "Moog 供应 C919 增升系统，含襟翼缝翼作动器与控制电子"
+
+  # ========== Liebherr 起落架部件 ==========
+  - edge_id: "rsupc_010"
+    source_node_id: "supplier_liebherr"
+    target_node_id: "comp_landing_gear"
+    relation_type: "supplies"
+    confidence: 1.0
+    description: "Liebherr 起落架公司(LAMC)供应 C919 主起落架与前起落架结构件"
+
+  # ========== Honeywell 刹车 ==========
+  - edge_id: "rsupc_011"
+    source_node_id: "supplier_honeywell"
+    target_node_id: "comp_brake"
+    relation_type: "supplies"
+    confidence: 0.9
+    description: "Honeywell 供应 C919 机轮刹车系统与防滑控制"
+
+  # ========== 中航工业机轮/轮胎 ==========
+  - edge_id: "rsupc_012"
+    source_node_id: "supplier_avic"
+    target_node_id: "comp_wheel"
+    relation_type: "supplies"
+    confidence: 0.85
+    description: "AVIC 下属单位供应 C919 主机轮及轮胎"
+
+  # ========== 客舱内装 ==========
+  - edge_id: "rsupc_013"
+    source_node_id: "supplier_avic"
+    target_node_id: "comp_cabin"
+    relation_type: "supplies"
+    confidence: 0.85
+    description: "AVIC 下属单位承担 C919 客舱内装部分部件供应"
+
+  - edge_id: "rsupc_014"
+    source_node_id: "supplier_comac"
+    target_node_id: "comp_passenger_seat"
+    relation_type: "supplies"
+    confidence: 0.85
+    description: "COMAC 协调国内供应商提供 C919 旅客座椅选装"
+
+  # ========== COMAC 总装 ==========
+  - edge_id: "rsupc_015"
+    source_node_id: "supplier_comac"
+    target_node_id: "c919_aircraft"
+    relation_type: "produces"
+    confidence: 1.0
+    description: "COMAC 在上海总装线完成 C919 整机总装与试飞交付"

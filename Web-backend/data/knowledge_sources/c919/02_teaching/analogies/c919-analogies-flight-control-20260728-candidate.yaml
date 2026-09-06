@@ -1,0 +1,83 @@
+# C919 飞控专项类比素材库
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / concept / analogy / explanation
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+analogies:
+  - id: "fc-ana-001-fbw-gamepad"
+    concept: "电传操纵（Fly-By-Wire）"
+    analogy: "游戏手柄操控飞机——电信号代替机械钢索"
+    explanation: >
+      传统飞机像老式自行车，钢索直接连着车把，打方向费力且靠机械传递。C919 的电传操纵像用游戏手柄玩游戏：
+      侧杆（手柄）→飞控计算机（游戏机主机）→舵面作动器（屏幕里角色的动作），中间没有机械钢索，全靠电信号。
+      由 Honeywell-AVIC 合资提供。注意：电传只改变"操纵方式"，不等于自动驾驶。
+
+  - id: "fc-ana-002-side-stick-gamepad"
+    concept: "侧杆（Side Stick）"
+    analogy: "游戏手柄——小巧省空间"
+    explanation: >
+      C919 没有传统的大圆盘操纵盘，而是用两个小侧杆——左右座各一个，装在座椅外侧扶手上。
+      像游戏手柄——小巧省空间，让驾驶舱更宽敞。侧杆无机械力反馈，手感来自弹簧+阻尼器。
+      向前推飞机低头、向后拉抬头、向左右压滚转。
+
+  - id: "fc-ana-003-control-law-layers"
+    concept: "控制律分层（Control Law Layers）"
+    analogy: "自动驾驶辅助等级——从全功能到最低兜底"
+    explanation: >
+      C919 控制律分层降级：Normal Law（全功能+包线保护）→ Alternate Law（部分保护丧失）→ Direct Law（保护全丧失）。
+      像自动驾驶辅助等级——从全功能到最低兜底，逐级降级。任一故障下仍有最低操纵能力，是民机电传飞控的通用安全策略。
+
+  - id: "fc-ana-004-envelope-protection-guardrail"
+    concept: "包线保护（Envelope Protection）"
+    analogy: "护栏——不让飞机走出安全边界"
+    explanation: >
+      C919 正常控制律提供多重包线保护：迎角限制、过载限制、速度限制、坡度限制。
+      像护栏——不让飞机走出安全边界。飞行员拉杆到底也不会失速、不会超过 Vmo/Mmo、不会滚转超过坡度限制。
+      但在 Direct Law 下保护全部丧失，飞行员需自主管理。
+
+  - id: "fc-ana-005-aoa-protection-anti-stall"
+    concept: "迎角保护（α-Protection）"
+    analogy: "防滑系统——不让机翼失速"
+    explanation: >
+      迎角保护把可用迎角限制在失速迎角以下，飞行员拉杆到底也不会失速。像汽车的防滑系统——不让机翼失速。
+      C919 通过迎角传感器实时监测，迎角接近临界值时自动减小俯仰指令。注意：这是兜底保护，不替代飞行员判断。
+
+  - id: "fc-ana-006-load-factor-protection"
+    concept: "过载限制（Load Factor Protection）"
+    analogy: "电梯限载——超过 +2.5g/-1g 自动限制"
+    explanation: >
+      C919 限制法向过载约 +2.5g/-1g（CCAR-25.337），防止结构过载。像电梯限载——超过 +2.5g/-1g 自动限制拉杆量。
+      机动飞行时自动限制，保证结构安全。这是电传飞控相比机械操纵的重要安全优势。
+
+  - id: "fc-ana-007-quadruple-redundancy-4-vote"
+    concept: "四余度架构（Quadruple Redundancy）"
+    analogy: "4 个人表决——少数服从多数"
+    explanation: >
+      C919 飞控计算机采用四余度架构，4 套独立通道并行工作。像 4 个人表决——少数服从多数，
+      任一故障被其余系统识别并隔离，不影响正常飞行。四余度是窄体客机高安全要求的设计，
+      比 A320 的三余度更安全但更重更贵。
+
+  - id: "fc-ana-008-actuator-muscle"
+    concept: "作动器（Actuator）"
+    analogy: "飞机的"肌肉"——把电信号变成机械力"
+    explanation: >
+      作动器把飞控计算机的电信号变成舵面的机械运动，像飞机的"肌肉"。C919 主舵面用液压作动器（力气大），
+      关键舵面配 EHA 电液作动器（备份）。任一液压系统失效，相应作动器切换到另一液压系统或 EHA，保证舵面仍有控制。
+
+  - id: "fc-ana-009-ccdl-cross-channel"
+    concept: "跨通道数据链路（CCDL）"
+    analogy: "4 个人互相通气——交叉验证"
+    explanation: >
+      C919 四余度飞控通道通过 CCDL（Cross Channel Data Link）交换数据，像 4 个人互相通气——
+      每套通道把自己的输出传给其他通道，进行比较表决。差异超阈值触发故障检测，故障通道被隔离。
+      CCDL 是余度管理的关键基础设施。
+
+  - id: "fc-ana-010-mechanical-backup-life-jacket"
+    concept: "机械备份（Mechanical Backup）"
+    analogy: "救生衣——电传全失效的最后兜底"
+    explanation: >
+      C919 通常有最低机械备份用于方向舵和俯仰配平，像救生衣——电传全失效的最后兜底。
+      通过机械脚蹬控制方向舵、机械手轮控制水平安定面配平，飞行员仍能维持最低限度操纵。
+      机械备份不依赖电传计算机和液压（部分机械连杆）。

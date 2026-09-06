@@ -1,0 +1,47 @@
+# C919 液压专项讲解侧问答种子（非评测种子）
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / question / audience / teaching_point
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+qa_seeds:
+  - id: "hyd-qa-001-what-fluid"
+    question: "C919 液压系统里装的是什么液体？"
+    audience: "中学生/有专业兴趣的公众"
+    teaching_point: "航空液压油（磷酸酯抗燃油，如 Skydrol LD-4），不是水。液压油需耐高温、低温不结冰、抗燃、润滑性好。工作压力约 3000 psi（20.7 MPa），水会腐蚀结冰不能用作液压介质。"
+
+  - id: "hyd-qa-002-three-systems"
+    question: "C919 为什么有三套液压系统？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "飞控舵面、起落架、刹车等依赖液压驱动。三套独立系统（左、右、辅助）是 CCAR-25.1309 要求的安全冗余，任意一套甚至两套故障，剩余系统仍能驱动关键舵面安全飞行和着陆。一套单点故障即失灵不可接受。"
+
+  - id: "hyd-qa-003-pressure-source"
+    question: "液压系统的压力从哪里来？"
+    audience: "中学生/航空爱好者"
+    teaching_point: "C919 每套液压系统有多个压力源：发动机驱动泵（EDP）、交流电动泵（ACMP）。主发失效时电动泵由 APU 或应急发电机供电。所有动力源失效时还有 RAT（冲压空气涡轮）自动放出驱动液压泵，确保最低限度操纵。"
+
+  - id: "hyd-qa-004-3000-psi-safe"
+    question: "3000 psi 液压压力安全吗？漏了会爆炸吗？"
+    audience: "普通公众"
+    teaching_point: "安全。液压管路按 CCAR-25.1435 设计，爆破压力是工作压力数倍。有泄漏探测和隔离阀，泄漏时自动隔离故障段。液压油不可压缩，管路破裂后压力迅速释放，不会像炸弹爆炸。"
+
+  - id: "hyd-qa-005-brakes-system"
+    question: "C919 刹车和汽车一样吗？"
+    audience: "普通公众/中学生"
+    teaching_point: "比汽车复杂。C919 刹车由液压驱动、电传控制，有防滑系统（类似 ABS 但更复杂）防止轮胎抱死。还有自动刹车系统（Auto-Brake）可预设减速率。脚踏板→电信号→刹车控制单元→液压阀门→刹车活塞。"
+
+  - id: "hyd-qa-006-landing-gear-retract"
+    question: "C919 起落架收放靠什么？"
+    audience: "中学生"
+    teaching_point: "靠液压系统。起飞后起落架由液压作动器收起收入机身/机翼舱内，着陆前放出并锁定。收放过程有顺序控制（先开舱门、收起落架、关舱门），确保不会卡住。有手动备用放起落架的应急系统。"
+
+  - id: "hyd-qa-007-accumulator"
+    question: "液压蓄压器有什么用？"
+    audience: "航空爱好者"
+    teaching_point: "蓄压器内充氮气，利用气体可压缩性储存液压能。在泵瞬时流量不足或失效瞬间补偿压力波动，防止作动器响应迟滞。刹车蓄压器还提供应急刹车液压源，确保液压失效时仍有几次刹车可用。"
+
+  - id: "hyd-qa-008-maintenance"
+    question: "C919 液压油怎么维护？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "需定期检测污染度（ISO 4406）、水分、酸值、电阻率。航空液压清洁度要求极高（严于 NAS 8 级），因精密伺服阀会被微小颗粒划伤。水分超标加速水解、降低润滑性。取样检测是例行维护科目，不是简单换油。"

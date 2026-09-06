@@ -1,0 +1,2298 @@
+{
+  "bank_total": 100,
+  "run_count": 100,
+  "run_seconds": 1109.3,
+  "method_note": "LLM-as-judge(deepseek-v4-flash) 每题 1 次调用；faithful/relevance 0-5 两维打分",
+  "cases": [
+    {
+      "id": "A01",
+      "query": "C919 的翼展是多少米？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-parameters-v1",
+        "c919-science-specifications-summary-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-parameters-v1",
+        "c919-science-vs-a320-v1",
+        "c919-science-overview-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 1810,
+      "answer": "C919 的翼展（含翼尖小翼）为 35.8 米。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "证据材料[1][2][3]均明确记载C919翼展为35.8米，答案完全有据。",
+      "relevance_reason": "答案直接、准确回应了用户关于翼展数值的问题，无省略或偏离。"
+    },
+    {
+      "id": "A02",
+      "query": "C919 的巡航马赫数是多少？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-parameters-v1",
+        "c919-science-specifications-summary-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-parameters-v1",
+        "c919-science-specifications-summary-v1",
+        "c919-science-mach-number-effects-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2475,
+      "answer": "根据证据材料，C919 的巡航马赫数为 0.785。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "证据[3]明确列出C919巡航Ma为0.785，答案与证据完全一致。",
+      "relevance_reason": "答案直接给出了用户询问的巡航马赫数，完整且准确。"
+    },
+    {
+      "id": "A03",
+      "query": "C919 的机身全长是多少米？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-parameters-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-parameters-v1",
+        "c919-science-specifications-summary-v1",
+        "c919-science-variants-family-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2025,
+      "answer": "根据证据材料，C919 基本型机身全长为 38.9 米。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的“C919 基本型机身全长 38.9 米”完全对应证据[1]中的“C919 基本型机身全长 38.9 米”。",
+      "relevance_reason": "答案直接给出了用户询问的机身全长数值，完整且明确。"
+    },
+    {
+      "id": "A04",
+      "query": "C919 采用的是哪款发动机？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-propulsion-v1",
+        "c919-science-engine-principle-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-propulsion-v1",
+        "c919-science-engine-principle-v1",
+        "c919-science-engine-bypass-ratio-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2061,
+      "answer": "C919 采用的是 CFM International 的 LEAP-1C 发动机，该发动机提供两个推力等级：基本型 LEAP-1C28（推力 130 kN）和延程型 LEAP-1C30（推力 137 kN）。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "证据材料明确写明 LEAP-1C 为 C919 的发动机，并给出推力等级数据，答案完全基于证据。",
+      "relevance_reason": "直接、完整地回答了 C919 采用的发动机型号及推力选项。"
+    },
+    {
+      "id": "A05",
+      "query": "C919 的客舱布局是什么样的？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-parameters-v1",
+        "c919-science-cabin-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-passenger-experience-v1",
+        "c919-science-cabin-v1",
+        "c919-science-project-background-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2788,
+      "answer": "C919 客舱采用典型的 3-3 单通道经济舱布局，即每排 6 个座位，左右各 3 个。座位数方面，标准两级客舱布局为 158 座（8 个公务舱加 150 个经济舱），全经济舱布局为 168 座，高密度布局约 190 座，最大可达 192 座。此外，C919 还提供多种客舱构型，如缩短型 C919-600（140-160 座）和加长型 C919-800（约增加 50 个座位）。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的所有事实均直接来自证据材料，包括3-3布局、各构型座位数等，无编造或外推。",
+      "relevance_reason": "答案直接且完整地回答了用户关于C919客舱布局的问题，涵盖了座椅布局和座位配置等关键信息。"
+    },
+    {
+      "id": "A06",
+      "query": "C919 的国产化率大约是多少？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-localization-rate-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-localization-rate-v1",
+        "c919-science-strategic-value-v1",
+        "c919-science-economic-impact-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2328,
+      "answer": "根据证据材料，C919 的国产化率约为 60%，这是按成本计算的行业估算值，并非官方精确数据。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的“约60%”和“行业估算、非官方数据”均直接来自证据[1][2]。",
+      "relevance_reason": "直接完整地回答了用户关于国产化率的问题，且未引入证据外信息。"
+    },
+    {
+      "id": "A07",
+      "query": "C919 首飞是哪一天？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-history-2017-first-flight-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-history-2017-first-flight-v1",
+        "c919-science-history-2017-2022-flight-test-v1",
+        "c919-science-maiden-flight-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 1639,
+      "answer": "C919 首飞日期为 2017 年 5 月 5 日，当日第一架原型机首飞，试飞工作开始。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "证据材料中多处明确记载首飞日期为 2017-05-05。",
+      "relevance_reason": "答案直接且完整地回答了用户问题，无多余信息。"
+    },
+    {
+      "id": "A08",
+      "query": "C919 什么时候取得型号合格证？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-certification-v1",
+        "c919-science-history-2022-2026-delivery-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-certification-v1",
+        "c919-science-certification-basis-v1",
+        "c919-science-history-2022-2026-delivery-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 1953,
+      "answer": "根据证据材料，C919 飞机型号合格证于 2022 年 9 月 29 日由中国民用航空局（CAAC）正式颁发，编号为 TC0045A。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的日期、颁发机构和编号均直接来自证据材料[1]。",
+      "relevance_reason": "答案直接且完整地回答了C919取得型号合格证的时间问题。"
+    },
+    {
+      "id": "A09",
+      "query": "C919 的最大起飞重量是多少？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-parameters-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-parameters-v1",
+        "c919-science-variants-family-v1",
+        "c919-science-stall-speed-margin-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3647,
+      "answer": "根据证据，C919-100 STD型号的最大起飞重量（MTOW）约为77,300 kg（约77.3吨）。另有资料估算为77-78吨。延程型（ER）的最大起飞重量在标准型基础上有所提高，但具体数值未在证据中给出。因此，标准型C919的最大起飞重量约77.3吨。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中所有事实均直接来自证据材料，如77,300 kg、77-78吨、延程型提高但未给出具体数值。",
+      "relevance_reason": "直接回答了用户关于C919最大起飞重量的问题，并补充了型号差异。"
+    },
+    {
+      "id": "A10",
+      "query": "C919 的实用升限是多少？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-specifications-summary-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-project-background-v1",
+        "c919-science-specifications-summary-v1",
+        "c919-science-history-2011-2015-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 1743,
+      "answer": "C919 的实用升限为 12,200 米（39,800 英尺）。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "证据材料中多处明确给出实用升限为 12,200 m（39,800 ft），答案完全依据该事实。",
+      "relevance_reason": "答案直接且完整地回答了用户关于 C919 实用升限的问题。"
+    },
+    {
+      "id": "A11",
+      "query": "C919 的制造商是哪家公司？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-specifications-summary-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-specifications-summary-v1",
+        "c919-science-parameters-v1",
+        "c919-science-project-background-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 1822,
+      "answer": "C919 的制造商是 COMAC（中国商用飞机有限责任公司）。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "证据[1]中制造商一栏明确写为COMAC（中国商用飞机有限责任公司）。",
+      "relevance_reason": "答案直接且完整地回答了制造商是谁的问题。"
+    },
+    {
+      "id": "A12",
+      "query": "C919 的客舱宽度是多少？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-parameters-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-parameters-v1",
+        "c919-science-passenger-experience-v1",
+        "c919-science-fuselage-structure-details-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3056,
+      "answer": "根据证据材料，C919 客舱采用单过道 3-3 布局，客舱宽度约 3.7 米（具体内部可用宽度为 3.74 米）。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中客舱宽度和布局均直接来自证据材料，未引入外部信息。",
+      "relevance_reason": "直接准确回答了用户关于客舱宽度的问题。"
+    },
+    {
+      "id": "A13",
+      "query": "歼-20 采用的是哪种气动布局？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "j20-science-canard-aero-v1",
+        "j20-science-canard-wing-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-vs-f22-v1",
+        "j20-science-overview-v1",
+        "j20-science-canard-aero-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3711,
+      "answer": "歼-20采用的是鸭式+大三角翼+边条翼的组合气动布局：机头两侧有鸭翼，主翼为大后掠三角翼，进气道为DSI无隔道超声速进气道，尾部为双外倾垂尾。这种布局兼顾隐身、超声速巡航和大迎角机动能力。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的每个事实（鸭式、大三角翼、边条翼、DSI、双外倾垂尾及作用）均直接出自证据材料[2]和[1]。",
+      "relevance_reason": "答案直接且完整地回答了歼-20采用哪种气动布局，无多余或缺失信息。"
+    },
+    {
+      "id": "A14",
+      "query": "歼-20 的进气道采用了什么设计？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "j20-science-dsi-intake-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-dsi-intake-v1",
+        "j20-science-inlet-aero-v1",
+        "j20-science-technical-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 4812,
+      "answer": "歼-20 采用了 DSI（无附面层隔道超声速）进气道设计。该设计具有低阻力特点，与高推重比发动机共同支撑了歼-20 的超声速巡航能力。证据材料仅提及设计名称和低阻力特性，未提供更具体的结构参数。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中关于DSI进气道和低阻力特性的陈述均直接出自证据材料[1]和[3]。",
+      "relevance_reason": "答案直接回答了歼-20进气道采用的设计，并基于证据给出了相关特点，完整回应了用户问题。"
+    },
+    {
+      "id": "A15",
+      "query": "歼-20 装备了什么雷达？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "j20-science-aesa-principle-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-aesa-principle-v1",
+        "j20-science-strategic-v1",
+        "j20-science-technical-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 4543,
+      "answer": "根据公开资料，歼-20采用综合航电架构，其核心装备是Type 1475有源相控阵（AESA）雷达，功率约100 kW，包含1,856个T/R模块。该雷达与EOTS光电瞄准系统、EORD-31红外搜索跟踪系统及机身多处被动光电窗口共同构成360°全向感知网络。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的事实（Type 1475 AESA雷达、约100 kW、1856个T/R模块等）均直接出自证据材料[3]。",
+      "relevance_reason": "直接明确回答了歼-20装备的雷达型号和类型，完全切合用户问题。"
+    },
+    {
+      "id": "A16",
+      "query": "运-20 的货舱宽度是多少？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "y20-science-parameters-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "y20-science-parameters-v1",
+        "y20-science-overview-v1",
+        "y20-science-cargo-hold-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 4257,
+      "answer": "证据不足，无法回答。现有证据仅提及运-20 货舱高度约 4 米，以及相比伊尔-76 货舱更宽更高，但未给出具体宽度数值。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案仅陈述证据中存在的货舱高度和比较性描述，未编造具体宽度。",
+      "relevance_reason": "用户询问宽度，证据中无宽度数据，拒答恰当，且完整说明证据情况。"
+    },
+    {
+      "id": "A17",
+      "query": "运-20 采用了几台发动机？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "y20-science-powerplant-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "y20-science-powerplant-v1",
+        "y20-science-engine-industry-v1",
+        "y20-science-overview-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3934,
+      "answer": "根据证据材料，运-20早期（Y-20/Y-20A）使用4台索洛维耶夫D-30KP-2或国产WS-18涡扇发动机，因此运-20采用4台发动机。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的“4台”直接源于证据材料[3]的明确表述。",
+      "relevance_reason": "答案直接回答了用户关于运-20发动机数量的问题。"
+    },
+    {
+      "id": "A18",
+      "query": "直-20 的最大起飞重量是多少？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "z20-science-parameters-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "z20-science-parameters-v1",
+        "z20-science-overview-v1",
+        "z20-science-vs-mi17-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 1863,
+      "answer": "根据证据材料，直-20 的最大起飞重量为 10,000 kg（约 10 吨级）。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "证据材料多处明确记载直-20最大起飞重量为10,000 kg，答案完全符合。",
+      "relevance_reason": "答案直接且完整地回答了用户关于直-20最大起飞重量的问题。"
+    },
+    {
+      "id": "A19",
+      "query": "直-20 装备了什么飞控系统？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "z20-science-fly-by-wire-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "z20-science-fly-by-wire-v1",
+        "z20-science-overview-v1",
+        "z20-science-parameters-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 1756,
+      "answer": "直-20装备了电传飞控系统。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "证据材料[2]明确提到直-20采用电传飞控系统。",
+      "relevance_reason": "答案直接且完整地回答了用户关于飞控系统的问题。"
+    },
+    {
+      "id": "A20",
+      "query": "运-20 的机翼是什么结构？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "y20-science-high-wing-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "y20-science-high-wing-v1",
+        "y20-science-highwing-shortfield-v1",
+        "y20-science-structural-load-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 4131,
+      "answer": "根据证据材料，运-20采用上单翼结构，其机翼属于大展弦比机翼，并配备增升装置，加上足够的推重比，从而赋予其短距起降能力，使其能在野战机场等简易跑道起降。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中所有事实均直接来自证据[1]和[2]，无额外编造。",
+      "relevance_reason": "直接回答了用户关于机翼结构的问题，并补充了相关特征，完整且切题。"
+    },
+    {
+      "id": "A21",
+      "query": "超临界翼型的阻力发散马赫数是多少？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-supercritical-airfoil-physics-v1"
+      ],
+      "gate": "weak",
+      "evidence_sources": [
+        "c919-science-mach-number-effects-v1",
+        "c919-science-supercritical-airfoil-physics-v1",
+        "c919-science-drag-breakdown-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 5613,
+      "answer": "超临界翼型的阻力发散马赫数（Mdd）因代次不同而异：第一代约0.78-0.80，第二代约0.80-0.82，第三代约0.82-0.84，第四代约0.84-0.86。C919采用的第四代超临界翼型Mdd约为0.84-0.86，其巡航马赫数0.785比Mdd低约0.06，留有充足阻力裕度。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "所有数值均出自证据材料中的表格和文字，无额外事实。",
+      "relevance_reason": "直接给出了超临界翼型阻力发散马赫数的具体数值范围，并特别指出了C919采用的第四代数值，完整回答了问题。"
+    },
+    {
+      "id": "A22",
+      "query": "激波会产生哪些不利影响？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-supercritical-airfoil-physics-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-supercritical-airfoil-physics-v1",
+        "c919-science-drag-breakdown-v1",
+        "c919-science-mach-number-effects-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2455,
+      "answer": "激波会产生以下不利影响：1. 波阻（激波本身消耗能量，产生阻力）；2. 边界层分离（激波后的逆压梯度可能引起边界层分离，分离区产生附加阻力）；3. 抖振（激波诱导的分离不稳定，引起结构振动）；4. 升力损失（激波后压力恢复不完全，升力下降）。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的每一项不利影响均直接来源于证据材料中的列举。",
+      "relevance_reason": "答案直接、完整地回答了激波的不利影响，与用户问题完全匹配。"
+    },
+    {
+      "id": "A23",
+      "query": "电传操纵相比机械操纵有什么优势？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-fly-by-wire-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-fly-by-wire-v1",
+        "c919-science-lift-coefficient-aoa-v1",
+        "c919-science-fbw-redundancy-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 5783,
+      "answer": "电传操纵相比机械操纵的优势包括：提供失速保护，自动限制最大迎角防止失速；自动限制机动过载不超过结构限制值；自动调节水平安定面保持飞行姿态；自动协调转弯中的副翼和方向舵，简化操纵；具备故障容限，通过余度设计在多次故障后仍可安全飞行。此外，飞控计算机持续监控迎角，在接近临界值时自动干预，将飞机保持在安全飞行包线内。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中所有优势均直接来自证据材料[1]和[2]，无编造或外推。",
+      "relevance_reason": "答案直接列出了电传操纵相比机械操纵的具体优势，完整回答了用户问题。"
+    },
+    {
+      "id": "A24",
+      "query": "涡扇发动机的推力是怎么产生的？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-engine-principle-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-engine-principle-v1",
+        "c919-science-aerodynamics-v1",
+        "c919-science-turbofan-cycle-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3535,
+      "answer": "涡扇发动机前部的大直径风扇吸入大量空气，气流分为内涵道和外涵道。内涵道空气进入核心机（压气机-燃烧室-涡轮），用于驱动风扇并提供附加推力；外涵道空气绕过核心机直接向后排出，产生大部分推力。因此，涡扇发动机的推力主要由外涵道气流产生，内涵道则负责驱动风扇并贡献附加推力。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案内容均来自证据[1]，包括气流分流、内涵道作用和外涵道产生大部分推力。",
+      "relevance_reason": "直接完整回答了涡扇发动机推力产生的原理，没有答非所问或省略。"
+    },
+    {
+      "id": "A25",
+      "query": "翼尖小翼有什么作用？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-drag-breakdown-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-drag-breakdown-v1",
+        "c919-science-winglet-aerodynamics-v1",
+        "c919-science-wing-structure-details-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3520,
+      "answer": "翼尖小翼通过近似垂直于机翼平面的构型，在不显著增加翼展的情况下增大有效展弦比；它产生的小涡与翼尖涡方向相反，部分抵消翼尖涡，减弱下洗，从而降低诱导阻力约3-5%；在巡航阶段可节省燃油约2-3%，长航程下累积节油效益显著；其代价是增加约50-100公斤结构重量并略增巡航阻力，但总体收益大于损失。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的每项事实均直接出自证据材料，包括增大展弦比、抵消翼尖涡、降阻节油数据及重量代价等。",
+      "relevance_reason": "答案直接且完整地回答了翼尖小翼的作用，涵盖原理、效益和代价，无遗漏或偏题。"
+    },
+    {
+      "id": "A26",
+      "query": "铝锂合金相比普通铝合金有什么优势？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-aluminum-lithium-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-aluminum-lithium-v1",
+        "c919-science-composite-material-v1",
+        "c919-science-fatigue-damage-tolerance-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2587,
+      "answer": "铝锂合金相比普通铝合金具有密度更低、刚度更高、疲劳性能更好的优势。具体而言，其密度降低约8-10%，弹性模量提高约10-15%，疲劳裂纹扩展速率更低，因此能有效减轻结构重量并改善疲劳性能。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的密度、刚度、疲劳性能等描述均直接来源于证据材料[1][2][3]，无编造或外推。",
+      "relevance_reason": "答案直接且完整地回答了铝锂合金相比普通铝合金的优势，紧扣用户问题。"
+    },
+    {
+      "id": "A27",
+      "query": "复合材料有什么特点？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "c919-science-composite-material-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-composite-mechanics-v1",
+        "c919-science-composite-material-v1",
+        "c919-science-specifications-summary-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3605,
+      "answer": "证据不足，无法回答。所提供的证据材料仅涉及C919飞机中复合材料的占比（12%）等具体数据，未给出复合材料本身的特点。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案未引入任何证据外事实，仅基于证据不足做出拒答。",
+      "relevance_reason": "证据确实未提供复合材料特点，拒答恰当。"
+    },
+    {
+      "id": "A28",
+      "query": "什么是飞行包线？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "j20-science-flight-envelope-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-flight-envelope-v1",
+        "c919-science-fbw-redundancy-v1",
+        "c919-science-fbw-control-laws-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2667,
+      "answer": "飞行包线界定速度、高度、过载的安全边界。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案直接复述了证据[1]中关于飞行包线的定义。",
+      "relevance_reason": "答案直接且完整地回答了用户问题，证据充足。"
+    },
+    {
+      "id": "A29",
+      "query": "有源相控阵雷达的工作原理是什么？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "j20-science-aesa-principle-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-aesa-principle-v1",
+        "j20-science-overview-v1",
+        "c919-science-engine-principle-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2981,
+      "answer": "证据不足，无法回答。现有证据仅提及歼-20配备有源相控阵雷达及其参数，未说明其工作原理。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案未引入任何证据外事实，仅基于证据不足作出判断。",
+      "relevance_reason": "在证据未包含所需原理的情况下，直接拒答是最恰当的回答方式。"
+    },
+    {
+      "id": "A30",
+      "query": "鸭式布局的优势有哪些？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "j20-science-canard-aero-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-canard-aero-v1",
+        "j20-science-high-aoa-v1",
+        "j20-science-technical-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 4490,
+      "answer": "鸭式布局在主机翼前方布置一对较小的前翼（鸭翼），其优势包括：鸭翼产生抬头力矩，可替代传统布局的水平尾翼；大迎角时鸭翼先于主翼产生涡流并扫过主翼上表面，为主翼增能，推迟气流分离，提高最大升力系数；推迟失速，配合飞控实现大迎角控制；鸭翼与主翼耦合产生额外涡升力，改善低速大迎角机动和起降性能，并为超声速巡航提供良好的升阻特性。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "所有陈述均能直接从证据材料[1][2][3]中找到依据，无编造或外推。",
+      "relevance_reason": "答案直接、完整地列出了鸭式布局的多项优势，紧扣用户问题。"
+    },
+    {
+      "id": "A31",
+      "query": "红外隐身的基本原理是什么？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "j20-science-ir-stealth-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-ir-stealth-v1",
+        "j20-science-stealth-principle-v1",
+        "j20-science-em-stealth-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 4620,
+      "answer": "证据不足，无法回答。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案未引入任何证据外事实，仅指出证据不足，符合材料实际内容。",
+      "relevance_reason": "用户询问红外隐身原理，但证据材料仅涉及雷达隐身和RCS，未提供红外原理，拒答恰当。"
+    },
+    {
+      "id": "A32",
+      "query": "什么是第五代战斗机？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "j20-science-5th-gen-definition-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-5th-gen-definition-v1",
+        "j20-science-overview-v1",
+        "j20-science-pilot-training-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 8252,
+      "answer": "第五代战斗机通常以隐身、超巡、超机动、超信息感知为标志。中国的歼-20是中国首型第五代战斗机，它与美国的F-22、F-35和俄罗斯的苏-57同属新一代战斗机。此外，第五代战斗机的飞行员需要掌握隐身作战、传感器融合等新技能，培训体系与传统战斗机有明显区别。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的所有事实性陈述均直接来源于证据材料[1][2][3]，未引入证据外内容。",
+      "relevance_reason": "答案直接定义了第五代战斗机的标志性特征，并结合歼-20等实例进行了说明，完整回答了用户问题。"
+    },
+    {
+      "id": "A33",
+      "query": "后掠翼有什么作用？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "y20-science-sweep-wing-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-supercritical-airfoil-physics-v1",
+        "c919-science-stall-speed-margin-v1",
+        "y20-science-sweep-wing-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 5384,
+      "answer": "证据不足，无法回答。现有材料仅涉及超临界翼型与失速特性，未提供后掠翼作用的具体信息。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案未引入证据外事实，仅说明证据不足。",
+      "relevance_reason": "证据确实未包含后掠翼作用，拒答恰当。"
+    },
+    {
+      "id": "A34",
+      "query": "旋翼是怎么产生升力的？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "z20-science-rotor-lift-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "z20-science-rotor-lift-v1",
+        "z20-science-rotor-aero-v1",
+        "j20-science-vortex-lift-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2071,
+      "answer": "旋翼桨叶旋转时，每片桨叶相当于一个旋转的机翼，桨叶相对气流产生升力；升力的垂直分量支撑直升机重量，水平分量（通过倾斜旋翼锥面）推动直升机前飞。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "所有事实均直接来自证据[1]和[2]，无外推或编造。",
+      "relevance_reason": "直接、完整地回答了旋翼如何产生升力，并说明了升力分量作用。"
+    },
+    {
+      "id": "A35",
+      "query": "涡升力是什么？",
+      "dimension": "accuracy",
+      "expect": "hit",
+      "gold": [
+        "j20-science-vortex-lift-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-vortex-lift-v1",
+        "z20-science-rotor-lift-v1",
+        "j20-science-airframe-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 8228,
+      "answer": "证据不足，无法回答。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案未包含任何事实性陈述，仅拒答，无编造。",
+      "relevance_reason": "证据仅提及涡升力由边条翼与鸭翼产生，未解释其定义或原理，不足以回答“是什么”，拒答恰当。"
+    },
+    {
+      "id": "B01",
+      "query": "激波对翼型性能有哪些影响？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "c919-science-supercritical-airfoil-physics-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-aero-windtunnel-v1",
+        "c919-science-supercritical-airfoil-physics-v1",
+        "y20-science-hq-adapt-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2498,
+      "answer": "根据证据材料，激波对翼型性能有以下不利影响：1. 波阻：激波本身消耗能量，产生阻力；2. 边界层分离：激波后的逆压梯度可能引起边界层分离；3. 抖振：激波诱导的分离不稳定，引起结构振动；4. 升力损失：激波后压力恢复不完全，升力下降。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的每条影响均直接源自证据[2]对激波产生的不利影响的列举，无外部事实。",
+      "relevance_reason": "答案直接完整回答了激波对翼型性能的影响，与用户问题完全对应。"
+    },
+    {
+      "id": "B02",
+      "query": "超临界翼型相比常规翼型有什么改进？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "c919-science-supercritical-airfoil-physics-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-supercritical-airfoil-physics-v1",
+        "c919-science-mach-number-effects-v1",
+        "c919-science-drag-breakdown-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 6069,
+      "answer": "超临界翼型相比常规翼型在多项性能指标上有所改进：巡航效率（升阻比）提升约20%，巡航阻力降低约8%（主要来自波阻降低），阻力发散马赫数提高0.06-0.08，跨声速性能提升；在相同阻力发散马赫数下翼型厚度可增加2-3%，有利于减轻结构重量；抖振边界提高0.05马赫，改善安全裕度。其设计特点包括上表面平坦、下表面向下凸出、后缘向下弯，从而减弱激波强度、维持总升力并改善压力分布，使飞机能在更高马赫数下巡航。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "所有改进指标均直接来自证据材料，无额外信息或编造。",
+      "relevance_reason": "直接列举了超临界翼型相对常规翼型的各项改进，完整回答了用户问题。"
+    },
+    {
+      "id": "B03",
+      "query": "复合材料在航空中有哪些应用？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "c919-science-composite-material-v1",
+        "c919-science-composite-mechanics-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-composite-material-v1",
+        "c919-science-composite-mechanics-v1",
+        "c919-science-aluminum-lithium-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3514,
+      "answer": "复合材料在航空中的应用（以C919为例）包括：尾翼（垂直安定面、水平安定面）、活动面（襟翼、副翼、扰流板）、翼尖小翼、整流罩等非关键承力结构，占整机结构约12%，可减重20%-25%。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的每项应用和比例均直接来自证据材料[2][3]。",
+      "relevance_reason": "直接列举了复合材料在航空器上的具体应用部位，完整回答了用户问题。"
+    },
+    {
+      "id": "B04",
+      "query": "电传飞控的余度设计是怎样的？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "c919-science-fbw-redundancy-v1",
+        "c919-science-fly-by-wire-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-fbw-redundancy-v1",
+        "c919-science-fbw-control-laws-v1",
+        "c919-science-fly-by-wire-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 6131,
+      "answer": "根据现有证据材料，仅能确认C919采用全权限数字式电传飞控系统，其余度架构为“多余度”，并需满足CCAR-25部适航标准中的FBW余度要求。但材料未提供具体的余度设计细节（如余度数量、通道结构等），因此无法回答电传飞控余度设计的具体情况。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案仅陈述证据中已有的“多余度”和“CCAR-25要求”，未引入额外事实，忠实于证据。",
+      "relevance_reason": "针对用户问题，证据不足时恰当拒答，因此相关性强。"
+    },
+    {
+      "id": "B05",
+      "query": "航电系统的 IMA 架构是什么？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "c919-science-avionics-ima-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-avionics-ima-v1",
+        "c919-science-avionics-v1",
+        "c919-science-vs-a320-avionics-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 5152,
+      "answer": "IMA（综合模块化航电）架构是一种将飞行信息显示、系统管理、通信导航、飞行管理等功能集成在共享通用计算平台上的架构。它采用ARINC 653分区化软件架构，支持时间和空间隔离，并通过ARINC 664以太网通信。相比传统联邦式航电，IMA具有重量更轻（约减重30%）、体积更小、可扩展性强、升级成本低（软件加载即可扩展）等优点，但也面临资源分配与隔离设计复杂、认证复杂等挑战。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的每项事实（共享平台、ARINC 653分区、ARINC 664、减重约30%、软件升级、挑战等）均直接出自证据材料。",
+      "relevance_reason": "答案直接、完整地解释了IMA架构的定义、特点、优势与挑战，切合用户问题。"
+    },
+    {
+      "id": "B06",
+      "query": "液压系统的余度设计有什么特点？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "c919-science-hydraulic-system-details-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-fbw-redundancy-v1",
+        "c919-science-fbw-control-laws-v1",
+        "c919-science-history-2018-static-test-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2381,
+      "answer": "液压系统的余度设计特点为三余度，即配备三套独立液压系统，可容忍两套失效时仍能工作。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的三余度、三套独立液压系统、两失效可工作均直接出自证据[1]和[2]。",
+      "relevance_reason": "答案直接概括了液压系统余度设计的核心特点，完整回应了用户问题。"
+    },
+    {
+      "id": "B07",
+      "query": "燃油系统的惰性气体系统是做什么的？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "c919-science-fuel-system-details-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-fuel-v1",
+        "c919-science-fuel-system-details-v1",
+        "c919-science-program-organization-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2221,
+      "answer": "根据证据材料，燃油系统的惰化系统会向油箱内注入惰性气体（氮气），以降低油箱内燃油蒸汽的浓度，防止燃油蒸汽燃烧，从而防止油箱爆炸。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案内容完全源自证据材料，未引入外部事实。",
+      "relevance_reason": "直接回答了惰性气体系统的用途，且与问题高度相关。"
+    },
+    {
+      "id": "B08",
+      "query": "起落架的刹车系统由谁提供？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "c919-science-landing-gear-details-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-landing-gear-details-v1",
+        "c919-science-landing-gear-v1",
+        "c919-science-supplier-system-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2470,
+      "answer": "根据证据材料，C919主起落架配备多盘式碳刹车装置，该刹车系统的供应商为霍尼韦尔。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "证据[2]明确说明刹车装置供应商为霍尼韦尔，答案陈述完全有据。",
+      "relevance_reason": "答案直接回应了刹车系统由谁提供的问题，且未遗漏关键信息。"
+    },
+    {
+      "id": "B09",
+      "query": "飞机的防冰系统有哪些类型？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "c919-science-ice-protection-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-ice-protection-v1",
+        "c919-science-history-2019-six-prototypes-v1",
+        "c919-science-history-2017-second-prototype-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2051,
+      "answer": "证据不足，无法回答",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案仅声明证据不足，未引入任何证据外事实。",
+      "relevance_reason": "证据材料未列出防冰系统类型，拒答是恰当行为。"
+    },
+    {
+      "id": "B10",
+      "query": "适航取证有哪些符合性方法？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "c919-science-airworthiness-process-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-airworthiness-process-v1",
+        "c919-science-international-certification-v1",
+        "c919-science-certification-basis-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 7705,
+      "answer": "证据不足，无法回答。现有证据仅提及符合性方法编号为MC0-MC9，但未列出各编号对应的具体符合性方法。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案仅复述证据中提到的MC0-MC9编号体系，未添加额外事实，且明确拒答。",
+      "relevance_reason": "用户询问具体符合性方法，证据未提供具体内容，拒答恰当，直接回应了问题。"
+    },
+    {
+      "id": "B11",
+      "query": "复合材料力学的各向异性是什么？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "c919-science-composite-mechanics-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-composite-mechanics-v1",
+        "c919-science-composite-material-v1",
+        "c919-science-aluminum-lithium-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3657,
+      "answer": "证据不足，无法回答。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "参考答案未陈述任何事实，仅基于证据不足拒答。",
+      "relevance_reason": "证据材料未定义各向异性，拒答恰当。"
+    },
+    {
+      "id": "B12",
+      "query": "疲劳与损伤容限设计的原则是什么？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "c919-science-fatigue-damage-tolerance-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-history-2018-static-test-v1",
+        "c919-science-composite-mechanics-v1",
+        "c919-science-fatigue-damage-tolerance-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 12313,
+      "answer": "疲劳与损伤容限设计的原则包括：必须通过疲劳与损伤容限分析验证，保证结构在设计服役寿命内安全运行；需开展模拟3倍设计寿命的全机疲劳试验，验证疲劳寿命和损伤容限；设计需考虑实际交变载荷的累积效应，并合理利用材料的疲劳特性和损伤容限优势。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的每一条均直接来自证据材料，无编造。",
+      "relevance_reason": "答案直接概括了证据中关于疲劳与损伤容限设计验证的原则，完整回应问题。"
+    },
+    {
+      "id": "B13",
+      "query": "电传操纵的控制律有哪些模式？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "c919-science-fbw-control-laws-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-vs-a320-avionics-v1",
+        "c919-science-fbw-control-laws-v1",
+        "c919-science-fbw-redundancy-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3350,
+      "answer": "电传操纵的控制律通常包括正常、备用和直接三种模式。正常模式在系统正常时启用，全部包线保护可用；备用模式在部分故障或超出包线时启用，部分包线保护降级或退出；直接模式在严重故障时启用，机组输入直接映射到舵面，无包线保护。部分电传系统（如A320）还保留机械备份。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的所有事实均直接来自证据材料[2]和[1]，无编造或外推。",
+      "relevance_reason": "答案直接列出了电传操纵的控制律模式及其特征，完全回答了用户问题。"
+    },
+    {
+      "id": "B14",
+      "query": "S-N 曲线描述的是什么？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "c919-science-fatigue-damage-tolerance-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-fatigue-damage-tolerance-v1",
+        "c919-science-composite-mechanics-v1",
+        "c919-science-mach-number-effects-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3138,
+      "answer": "S-N曲线是描述材料疲劳寿命的曲线，横轴为应力循环次数N（对数坐标），纵轴为应力幅值S（对数坐标），表示材料或结构在给定应力水平下发生疲劳失效的循环次数。不同材料的S-N曲线特征不同，部分钢存在水平段，有明显疲劳极限；铝合金和复合材料持续下降，无明显疲劳极限。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中所有事实均直接来自证据材料，如S-N曲线定义和不同材料的特征。",
+      "relevance_reason": "答案直接、完整地描述了S-N曲线的含义，完全回答了用户问题。"
+    },
+    {
+      "id": "B15",
+      "query": "高速飞行中的气动加热是怎么产生的？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "j20-science-aerodynamic-heating-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-aerodynamic-heating-v1",
+        "c919-science-aerodynamics-v1",
+        "c919-science-lighting-fire-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2916,
+      "answer": "证据不足，无法回答。证据材料仅提到超声速飞行产生气动加热，影响材料与结构设计，但未解释其产生的具体机理。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案仅指出证据不足，未引入任何证据外事实。",
+      "relevance_reason": "证据确实不足以解释气动加热产生机理，拒答恰当。"
+    },
+    {
+      "id": "B16",
+      "query": "弹射座椅的作用是什么？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "j20-science-ejection-seat-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-ejection-seat-v1",
+        "c919-science-localization-rate-v1",
+        "c919-science-passenger-experience-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 7741,
+      "answer": "弹射座椅的作用是应急逃生，主要用于战斗机飞行员在紧急情况下快速脱离飞机，保障生命安全。歼-20的具体型号官方未详细公开。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "证据材料[1]明确写明“弹射座椅用于应急逃生”，答案未引入额外事实。",
+      "relevance_reason": "答案直接回答了弹射座椅的作用，并补充了关联信息，完全切题。"
+    },
+    {
+      "id": "B17",
+      "query": "机载数据链的主要功能是什么？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "j20-science-data-link-v1",
+        "j20-science-datalink-sys-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-datalink-sys-v1",
+        "c919-science-communication-system-v1",
+        "c919-science-avionics-ima-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 5483,
+      "answer": "根据证据材料，机载数据链的主要功能是实现空地/空空之间的数据通信。具体包括空管数据链通信（如CPDLC），通过数据链文本消息替代部分语音通信，在语音覆盖不足的区域尤为重要；此外，ACARS数据链也用于数据通信。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的事实均来自证据[2]和[3]，未引入外部信息。",
+      "relevance_reason": "答案直接概括了机载数据链的主要功能，完整回答了用户问题。"
+    },
+    {
+      "id": "B18",
+      "query": "光电瞄准系统用于完成什么任务？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "j20-science-eots-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-eots-v1",
+        "j20-science-overview-v1",
+        "j20-science-avionics-weapons-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 4430,
+      "answer": "据证据材料，歼-20的光电瞄准系统安装在机头下方，与红外搜索跟踪系统配合，通过机身多处被动光电窗口实现全向态势感知和360°无源探测，使战机可在不开雷达（静默）状态下探测目标，保持隐身优势。",
+      "faithful_score": 5,
+      "relevance_score": 4,
+      "verdict": "correct",
+      "faithful_reason": "答案中的陈述均直接出自证据材料，无添加外部事实。",
+      "relevance_reason": "答案准确概括了光电瞄准系统的功能，虽未明确展开“任务”一词，但已直接回答其用途。"
+    },
+    {
+      "id": "B19",
+      "query": "空中受油系统有什么作用？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "j20-science-aerial-refueling-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-aerial-refueling-v1",
+        "y20-science-refueling-probe-v1",
+        "c919-science-history-2017-second-prototype-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3522,
+      "answer": "证据不足，无法回答。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案仅表示证据不足，未引入任何证据外事实，完全忠实于材料。",
+      "relevance_reason": "用户询问作用，但证据仅提及受油系统为重要主题，未给出具体作用，证据确实不足，拒答恰当。"
+    },
+    {
+      "id": "B20",
+      "query": "大迎角机动的基本原理是什么？",
+      "dimension": "ranking",
+      "expect": "hit",
+      "gold": [
+        "j20-science-high-aoa-v1",
+        "j20-science-vortex-lift-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-high-aoa-v1",
+        "j20-science-lerx-v1",
+        "j20-science-canard-aero-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2712,
+      "answer": "大迎角机动的基本原理包括：机翼前缘边条（LERX）在大迎角下产生涡流，增强机动性；鸭式布局在大迎角时能保持升力、推迟失速，并配合飞控系统的限制，从而使歼-20具有优异的大迎角机动能力。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的陈述全部可在证据材料[2]和[3]中找到依据。",
+      "relevance_reason": "答案直接、完整地回答了大迎角机动的基本原理，且未引入证据外内容。"
+    },
+    {
+      "id": "C01",
+      "query": "C919 的巡航马赫数是多少？",
+      "dimension": "consistency",
+      "expect": "hit",
+      "gold": [
+        "c919-science-parameters-v1",
+        "c919-science-specifications-summary-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-parameters-v1",
+        "c919-science-specifications-summary-v1",
+        "c919-science-mach-number-effects-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2259,
+      "answer": "证据材料显示，C919 的巡航马赫数为 0.785，介于 A320neo 的 0.78 与 B737 MAX 8 的 0.79 之间。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的巡航马赫数 0.785 直接来自证据材料 [3] 的表格。",
+      "relevance_reason": "答案直接给出了用户询问的 C919 巡航马赫数，并作了简要对比，完全回应问题。"
+    },
+    {
+      "id": "C02",
+      "query": "C919 超临界翼型的阻力发散马赫数是多少？",
+      "dimension": "consistency",
+      "expect": "hit",
+      "gold": [
+        "c919-science-supercritical-airfoil-physics-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-mach-number-effects-v1",
+        "c919-science-supercritical-airfoil-physics-v1",
+        "c919-science-drag-breakdown-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3580,
+      "answer": "根据证据材料，C919 采用第四代超临界翼型，其阻力发散马赫数（Mdd）约为 0.84-0.86。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中关于Mdd数值的陈述直接来源于证据[1]和[2]中“第四代超临界翼型 Mdd 约 0.84-0.86”的明确记载。",
+      "relevance_reason": "答案直接且完整地回答了用户关于C919超临界翼型阻力发散马赫数数值的问题。"
+    },
+    {
+      "id": "C03",
+      "query": "激波会产生哪些不利影响？",
+      "dimension": "consistency",
+      "expect": "hit",
+      "gold": [
+        "c919-science-supercritical-airfoil-physics-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-supercritical-airfoil-physics-v1",
+        "c919-science-drag-breakdown-v1",
+        "c919-science-mach-number-effects-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3048,
+      "answer": "激波会产生以下不利影响：波阻（激波消耗能量，产生阻力）；边界层分离（激波后的逆压梯度可能引起边界层分离，分离区产生附加阻力）；抖振（激波诱导的分离不稳定，引起结构振动）；升力损失（激波后压力恢复不完全，升力下降）。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的每条影响均直接出自证据材料[1]的列举及[3]的补充说明。",
+      "relevance_reason": "答案直接完整回答了‘激波会产生哪些不利影响’这一具体问题，无遗漏。"
+    },
+    {
+      "id": "C04",
+      "query": "C919 发动机的推力数值是多少？",
+      "dimension": "consistency",
+      "expect": "hit",
+      "gold": [
+        "c919-science-engine-bypass-ratio-v1",
+        "c919-science-parameters-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-engine-principle-v1",
+        "c919-science-engine-bypass-ratio-v1",
+        "c919-science-turbofan-cycle-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3458,
+      "answer": "C919 配备的 LEAP-1C 发动机提供两个推力等级：基本型 LEAP-1C28 的推力为 130 kN（约 129.98 kN），延程型 LEAP-1C30 的推力为 137 kN（约 137.14 kN）。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的推力数值均直接来自证据材料[1]和[3]，无任何额外事实。",
+      "relevance_reason": "答案直接且完整地回答了用户关于推力数值的问题，并列出了两个等级的具体数值。"
+    },
+    {
+      "id": "C05",
+      "query": "C919 的座位数是多少？",
+      "dimension": "consistency",
+      "expect": "hit",
+      "gold": [
+        "c919-science-parameters-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-parameters-v1",
+        "c919-science-specifications-summary-v1",
+        "c919-science-variants-family-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 5316,
+      "answer": "根据证据材料，C919 的标准两舱布局为 158 座（8 公务舱 + 150 经济舱），全经济舱布局为 168 座，最大座位数为 192 座。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中所有座位数均直接引自证据材料中的表格数据。",
+      "relevance_reason": "直接给出了C919的多种布局座位数，完整回答了用户问题。"
+    },
+    {
+      "id": "C06",
+      "query": "波音 737 的最大巡航速度是多少？",
+      "dimension": "consistency",
+      "expect": "weak",
+      "gold": [],
+      "gate": "confident",
+      "evidence_sources": [
+        "z20-science-parameters-v1",
+        "c919-science-design-philosophy-v1",
+        "c919-science-parameters-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3901,
+      "answer": "证据不足，无法回答。所提供的证据材料中未包含任何关于波音 737 最大巡航速度的信息，仅涉及其他飞行器的速度参数。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案未引入任何外部事实，仅陈述证据不足，完全符合证据内容。",
+      "relevance_reason": "证据确实未提及波音737，拒答恰当且直接回应了问题场景。"
+    },
+    {
+      "id": "C07",
+      "query": "歼-20 的单价是多少？",
+      "dimension": "consistency",
+      "expect": "weak",
+      "gold": [],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-parameters-v1",
+        "j20-science-strategic-v1",
+        "j20-science-airforce-modernization-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2950,
+      "answer": "证据不足，无法回答。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "参考答案完全基于证据缺失的情况，未引入任何证据外事实。",
+      "relevance_reason": "用户询问单价，证据材料中无单价信息，拒答恰当且直接。"
+    },
+    {
+      "id": "C08",
+      "query": "C919 油箱的容量是多少升？",
+      "dimension": "consistency",
+      "expect": "hit",
+      "gold": [
+        "c919-science-fuel-system-details-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-fuel-system-details-v1",
+        "c919-science-fuel-v1",
+        "c919-science-parameters-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3798,
+      "answer": "根据证据，C919采用三油箱布局，左机翼油箱约4,000升，右机翼油箱约4,000升，中央油箱约8,500升，总容量约16,500升。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的容量数据均直接取自证据材料[1]中的表格。",
+      "relevance_reason": "答案直接给出了C919油箱总容量及分项容量，完整回答用户问题。"
+    },
+    {
+      "id": "C09",
+      "query": "空客 A380 的翼展是多少？",
+      "dimension": "consistency",
+      "expect": "weak",
+      "gold": [],
+      "gate": "confident",
+      "evidence_sources": [
+        "y20-science-parameters-v1",
+        "c919-science-parameters-v1",
+        "c919-science-specifications-summary-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2468,
+      "answer": "证据不足，无法回答。证据材料中仅提及 y20 翼展 50 m、c919 翼展 35.8 m（含小翼）等信息，未包含空客 A380 的翼展数据。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案仅陈述证据不足，未引入任何证据外事实。",
+      "relevance_reason": "证据确实未提供 A380 翼展，拒答恰当。"
+    },
+    {
+      "id": "C10",
+      "query": "长征五号火箭的推力是多少？",
+      "dimension": "consistency",
+      "expect": "weak",
+      "gold": [],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-parameters-v1",
+        "c919-science-variants-family-v1",
+        "y20-science-parameters-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3812,
+      "answer": "证据不足，无法回答",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案未引入任何证据外事实，仅依据证据材料均不涉及长征五号而作出证据不足判断。",
+      "relevance_reason": "证据材料只包含C919和运-20的发动机推力，与长征五号火箭推力完全无关，因此拒答是恰当且相关的。"
+    },
+    {
+      "id": "C11",
+      "query": "运-20 的最大载重是多少？",
+      "dimension": "consistency",
+      "expect": "hit",
+      "gold": [
+        "y20-science-parameters-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "y20-science-parameters-v1",
+        "y20-science-cargo-hold-v1",
+        "y20-science-overview-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3150,
+      "answer": "根据证据材料，运-20 的最大载重为 66,000 kg，即 66 吨。这一数据同时出现在多个来源中，并且其最大起飞重量为 220,000 kg。证据表明，66 吨级载重使运-20 位列大型战略运输机行列。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的所有事实（最大载重 66,000 kg、最大起飞重量 220,000 kg、大型战略运输机）均直接来自证据材料。",
+      "relevance_reason": "答案直接、完整地回答了运-20 最大载重是多少的问题，没有引入无关信息。"
+    },
+    {
+      "id": "C12",
+      "query": "直-20 的巡航速度是多少？",
+      "dimension": "consistency",
+      "expect": "hit",
+      "gold": [
+        "z20-science-parameters-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "z20-science-parameters-v1",
+        "z20-science-vs-uh60-v1",
+        "z20-science-vs-mi17-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2754,
+      "answer": "根据证据材料，直-20 的巡航速度为 290 km/h。该数据在多个对比表格中均有记载，与最大速度 360 km/h 等参数并列，可用于与其他直升机如 UH-60L（约 278 km/h）和米-17（约 230 km/h）进行对比。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的巡航速度 290 km/h 直接来源于证据材料[1]和[2][3]中的表格。",
+      "relevance_reason": "答案直接给出了用户询问的直-20巡航速度，并补充了对比信息，完全回答了问题。"
+    },
+    {
+      "id": "C13",
+      "query": "C919 的单价是多少？",
+      "dimension": "consistency",
+      "expect": "weak",
+      "gold": [
+        "c919-science-commercial-value-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-orders-by-airline-v1",
+        "c919-science-market-positioning-v1",
+        "c919-science-commercial-value-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3898,
+      "answer": "根据证据材料，C919的目录价格约为6.53亿元人民币（约合1.01亿美元），这一价格相较于A320neo和B737 MAX具有竞争力。此外，证据也提及2012年历史订单中C919单价为6,840万美元，但当前目录价以最新数据为准。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的价格数据均直接来自证据材料，无外部事实。",
+      "relevance_reason": "直接给出C919的单价（目录价），并补充了历史价格，完整回答了问题。"
+    },
+    {
+      "id": "C14",
+      "query": "涡扇发动机的涵道比越大越好吗？",
+      "dimension": "consistency",
+      "expect": "hit",
+      "gold": [
+        "c919-science-engine-bypass-ratio-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-engine-bypass-ratio-v1",
+        "c919-science-engine-principle-v1",
+        "c919-science-vs-a320neo-engine-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3972,
+      "answer": "涵道比并非越大越好。虽然高涵道比通常带来更高的推进效率和更低的噪声，但涵道比增大会使风扇直径增大，导致发动机短舱阻力增加、离地间隙减小，起落架高度需相应增加，带来设计挑战。因此需权衡利弊，综合考虑效率、噪声与飞机布局等因素。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的每项事实均可在证据材料[1]和[2]中找到对应依据。",
+      "relevance_reason": "直接回答了“是否越大越好”的问题，并给出了基于证据的权衡性结论。"
+    },
+    {
+      "id": "C15",
+      "query": "C919 采用了钛合金材料吗？",
+      "dimension": "consistency",
+      "expect": "hit",
+      "gold": [
+        "c919-science-composite-material-v1",
+        "c919-science-fuselage-structure-details-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-fuselage-v1",
+        "c919-science-fuselage-structure-details-v1",
+        "c919-science-manufacturing-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 5462,
+      "answer": "是的，C919采用了钛合金材料。根据证据，C919机体结构材料中包含钛合金，其占比在不同来源中约为3%至7%之间，主要用于起落架接头和高温区域等部位。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "证据[1]和[2]均明确列出钛合金为C919机体材料之一并给出占比，答案全部有据。",
+      "relevance_reason": "直接正面回答了用户关于C919是否采用钛合金的问题，并补充了占比和用途。"
+    },
+    {
+      "id": "C16",
+      "query": "波音 747 是双层客机吗？",
+      "dimension": "consistency",
+      "expect": "weak",
+      "gold": [],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-vs-b737-v1",
+        "c919-science-vs-b737max-orders-v1",
+        "c919-science-overview-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2836,
+      "answer": "证据不足，无法回答",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "证据材料未提及波音747或双层客机，答案仅陈述证据不足，无任何编造",
+      "relevance_reason": "用户问题在证据中无相关信息，恰当拒答"
+    },
+    {
+      "id": "C17",
+      "query": "C919 的失速速度是多少？",
+      "dimension": "consistency",
+      "expect": "hit",
+      "gold": [
+        "c919-science-stall-speed-margin-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-lift-coefficient-aoa-v1",
+        "c919-science-stall-speed-margin-v1",
+        "c919-science-fbw-redundancy-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 4702,
+      "answer": "证据不足，无法回答。证据材料中仅提到在巡航高度12,200 m下失速速度约为976 km/h（真实空速），但未给出标准条件下C919的失速速度具体数值。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案仅陈述证据不足，并引用了证据中存在的巡航高度失速速度，未引入外部事实。",
+      "relevance_reason": "用户询问C919失速速度，证据中无标准条件数值，拒答恰当。"
+    },
+    {
+      "id": "C18",
+      "query": "运-8 的用途是什么？",
+      "dimension": "consistency",
+      "expect": "hit",
+      "gold": [
+        "y20-science-vs-y8-y9-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "y20-science-vs-y8-y9-v1",
+        "c919-science-history-2019-six-prototypes-v1",
+        "c919-science-orders-by-airline-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3660,
+      "answer": "运-8 是中小型运输机，主要用于运输人员和物资。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "证据[1]明确说明运-8是中小型运输机，答案未超出证据范围。",
+      "relevance_reason": "答案直接回答了运-8的用途，且证据充分支持该回答。"
+    },
+    {
+      "id": "C19",
+      "query": "C919 有哪些国际合作？",
+      "dimension": "consistency",
+      "expect": "hit",
+      "gold": [
+        "c919-science-international-cooperation-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-international-cooperation-v1",
+        "c919-science-history-2011-bombardier-v1",
+        "c919-science-economic-impact-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 5260,
+      "answer": "C919的国际合作体现在三个层面：供应商层面通过合资公司与霍尼韦尔、利勃海尔、CFM、柯林斯等国际一级供应商合作；适航层面与CAAC、EASA、FAA等国际适航机构合作取得型号认可；工程合作层面与国际航空企业开展工程协作。具体合作方包括CFM（发动机LEAP-1C）、Honeywell（APU、大气数据、飞控）、Liebherr（起落架、空气管理）、GE（航电）、Collins（气象雷达、通信导航）、Parker（液压、燃油）、Thales（IFE）、Nexcelle（发动机短舱），多采用合资模式持续合作。Bombardier曾合作供应链、航电、驾驶舱（2011-2015），现已淡化。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的每个事实（三个层面、具体合作方、合资模式、Bombardier合作时段）均直接来自证据材料[1][2]，无外部事实。",
+      "relevance_reason": "答案直接列举了C919的国际合作层面和具体伙伴，完整回应用户问题，且证据充足时未拒答。"
+    },
+    {
+      "id": "C20",
+      "query": "什么是马赫数？",
+      "dimension": "consistency",
+      "expect": "hit",
+      "gold": [
+        "c919-science-mach-number-effects-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-mach-number-effects-v1",
+        "c919-science-supercritical-airfoil-physics-v1",
+        "c919-science-drag-breakdown-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2910,
+      "answer": "证据不足，无法回答。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案仅声明证据不足，未引入任何额外事实，忠实于证据材料。",
+      "relevance_reason": "线索材料未定义马赫数，证据确实不足，此时拒答恰当且完整回应了问题。"
+    },
+    {
+      "id": "D01",
+      "query": "升力与推力有什么区别？",
+      "dimension": "complex",
+      "expect": "hit",
+      "gold": [
+        "c919-science-engine-principle-v1",
+        "c919-science-supercritical-airfoil-physics-v1"
+      ],
+      "gate": "weak",
+      "evidence_sources": [
+        "c919-science-supercritical-airfoil-physics-v1",
+        "c919-science-aerodynamics-v1",
+        "c919-science-flight-mechanics-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 7939,
+      "answer": "升力与推力是飞机飞行中两个不同的力。升力方向垂直于飞行方向（向上），由机翼上下表面压力差产生，用于克服飞机重力，维持飞机在空中飞行；推力方向平行于飞行方向（向前），由发动机提供，用于克服阻力，推动飞机前进。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中关于升力方向、作用及推力方向、作用的描述直接出自证据材料[2]和[3]。",
+      "relevance_reason": "直接对比了升力与推力的方向、作用与来源，完整回答了用户问题。"
+    },
+    {
+      "id": "D02",
+      "query": "C919 与空客 A320 相比有哪些差异？",
+      "dimension": "complex",
+      "expect": "hit",
+      "gold": [
+        "c919-science-vs-a320-v1",
+        "c919-science-vs-a320-range-payload-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-vs-a320-v1",
+        "c919-science-vs-a320-avionics-v1",
+        "c919-science-vs-a320-range-payload-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 5540,
+      "answer": "C919与空客A320系列均为150-190座级窄体干线客机，机身高度接近（C919约4.166m，A320约4.14m）。主要差异包括：航电架构上，C919采用后发优势的IMA架构和ARINC 664总线，而A320采用联邦式架构和ARINC 429，带宽高1000倍；A320neo继承ceo架构未全面升级。货舱容积方面，C919约30 m³，A320neo约40 m³，小约25%，且C919机长38.9米，A320neo机长37.57米。两者最大载荷相同为20.4吨。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中所有事实（机身高度、航电架构、货舱容积、机长、最大载荷）均直接取自证据材料，无编造或外推。",
+      "relevance_reason": "答案直接列举了C919与A320在尺寸、航电、货舱等多方面的具体差异，完整回应用户问题。"
+    },
+    {
+      "id": "D03",
+      "query": "C919 的航程与 A320 相比如何？",
+      "dimension": "complex",
+      "expect": "hit",
+      "gold": [
+        "c919-science-vs-a320-range-payload-v1",
+        "c919-science-vs-a320-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-vs-a320-range-payload-v1",
+        "c919-science-vs-a320-v1",
+        "c919-science-market-positioning-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3925,
+      "answer": "根据证据材料，C919标准型航程为4,075公里，延程型为5,555公里；A320neo标准型航程约为6,300至6,500公里（不同来源数据略有差异）。C919的航程明显短于A320neo，即使C919延程型（5,555公里）也仍低于A320neo的标准航程。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中所有航程数据均直接来自证据材料[2]和[3]，未引入任何外部事实。",
+      "relevance_reason": "答案直接对比了C919与A320neo的航程，并明确指出差距，完整回应了用户问题。"
+    },
+    {
+      "id": "D04",
+      "query": "为什么超临界翼型能降低巡航阻力？",
+      "dimension": "complex",
+      "expect": "hit",
+      "gold": [
+        "c919-science-supercritical-airfoil-physics-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-drag-breakdown-v1",
+        "c919-science-mach-number-effects-v1",
+        "c919-science-supercritical-airfoil-physics-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 7599,
+      "answer": "超临界翼型通过上表面平坦化使气流加速更平缓，减弱激波强度；下表面向下凸出及后缘下弯可补偿升力并改善压力分布。其核心收益是提高阻力发散马赫数（M_dd），推迟波阻急剧增大，使飞机能在更高马赫数下巡航而不引发剧烈波阻。据材料，C919采用该翼型后M_dd提升至0.84-0.86，巡航阻力降低约8%。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中关于上表面平坦、下表面凸出、后缘下弯、M_dd提高及阻力降低均直接来自证据材料。",
+      "relevance_reason": "答案直接解释了超临界翼型降低巡航阻力的机理，并给出了量化效果，完整回答用户问题。"
+    },
+    {
+      "id": "D05",
+      "query": "C919 的电传飞控与普通飞控有什么区别？",
+      "dimension": "complex",
+      "expect": "hit",
+      "gold": [
+        "c919-science-fbw-control-laws-v1",
+        "c919-science-fly-by-wire-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-fly-by-wire-v1",
+        "c919-science-vs-a320-avionics-v1",
+        "c919-science-fbw-control-laws-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 4227,
+      "answer": "C919 采用的是全权限数字式电传飞控系统，而普通飞控（传统飞机的机械/液压操纵系统）则不同。普通飞控通过钢索、连杆和液压管路直接驱动气动舵面，存在重量大、摩擦力大、功能扩展受限等缺点；电传飞控以电信号替代机械连杆，飞行员操纵侧杆和脚蹬产生电信号，经飞控计算机处理后发送给舵面伺服作动器，由液压或电动马达驱动舵面偏转。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的事实全部来自证据材料[1]，准确描述了电传飞控与机械/液压飞控的区别，无任何编造。",
+      "relevance_reason": "直接、完整地回答了用户关于C919电传飞控与普通飞控区别的问题，且证据充分。"
+    },
+    {
+      "id": "D06",
+      "query": "运-20 与伊尔-76 哪个载重更大？",
+      "dimension": "complex",
+      "expect": "hit",
+      "gold": [
+        "y20-science-vs-il76-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "y20-science-vs-il76-v1",
+        "y20-science-overview-v1",
+        "y20-science-cargo-hold-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2079,
+      "answer": "根据证据，运-20 的最大载重为 66 吨，而伊尔-76 的最大载重约为 48 吨，因此运-20 的载重明显大于伊尔-76。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的载重数据（66吨 vs 48吨）直接来自证据材料[1]和[3]。",
+      "relevance_reason": "答案直接明确地比较了两种机型的载重并给出结论，完全回答了用户问题。"
+    },
+    {
+      "id": "D07",
+      "query": "C919 国产化率与制造工艺有什么关系？",
+      "dimension": "complex",
+      "expect": "hit",
+      "gold": [
+        "c919-science-localization-rate-v1",
+        "c919-science-manufacturing-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-localization-rate-v1",
+        "c919-science-supply-chain-layout-v1",
+        "c919-science-economic-impact-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 8060,
+      "answer": "证据不足，无法回答。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案仅作拒答，未引入任何证据外事实，证据中确实未涉及制造工艺与国产化率的直接关系。",
+      "relevance_reason": "用户问题问及国产化率与制造工艺的关系，证据材料未提供相关直接信息，拒答恰当。"
+    },
+    {
+      "id": "D08",
+      "query": "C919 的超临界机翼设计经历了哪些风洞试验？",
+      "dimension": "complex",
+      "expect": "hit",
+      "gold": [
+        "c919-science-aero-windtunnel-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-aero-windtunnel-v1",
+        "c919-science-history-2011-2015-v1",
+        "c919-science-drag-breakdown-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 12026,
+      "answer": "据证据材料，C919 超临界机翼在详细设计阶段进行了大量风洞试验，涵盖多个马赫数、迎角及襟翼构型，以确定翼型最终几何形状。不过，材料并未列出具体每项风洞试验的名称或详细清单。",
+      "faithful_score": 5,
+      "relevance_score": 4,
+      "verdict": "correct",
+      "faithful_reason": "答案全部基于证据[2]中‘详细设计阶段完成了多个马赫数、迎角、襟翼构型下的风洞试验’的表述，未引入额外事实。",
+      "relevance_reason": "直接回答了用户问题中‘哪些’的部分，引用了证据中所有相关信息，但因证据本身未列出具体试验名称，略有省略。"
+    },
+    {
+      "id": "D09",
+      "query": "歼-20 的隐身设计与发动机有什么关系？",
+      "dimension": "complex",
+      "expect": "hit",
+      "gold": [
+        "j20-science-em-stealth-v1",
+        "j20-science-engine-nozzle-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "j20-science-em-stealth-v1",
+        "j20-science-powerplant-v1",
+        "j20-science-seamless-ops-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 9100,
+      "answer": "根据证据材料，歼-20的隐身设计与发动机的关系主要体现在发动机的隐身喷口上。AL-31FM2和WS-10B发动机没有隐身喷口，而WS-10C、WS-10B-3和WS-15发动机配备了隐身喷口。这表明发动机采用了隐身喷口设计，是歼-20整体隐身设计的一部分。此外，证据未显示发动机的推力、矢量推力、超巡能力与隐身设计的直接关系。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的所有事实性陈述均直接来自证据材料中发动机表格的隐身喷口列，无任何外推或编造。",
+      "relevance_reason": "答案直接指出了隐身设计与发动机的关系在于隐身喷口，并列举了相关型号，完整回答了问题。"
+    },
+    {
+      "id": "D10",
+      "query": "C919 的复合材料占比是多少？",
+      "dimension": "complex",
+      "expect": "hit",
+      "gold": [
+        "c919-science-specifications-summary-v1",
+        "c919-science-composite-material-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-composite-mechanics-v1",
+        "c919-science-composite-material-v1",
+        "c919-science-fatigue-damage-tolerance-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2180,
+      "answer": "C919的复合材料占结构重量的12%，应用于垂直尾翼和水平尾翼的翼盒、蒙皮、舵面，后机身段，翼尖小翼，整流罩，扰流板和襟翼，部分舱门和内饰等部位。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的12%和部件清单均直接来自证据材料[2]。",
+      "relevance_reason": "直接回答了用户关于复合材料占比的问题，并补充了应用部位，完整准确。"
+    },
+    {
+      "id": "D11",
+      "query": "C919 的首飞与取证相隔了多久？",
+      "dimension": "complex",
+      "expect": "hit",
+      "gold": [
+        "c919-science-history-2017-first-flight-v1",
+        "c919-science-certification-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-history-2017-first-flight-v1",
+        "c919-science-certification-basis-v1",
+        "c919-science-vs-arj21-positioning-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 4386,
+      "answer": "根据证据材料，C919于2017年5月首飞，于2022年9月取得型号合格证（TC）。因此，首飞与取证相隔约5年4个月（约64个月）。证据中提到的“取证时长12年”是指从2008年立项到2022年取证，并非首飞到取证的时间间隔。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的所有时间节点和计算均直接来自证据材料，未引入任何外部事实。",
+      "relevance_reason": "答案直接计算并回答了首飞与取证的具体间隔，且澄清了容易混淆的“12年”口径，完整切题。"
+    },
+    {
+      "id": "D12",
+      "query": "C919 适航取证需要满足哪些规章？",
+      "dimension": "complex",
+      "expect": "hit",
+      "gold": [
+        "c919-science-certification-basis-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-certification-basis-v1",
+        "c919-science-international-certification-v1",
+        "c919-science-certification-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 4212,
+      "answer": "C919 的型号合格审定依据为 CCAR-25 部《运输类飞机适航标准》，该标准等效于 FAA FAR Part 25 和 EASA CS-25。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案所有陈述均可在证据[3]中找到依据，无编造。",
+      "relevance_reason": "直接回答了适航取证需满足的规章，且证据充分。"
+    },
+    {
+      "id": "D13",
+      "query": "直-20 与 UH-60 的定位有什么不同？",
+      "dimension": "complex",
+      "expect": "hit",
+      "gold": [
+        "z20-science-vs-uh60-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "z20-science-overview-v1",
+        "z20-science-vs-uh60-v1",
+        "z20-science-vs-uh60-detail-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3213,
+      "answer": "证据不足，无法回答。根据现有材料，直-20与UH-60均属于10吨级中型通用直升机，直-20在功能定位上对标UH-60，但材料未提及两者定位的具体不同。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案仅复述证据中关于两者定位相同或对标的内容，未引入额外事实。",
+      "relevance_reason": "用户询问定位差异，但证据未提供差异信息，因此恰当拒答。"
+    },
+    {
+      "id": "D14",
+      "query": "涵道比越大，燃油效率越高吗？",
+      "dimension": "complex",
+      "expect": "hit",
+      "gold": [
+        "c919-science-engine-bypass-ratio-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-engine-bypass-ratio-v1",
+        "c919-science-turbofan-cycle-v1",
+        "c919-science-engine-principle-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3824,
+      "answer": "是的，一般情况下涵道比越大燃油效率越高。证据表明，涵道比越大，平均排气速度越低，推进效率越高，而推进效率提升直接降低燃油消耗率（SFC）。例如LEAP-1C涵道比约11:1，高于CFM56的约5.5:1，是其燃油效率大幅提升的核心原因之一。但涵道比提高也会导致风扇直径增大、短舱阻力上升等代价。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中关于涵道比与推进效率、油耗降低的关系以及LEAP-1C示例均出自证据材料[2][3]，无外部事实。",
+      "relevance_reason": "直接回答了涵道比越大是否燃油效率越高，并给出证据依据和代价说明，完整回应问题。"
+    },
+    {
+      "id": "D15",
+      "query": "C919 的哪些部件由合资企业供应？",
+      "dimension": "complex",
+      "expect": "hit",
+      "gold": [
+        "c919-science-supplier-system-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-supplier-system-v1",
+        "c919-science-fly-by-wire-v1",
+        "c919-science-international-cooperation-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 5850,
+      "answer": "由合资企业供应的部件包括：电传飞控系统（鸿飞飞控）、显示与飞行管理系统（AVIAGE Systems）、主起落架（Liebherr LAMC）、气象雷达（ALRAC）、通信导航（RCCAC）、增升装置（Moog-AVIC庆安）、电力系统（RTX-AVIC）、机上娱乐系统（Thales-CETCA）等。此外，发动机由美法合资CFM供应（LEAP-1C）。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "所列部件均直接见于证据材料中的合资企业供应信息，无额外事实。",
+      "relevance_reason": "直接、完整回答了C919哪些部件由合资企业供应，且未引入证据外内容。"
+    },
+    {
+      "id": "E01",
+      "query": "波音 737 的维修步骤是什么？",
+      "dimension": "robustness",
+      "expect": "weak",
+      "gold": [],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-vs-b737max-orders-v1",
+        "c919-science-tariff-impact-v1",
+        "c919-science-economic-impact-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 1554,
+      "answer": "证据不足，无法回答",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案仅表示证据不足，未引入任何额外事实，完全忠实于证据材料。",
+      "relevance_reason": "证据材料未包含波音737维修步骤的任何信息，拒答是恰当行为。"
+    },
+    {
+      "id": "E02",
+      "query": "升力",
+      "dimension": "robustness",
+      "expect": "hit",
+      "gold": [
+        "c919-science-supercritical-airfoil-physics-v1",
+        "c919-science-lift-coefficient-aoa-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-stall-speed-margin-v1",
+        "c919-science-mach-number-effects-v1",
+        "j20-science-vortex-lift-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 2062,
+      "answer": "升力系数CL与迎角α在小于临界迎角时近似线性关系：CL = CL_α×(α - α_0)，其中CL_α为升力线斜率，α_0为零升力迎角。迎角超过临界迎角α_stall后，CL急剧下降，进入失速状态。升力系数随马赫数增加而增大，满足CL = CL_0/sqrt(1 - Ma²)。此外，鸭翼与边条产生的涡流可为主翼增能，提高升力系数。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "所有陈述均来自证据材料，无外推。",
+      "relevance_reason": "直接围绕升力系数及其影响因素进行了完整概述，与用户问题相关。"
+    },
+    {
+      "id": "E03",
+      "query": "？？？",
+      "dimension": "robustness",
+      "expect": "weak",
+      "gold": [],
+      "gate": "weak",
+      "evidence_sources": [],
+      "llm_error": null,
+      "latency_ms": 2715,
+      "answer": "证据不足，无法回答",
+      "faithful_score": 0,
+      "relevance_score": 0,
+      "verdict": "unverifiable",
+      "faithful_reason": "证据材料为空，无法验证任何事实陈述",
+      "relevance_reason": "无证据可供回答，无法判定相关性"
+    },
+    {
+      "id": "E04",
+      "query": "",
+      "dimension": "robustness",
+      "expect": "weak",
+      "gold": [],
+      "gate": "weak",
+      "evidence_sources": [],
+      "llm_error": null,
+      "latency_ms": 35854,
+      "answer": "证据不足，无法回答",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案仅陈述证据不足，与空证据材料完全一致，无任何编造。",
+      "relevance_reason": "在证据确实为空的情况下，拒答是恰当且完整的回答方式。"
+    },
+    {
+      "id": "E05",
+      "query": "C919 怎么进行故障处置？",
+      "dimension": "robustness",
+      "expect": "weak",
+      "gold": [],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-engine-nacelle-details-v1",
+        "c919-science-fc-laws-v1",
+        "c919-science-fbw-redundancy-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 13910,
+      "answer": "C919通过冗余和试飞验证进行故障处置：飞控系统配备4套独立飞控计算机，当某台故障时，其余三台通过“三取二”表决机制判断控制指令，确保输出正确舵面指令。反推装置需满足CCAR25部适航要求，防止意外展开，并通过反推故障、不对称展开等试验验证安全性。在4200小时试飞中，进行了失效模式试飞和故障注入试飞，模拟FCC/液压/电源失效并注入故障，验证系统响应。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中所有事实均直接来自证据材料，未引入额外信息。",
+      "relevance_reason": "答案直接说明了冗余表决和试飞验证等故障处置机制，完整回答了用户问题。"
+    },
+    {
+      "id": "E06",
+      "query": "C919 的飞机翅膀有多长？",
+      "dimension": "robustness",
+      "expect": "hit",
+      "gold": [
+        "c919-science-parameters-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-parameters-v1",
+        "c919-science-specifications-summary-v1",
+        "c919-science-variants-family-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 3293,
+      "answer": "证据不足，无法回答",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案未引入任何外部事实，仅基于证据材料不足作判定。",
+      "relevance_reason": "证据中无翼展数据，拒答恰当且直接回应了问题。"
+    },
+    {
+      "id": "E07",
+      "query": "请简单一点解释超临界机翼",
+      "dimension": "robustness",
+      "expect": "hit",
+      "gold": [
+        "c919-science-supercritical-airfoil-physics-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-drag-breakdown-v1",
+        "c919-science-fbw-control-laws-v1",
+        "c919-science-supercritical-airfoil-physics-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 5809,
+      "answer": "超临界机翼是一种先进机翼设计，其上表面平坦，使气流加速平缓，减弱激波；下表面向下凸出，补偿升力；后缘向下弯，改善压力分布。它的核心收益是提高阻力发散马赫数，让飞机能在更高马赫数下巡航而不引发剧烈波阻。以C919为例，其采用超临界机翼后，气动效率提升约20%，阻力降低约8%，巡航马赫数达0.785。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中所有事实均出自证据材料，如上下表面形状、后缘弯度、Mdd收益及C919数据。",
+      "relevance_reason": "直接、完整地解释了超临界机翼的简单定义和核心优势，符合用户“简单一点解释”的要求。"
+    },
+    {
+      "id": "E08",
+      "query": "你刚才说错了，涵道比不是这个数",
+      "dimension": "robustness",
+      "expect": "weak",
+      "gold": [
+        "c919-science-engine-bypass-ratio-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-engine-bypass-ratio-v1",
+        "c919-science-turbofan-cycle-v1",
+        "c919-science-vs-a320neo-engine-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 4248,
+      "answer": "根据证据材料，C919使用的LEAP-1C发动机涵道比为11:1。该数值在多个来源中一致出现，并与LEAP-1A相同，高于LEAP-1B的9:1和CFM56的5.5:1，但低于PW1100G的12:1。因此，正确的涵道比应为11:1。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案中的所有事实均直接取自证据材料，如LEAP-1C涵道比为11:1等。",
+      "relevance_reason": "直接明确地回答了涵道比的正确数值，并纠正了可能的错误说法。"
+    },
+    {
+      "id": "E09",
+      "query": "C919 与 A320 哪个更好？",
+      "dimension": "robustness",
+      "expect": "hit",
+      "gold": [
+        "c919-science-vs-a320-v1"
+      ],
+      "gate": "confident",
+      "evidence_sources": [
+        "c919-science-fuselage-structure-details-v1",
+        "c919-science-vs-a320-v1",
+        "c919-science-vs-a320-avionics-v1"
+      ],
+      "llm_error": null,
+      "latency_ms": 6548,
+      "answer": "根据现有证据，C919 与 A320 均为 150-190 座级窄体干线客机，机身尺寸接近（C919 机身高 4.166 米，A320 约 4.14 米），采用相同 3-3 单通道客舱布局。C919 机身宽度 3.96 米略宽于 A320 的 3.95 米。在航电架构上，C919 采用 IMA 与 ARINC 664 总线，相比 A320 的联邦式架构与 ARINC 429 具有后发优势。但证据未比较两者性能、经济性等，无法断言哪个更好。",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "所有陈述均能在证据材料中找到依据，未引入额外事实。",
+      "relevance_reason": "直接回应了问题，并指出证据不足难以判断，符合拒答条件。"
+    },
+    {
+      "id": "E10",
+      "query": "什么是？？",
+      "dimension": "robustness",
+      "expect": "weak",
+      "gold": [],
+      "gate": "weak",
+      "evidence_sources": [],
+      "llm_error": null,
+      "latency_ms": 3340,
+      "answer": "证据不足，无法回答",
+      "faithful_score": 5,
+      "relevance_score": 5,
+      "verdict": "correct",
+      "faithful_reason": "答案仅声明证据不足，未引入任何外部事实，与空证据材料一致。",
+      "relevance_reason": "证据为空，拒答是恰当行为，直接回应了问题无法回答的现状。"
+    }
+  ]
+}

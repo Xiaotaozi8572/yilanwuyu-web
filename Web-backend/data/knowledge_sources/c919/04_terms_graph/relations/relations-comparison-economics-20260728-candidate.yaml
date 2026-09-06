@@ -1,0 +1,95 @@
+# C919 经济性对比关系
+# 描述 C919 与 A320/B737 在经济性指标上的对比关系
+# relation_type: compared_with
+# edge_id 前缀：rcecon_
+
+relations:
+  # ========== 目录价格对比 ==========
+  - edge_id: "rcecon_001"
+    source_node_id: "c919_aircraft"
+    target_node_id: "b737max_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.85
+    description: "C919 目录价格约 0.99 亿美元，比 B737 MAX 8 约 1.22 亿美元更具价格竞争力"
+
+  - edge_id: "rcecon_002"
+    source_node_id: "c919_aircraft"
+    target_node_id: "a320_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.85
+    description: "C919 目录价格约 0.99 亿美元，比 A320neo 约 1.10 亿美元略低"
+
+  # ========== 维护成本对比 ==========
+  - edge_id: "rcecon_003"
+    source_node_id: "c919_aircraft"
+    target_node_id: "b737max_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.7
+    description: "C919 维护成本设计目标略低于 B737 MAX，依托国内供应商网络降低维修费用"
+
+  - edge_id: "rcecon_004"
+    source_node_id: "c919_aircraft"
+    target_node_id: "a320_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.7
+    description: "C919 维护成本与 A320 相比仍处于优化阶段，国内售后网络成熟后将更具优势"
+
+  # ========== 燃油成本对比 ==========
+  - edge_id: "rcecon_005"
+    source_node_id: "c919_aircraft"
+    target_node_id: "b737max_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.8
+    description: "C919 装备 LEAP-1C，与 B737 MAX LEAP-1B 燃油成本水平相当"
+
+  - edge_id: "rcecon_006"
+    source_node_id: "c919_aircraft"
+    target_node_id: "a320_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.8
+    description: "C919 装备 LEAP-1C，与 A320neo LEAP-1A 同代发动机，燃油成本接近"
+
+  # ========== 直接运营成本对比 ==========
+  - edge_id: "rcecon_007"
+    source_node_id: "c919_aircraft"
+    target_node_id: "b737max_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.75
+    description: "C919 直接运营成本(DOC)目标略低于 B737 MAX，主要依赖较低的购置成本"
+
+  - edge_id: "rcecon_008"
+    source_node_id: "c919_aircraft"
+    target_node_id: "a320_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.75
+    description: "C919 直接运营成本与 A320neo 相比，依托国产化供应链有下降空间"
+
+  - edge_id: "rcecon_009"
+    source_node_id: "c919_aircraft"
+    target_node_id: "a320neo_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.75
+    description: "C919 与 A320neo 同代机型，DOC 水平接近，但 C919 价格优势明显"
+
+  # ========== 座公里成本对比 ==========
+  - edge_id: "rcecon_010"
+    source_node_id: "c919_aircraft"
+    target_node_id: "b737max_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.7
+    description: "C919 座公里成本目标略低于 B737 MAX，依托燃油效率与较低购置成本"
+
+  - edge_id: "rcecon_011"
+    source_node_id: "c919_aircraft"
+    target_node_id: "a320_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.7
+    description: "C919 座公里成本与 A320 相比，C919 机身更宽可适度增加座椅密度，单位成本下降"
+
+  # ========== 订单数对比 ==========
+  - edge_id: "rcecon_012"
+    source_node_id: "c919_aircraft"
+    target_node_id: "b737max_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.7
+    description: "C919 累计订单已超千架，与 B737 MAX 累计订单数千架相比，C919 仍在市场开拓阶段"

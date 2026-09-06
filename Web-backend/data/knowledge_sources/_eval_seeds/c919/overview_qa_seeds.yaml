@@ -1,0 +1,45 @@
+# C919 总览分区评测种子
+# 字段：question, expected_intent_type, expected_complexity, expected_evidence_partitions, notes
+
+seeds:
+  - question: "C919 是什么类型的飞机？"
+    expected_intent_type: "concept_explanation"
+    expected_complexity: "L1"
+    expected_evidence_partitions: ["c919/01_science/01_overview"]
+    notes: "型号定位，适合入门科普"
+
+  - question: "C919 的机长、翼展和机高分别是多少？"
+    expected_intent_type: "parameter_fact"
+    expected_complexity: "L1"
+    expected_evidence_partitions: ["c919/01_science/01_overview"]
+    notes: "基本参数查询，require_parameter_source=true"
+
+  - question: "C919 的标准航程和延程航程分别是多少？"
+    expected_intent_type: "parameter_fact"
+    expected_complexity: "L1"
+    expected_evidence_partitions: ["c919/01_science/01_overview"]
+    notes: "航程参数"
+
+  - question: "C919 的标准客载是多少？"
+    expected_intent_type: "parameter_fact"
+    expected_complexity: "L1"
+    expected_evidence_partitions: ["c919/01_science/01_overview"]
+    notes: "载客量参数"
+
+  - question: "C919 采用了哪些先进技术？"
+    expected_intent_type: "concept_explanation"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/01_overview", "c919/01_science/03_principles"]
+    notes: "技术特征总览"
+
+  - question: "C919 的设计目标是什么？"
+    expected_intent_type: "concept_explanation"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/01_overview"]
+    notes: "设计目标概述"
+
+  - question: "C919 的巡航速度是多少？使用高度上限是多少？"
+    expected_intent_type: "parameter_fact"
+    expected_complexity: "L1"
+    expected_evidence_partitions: ["c919/01_science/01_overview"]
+    notes: "飞行性能参数"

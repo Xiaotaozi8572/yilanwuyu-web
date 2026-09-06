@@ -1,0 +1,95 @@
+# C919 飞控系统实体
+# 电传飞行控制系统及操纵面作动
+# node_type: system
+# node_id 前缀：sfc_
+
+entities:
+  - node_id: "sfc_fcc"
+    node_type: "system"
+    canonical_name: "飞控计算机"
+    aliases: ["FCC", "flight control computer", "飞控主控计算机"]
+    description: "电传飞控系统核心计算单元，C919 采用三余度 FCC，处理驾驶员输入并输出作动器指令"
+    specifications:
+      redundancy: "三余度"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfc_actuator"
+    node_type: "system"
+    canonical_name: "作动器"
+    aliases: ["actuator", "液压作动器", "伺服作动器"]
+    description: "驱动舵面偏转的液压伺服执行机构，C919 舵面作动器由 Moog 等供应商提供"
+    specifications:
+      supplier: "Moog"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfc_servo"
+    node_type: "system"
+    canonical_name: "舵机"
+    aliases: ["servo", "伺服舵机", "电液伺服舵机"]
+    description: "接受飞控计算机电信号驱动舵面的小型伺服机构，实现电信号到机械位移转换"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfc_sidestick"
+    node_type: "system"
+    canonical_name: "驾驶杆"
+    aliases: ["sidestick", "侧杆", "驾驶盘"]
+    description: "驾驶员输入俯仰和滚转指令的操纵杆，C919 采用侧杆设计，输入电信号传至 FCC"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfc_rudder_pedal"
+    node_type: "system"
+    canonical_name: "脚蹬"
+    aliases: ["rudder pedal", "方向舵脚蹬", "脚操纵"]
+    description: "驾驶员输入航向指令的脚踏板，控制方向舵偏转及地面前轮转弯"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfc_spoiler_actuator"
+    node_type: "system"
+    canonical_name: "扰流板作动器"
+    aliases: ["spoiler actuator", "减速板作动器"]
+    description: "驱动扰流板偏转的液压作动器，C919 多块扰流板分别由独立作动器驱动实现解耦控制"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfc_flap_actuator"
+    node_type: "system"
+    canonical_name: "襟翼作动器"
+    aliases: ["flap actuator", "襟翼驱动机构"]
+    description: "驱动后缘襟翼展开收回的动力旋转作动器，C919 襟翼通过扭力管同步驱动两侧对称运动"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfc_slat_actuator"
+    node_type: "system"
+    canonical_name: "缝翼作动器"
+    aliases: ["slat actuator", "缝翼驱动机构"]
+    description: "驱动前缘缝翼展开收回的动力作动器，与襟翼作动器协同实现增升装置控制"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfc_trim_motor"
+    node_type: "system"
+    canonical_name: "配平马达"
+    aliases: ["trim motor", "配平作动器", "安定面配平马达"]
+    description: "驱动水平安定面安装角调节的电动作动器，实现飞行中纵向自动配平"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfc_feel_computer"
+    node_type: "system"
+    canonical_name: "感觉计算机"
+    aliases: ["feel computer", "人工感觉系统", "力感计算机"]
+    description: "电传飞控中模拟人工操纵力感的计算机，C919 按动压和构型向侧杆提供反馈力"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfc_envelope_protection"
+    node_type: "system"
+    canonical_name: "包线保护"
+    aliases: ["envelope protection", "飞行包线保护", "边界保护"]
+    description: "防止飞机超出安全飞行包线的飞控功能，C919 具备过载、迎角、速度包线保护"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfc_redundancy"
+    node_type: "system"
+    canonical_name: "余度管理"
+    aliases: ["redundancy management", "余度管理", "表决机制"]
+    description: "多余度飞控系统的故障检测与表决机制，C919 采用三余度表决确保单点故障后仍安全可控"
+    specifications:
+      redundancy: "三余度"
+    applicable_aircraft: ["c919"]

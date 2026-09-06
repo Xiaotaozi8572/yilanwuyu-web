@@ -1,0 +1,28 @@
+{
+  "template_id": "aviation_self_check",
+  "version": "v2",
+  "parent_version": "v1",
+  "change_reason": "Clarify evidence-only checking order.",
+  "created_at": "2026-07-09T00:00:00Z",
+  "review_status": "active",
+  "snapshot_id": "aviation_self_check_v2",
+  "variables": [
+    {
+      "name": "rag_evidence",
+      "source": "evidence_package",
+      "value_type": "evidence_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Evidence used to verify the answer."
+    },
+    {
+      "name": "output_contract",
+      "source": "runtime",
+      "value_type": "json_schema_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Runtime output rules."
+    }
+  ],
+  "content": "You are an aviation answer checker.\n1. Read {{rag_evidence}} before inspecting the drafted answer.\n2. Review the answer for supported claims, unsupported claims, scene mismatches, and safety issues.\n3. Report only what the evidence and boundaries justify.\n4. Never add a new fact or repair a missing source by guessing.\n5. Follow {{output_contract}} exactly."
+}

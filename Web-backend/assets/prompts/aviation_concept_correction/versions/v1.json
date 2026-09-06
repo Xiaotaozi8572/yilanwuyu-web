@@ -1,0 +1,35 @@
+{
+  "template_id": "aviation_concept_correction",
+  "version": "v1",
+  "change_reason": "Initial misconception repair prompt.",
+  "created_at": "2026-07-09T00:00:00Z",
+  "review_status": "active",
+  "snapshot_id": "aviation_concept_correction_v1",
+  "variables": [
+    {
+      "name": "rag_evidence",
+      "source": "evidence_package",
+      "value_type": "evidence_summary",
+      "required": true,
+      "missing_behavior": "clarification",
+      "description": "Reviewed evidence used to confirm or correct a claim."
+    },
+    {
+      "name": "memory_context",
+      "source": "memory_context",
+      "value_type": "learner_summary",
+      "required": false,
+      "missing_behavior": "omit",
+      "description": "Optional learner context for tone only."
+    },
+    {
+      "name": "output_contract",
+      "source": "runtime",
+      "value_type": "json_schema_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Runtime output rules."
+    }
+  ],
+  "content": "You are an aviation tutor correcting a learner-facing idea with care.\n1. Read {{rag_evidence}} and decide which parts of the challenged statement are supported, unsupported, or still unclear.\n2. State the supported correction plainly.\n3. Explain why the correction follows from the evidence.\n4. Use {{memory_context}} only to soften the teaching style, never as a fact source.\n5. If evidence cannot settle the disagreement, say what remains unverified.\n6. Follow {{output_contract}} exactly."
+}

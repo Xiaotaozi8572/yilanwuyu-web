@@ -1,0 +1,47 @@
+# C919 航电专项讲解侧问答种子（非评测种子）
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / question / audience / teaching_point
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+qa_seeds:
+  - id: "av-qa-001-glass-cockpit"
+    question: "C919 驾驶舱为什么全是屏幕？"
+    audience: "普通公众/中学生"
+    teaching_point: "C919 采用玻璃座舱（Glass Cockpit），用大尺寸液晶显示器替代传统机械仪表。好处是信息集成度高、可切换显示内容、重量轻。驾驶舱有 5 块大屏，按需显示飞行参数、导航、发动机状态、系统信息。"
+
+  - id: "av-qa-002-fly-by-wire-vs-mechanical"
+    question: "电传操纵和传统机械操纵有什么区别？"
+    audience: "中学生/航空爱好者"
+    teaching_point: "传统机械操纵靠钢索和拉杆传递飞行员指令，费力且重。电传操纵把飞行员指令转为电信号，经飞控计算机处理后驱动液压作动器。C919 采用全权限数字式电传飞控、四余度架构，更轻、更精准、可叠加包线保护。"
+
+  - id: "av-qa-003-navigation-systems"
+    question: "C919 靠什么导航？"
+    audience: "中学生/有专业兴趣的公众"
+    teaching_point: "C919 采用多源融合导航：惯性导航（INS，自主但会漂移）+ GPS/北斗（卫星导航，定期校正惯导）+ 无电导航（VOR/DME，地面信标）。多源融合确保任一系统失效仍能准确定位。"
+
+  - id: "av-qa-004-autopilot-capability"
+    question: "C919 能自动降落吗？"
+    audience: "普通公众/航空爱好者"
+    teaching_point: "C919 的自动飞行系统具备 Cat II/III 自动进近能力（在低能见度下辅助进近）。但全自动着陆（Cat IIIc）需机场设施配合。飞行员仍是最终决策者，自动飞行系统是辅助工具。"
+
+  - id: "av-qa-005-tcas"
+    question: "C919 怎么避免在空中和其他飞机相撞？"
+    audience: "中学生/有专业兴趣的公众"
+    teaching_point: "C919 配备 TCAS（空中防撞系统），主动询问附近飞机的应答机，计算潜在碰撞风险。若判断有碰撞危险，会向飞行员发出避让指令（爬升或下降）。TCAS 是独立于空管的安全兜底系统。"
+
+  - id: "av-qa-006-weather-radar"
+    question: "C919 怎么避开雷暴和颠簸？"
+    audience: "普通公众/中学生"
+    teaching_point: "C919 配备气象雷达，通过发射微波探测前方降水和湍流强度，在显示器上用颜色标注危险区域（红/黄/绿）。飞行员可提前绕飞避让。还有 EGPWS（增强型近地警告系统）防止可控飞行撞地。"
+
+  - id: "av-qa-007-communication"
+    question: "C919 飞行员怎么和地面通话？"
+    audience: "普通公众"
+    teaching_point: "C919 有甚高频（VHF）和高频（HF）无线电通信，VHF 用于视距内通信（约 200 海里），HF 用于跨洋远程通信。还有 ACARS（数据链）通过卫星或 VHF 传文字数据。未来将逐步推广 CPDLC（管制员-飞行员数据链通信）。"
+
+  - id: "av-qa-008-supplier"
+    question: "C919 的航电系统是谁提供的？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "C919 航电核心由中电科航空电子与 GE 航空合资的昂际航电（AVIOEC）提供，飞控由霍尼韦尔与航空工业自控所合资的中航霍尼韦尔提供。这是'合资+技术转移'模式，核心 IP 仍受外方制约，是国产化的关键瓶颈之一。"

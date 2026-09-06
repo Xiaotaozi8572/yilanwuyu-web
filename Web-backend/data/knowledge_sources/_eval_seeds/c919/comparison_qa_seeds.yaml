@@ -1,0 +1,32 @@
+# C919 对比分区评测种子
+
+seeds:
+  - question: "C919 和 A320neo 相比有什么优势和不足？"
+    expected_intent_type: "comparison"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/06_comparison", "c919/01_science/01_overview"]
+    notes: "与 A320 对比"
+
+  - question: "C919 和 B737 相比尺寸和航程如何？"
+    expected_intent_type: "comparison"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/06_comparison"]
+    notes: "与 B737 对比"
+
+  - question: "C919 和 ARJ21 有什么区别？"
+    expected_intent_type: "comparison"
+    expected_complexity: "L1"
+    expected_evidence_partitions: ["c919/01_science/06_comparison"]
+    notes: "与 ARJ21 对比，注意区分支线与干线"
+
+  - question: "C919、A320neo、B737 MAX 三者的发动机分别是什么？"
+    expected_intent_type: "comparison"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/06_comparison", "c919/01_science/03_principles"]
+    notes: "三机型发动机对比"
+
+  - question: "C919 和同级别竞争机型相比，客舱有什么特色？"
+    expected_intent_type: "comparison"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/06_comparison", "c919/01_science/02_structure_systems"]
+    notes: "客舱舒适度对比"

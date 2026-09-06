@@ -1,0 +1,132 @@
+# y20 关系种子（扩充）
+# relation_type: part_of / depends_on / derives_from / parameter_of / compared_with
+
+relations:
+  - edge_id: "y20_cargo_part_of_y20_aircraft"
+    source_node_id: "y20_cargo"
+    target_node_id: "y20_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "货舱属于机身"
+
+  - edge_id: "y20_wing_part_of_y20_aircraft"
+    source_node_id: "y20_wing"
+    target_node_id: "y20_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "上单翼属于机体"
+
+  - edge_id: "y20_tail_part_of_y20_aircraft"
+    source_node_id: "y20_tail"
+    target_node_id: "y20_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "T形尾翼属于机体"
+
+  - edge_id: "y20_ws20_part_of_y20_powerplant"
+    source_node_id: "ws20"
+    target_node_id: "y20_powerplant"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "WS-20属于动力"
+
+  - edge_id: "y20_d30_part_of_y20_powerplant"
+    source_node_id: "d30"
+    target_node_id: "y20_powerplant"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "D-30属于动力"
+
+  - edge_id: "y20_avionics_part_of_y20_aircraft"
+    source_node_id: "y20_avionics"
+    target_node_id: "y20_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "航电属于系统"
+
+  - edge_id: "y20_aircraft_depends_on_y20_powerplant"
+    source_node_id: "y20_aircraft"
+    target_node_id: "y20_powerplant"
+    relation_type: "depends_on"
+    confidence: 0.9
+    metadata:
+      note: "飞机依赖动力"
+
+  - edge_id: "y20_cargo_depends_on_y20_airframe"
+    source_node_id: "y20_cargo"
+    target_node_id: "y20_airframe"
+    relation_type: "depends_on"
+    confidence: 0.8
+    metadata:
+      note: "货舱依赖机身"
+
+  - edge_id: "y20_powerplant_depends_on_y20_fuel"
+    source_node_id: "y20_powerplant"
+    target_node_id: "y20_fuel"
+    relation_type: "depends_on"
+    confidence: 0.8
+    metadata:
+      note: "动力依赖燃油"
+
+  - edge_id: "y20_aircraft_parameter_of_y20_aircraft"
+    source_node_id: "y20_aircraft"
+    target_node_id: "y20_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "机长"
+      value: "47 m"
+
+  - edge_id: "y20_aircraft_compared_with_il76"
+    source_node_id: "y20_aircraft"
+    target_node_id: "il76"
+    relation_type: "compared_with"
+    confidence: 1.0
+    metadata:
+      note: "同类型运输机"
+
+  - edge_id: "y20_aircraft_compared_with_c17"
+    source_node_id: "y20_aircraft"
+    target_node_id: "c17"
+    relation_type: "compared_with"
+    confidence: 1.0
+    metadata:
+      note: "同类型运输机"
+
+  - edge_id: "y20_aircraft_compared_with_a400m"
+    source_node_id: "y20_aircraft"
+    target_node_id: "a400m"
+    relation_type: "compared_with"
+    confidence: 0.9
+    metadata:
+      note: "跨类型对比"
+
+  - edge_id: "y20_aircraft_compared_with_an124"
+    source_node_id: "y20_aircraft"
+    target_node_id: "an124"
+    relation_type: "compared_with"
+    confidence: 0.9
+    metadata:
+      note: "跨量级对比"
+
+  - edge_id: "y20_yy20_derives_from_y20_aircraft"
+    source_node_id: "yy20"
+    target_node_id: "y20_aircraft"
+    relation_type: "derives_from"
+    confidence: 0.9
+    metadata:
+      note: "加油改型"
+
+  - edge_id: "y20b_derives_from_y20_aircraft"
+    source_node_id: "y20b"
+    target_node_id: "y20_aircraft"
+    relation_type: "derives_from"
+    confidence: 0.9
+    metadata:
+      note: "WS-20换发型号"

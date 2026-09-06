@@ -1,0 +1,277 @@
+# C919 实体定义
+# 字段对齐 GraphNode
+# node_type: aircraft / component / system / concept
+# 实体 node_id 与 relations.yaml 中的 source_node_id / target_node_id 一一对应
+
+entities:
+  # ========== 机型实体（4） ==========
+  - node_id: "c919_aircraft"
+    node_type: "aircraft"
+    canonical_name: "C919"
+    aliases: ["C919", "国产大飞机", "中国商飞窄体客机"]
+    description: "中国商飞研制的 150-190 座级窄体干线客机，2022-09-29 取得型号合格证"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "arj21_aircraft"
+    node_type: "aircraft"
+    canonical_name: "ARJ21"
+    aliases: ["ARJ21", "翔凤", "ARJ21 支线客机"]
+    description: "中国商飞研制的 78-90 座级支线喷气式客机，C919 的前期技术积累"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "a320_aircraft"
+    node_type: "aircraft"
+    canonical_name: "空客 A320"
+    aliases: ["A320", "A320neo", "A320ceo", "Airbus A320"]
+    description: "空客公司的窄体客机系列，C919 的直接对标机型"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "b737_aircraft"
+    node_type: "aircraft"
+    canonical_name: "波音 737"
+    aliases: ["B737", "737NG", "737 MAX", "Boeing 737"]
+    description: "波音公司的经典窄体客机系列，C919 的主要竞争机型之一"
+    applicable_aircraft: ["c919"]
+
+  # ========== 结构部件实体（11） ==========
+  - node_id: "c919_wing"
+    node_type: "component"
+    canonical_name: "机翼"
+    aliases: ["wing", "主翼"]
+    description: "产生升力的主要气动部件，采用超临界翼型，翼展约 35.8 米"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_fuselage"
+    node_type: "component"
+    canonical_name: "机身"
+    aliases: ["fuselage", "机体"]
+    description: "主体结构，载客/载货及安装各系统，采用铝锂合金和复合材料"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_empennage"
+    node_type: "component"
+    canonical_name: "尾翼"
+    aliases: ["empennage", "垂直尾翼", "水平尾翼"]
+    description: "尾部翼面组合，提供纵向和航向稳定性和操纵性"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_landing_gear"
+    node_type: "component"
+    canonical_name: "起落架"
+    aliases: ["landing gear", "前起落架", "主起落架"]
+    description: "地面停放、滑行、起降时支撑飞机的装置，由 Liebherr 提供"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_flap"
+    node_type: "component"
+    canonical_name: "襟翼"
+    aliases: ["flap", "后缘襟翼"]
+    description: "机翼后缘可动翼面，用于在起降阶段增加升力"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_aileron"
+    node_type: "component"
+    canonical_name: "副翼"
+    aliases: ["aileron"]
+    description: "机翼后缘外侧可动翼面，通过差动偏转控制飞机滚转"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_slat"
+    node_type: "component"
+    canonical_name: "前缘缝翼"
+    aliases: ["slat", "缝翼"]
+    description: "机翼前缘可动翼面，用于增加最大升力系数"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_spoiler"
+    node_type: "component"
+    canonical_name: "扰流板"
+    aliases: ["spoiler", "减速板"]
+    description: "机翼上表面可动板面，用于空中减速和辅助滚转、地面破坏升力"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_winglet"
+    node_type: "component"
+    canonical_name: "翼尖小翼"
+    aliases: ["winglet", "翼梢小翼"]
+    description: "安装在翼尖的垂直翼面，用于降低诱导阻力"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_rudder"
+    node_type: "component"
+    canonical_name: "方向舵"
+    aliases: ["rudder"]
+    description: "垂直尾翼后缘可动翼面，控制飞机偏航运动"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_elevator"
+    node_type: "component"
+    canonical_name: "升降舵"
+    aliases: ["elevator"]
+    description: "水平尾翼后缘可动翼面，控制飞机俯仰运动"
+    applicable_aircraft: ["c919"]
+
+  # ========== 发动机部件实体（8） ==========
+  - node_id: "c919_leap1c"
+    node_type: "component"
+    canonical_name: "LEAP-1C 发动机"
+    aliases: ["LEAP-1C", "LEAP-1C28", "LEAP-1C30"]
+    description: "CFM 国际为 C919 定制的涡扇发动机，涵道比约 11:1"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_cj1000a"
+    node_type: "component"
+    canonical_name: "CJ-1000A 发动机"
+    aliases: ["CJ-1000A", "长江-1000A"]
+    description: "中国航发研制的 C919 国产替代发动机，技术参考 LEAP-1C"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_fan"
+    node_type: "component"
+    canonical_name: "风扇"
+    aliases: ["fan", "发动机风扇"]
+    description: "涡扇发动机前部的大直径旋转叶片，产生外涵道气流"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_compressor"
+    node_type: "component"
+    canonical_name: "压气机"
+    aliases: ["compressor", "高压压气机", "低压压气机"]
+    description: "涡扇发动机中压缩进入空气的旋转部件，分高压和低压级"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_combustor"
+    node_type: "component"
+    canonical_name: "燃烧室"
+    aliases: ["combustor", "TAPS 燃烧室"]
+    description: "燃料与高压空气混合燃烧的部件，LEAP 采用 TAPS 低排放技术"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_turbine"
+    node_type: "component"
+    canonical_name: "涡轮"
+    aliases: ["turbine", "高压涡轮", "低压涡轮"]
+    description: "利用高温燃气膨胀做功驱动压气机和风扇的旋转部件"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_nacelle"
+    node_type: "component"
+    canonical_name: "短舱"
+    aliases: ["nacelle", "PANACHE 短舱", "整体式短舱"]
+    description: "包裹发动机的流线型外壳，LEAP-1C 采用 Nexcelle 整体式短舱"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_thrust_reverser"
+    node_type: "component"
+    canonical_name: "反推装置"
+    aliases: ["thrust reverser", "反推力装置"]
+    description: "着陆时改变发动机排气方向以产生反向推力的装置"
+    applicable_aircraft: ["c919"]
+
+  # ========== 系统实体（10） ==========
+  - node_id: "c919_propulsion"
+    node_type: "system"
+    canonical_name: "动力系统"
+    aliases: ["推进系统", "发动机系统", "propulsion"]
+    description: "含两台 LEAP-1C 涡扇发动机和整体式短舱的动力装置系统"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_flight_control"
+    node_type: "system"
+    canonical_name: "飞控系统"
+    aliases: ["飞行控制系统", "电传飞控", "FBW"]
+    description: "四余度全权限数字式电传飞行控制系统"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_hydraulic"
+    node_type: "system"
+    canonical_name: "液压系统"
+    aliases: ["hydraulic", "三余度液压"]
+    description: "三余度液压动力系统，驱动飞控舵面和起落架等关键作动器"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_fuel"
+    node_type: "system"
+    canonical_name: "燃油系统"
+    aliases: ["fuel system", "燃油箱"]
+    description: "燃油储存与供给系统，为发动机和 APU 提供燃料"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_avionics"
+    node_type: "system"
+    canonical_name: "航电系统"
+    aliases: ["avionics", "综合模块化航电", "IMA"]
+    description: "IMA 架构的航空电子系统，由昂际航电提供"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_electrical"
+    node_type: "system"
+    canonical_name: "电气系统"
+    aliases: ["electrical power", "电源系统", "EPS"]
+    description: "电力生成与分配系统，由发动机发电机和 APU 驱动"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_ecs"
+    node_type: "system"
+    canonical_name: "环控系统"
+    aliases: ["ECS", "环境控制系统", "空调系统"]
+    description: "客舱空调与增压系统，由发动机引气驱动，Liebherr 提供"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_fire_protection"
+    node_type: "system"
+    canonical_name: "防火系统"
+    aliases: ["fire protection", "火警系统"]
+    description: "发动机/APU/货舱火警探测与灭火系统"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_lighting"
+    node_type: "system"
+    canonical_name: "照明系统"
+    aliases: ["lighting", "客舱照明", "外部照明"]
+    description: "内外部照明系统，含 LED 情景照明和外部航行灯"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_cabin"
+    node_type: "system"
+    canonical_name: "客舱系统"
+    aliases: ["cabin", "座舱"]
+    description: "乘客舱室与内饰系统，采用 3-3 布局"
+    applicable_aircraft: ["c919"]
+
+  # ========== 其他部件实体（2） ==========
+  - node_id: "c919_apu"
+    node_type: "component"
+    canonical_name: "APU"
+    aliases: ["APU", "辅助动力装置", "HGT750"]
+    description: "Honeywell HGT750 辅助动力装置，提供地面电源和气源"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_fadec"
+    node_type: "system"
+    canonical_name: "FADEC"
+    aliases: ["FADEC", "全权限数字式发动机控制"]
+    description: "发动机的全权限数字式电子控制系统，管理推力和燃油流量"
+    applicable_aircraft: ["c919"]
+
+  # ========== 概念实体（3） ==========
+  - node_id: "c919_supercritical_wing"
+    node_type: "concept"
+    canonical_name: "超临界机翼"
+    aliases: ["超临界翼型", "supercritical wing"]
+    description: "通过上表面平坦设计延缓激波生成的跨声速机翼构型，C919 采用第四代设计"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_composite_material"
+    node_type: "concept"
+    canonical_name: "复合材料"
+    aliases: ["CFRP", "碳纤维复合材料"]
+    description: "由碳纤维与树脂基体复合而成的航空结构材料，机身占比约 12%"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_fbw_concept"
+    node_type: "concept"
+    canonical_name: "电传操纵"
+    aliases: ["fly-by-wire", "FBW"]
+    description: "以电信号替代机械连杆传递飞行员操纵指令的飞行操纵方式"
+    applicable_aircraft: ["c919"]

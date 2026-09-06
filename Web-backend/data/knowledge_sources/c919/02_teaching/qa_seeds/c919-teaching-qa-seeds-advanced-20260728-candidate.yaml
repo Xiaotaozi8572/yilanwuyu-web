@@ -1,0 +1,68 @@
+# C919 进阶讲解侧问答种子（非评测种子）
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / question / audience / teaching_point
+# 注意：本文件是“进阶讲解侧”问答种子，用于讲解者预判有专业兴趣听众的提问、准备讲解口径，不是评测题库。
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+qa_seeds:
+  - id: "adv-qa-001-aero-efficiency"
+    question: "C919 的气动效率提升 20% 是怎么算出来的？"
+    audience: "有专业兴趣的公众/航空爱好者"
+    teaching_point: "超临界机翼延迟激波、融合式翼尖小翼降低诱导阻力、机翼后掠角与翼型优化共同作用，相比上一代基准设计，巡航升阻比提升约 20%。'约 20%' 是相对基准设计的综合气动收益，不是单一部件贡献。"
+
+  - id: "adv-qa-002-supercritical-why-flat-top"
+    question: "超临界机翼上表面为什么是平的？"
+    audience: "航空爱好者/中学生"
+    teaching_point: "上表面平坦减缓气流加速，降低局部峰值马赫数，把激波位置后移、强度减弱，从而降低跨声速波阻。下表面弯度大、靠后缘凹形补回升力。这是跨声速翼型设计的核心思路。"
+
+  - id: "adv-qa-003-material-choice-tradeoff"
+    question: "为什么 C919 不全用复合材料？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "复合材料减重但成本高、损伤检测难、修理复杂、回收难。材料选择需在减重、成本、可维修性、认证风险间权衡。C919 复合材料约 12%，中央翼盒原计划用复合材料后改回铝合金，是用重量收益换认证风险的典型权衡。"
+
+  - id: "adv-qa-004-central-wingbox-aluminum"
+    question: "C919 中央翼盒为什么用铝合金不用复合材料？"
+    audience: "有专业兴趣的公众/航空爱好者"
+    teaching_point: "中央翼盒是主承力结构，承受机翼弯矩扭矩。复合材料方案减重约 15-20%，但民机主承力盒段应用经验少、认证风险高、损伤检测难。C919 作为首型号需积累适航经验，改回铝合金是用重量换可靠性和认证成熟度。"
+
+  - id: "adv-qa-005-system-integration"
+    question: "C919 的系统集成主要难在哪里？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "难在把来自全球数百家供应商的数百万零件、航电飞控液压等系统集成为一个安全可靠经济的飞行平台。接口定义、电磁兼容、软件交互、适航验证都是集成难题。核心竞争力在总体设计与系统集成能力，而非单个零件谁造。"
+
+  - id: "adv-qa-006-ccar25-airworthiness"
+    question: "C919 按什么标准取证？和 FAA/EASA 一样吗？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "依据中国 CCAR-25 部，技术上等效于 FAA Part 25 / EASA CS-25。C919 已获 CAAC 型号合格证（2022-09-29），可在中国及与 CAAC 有双边协议的 30 多国运行。FAA/EASA 认可需双边谈判，暂无确切时间表。"
+
+  - id: "adv-qa-007-leap-thrust-params"
+    question: "C919 的发动机推力是多少？够用吗？"
+    audience: "航空爱好者"
+    teaching_point: "CFM LEAP-1C28 标准型推力 129.98 kN，LEAP-1C30 延程型 137.14 kN。两台合计约 26 吨推力，托起最大起飞重量约 77 吨的飞机，推重比约 0.34，是窄体客机典型水平。推力选型需兼顾起降、高温高原、单发失效复飞等工况。"
+
+  - id: "adv-qa-008-bypass-ratio-fuel"
+    question: "涵道比 11:1 意味着什么？"
+    audience: "航空爱好者"
+    teaching_point: "11 份空气中约 10 份走外涵道只加速不烧油、1 份进核心机燃烧。高涵道比推进效率高、油耗低（较 CFM56 降约 15%），但风扇直径增大受离地间隙限制、推力响应变慢。11:1 是与 A320neo/B737 MAX 同代的工程平衡点。"
+
+  - id: "adv-qa-009-cj1000a-progress"
+    question: "国产发动机 CJ-1000A 进展如何？什么时候能装 C919？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "CJ-1000A 对标 LEAP-1C 同代水平研制，大涵道比、复合材料风扇。当前研制中，核心机和高压试验推进，尚无确切取证时间表。差距主要在长期可靠性数据、供应链成熟度、材料工艺稳定性。先用成熟 LEAP-1C、同步研制 CJ-1000A 是'两条腿走路'策略。"
+
+  - id: "adv-qa-010-localization-60"
+    question: "C919 国产化率 60% 是怎么算的？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "60% 是按价值量计算的国产化率。机体结构 100% 国产，但发动机（CFM）、部分航电（GE-AVIC）、飞控（Honeywell-AVIC）、起落架（Liebherr-AVIC）等高价值系统依赖进口或合资。按重量 vs 按价值口径不同，避免笼统说'80%'。"
+
+  - id: "adv-qa-011-fly-by-wire-redundancy"
+    question: "C919 电传飞控的四余度是什么意思？"
+    audience: "航空爱好者"
+    teaching_point: "四余度是 4 套独立计算机并行工作，像四人表决，少数服从多数。任意一套故障被其余识别隔离，不影响正常飞行。这是民机电传飞控安全冗余的典型做法，确保单点故障下仍能安全操纵。电传是操纵方式，不等于自动驾驶。"
+
+  - id: "adv-qa-012-composite-repair"
+    question: "C919 的复合材料部件坏了怎么修？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "复合材料损伤检测需超声波、X 射线等无损检测（内部脱层肉眼不可见）。修理采用补片胶接或螺接，工艺要求高、需专用设备和培训。相比金属打补丁更复杂。这也是复合材料占比受限（约 12%）的原因之一——可维修性与成本权衡。"

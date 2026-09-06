@@ -1,0 +1,92 @@
+# C919 客舱内部结构关系
+# 描述客舱内部设施、旅客服务系统的层级与功能关系
+# relation_type: part_of / controls / parameter_of / depends_on
+# edge_id 前缀：rcab_
+
+relations:
+  # ========== part_of 客舱内部设施归属 ==========
+  - edge_id: "rcab_001"
+    source_node_id: "comp_passenger_seat"
+    target_node_id: "comp_cabin"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "旅客座椅安装于客舱内部，按单通道双联布局排列"
+
+  - edge_id: "rcab_002"
+    source_node_id: "comp_overhead_bin"
+    target_node_id: "comp_cabin"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "顶部行李架位于客舱顶部两侧，存放旅客随身行李"
+
+  - edge_id: "rcab_003"
+    source_node_id: "comp_cabin_lighting"
+    target_node_id: "comp_cabin"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "客舱照明含顶灯、阅读灯和指示灯，提供客舱灯光环境"
+
+  - edge_id: "rcab_004"
+    source_node_id: "comp_oxygen_mask"
+    target_node_id: "comp_cabin"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "客舱氧气面罩藏于座椅上方服务箱内，应急时自动落下"
+
+  - edge_id: "rcab_005"
+    source_node_id: "comp_attendant_seat"
+    target_node_id: "comp_cabin"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "乘务员座椅位于客舱前后服务区，起飞着陆时供乘务员乘坐"
+
+  - edge_id: "rcab_006"
+    source_node_id: "comp_galley"
+    target_node_id: "comp_cabin"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "厨房位于客舱前/中/后部，提供餐食加热和饮料储存"
+
+  - edge_id: "rcab_007"
+    source_node_id: "comp_lavatory"
+    target_node_id: "comp_cabin"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "卫生间位于客舱前/中/后部，为旅客提供盥洗设施"
+
+  - edge_id: "rcab_008"
+    source_node_id: "comp_emergency_slide"
+    target_node_id: "comp_cabin"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "应急滑梯收纳于舱门下方，紧急情况下充气展开供旅客撤离"
+
+  - edge_id: "rcab_009"
+    source_node_id: "comp_air_distribution_duct"
+    target_node_id: "comp_cabin"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "空气分配管道沿客舱顶部布置，将空调组件的调温空气送入客舱"
+
+  - edge_id: "rcab_010"
+    source_node_id: "comp_passenger_sign"
+    target_node_id: "comp_cabin"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "旅客告示牌含安全带指示、禁烟指示和返回座位指示等"
+
+  # ========== parameter_of 客舱关键参数 ==========
+  - edge_id: "rcab_011"
+    source_node_id: "param_cabin_pressure_alt"
+    target_node_id: "comp_cabin"
+    relation_type: "parameter_of"
+    confidence: 0.95
+    description: "客舱压力高度是客舱增压系统关键参数，巡航时维持约 2400 米等效高度"
+
+  # ========== controls 客舱环境控制 ==========
+  - edge_id: "rcab_012"
+    source_node_id: "comp_cabin_temp_controller"
+    target_node_id: "comp_cabin"
+    relation_type: "controls"
+    confidence: 0.9
+    description: "客舱温度控制器调节进入客舱的空气温度，维持旅客舒适度"

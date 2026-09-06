@@ -1,0 +1,74 @@
+# 运-20 术语与别名
+
+terms:
+  - canonical_name: "运-20"
+    aliases: ["Y-20", "运-20", "鲲鹏", "Xian Y-20"]
+    node_type: "aircraft"
+    definition: "西安飞机工业集团研制的大型战略运输机"
+    source_id: "y20-science-overview-v1"
+
+  - canonical_name: "战略运输机"
+    aliases: ["战略运输", "战略空运"]
+    node_type: "concept"
+    definition: "承担远程、大规模、重型装备投送任务的大型运输机"
+    source_id: "y20-science-overview-v1"
+
+  - canonical_name: "上单翼"
+    aliases: ["上单翼", "高置翼"]
+    node_type: "concept"
+    definition: "机翼安装在机身上方的布局，常见于运输机"
+    source_id: "y20-science-highwing-shortfield-v1"
+
+  - canonical_name: "WS-20"
+    aliases: ["涡扇-20", "WS-20"]
+    node_type: "component"
+    definition: "沈阳发动机研究所大涵道比涡扇发动机，单发推力约 140 kN"
+    source_id: "y20-science-powerplant-v1"
+
+  - canonical_name: "D-30KP-2"
+    aliases: ["D-30", "D-30KP-2"]
+    node_type: "component"
+    definition: "俄罗斯索洛维耶夫涡扇发动机，运-20 早期动力"
+    source_id: "y20-science-powerplant-v1"
+
+  - canonical_name: "货舱"
+    aliases: ["货舱", "cargo hold"]
+    node_type: "concept"
+    definition: "运-20 高约 4 米的货物舱段"
+    source_id: "y20-science-cargo-hold-v1"
+
+  - canonical_name: "99A 主战坦克"
+    aliases: ["99A", "99A坦克"]
+    node_type: "concept"
+    definition: "中国第三代主战坦克，运-20 可装 1 辆"
+    source_id: "y20-science-cargo-hold-v1"
+
+  - canonical_name: "15 式坦克"
+    aliases: ["15式", "15式轻型坦克"]
+    node_type: "concept"
+    definition: "中国轻型坦克，运-20 可装 2 辆"
+    source_id: "y20-science-cargo-hold-v1"
+
+  - canonical_name: "YY-20"
+    aliases: ["YY-20", "运油-20"]
+    node_type: "aircraft"
+    definition: "运-20 的空中加油改型，约 90 吨燃油"
+    source_id: "y20-science-powerplant-v1"
+
+  - canonical_name: "西安飞机工业集团"
+    aliases: ["西飞", "AVIC Xi'an"]
+    node_type: "concept"
+    definition: "运-20 研制单位，中国航空工业集团成员企业"
+    source_id: "y20-science-overview-v1"
+
+  - canonical_name: "伊尔-76"
+    aliases: ["Il-76", "伊尔76"]
+    node_type: "aircraft"
+    definition: "苏联/俄罗斯大型运输机，运-20 的主要替代对象"
+    source_id: "y20-science-vs-il76-v1"
+
+  - canonical_name: "C-17"
+    aliases: ["C-17", "环球霸王III", "Globemaster III"]
+    node_type: "aircraft"
+    definition: "美国波音大型战略战术运输机"
+    source_id: "y20-science-vs-c17-v1"

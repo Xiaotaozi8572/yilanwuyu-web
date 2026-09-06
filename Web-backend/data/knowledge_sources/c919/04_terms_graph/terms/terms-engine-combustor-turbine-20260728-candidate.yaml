@@ -1,0 +1,90 @@
+# C919 燃烧室与涡轮类术语
+# 领域：发动机燃烧室与涡轮
+# 条目数：12
+# node_type 统一为 component
+# ID 前缀：combust_
+
+terms:
+  - term_id: "combust_001"
+    canonical_name: "燃烧室"
+    aliases: ["燃烧室", "combustor", "combustion chamber", "燃烧室组件"]
+    node_type: "component"
+    definition: "发动机内燃料与空气混合燃烧的部件，C919 LEAP-1C 采用环形燃烧室提供高温高压燃气驱动涡轮"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "combust_002"
+    canonical_name: "TAPS"
+    aliases: ["TAPS", "Twin Annular Premixing Swirler", "双环形预混旋流器"]
+    node_type: "component"
+    definition: "CFM 公司贫油预混低排放燃烧室技术，C919 LEAP-1C 采用 TAPS 燃烧室显著降低 NOx 排放"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "combust_003"
+    canonical_name: "富油"
+    aliases: ["富油", "fuel-rich", "富油燃烧", "富油区"]
+    node_type: "concept"
+    definition: "燃料与空气比高于化学恰当比的燃烧状态，传统燃烧室主区富油保证稳定燃烧但 NOx 较高"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "combust_004"
+    canonical_name: "贫油"
+    aliases: ["贫油", "fuel-lean", "贫油燃烧", "贫油区"]
+    node_type: "concept"
+    definition: "燃料与空气比低于化学恰当比的燃烧状态，C919 LEAP-1C TAPS 燃烧室采用贫油预混降低燃烧温度和 NOx"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "combust_005"
+    canonical_name: "预混"
+    aliases: ["预混", "premix", "预混合", "预混燃烧"]
+    node_type: "concept"
+    definition: "燃料与空气在进入燃烧区前预先混合的方式，C919 LEAP-1C 采用预混燃烧降低局部高温和污染物"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "combust_006"
+    canonical_name: "旋流"
+    aliases: ["旋流", "swirl", "旋流器", "旋流燃烧"]
+    node_type: "concept"
+    definition: "使空气旋转进入燃烧室形成回流区的流动，C919 LEAP-1C 旋流器稳定火焰并促进混合"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "combust_007"
+    canonical_name: "火焰筒"
+    aliases: ["火焰筒", "liner", "火焰管", "燃烧室火焰筒"]
+    node_type: "component"
+    definition: "燃烧室内部容纳火焰的筒形结构，带冷却孔保证筒壁温度可控，C919 LEAP-1C 火焰筒采用先进冷却设计"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "combust_008"
+    canonical_name: "燃油喷嘴"
+    aliases: ["燃油喷嘴", "fuel nozzle", "燃料喷嘴", "燃油雾化器"]
+    node_type: "component"
+    definition: "将燃油雾化喷入燃烧室的喷嘴，C919 LEAP-1C 燃油喷嘴实现精细雾化保证高效燃烧"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "combust_009"
+    canonical_name: "点火"
+    aliases: ["点火", "ignition", "点火系统", "点火器"]
+    node_type: "system"
+    definition: "燃烧室启动时点燃混合气的系统，C919 LEAP-1C 配备高能点火器在启动和恶劣工况下点火"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "combust_010"
+    canonical_name: "熄火"
+    aliases: ["熄火", "flameout", "熄火保护", "火焰熄灭"]
+    node_type: "concept"
+    definition: "燃烧室火焰意外熄灭的现象，C919 发动机配备熄火保护和自动点火恢复功能"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "combust_011"
+    canonical_name: "NOx"
+    aliases: ["NOx", "氮氧化物", "NOx 排放"]
+    node_type: "concept"
+    definition: "燃烧产生氮氧化物污染物，主要在高温下生成，C919 LEAP-1C 通过贫油预混燃烧显著降低 NOx 排放"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "combust_012"
+    canonical_name: "冒烟"
+    aliases: ["冒烟", "smoke", "排气冒烟", "烟尘"]
+    node_type: "concept"
+    definition: "燃烧不完全产生的碳烟颗粒，C919 LEAP-1C 通过优化燃烧组织减少冒烟和颗粒物排放"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

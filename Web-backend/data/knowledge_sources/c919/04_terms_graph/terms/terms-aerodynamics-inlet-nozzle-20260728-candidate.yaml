@@ -1,0 +1,76 @@
+# C919 进气道与喷管类术语
+# 领域：进气道与喷管气动
+# 条目数：10
+# node_type 统一为 concept
+# ID 前缀：inlet_
+
+terms:
+  - term_id: "inlet_001"
+    canonical_name: "进气道"
+    aliases: ["进气道", "intake", "inlet", "进气口"]
+    node_type: "concept"
+    definition: "发动机吸入空气的通道，负责将外部气流减速增压并均匀送入压气机，C919 LEAP-1C 进气道采用亚声速扩压设计"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "inlet_002"
+    canonical_name: "扩压器"
+    aliases: ["扩压器", "diffuser", "扩压段"]
+    node_type: "concept"
+    definition: "使气流减速增压的扩张通道，进气道后段即为扩压器，C919 进气道扩压器保证压气机进口气流均匀稳定"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "inlet_003"
+    canonical_name: "收敛喷管"
+    aliases: ["收敛喷管", "convergent nozzle", "收敛喷口"]
+    node_type: "concept"
+    definition: "截面逐渐收缩的排气喷管，亚声速和跨声速客机常用，C919 LEAP-1C 采用收敛喷管，气流在喷口达到声速"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "inlet_004"
+    canonical_name: "收敛-扩张喷管"
+    aliases: ["收敛-扩张喷管", "convergent-divergent nozzle", "C-D 喷管", "拉瓦尔喷管"]
+    node_type: "concept"
+    definition: "先收缩后扩张的喷管，可使气流加速至超声速获得更大推力，超声速飞机常用，C919 不采用此类喷管"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "inlet_005"
+    canonical_name: "引射"
+    aliases: ["引射", "ejector", "引射喷管", "引射效应"]
+    node_type: "concept"
+    definition: "高速射流带动周围次流的现象，引射喷管可降低喷管重量并改善低速性能，部分发动机采用引射降噪"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "inlet_006"
+    canonical_name: "推力矢量"
+    aliases: ["推力矢量", "thrust vectoring", "矢量推力"]
+    node_type: "concept"
+    definition: "通过偏转喷管改变推力方向的技术，可增强机动性，C919 为民用客机不采用推力矢量喷管"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "inlet_007"
+    canonical_name: "反推"
+    aliases: ["反推", "thrust reverser", "反推力装置", "推力反向器"]
+    node_type: "concept"
+    definition: "着陆时使发动机喷流反向偏转产生反向推力的装置，缩短着陆滑跑距离，C919 LEAP-1C 配备扰流板式反推装置"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "inlet_008"
+    canonical_name: "消音器"
+    aliases: ["消音器", "silencer", "消声器", "降噪喷管"]
+    node_type: "concept"
+    definition: "降低发动机排气噪声的装置，常见有波纹喷管和 Chevron 锯齿喷管，C919 LEAP-1C 采用 Chevron 喷管降低噪声"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "inlet_009"
+    canonical_name: "进气整流"
+    aliases: ["进气整流", "intake fairing", "进气整流罩"]
+    node_type: "concept"
+    definition: "进气道前缘的流线型整流结构，保证不同姿态下气流平滑进入，C919 进气整流罩优化了侧风和大迎角进气特性"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "inlet_010"
+    canonical_name: "唇口"
+    aliases: ["唇口", "lip", "进气唇口", "进气道前缘"]
+    node_type: "concept"
+    definition: "进气道前缘的圆弧形结构，影响进气流场和抗畸变能力，C919 进气唇口设计兼顾低速大迎角和高速巡航性能"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

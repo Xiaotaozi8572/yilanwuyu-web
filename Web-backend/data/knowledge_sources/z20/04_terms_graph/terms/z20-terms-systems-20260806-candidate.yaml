@@ -1,0 +1,43 @@
+# z20-terms-systems-20260806-candidate
+
+terms:
+  - canonical_name: "动力系统"
+    aliases: ["动力系统"]
+    node_type: "system"
+    definition: "2台WZ-10涡轴"
+    source_id: "z20-science-basic-parameters-v1"
+  - canonical_name: "传动系统"
+    aliases: ["传动系统"]
+    node_type: "system"
+    definition: "旋翼/尾桨动力分配"
+    source_id: "z20-science-rotor-flightcontrol-v1"
+  - canonical_name: "电传飞控"
+    aliases: ["电传飞控"]
+    node_type: "system"
+    definition: "全权限电传操纵"
+    source_id: "z20-science-rotor-flightcontrol-v1"
+  - canonical_name: "航电系统"
+    aliases: ["航电系统"]
+    node_type: "system"
+    definition: "导航通信任务航电"
+    source_id: "z20-science-overview-v1"
+  - canonical_name: "防除冰系统"
+    aliases: ["防除冰系统"]
+    node_type: "system"
+    definition: "旋翼/发动机防冰"
+    source_id: "z20-science-overview-v1"
+  - canonical_name: "液压系统"
+    aliases: ["液压系统"]
+    node_type: "system"
+    definition: "舵面与起落架驱动"
+    source_id: "z20-science-overview-v1"
+  - canonical_name: "自卫系统"
+    aliases: ["自卫系统", "RWR", "MAWS"]
+    node_type: "system"
+    definition: "告警与干扰弹"
+    source_id: "z20-science-rotor-flightcontrol-v1"
+  - canonical_name: "反潜系统"
+    aliases: ["反潜系统", "声呐"]
+    node_type: "system"
+    definition: "反潜型搜潜设备"
+    source_id: "z20-science-overview-v1"

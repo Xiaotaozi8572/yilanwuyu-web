@@ -1,0 +1,44 @@
+# data/knowledge_sources/MANIFEST.yaml
+schema_version: "1.0"
+knowledge_base:
+  root: data/knowledge_sources
+  default_aircraft: c919
+  active_objects:
+    - id: c919
+      display_name: "中国商飞 C919"
+      partition_enable:
+        01_science: true
+        02_teaching: true
+        03_multimodal: true
+        04_terms_graph: true
+        90_reference_only: false
+    - id: j20
+      display_name: "歼-20"
+      partition_enable:
+        01_science: true
+        02_teaching: true
+        03_multimodal: true
+        04_terms_graph: true
+        90_reference_only: false
+    - id: y20
+      display_name: "运-20"
+      partition_enable:
+        01_science: true
+        02_teaching: true
+        03_multimodal: true
+        04_terms_graph: true
+        90_reference_only: false
+    - id: z20
+      display_name: "直-20"
+      partition_enable:
+        01_science: true
+        02_teaching: true
+        03_multimodal: true
+        04_terms_graph: true
+        90_reference_only: false
+  global_review_policy:
+    allowed_core_review_status: ["reviewed"]
+    authority_levels:
+      official: 1.0
+      project_reviewed: 0.8
+      standard: 0.6

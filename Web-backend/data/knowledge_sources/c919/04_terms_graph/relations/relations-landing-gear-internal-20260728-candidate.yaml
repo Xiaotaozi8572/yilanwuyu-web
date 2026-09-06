@@ -1,0 +1,92 @@
+# C919 起落架内部结构关系
+# 描述前/主起落架及其附件的层级与功能关系
+# relation_type: part_of / controls / parameter_of / depends_on
+# edge_id 前缀：rlg_
+
+relations:
+  # ========== part_of 起落架分系统归属 ==========
+  - edge_id: "rlg_001"
+    source_node_id: "comp_nose_lg"
+    target_node_id: "comp_landing_gear"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "前起落架安装于前机身下部，承担前部支撑与地面转向功能"
+
+  - edge_id: "rlg_002"
+    source_node_id: "comp_main_lg"
+    target_node_id: "comp_landing_gear"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "主起落架安装于中机身/机翼根部，承担主要着陆载荷"
+
+  - edge_id: "rlg_003"
+    source_node_id: "comp_left_main_lg"
+    target_node_id: "comp_main_lg"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "左主起落架安装于左侧机翼根部，承担左半部着陆载荷"
+
+  - edge_id: "rlg_004"
+    source_node_id: "comp_right_main_lg"
+    target_node_id: "comp_main_lg"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "右主起落架安装于右侧机翼根部，承担右半部着陆载荷"
+
+  - edge_id: "rlg_005"
+    source_node_id: "comp_wheel"
+    target_node_id: "comp_main_lg"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "机轮安装于主起落架轴端，承担地面接触与滚动支撑"
+
+  - edge_id: "rlg_006"
+    source_node_id: "comp_brake"
+    target_node_id: "comp_wheel"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "刹车组件安装于机轮内部，承担地面减速与防滑功能"
+
+  - edge_id: "rlg_007"
+    source_node_id: "comp_shock_strut"
+    target_node_id: "comp_landing_gear"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "减震支柱是起落架的承力核心，吸收着陆冲击能量并缓冲地面振动"
+
+  - edge_id: "rlg_008"
+    source_node_id: "comp_retract_actuator"
+    target_node_id: "comp_landing_gear"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "收放作动筒负责起落架的收起与放下动作，由液压系统驱动"
+
+  - edge_id: "rlg_009"
+    source_node_id: "comp_main_lg_door"
+    target_node_id: "comp_main_lg"
+    relation_type: "part_of"
+    confidence: 0.95
+    description: "主起落架舱门随主起落架收放联动，提供气动整流"
+
+  # ========== controls 控制关系 ==========
+  - edge_id: "rlg_010"
+    source_node_id: "act_nose_steering"
+    target_node_id: "comp_nose_lg"
+    relation_type: "controls"
+    confidence: 0.95
+    description: "前轮转弯作动器驱动前起落架偏转，实现地面低速转向"
+
+  - edge_id: "rlg_011"
+    source_node_id: "sys_antiskid"
+    target_node_id: "comp_brake"
+    relation_type: "controls"
+    confidence: 0.95
+    description: "防滑系统控制刹车组件的刹车压力，避免机轮打滑"
+
+  # ========== parameter_of 机轮参数 ==========
+  - edge_id: "rlg_012"
+    source_node_id: "param_tire_pressure"
+    target_node_id: "comp_wheel"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "机轮轮胎压力是机轮关键运行参数，影响承载能力与地面接触面积"

@@ -1,0 +1,11 @@
+# ==============================================================================
+# 离线 mock 覆盖配置（configs/mock/providers.yaml）
+# R0/T1-3：供 `scripts/validate_deployment.py --profile mock` 读取的 provider 口径覆盖。
+# 仅覆盖 provider 默认值，使离线校验与真实默认 provider（deepseek / bge_m3）解耦。
+# 本文件只被 mock 门禁消费，不参与运行时配置加载。
+# ==============================================================================
+providers:
+  llm:
+    default: mock
+  embedding:
+    default: mock

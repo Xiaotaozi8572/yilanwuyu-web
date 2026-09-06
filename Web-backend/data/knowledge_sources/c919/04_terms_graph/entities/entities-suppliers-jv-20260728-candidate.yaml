@@ -1,0 +1,93 @@
+# C919 合资企业实体
+# 中外合资成立的航电系统供应商
+# node_type: supplier
+# node_id 前缀：supjv_
+
+entities:
+  - node_id: "supjv_aviage"
+    node_type: "supplier"
+    canonical_name: "AVIAGE Systems"
+    aliases: ["AVIAGE Systems", "昂际航电", "中电科-GE 航电合资"]
+    description: "中电科与 GE 航空航天合资公司，为 C919 提供航电核心处理系统、IMA 平台"
+    specifications:
+      products: "IMA 平台, 航电核心处理"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supjv_hongfei"
+    node_type: "supplier"
+    canonical_name: "鸿飞"
+    aliases: ["Hongfei", "鸿飞航电", "中航-Shenyang-Honeywell"]
+    description: "中航工业与霍尼韦尔合资公司，为 C919 提供飞控计算机及部分飞控软件"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supjv_liebherr_lamc"
+    node_type: "supplier"
+    canonical_name: "利勃海尔中航起"
+    aliases: ["Liebherr LAMC", "利勃海尔 LAMC", "中航-利勃海尔起落架"]
+    description: "中航工业与利勃海尔合资公司，为 C919 提供起落架系统及收放机构"
+    specifications:
+      products: "起落架系统"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supjv_alrac"
+    node_type: "supplier"
+    canonical_name: "ALRAC"
+    aliases: ["ALRAC", "中航-利勃海尔环控合资"]
+    description: "中航工业与利勃海尔合资公司，为 C919 提供空气管理系统及环控部件"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supjv_rccac"
+    node_type: "supplier"
+    canonical_name: "RCCAC"
+    aliases: ["RCCAC", "成都-柯林斯航电合资"]
+    description: "中航工业与柯林斯合资公司，为 C919 提供通信导航及客舱核心系统"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supjv_moog_qingan"
+    node_type: "supplier"
+    canonical_name: "穆格-中航庆安"
+    aliases: ["Moog-AVIC 庆安", "穆格庆安", "庆安-穆格"]
+    description: "穆格与中航工业庆安合资公司，为 C919 提供飞控作动器及电液伺服产品"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supjv_parker_avic"
+    node_type: "supplier"
+    canonical_name: "派克-中航"
+    aliases: ["Parker-AVIC", "派克中航", "中航-派克"]
+    description: "派克汉尼汾与中航工业合资公司，为 C919 提供液压油箱及燃油系统部件"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supjv_hamilton_avic"
+    node_type: "supplier"
+    canonical_name: "汉胜-中航"
+    aliases: ["Hamilton Sundstrand-AVIC", "汉胜中航", "中航-汉胜"]
+    description: "汉胜与中航工业合资公司，为 C919 提供电源系统及辅助动力相关部件"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supjv_thales_cetca"
+    node_type: "supplier"
+    canonical_name: "泰雷兹-CETCA"
+    aliases: ["Thales-CETCA", "泰雷兹中航", "中航-泰雷兹"]
+    description: "泰雷兹与中航工业合资公司，为 C919 提供娱乐系统及部分航电设备"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supjv_collins_cetca"
+    node_type: "supplier"
+    canonical_name: "柯林斯-CETCA"
+    aliases: ["Collins-CETCA", "柯林斯中航", "中航-柯林斯航电"]
+    description: "柯林斯与中航工业合资公司，为 C919 提供客舱核心系统及配电管理设备"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supjv_ge_avic"
+    node_type: "supplier"
+    canonical_name: "GE-中航"
+    aliases: ["GE-AVIC", "GE 中航", "中航-GE"]
+    description: "GE 航空航天与中航工业合资公司，为 C919 提供航电系统及电气配套部件"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supjv_rtx_avic"
+    node_type: "supplier"
+    canonical_name: "RTX-中航"
+    aliases: ["RTX-AVIC", "雷神中航", "中航-RTX"]
+    description: "雷神技术（含柯林斯/汉胜）与中航工业合资体系，统筹 C919 机电航电配套"
+    applicable_aircraft: ["c919"]

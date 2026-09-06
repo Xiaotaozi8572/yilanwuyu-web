@@ -1,0 +1,198 @@
+# j20 关系种子（扩充）
+# relation_type: part_of / depends_on / derives_from / parameter_of / compared_with
+
+relations:
+  - edge_id: "j20_canard_part_of_j20_airframe"
+    source_node_id: "j20_canard"
+    target_node_id: "j20_airframe"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "鸭翼属于气动布局"
+
+  - edge_id: "j20_main_wing_part_of_j20_airframe"
+    source_node_id: "j20_main_wing"
+    target_node_id: "j20_airframe"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "主翼属于机体"
+
+  - edge_id: "j20_twin_tail_part_of_j20_airframe"
+    source_node_id: "j20_twin_tail"
+    target_node_id: "j20_airframe"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "双垂尾属于机体"
+
+  - edge_id: "j20_dsi_part_of_j20_airframe"
+    source_node_id: "j20_dsi"
+    target_node_id: "j20_airframe"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "DSI进气道属于机体"
+
+  - edge_id: "j20_main_bay_part_of_j20_weapons"
+    source_node_id: "j20_main_bay"
+    target_node_id: "j20_weapons"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "主弹舱属于武器系统"
+
+  - edge_id: "j20_side_bay_part_of_j20_weapons"
+    source_node_id: "j20_side_bay"
+    target_node_id: "j20_weapons"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "侧弹舱属于武器系统"
+
+  - edge_id: "j20_ws10c_part_of_j20_powerplant"
+    source_node_id: "ws10c"
+    target_node_id: "j20_powerplant"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "WS-10C属于动力系统"
+
+  - edge_id: "j20_ws15_part_of_j20_powerplant"
+    source_node_id: "ws15"
+    target_node_id: "j20_powerplant"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "WS-15属于动力系统"
+
+  - edge_id: "j20_pl15_part_of_j20_weapons"
+    source_node_id: "pl15"
+    target_node_id: "j20_weapons"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "PL-15属于武器系统"
+
+  - edge_id: "j20_pl10_part_of_j20_weapons"
+    source_node_id: "pl10"
+    target_node_id: "j20_weapons"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "PL-10属于武器系统"
+
+  - edge_id: "j20_radar_part_of_j20_avionics"
+    source_node_id: "j20_radar"
+    target_node_id: "j20_avionics"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "雷达属于航电系统"
+
+  - edge_id: "j20_eo_part_of_j20_avionics"
+    source_node_id: "j20_eo"
+    target_node_id: "j20_avionics"
+    relation_type: "part_of"
+    confidence: 1.0
+    metadata:
+      note: "光电系统属于航电"
+
+  - edge_id: "j20_avionics_depends_on_j20_powerplant"
+    source_node_id: "j20_avionics"
+    target_node_id: "j20_powerplant"
+    relation_type: "depends_on"
+    confidence: 0.8
+    metadata:
+      note: "航电依赖电力"
+
+  - edge_id: "j20_weapons_depends_on_j20_avionics"
+    source_node_id: "j20_weapons"
+    target_node_id: "j20_avionics"
+    relation_type: "depends_on"
+    confidence: 0.8
+    metadata:
+      note: "武器依赖火控航电"
+
+  - edge_id: "j20_airframe_depends_on_j20_powerplant"
+    source_node_id: "j20_airframe"
+    target_node_id: "j20_powerplant"
+    relation_type: "depends_on"
+    confidence: 0.7
+    metadata:
+      note: "机体依赖动力"
+
+  - edge_id: "j20_avionics_depends_on_j20_datalink"
+    source_node_id: "j20_avionics"
+    target_node_id: "j20_datalink"
+    relation_type: "depends_on"
+    confidence: 0.7
+    metadata:
+      note: "航电依赖数据链"
+
+  - edge_id: "j20_aircraft_parameter_of_j20_aircraft"
+    source_node_id: "j20_aircraft"
+    target_node_id: "j20_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "最大速度"
+      value: "Mach 2.0"
+
+  - edge_id: "j20_ws10c_parameter_of_j20_powerplant"
+    source_node_id: "ws10c"
+    target_node_id: "j20_powerplant"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "推力"
+      value: "142-147 kN"
+
+  - edge_id: "j20_ws15_parameter_of_j20_powerplant"
+    source_node_id: "ws15"
+    target_node_id: "j20_powerplant"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "推力"
+      value: "约180 kN"
+
+  - edge_id: "j20_aircraft_compared_with_f22"
+    source_node_id: "j20_aircraft"
+    target_node_id: "f22"
+    relation_type: "compared_with"
+    confidence: 1.0
+    metadata:
+      note: "同代重型制空机"
+
+  - edge_id: "j20_aircraft_compared_with_f35"
+    source_node_id: "j20_aircraft"
+    target_node_id: "f35"
+    relation_type: "compared_with"
+    confidence: 1.0
+    metadata:
+      note: "五代机对比"
+
+  - edge_id: "j20_aircraft_compared_with_su57"
+    source_node_id: "j20_aircraft"
+    target_node_id: "su57"
+    relation_type: "compared_with"
+    confidence: 1.0
+    metadata:
+      note: "五代机对比"
+
+  - edge_id: "j20_aircraft_compared_with_fc31"
+    source_node_id: "j20_aircraft"
+    target_node_id: "fc31"
+    relation_type: "compared_with"
+    confidence: 1.0
+    metadata:
+      note: "轻重搭配"
+
+  - edge_id: "j20s_derives_from_j20_aircraft"
+    source_node_id: "j20s"
+    target_node_id: "j20_aircraft"
+    relation_type: "derives_from"
+    confidence: 0.9
+    metadata:
+      note: "双座改型"

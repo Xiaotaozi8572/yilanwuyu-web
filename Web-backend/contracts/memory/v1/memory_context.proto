@@ -1,0 +1,109 @@
+syntax = "proto3";
+
+package yilan.memory.v1;
+
+option java_multiple_files = true;
+option java_package = "com.yilan.memory.contract.v1";
+
+// Online, governed memory projection. Learner identity is intentionally absent
+// from every request body and is derived from signed gRPC metadata.
+service MemoryContextService {
+  rpc ResolveMemoryContext(ResolveMemoryContextRequest) returns (ResolveMemoryContextResponse);
+  rpc GetCapabilities(CapabilityRequest) returns (CapabilityResponse);
+}
+
+enum MemoryApplicationStatus {
+  MEMORY_APPLICATION_STATUS_UNSPECIFIED = 0;
+  APPLIED = 1;
+  EMPTY = 2;
+  DEGRADED = 3;
+}
+
+message ResolveMemoryContextRequest {
+  string request_id = 1;
+  string schema_version = 2;
+  string session_id = 3;
+  string query_text = 4;
+  string task_type = 5;
+  SceneBinding scene = 6;
+  ContextBudget budget = 7;
+  optional QueryEmbedding query_embedding = 8;
+  string traceparent = 9;
+}
+
+message ResolveMemoryContextResponse {
+  string request_id = 1;
+  string schema_version = 2;
+  MemoryApplicationStatus status = 3;
+  string identity_binding_digest = 4;
+  GovernedMemoryContext context = 5;
+  repeated string omitted_channels = 6;
+  string trace_id = 7;
+  string diagnostic_code = 8;
+}
+
+message SceneBinding {
+  string scene_type = 1;
+  string scene_id = 2;
+  repeated string object_ids = 3;
+  string locale = 4;
+}
+
+message ContextBudget {
+  uint32 max_items = 1;
+  uint32 max_bytes = 2;
+  uint32 max_tokens = 3;
+  repeated string allowed_memory_types = 4;
+  repeated string allowed_use_classes = 5;
+}
+
+message QueryEmbedding {
+  repeated float values = 1;
+  string model_id = 2;
+  string model_version = 3;
+  uint32 dimension = 4;
+  string normalization = 5;
+}
+
+message GovernedMemoryContext {
+  repeated MemoryItem items = 1;
+  string memory_boundary = 2;
+  uint64 policy_epoch = 3;
+  uint64 memory_epoch = 4;
+  string generated_at = 5;
+}
+
+message MemoryItem {
+  string memory_id = 1;
+  string version_id = 2;
+  string memory_type = 3;
+  string use_class = 4;
+  string value_json = 5;
+  double confidence = 6;
+  string valid_from = 7;
+  string valid_to = 8;
+  string confirmation_status = 9;
+  repeated string source_ids = 10;
+}
+
+message CapabilityRequest {
+  string request_id = 1;
+  string schema_version = 2;
+  string traceparent = 3;
+}
+
+message CapabilityResponse {
+  string request_id = 1;
+  string schema_version = 2;
+  repeated string supported_schema_versions = 3;
+  repeated string required_capabilities = 4;
+  repeated EmbeddingProfile embedding_profiles = 5;
+  string trace_id = 6;
+}
+
+message EmbeddingProfile {
+  string model_id = 1;
+  string model_version = 2;
+  uint32 dimension = 3;
+  string normalization = 4;
+}

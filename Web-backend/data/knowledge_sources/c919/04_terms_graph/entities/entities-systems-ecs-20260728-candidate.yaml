@@ -1,0 +1,95 @@
+# C919 环控系统实体
+# 环境控制与座舱增压系统
+# node_type: system
+# node_id 前缀：secs_
+
+entities:
+  - node_id: "secs_bleed"
+    node_type: "system"
+    canonical_name: "引气系统"
+    aliases: ["bleed air system", "引气", "发动机引气"]
+    description: "从发动机压气机引出高压空气的系统，C919 引气经调压后供给空调、防冰、增压等用户"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "secs_pack"
+    node_type: "system"
+    canonical_name: "空调组件"
+    aliases: ["air conditioning pack", "空调包", "制冷组件"]
+    description: "将引气制冷除湿后供入客舱的空气循环制冷组件，C919 左右各 1 套由 Liebherr 提供"
+    specifications:
+      supplier: "Liebherr"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "secs_heat_exchanger"
+    node_type: "system"
+    canonical_name: "热交换器"
+    aliases: ["heat exchanger", "换热器", "热交换器"]
+    description: "利用冲压空气冷却引气的换热装置，C919 空调组件含主次两段热交换器逐级降温"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "secs_air_cycle_machine"
+    node_type: "system"
+    canonical_name: "空气循环机"
+    aliases: ["air cycle machine", "ACM", "涡轮冷却器"]
+    description: "通过涡轮膨胀进一步冷却空气的旋转机械，C919 ACM 与压气机同轴实现能量回收"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "secs_water_separator"
+    node_type: "system"
+    canonical_name: "水分离器"
+    aliases: ["water separator", "除水器", "冷凝水分离器"]
+    description: "分离空气中冷凝水的装置，C919 水分离器去除水分后水可回送加湿或排出机外"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "secs_pressurization"
+    node_type: "system"
+    canonical_name: "座舱增压系统"
+    aliases: ["pressurization system", "增压系统", "客舱增压"]
+    description: "维持客舱压力高于外界大气压的系统，C919 巡航高度座舱高度保持在 8000 英尺以下"
+    specifications:
+      cabin_altitude_ft: 8000
+    applicable_aircraft: ["c919"]
+
+  - node_id: "secs_pressure_regulator"
+    node_type: "system"
+    canonical_name: "压力调节阀"
+    aliases: ["pressure regulator valve", "外流阀", "排气阀"]
+    description: "控制座舱排气量维持压力的阀门，C919 由自动增压系统电动调节外流阀开度"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "secs_temperature_control_valve"
+    node_type: "system"
+    canonical_name: "温度控制阀"
+    aliases: ["temperature control valve", "温控阀", "调温阀"]
+    description: "调节冷热空气混合比例控制供气温度的阀门，C919 客舱和驾驶舱独立温控"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "secs_ram_air"
+    node_type: "system"
+    canonical_name: "冲压空气系统"
+    aliases: ["ram air system", "冲压进气", "冲压空气"]
+    description: "利用飞行速度引入外界空气冷却热交换器的系统，C919 机腹设冲压空气进排气口"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "secs_oat"
+    node_type: "system"
+    canonical_name: "外界空气温度传感器"
+    aliases: ["OAT", "outside air temperature sensor", "外界气温探头"]
+    description: "测量外界大气温度的传感器，C919 OAT 数据送入大气数据计算机用于总温计算"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "secs_filter"
+    node_type: "system"
+    canonical_name: "过滤器"
+    aliases: ["filter", "空气过滤器", "HEPA 过滤器"]
+    description: "过滤进入客舱空气的微粒过滤器，C919 供气路设 HEPA 高效过滤器保证客舱空气质量"
+    specifications:
+      filter_type: "HEPA"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "secs_humidity_control"
+    node_type: "system"
+    canonical_name: "湿度控制"
+    aliases: ["humidity control", "加湿系统", "湿度调节"]
+    description: "调节客舱湿度的系统，C919 通过水分离器回送及加湿器维持客舱湿度在舒适区间"
+    applicable_aircraft: ["c919"]

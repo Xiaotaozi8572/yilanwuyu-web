@@ -1,0 +1,24 @@
+{
+  "template_id": "asr_correction_prompt",
+  "title": "ASR correction prompt",
+  "task_type": "asr_correction",
+  "status": "active",
+  "active_version": "v2",
+  "activation_scope": [
+    "asr_correction"
+  ],
+  "concept_scope": [
+    "speech_normalization"
+  ],
+  "scene_scope": [
+    "voice",
+    "scene"
+  ],
+  "constraints": [
+    "normalize_terms_without_adding_facts",
+    "surface_uncertain_transcripts"
+  ],
+  "risk_boundaries": [
+    "no_fact_completion_from_partial_audio"
+  ]
+}

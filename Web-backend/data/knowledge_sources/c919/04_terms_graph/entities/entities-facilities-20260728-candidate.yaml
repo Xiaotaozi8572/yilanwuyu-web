@@ -1,0 +1,75 @@
+# C919 制造设施实体
+# 生产总装、部件制造及试验设施
+# node_type: facility
+# node_id 前缀：fac_
+
+entities:
+  - node_id: "fac_shanghai_final"
+    node_type: "facility"
+    canonical_name: "上海总装线"
+    aliases: ["上海总装线", "COMAC 总装中心", "浦东总装线"]
+    description: "位于上海浦东的中国商飞 C919 总装中心，承担全机总装、测试和交付"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "fac_xian_wing"
+    node_type: "facility"
+    canonical_name: "西安机翼制造中心"
+    aliases: ["西安机翼", "中航西飞机翼", "XAC 机翼"]
+    description: "中航西飞位于西安的机翼制造中心，承担 C919 机翼及中央翼盒制造与机翼总装"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "fac_hongdu_fuselage"
+    node_type: "facility"
+    canonical_name: "洪都机身制造基地"
+    aliases: ["洪都机身", "南昌机身基地", "洪都前机身"]
+    description: "江西洪都航空位于南昌的机身制造基地，承担 C919 前机身及中后机身装配"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "fac_shenyang_fuselage"
+    node_type: "facility"
+    canonical_name: "沈阳机身制造基地"
+    aliases: ["沈阳机身", "中航沈飞机身", "SAC 后机身"]
+    description: "中航沈飞位于沈阳的机身制造基地，承担 C919 后机身前段、垂直尾翼制造"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "fac_chengdu_nose"
+    node_type: "facility"
+    canonical_name: "成都机头制造中心"
+    aliases: ["成都机头", "成飞机头", "CAC 机头"]
+    description: "中航成飞位于成都的机头制造中心，承担 C919 机头段制造，机身宽度 3.96m 部件"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "fac_nanchang_testflight"
+    node_type: "facility"
+    canonical_name: "南昌试飞基地"
+    aliases: ["南昌试飞", "瑶湖机场", "南昌瑶湖试飞"]
+    description: "位于南昌瑶湖的试飞机场，承担 C919 部分试飞科目及生产试飞任务"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "fac_pudong_testflight"
+    node_type: "facility"
+    canonical_name: "浦东试飞场"
+    aliases: ["浦东试飞", "浦东国际机场试飞", "上海浦东试飞"]
+    description: "上海浦东国际机场 C919 试飞主基地，首飞及多架机试飞主要起降场"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "fac_yanliang_testflight"
+    node_type: "facility"
+    canonical_name: "阎良试飞院"
+    aliases: ["阎良试飞院", "中国飞行试验研究院", "阎良"]
+    description: "位于西安阎良的中国飞行试验研究院，承担 C919 适航试飞及鉴定科目"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "fac_tianjin_final"
+    node_type: "facility"
+    canonical_name: "天津总装基地"
+    aliases: ["天津总装", "天津制造基地", "COMAC 天津"]
+    description: "位于天津的中国商飞制造基地，承担 C919 部分部装及未来产能扩展"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "fac_beijing_engineering"
+    node_type: "facility"
+    canonical_name: "北京工程中心"
+    aliases: ["北京工程中心", "COMAC 北京", "北京研发中心"]
+    description: "位于北京的中国商飞工程研发中心，承担 C919 设计、系统研发及适航工程支持"
+    applicable_aircraft: ["c919"]

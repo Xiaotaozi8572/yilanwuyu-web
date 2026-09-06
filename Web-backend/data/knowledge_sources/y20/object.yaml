@@ -1,0 +1,22 @@
+# data/knowledge_sources/y20/object.yaml
+object_id: y20
+display_name: "运-20"
+aliases:
+  - "Y-20"
+  - "运-20"
+  - "鲲鹏"
+aircraft_family: "transport"
+manufacturer: "AVIC 西安飞机工业（集团）"
+partition_enable:
+  01_science: true
+  02_teaching: true
+  03_multimodal: true
+  04_terms_graph: true
+  90_reference_only: false
+partition_owners:
+  01_science: "科普证据组"
+  02_teaching: "教学设计组"
+  03_multimodal: "视觉资产组"
+  04_terms_graph: "术语图谱组"
+  90_reference_only: "资料转化组"
+notes: "运-20 为大型军用运输机，公开参数相对完整，以权威公开来源为准。"

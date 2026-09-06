@@ -1,0 +1,95 @@
+# y20 实体补全
+# 字段对齐 GraphNode
+
+entities:
+  - entity_id: "a400m"
+    node_type: "aircraft"
+    canonical_name: "A400M"
+    aliases: []
+    definition: "欧洲中型运输机"
+    source_id: "y20-graph-entities-extra-v1"
+
+  - entity_id: "an124"
+    node_type: "aircraft"
+    canonical_name: "安-124"
+    aliases: []
+    definition: "俄罗斯超大型运输机"
+    source_id: "y20-graph-entities-extra-v1"
+
+  - entity_id: "c17"
+    node_type: "aircraft"
+    canonical_name: "C-17"
+    aliases: []
+    definition: "美国大型运输机"
+    source_id: "y20-graph-entities-extra-v1"
+
+  - entity_id: "d30"
+    node_type: "component"
+    canonical_name: "D-30KP-2发动机"
+    aliases: []
+    definition: "俄制发动机"
+    source_id: "y20-graph-entities-extra-v1"
+
+  - entity_id: "il76"
+    node_type: "aircraft"
+    canonical_name: "伊尔-76"
+    aliases: []
+    definition: "俄罗斯大型运输机"
+    source_id: "y20-graph-entities-extra-v1"
+
+  - entity_id: "ws20"
+    node_type: "component"
+    canonical_name: "WS-20发动机"
+    aliases: []
+    definition: "大涵道比涡扇，140 kN"
+    source_id: "y20-graph-entities-extra-v1"
+
+  - entity_id: "y20_airframe"
+    node_type: "component"
+    canonical_name: "机身"
+    aliases: []
+    definition: "47米大型货舱机身"
+    source_id: "y20-graph-entities-extra-v1"
+
+  - entity_id: "y20_avionics"
+    node_type: "system"
+    canonical_name: "航电系统"
+    aliases: []
+    definition: "运输机航电"
+    source_id: "y20-graph-entities-extra-v1"
+
+  - entity_id: "y20_cargo"
+    node_type: "component"
+    canonical_name: "货舱"
+    aliases: []
+    definition: "高约4米货舱段"
+    source_id: "y20-graph-entities-extra-v1"
+
+  - entity_id: "y20_fuel"
+    node_type: "system"
+    canonical_name: "燃油系统"
+    aliases: []
+    definition: "大容量机翼油箱"
+    source_id: "y20-graph-entities-extra-v1"
+
+  - entity_id: "y20_tail"
+    node_type: "component"
+    canonical_name: "T形尾翼"
+    aliases: []
+    definition: "T形尾翼布局"
+    source_id: "y20-graph-entities-extra-v1"
+
+  - entity_id: "y20b"
+    node_type: "aircraft"
+    canonical_name: "Y-20B"
+    aliases: []
+    definition: "换装WS-20型号"
+    source_id: "y20-graph-entities-extra-v1"
+
+  - entity_id: "yy20"
+    node_type: "aircraft"
+    canonical_name: "YY-20加油机"
+    aliases: []
+    definition: "运-20加油改型"
+    source_id: "y20-graph-entities-extra-v1"
+

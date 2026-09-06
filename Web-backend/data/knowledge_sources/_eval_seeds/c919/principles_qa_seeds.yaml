@@ -1,0 +1,44 @@
+# C919 原理分区评测种子
+
+seeds:
+  - question: "超临界机翼的原理是什么？为什么能提升效率？"
+    expected_intent_type: "concept_explanation"
+    expected_complexity: "L3"
+    expected_evidence_partitions: ["c919/01_science/03_principles"]
+    notes: "气动原理"
+
+  - question: "什么是涵道比？LEAP-1C 的涵道比是多少？"
+    expected_intent_type: "principle_explanation"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/03_principles"]
+    notes: "发动机原理参数"
+
+  - question: "电传操纵和传统机械操纵有什么区别？"
+    expected_intent_type: "concept_explanation"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/03_principles"]
+    notes: "电传操纵原理"
+
+  - question: "C919 用了哪些先进材料？各有什么好处？"
+    expected_intent_type: "principle_explanation"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/03_principles", "c919/01_science/02_structure_systems"]
+    notes: "材料原理"
+
+  - question: "C919 的飞机在飞行中受到哪几个力的作用？"
+    expected_intent_type: "principle_explanation"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/03_principles"]
+    notes: "飞行力学基础"
+
+  - question: "什么是适航？C919 取得了哪些适航证件？"
+    expected_intent_type: "knowledge_explanation"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/03_principles", "c919/01_science/04_history_milestones"]
+    notes: "适航理念"
+
+  - question: "C919 的 LEAP-1C 发动机采用了哪些先进技术？"
+    expected_intent_type: "principle_explanation"
+    expected_complexity: "L3"
+    expected_evidence_partitions: ["c919/01_science/03_principles"]
+    notes: "发动机技术细节"

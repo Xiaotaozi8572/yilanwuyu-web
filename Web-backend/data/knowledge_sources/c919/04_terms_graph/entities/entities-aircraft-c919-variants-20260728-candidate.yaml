@@ -1,0 +1,141 @@
+# C919 机型变体实体
+# C919 系列各改型与衍生型号
+# node_type: aircraft
+# node_id 前缀：ac919_
+
+entities:
+  - node_id: "ac919_100std"
+    node_type: "aircraft"
+    canonical_name: "C919-100STD"
+    aliases: ["C919-100STD", "C919 标准型", "C919-100"]
+    description: "C919 系列基本标准型窄体客机，机身宽度 3.96m，翼展 33.6m（含小翼 35.8m），巡航 Mach 0.785，2022-09-29 取得型号合格证"
+    specifications:
+      wingspan_m: 35.8
+      fuselage_width_m: 3.96
+      length_m: 38.9
+      height_m: 11.95
+      mtow_kg: 77300
+      range_km: 4075
+      seats: "158-168"
+      cruise_mach: 0.785
+      engines: "2× LEAP-1C28（推力 129.98kN）"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ac919_100er"
+    node_type: "aircraft"
+    canonical_name: "C919-100ER"
+    aliases: ["C919-100ER", "C919 延程型", "C919-100 ER"]
+    description: "C919 系列延程型，通过增加燃油容量和提升 MTOW 实现更远航程，巡航 Mach 0.785"
+    specifications:
+      wingspan_m: 35.8
+      fuselage_width_m: 3.96
+      length_m: 38.9
+      height_m: 11.95
+      mtow_kg: 78900
+      range_km: 5555
+      seats: "158-168"
+      cruise_mach: 0.785
+      engines: "2× LEAP-1C28（推力 129.98kN）"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ac919_600"
+    node_type: "aircraft"
+    canonical_name: "C919-600"
+    aliases: ["C919-600", "C919 缩短型", "C919-600 概念型"]
+    description: "C919 系列缩短型改型，面向中短程高密度市场，机身缩短，座位数减少，2026 年计划出厂"
+    specifications:
+      wingspan_m: 35.8
+      fuselage_width_m: 3.96
+      length_m: 35.5
+      height_m: 11.95
+      mtow_kg: 75000
+      range_km: 4100
+      seats: "140-150"
+      cruise_mach: 0.785
+      engines: "2× LEAP-1C28（推力 129.98kN）"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ac919_800"
+    node_type: "aircraft"
+    canonical_name: "C919-800"
+    aliases: ["C919-800", "C919 加长型", "C919-800 概念型"]
+    description: "C919 系列加长型改型，面向中长程大客流市场，机身加长约 4 米，座位数提升至 180-190"
+    specifications:
+      wingspan_m: 35.8
+      fuselage_width_m: 3.96
+      length_m: 42.8
+      height_m: 11.95
+      mtow_kg: 80000
+      range_km: 3900
+      seats: "180-190"
+      cruise_mach: 0.785
+      engines: "2× LEAP-1C30（推力 137.14kN）"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ac919_100f"
+    node_type: "aircraft"
+    canonical_name: "C919-100F"
+    aliases: ["C919-100F", "C919 货机", "C919F"]
+    description: "C919 系列货机改型，拆除客舱座椅改装主货舱，增设腹舱货舱门，面向航空货运市场"
+    specifications:
+      wingspan_m: 35.8
+      fuselage_width_m: 3.96
+      length_m: 38.9
+      height_m: 11.95
+      mtow_kg: 78900
+      range_km: 5100
+      payload_kg: 25000
+      cruise_mach: 0.785
+      engines: "2× LEAP-1C28（推力 129.98kN）"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ac919_100bj"
+    node_type: "aircraft"
+    canonical_name: "C919-100BJ"
+    aliases: ["C919-100BJ", "C919 公务机", "C919BJ"]
+    description: "C919 系列公务机改型，客舱改为豪华公务布局，载客量减少但航程增加，巡航 Mach 0.785"
+    specifications:
+      wingspan_m: 35.8
+      fuselage_width_m: 3.96
+      length_m: 38.9
+      height_m: 11.95
+      mtow_kg: 78900
+      range_km: 6500
+      seats: "20-50"
+      cruise_mach: 0.785
+      engines: "2× LEAP-1C28（推力 129.98kN）"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ac919_100lr"
+    node_type: "aircraft"
+    canonical_name: "C919-100LR"
+    aliases: ["C919-100LR", "C919 远程型", "C919-100 LR"]
+    description: "C919 系列远程型，进一步增大燃油容量并换装 LEAP-1C30 发动机（推力 137.14kN），航程显著提升"
+    specifications:
+      wingspan_m: 35.8
+      fuselage_width_m: 3.96
+      length_m: 38.9
+      height_m: 11.95
+      mtow_kg: 80000
+      range_km: 7000
+      seats: "150-160"
+      cruise_mach: 0.785
+      engines: "2× LEAP-1C30（推力 137.14kN）"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ac919_100x"
+    node_type: "aircraft"
+    canonical_name: "C919-100X"
+    aliases: ["C919-100X", "C919 增强型", "C919-100 X"]
+    description: "C919 系列增强改型概念方案，升级航电与气动优化，提升高原机场适应性及高温环境性能"
+    specifications:
+      wingspan_m: 35.8
+      fuselage_width_m: 3.96
+      length_m: 38.9
+      height_m: 11.95
+      mtow_kg: 79000
+      range_km: 5200
+      seats: "158-168"
+      cruise_mach: 0.785
+      engines: "2× LEAP-1C30（推力 137.14kN）"
+    applicable_aircraft: ["c919"]

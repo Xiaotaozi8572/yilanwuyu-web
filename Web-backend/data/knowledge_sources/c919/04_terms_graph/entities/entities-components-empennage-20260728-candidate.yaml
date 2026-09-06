@@ -1,0 +1,89 @@
+# C919 尾翼部件实体
+# 尾翼结构分解及操纵面部件
+# node_type: component
+# node_id 前缀：cemp_
+
+entities:
+  - node_id: "cemp_vertical_tail"
+    node_type: "component"
+    canonical_name: "垂直尾翼"
+    aliases: ["vertical tail", "垂尾", "立尾"]
+    description: "机身尾部垂直翼面，提供航向静稳定性并安装方向舵，C919 垂尾采用复合材料蒙皮"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cemp_horizontal_tail"
+    node_type: "component"
+    canonical_name: "水平尾翼"
+    aliases: ["horizontal tail", "平尾"]
+    description: "机身尾部水平翼面，提供纵向静稳定性并安装升降舵，C919 采用可调安定面设计"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cemp_rudder"
+    node_type: "component"
+    canonical_name: "方向舵"
+    aliases: ["rudder", "方向舵面"]
+    description: "垂直尾翼后缘可动翼面，偏转产生偏航力矩实现航向操纵，C919 方向舵由液压作动器驱动"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cemp_elevator"
+    node_type: "component"
+    canonical_name: "升降舵"
+    aliases: ["elevator", "升降舵面"]
+    description: "水平尾翼后缘可动翼面，差动或同动偏转产生俯仰力矩实现纵向操纵"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cemp_stabilizer"
+    node_type: "component"
+    canonical_name: "安定面"
+    aliases: ["stabilizer", "固定安定面"]
+    description: "尾翼固定翼面部分，提供静稳定性，C919 水平安定面可通过配平马达调节安装角"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cemp_trim_tab"
+    node_type: "component"
+    canonical_name: "配平片"
+    aliases: ["trim tab", "调整片"]
+    description: "舵面后缘可调小翼片，偏转减小驾驶杆力，实现飞行配平，减轻飞行员操纵负荷"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cemp_ventral_fin"
+    node_type: "component"
+    canonical_name: "腹鳍"
+    aliases: ["ventral fin", "下垂直尾鳍"]
+    description: "机身尾部下方垂直翼面，补偿大迎角航向稳定性不足，防止深失速"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cemp_dorsal_fin"
+    node_type: "component"
+    canonical_name: "背鳍"
+    aliases: ["dorsal fin", "脊鳍"]
+    description: "机身尾部至垂尾根部的整流过渡翼面，改善垂尾根部气流并增强航向稳定性"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cemp_tail_root"
+    node_type: "component"
+    canonical_name: "尾翼根部"
+    aliases: ["tail root", "尾翼连接区"]
+    description: "尾翼与机身连接的根部承力区，承受尾翼传来的弯矩和剪力，是尾翼关键承力部位"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cemp_tail_tip"
+    node_type: "component"
+    canonical_name: "尾翼翼尖"
+    aliases: ["tail tip", "尾翼翼梢"]
+    description: "尾翼末端区域，垂尾翼尖安装天线及航行灯，平尾翼尖优化气动外形降低诱导阻力"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cemp_swept_tail"
+    node_type: "component"
+    canonical_name: "后掠翼尾翼"
+    aliases: ["swept tail", "后掠尾翼"]
+    description: "尾翼采用后掠设计，C919 垂尾和平尾均有后掠角，延缓临界马赫数并改善高速气动特性"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cemp_adjustable_stabilizer"
+    node_type: "component"
+    canonical_name: "可调安定面"
+    aliases: ["adjustable stabilizer", "可配平安定面"]
+    description: "水平安定面安装角可通过配平马达在飞行中调节，实现纵向配平，C919 采用电传控制配平"
+    applicable_aircraft: ["c919"]

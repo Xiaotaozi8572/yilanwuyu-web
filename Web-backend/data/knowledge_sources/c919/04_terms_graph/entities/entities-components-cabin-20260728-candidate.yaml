@@ -1,0 +1,100 @@
+# C919 客舱部件实体
+# 客舱内饰及旅客服务设施
+# node_type: component
+# node_id 前缀：ccab_
+
+entities:
+  - node_id: "ccab_seat"
+    node_type: "component"
+    canonical_name: "座椅"
+    aliases: ["seat", "旅客座椅", "客舱座椅"]
+    description: "客舱旅客座椅，C919 标准布置 158-168 座，3-3 布局，经济舱座椅宽度约 17 英寸"
+    specifications:
+      seats: "158-168"
+      layout: "3-3"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ccab_overhead_bin"
+    node_type: "component"
+    canonical_name: "行李架"
+    aliases: ["overhead bin", "行李箱", "顶部行李架"]
+    description: "客舱顶部行李存储架，C919 行李架采用下沉式设计，容量较传统设计提升约 30%"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ccab_ceiling_light"
+    node_type: "component"
+    canonical_name: "顶灯"
+    aliases: ["ceiling light", "客舱顶灯", "照明灯"]
+    description: "客舱顶部照明灯具，C919 采用 LED 全色可调情景照明系统，模拟昼夜光线变化"
+    specifications:
+      light_type: "LED"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ccab_vent"
+    node_type: "component"
+    canonical_name: "通风口"
+    aliases: ["vent", "气体出口", "个人通风口"]
+    description: "客舱座位上方个人通风喷嘴，可调节方向和流量，由环控系统供气"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ccab_oxygen_mask"
+    node_type: "component"
+    canonical_name: "氧气面罩"
+    aliases: ["oxygen mask", "应急氧气面罩", "PSU"]
+    description: "客舱顶部的旅客应急氧气面罩组件，座舱高度超过 14000 英尺时自动落下，化学氧发生器供氧"
+    specifications:
+      deploy_altitude_ft: 14000
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ccab_ife"
+    node_type: "component"
+    canonical_name: "机上娱乐系统"
+    aliases: ["IFE", "in-flight entertainment", "机上娱乐"]
+    description: "客舱机上娱乐系统，C919 座椅背部配备触摸显示屏，提供视频、音频及飞行信息显示"
+    specifications:
+      screen_type: "触摸显示屏"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ccab_galley"
+    node_type: "component"
+    canonical_name: "厨房"
+    aliases: ["galley", "机上厨房", "餐厨间"]
+    description: "客舱前后部餐食准备区，配备烤箱、咖啡机、推车存储位，由客舱乘务员操作"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ccab_lavatory"
+    node_type: "component"
+    canonical_name: "卫生间"
+    aliases: ["lavatory", "洗手间", "盥洗室"]
+    description: "客舱盥洗设施，C919 标准布置前后卫生间，配备真空马桶、洗手池及婴儿护理板"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ccab_evacuation_slide"
+    node_type: "component"
+    canonical_name: "应急滑梯"
+    aliases: ["evacuation slide", "逃生滑梯", "应急撤离滑梯"]
+    description: "紧急出口外部充气滑梯，紧急情况自动展开供旅客撤离，C919 客舱门及紧急出口均配滑梯"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ccab_life_vest"
+    node_type: "component"
+    canonical_name: "救生衣"
+    aliases: ["life vest", "旅客救生衣", "漂浮装置"]
+    description: "每名旅客座椅下方配备的充气式救生衣，水上迫降时使用，含口哨和照明灯"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ccab_cabin_door"
+    node_type: "component"
+    canonical_name: "舱门"
+    aliases: ["cabin door", "客舱门", "登机门"]
+    description: "客舱进出舱门，C919 采用塞式增压密封门，由 Hawker Pacific 等供应商提供机构"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ccab_window"
+    node_type: "component"
+    canonical_name: "窗户"
+    aliases: ["window", "客舱舷窗", "观察窗"]
+    description: "客舱侧面观察窗，C919 采用多层有机玻璃电加温窗户，窗口尺寸较 A320 增大约 15%"
+    specifications:
+      window_size_increase_pct: 15
+    applicable_aircraft: ["c919"]

@@ -1,0 +1,79 @@
+# C919 辅助动力系统内部关系
+# 描述 APU 及其附件的层级与功能关系
+# relation_type: part_of / controls / provides_power_to / feeds_to
+# edge_id 前缀：raux_
+
+relations:
+  # ========== part_of APU 组件归属 ==========
+  - edge_id: "raux_001"
+    source_node_id: "sys_apu"
+    target_node_id: "sys_auxiliary_power"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "APU 是辅助动力系统的核心，是一台小型燃气涡轮发动机"
+
+  - edge_id: "raux_002"
+    source_node_id: "comp_apu_generator"
+    target_node_id: "sys_apu"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "APU 发电机由 APU 驱动，提供地面或空中的电力供应"
+
+  - edge_id: "raux_003"
+    source_node_id: "comp_apu_bleed"
+    target_node_id: "sys_apu"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "APU 引气从 APU 压气机引出，提供地面空调与发动机启动气源"
+
+  - edge_id: "raux_004"
+    source_node_id: "comp_apu_fuel_pump"
+    target_node_id: "sys_apu"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "APU 燃油泵从飞机燃油系统抽油供 APU 燃烧室使用"
+
+  - edge_id: "raux_005"
+    source_node_id: "comp_apu_ecu"
+    target_node_id: "sys_apu"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "APU 控制单元(ECU)对 APU 启动、运行、停车进行全自动控制与监测"
+
+  - edge_id: "raux_006"
+    source_node_id: "comp_apu_exhaust"
+    target_node_id: "sys_apu"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "APU 排气管将 APU 燃气排至机外，安装于后机身尾部"
+
+  # ========== controls APU 控制 ==========
+  - edge_id: "raux_007"
+    source_node_id: "comp_apu_ecu"
+    target_node_id: "sys_apu"
+    relation_type: "controls"
+    confidence: 0.95
+    description: "ECU 控制 APU 启动时序、转速调节与停车保护逻辑"
+
+  # ========== provides_power_to APU 供能 ==========
+  - edge_id: "raux_008"
+    source_node_id: "comp_apu_generator"
+    target_node_id: "sys_electrical"
+    relation_type: "provides_power_to"
+    confidence: 0.95
+    description: "APU 发电机为电力系统提供地面或备用电力"
+
+  - edge_id: "raux_009"
+    source_node_id: "comp_apu_bleed"
+    target_node_id: "sys_bleed_air"
+    relation_type: "provides_power_to"
+    confidence: 0.95
+    description: "APU 引气为引气系统提供地面气源，可启动主发动机或驱动空调"
+
+  # ========== feeds_to APU 燃油流向 ==========
+  - edge_id: "raux_010"
+    source_node_id: "comp_apu_fuel_pump"
+    target_node_id: "sys_apu"
+    relation_type: "feeds_to"
+    confidence: 0.95
+    description: "APU 燃油泵将燃油送至 APU 燃烧室维持 APU 运行"

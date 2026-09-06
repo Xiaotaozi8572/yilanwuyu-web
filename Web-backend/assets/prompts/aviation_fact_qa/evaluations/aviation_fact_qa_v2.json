@@ -1,0 +1,20 @@
+{
+  "snapshot_id": "aviation_fact_qa_v2",
+  "template_id": "aviation_fact_qa",
+  "version": "v2",
+  "test_cases": [
+    "basic_concept",
+    "parameter_without_source",
+    "scene_component"
+  ],
+  "dimension_scores": {
+    "faithfulness": 1.0,
+    "clarity": 0.92,
+    "scene_alignment": 0.9
+  },
+  "violations": [],
+  "improvements": [
+    "Evidence boundary is explicit."
+  ],
+  "final_decision": "approve"
+}

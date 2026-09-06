@@ -1,0 +1,90 @@
+# C919 高速气动类术语
+# 领域：高速气流与压缩性效应
+# 条目数：12
+# node_type 统一为 concept
+# ID 前缀：hs_
+
+terms:
+  - term_id: "hs_001"
+    canonical_name: "马赫数"
+    aliases: ["马赫数", "Mach number", "M", "飞行马赫数"]
+    node_type: "concept"
+    definition: "流速与当地声速之比 M=V/a，C919 巡航马赫数约 0.785，是衡量跨声速飞行状态的关键参数"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hs_002"
+    canonical_name: "临界马赫数"
+    aliases: ["临界马赫数", "critical Mach number", "Mcr"]
+    node_type: "concept"
+    definition: "流场中任一点流速首次达到当地声速对应的来流马赫数，超过后出现局部超声速区和激波，C919 临界马赫数约 0.82"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hs_003"
+    canonical_name: "阻力发散马赫数"
+    aliases: ["阻力发散马赫数", "drag divergence Mach", "Mdd"]
+    node_type: "concept"
+    definition: "阻力系数急剧上升对应的来流马赫数，通常高于临界马赫数，C919 超临界翼型使 Mdd 略高于巡航马赫数 0.785"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hs_004"
+    canonical_name: "声速"
+    aliases: ["声速", "speed of sound", "a"]
+    node_type: "concept"
+    definition: "微小压力扰动在介质中传播的速度 a=√(γRT)，海平面标准大气声速约 340 m/s，随温度降低而减小"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hs_005"
+    canonical_name: "亚声速"
+    aliases: ["亚声速", "subsonic", "亚声速飞行"]
+    node_type: "concept"
+    definition: "来流马赫数小于 1 的飞行状态，气流可视为不可压缩（M<0.3）或可压缩（0.3<M<1），C919 巡航属高亚声速范围"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hs_006"
+    canonical_name: "跨声速"
+    aliases: ["跨声速", "transonic", "跨声速飞行"]
+    node_type: "concept"
+    definition: "来流马赫数约 0.8-1.2 时流场同时存在亚声速和超声速区的飞行状态，C919 巡航马赫数 0.785 处于跨声速区下边界"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hs_007"
+    canonical_name: "超声速"
+    aliases: ["超声速", "supersonic", "超声速飞行"]
+    node_type: "concept"
+    definition: "来流马赫数大于 1 的飞行状态，产生弓形激波和膨胀波，C919 为亚声速客机不进入超声速飞行"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hs_008"
+    canonical_name: "激波"
+    aliases: ["激波", "shock wave", "压缩波"]
+    node_type: "concept"
+    definition: "超声速气流减速时形成的强压缩不连续面，通过激波后压力突增、速度突降，C919 跨声速时机翼上表面会产生正激波"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hs_009"
+    canonical_name: "膨胀波"
+    aliases: ["膨胀波", "expansion wave", "Prandtl-Meyer 膨胀波"]
+    node_type: "concept"
+    definition: "超声速气流绕外凸角流动时形成的扇形稀疏波，通过膨胀波后速度增大、压力降低"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hs_010"
+    canonical_name: "普朗特-格劳厄脱法则"
+    aliases: ["普朗特-格劳厄脱法则", "Prandtl-Glauert rule", "P-G 法则"]
+    node_type: "concept"
+    definition: "亚声速可压缩流中升力和压力系数与不可压缩流的近似关系 Cp/Cp0=1/√(1-M²)，用于修正压缩性影响"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hs_011"
+    canonical_name: "面积律"
+    aliases: ["面积律", "area rule", "面积律修形"]
+    node_type: "concept"
+    definition: "跨声速飞行时飞机横截面积沿纵轴分布应平滑变化以降低波阻的设计原则，C919 机身尾部收缩应用了面积律思想"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hs_012"
+    canonical_name: "压缩性"
+    aliases: ["压缩性", "compressibility", "可压缩性"]
+    node_type: "concept"
+    definition: "流体密度随压力变化而改变的物理性质，马赫数大于 0.3 时必须考虑压缩性，C919 巡航空气压缩性显著"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

@@ -1,0 +1,47 @@
+# C919 材料专项讲解侧问答种子（非评测种子）
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / question / audience / teaching_point
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+qa_seeds:
+  - id: "mat-qa-001-composite-percentage"
+    question: "C919 用了多少复合材料？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "复合材料约占 12%（按重量），主要用于尾翼、整流罩、襟翼滑轨等部位。铝合金仍是主体（约 65%），钛合金约 9%，钢约 6%。与 B787（复合材料 50%）不同，C919 作为窄体客机采用更保守的材料策略。"
+
+  - id: "mat-qa-002-composite-vs-aluminum"
+    question: "复合材料比铝合金好在哪里？为什么不全用？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "复合材料比强度高于铝合金（同等强度更轻），耐疲劳、抗腐蚀。但成本高、损伤检测难（需超声波/X 射线）、修理复杂、回收难。C919 在减重与成本/可维修性间权衡，复合材料限制在 12%。"
+
+  - id: "mat-qa-003-aluminum-lithium"
+    question: "C919 用的铝合金和普通铝有什么区别？"
+    audience: "航空爱好者/有专业兴趣的公众"
+    teaching_point: "C919 使用第三代铝锂合金，每添加 1% 锂可减重约 3%、提高刚度约 5%。铝锂合金比传统 2024/7075 铝合金更轻更强，用于机身蒙皮、桁条等主承力结构。铝锂合金约占机体结构 8.8%。"
+
+  - id: "mat-qa-004-titanium-use"
+    question: "C919 哪些地方用钛合金？"
+    audience: "航空爱好者"
+    teaching_point: "钛合金用于高温区域（发动机吊挂、防火墙）、高应力接头（起落架支柱、机翼接头）和耐腐蚀部位。钛合金比强度高、耐高温、抗腐蚀，但加工难、成本高。C919 钛合金约占 9%。"
+
+  - id: "mat-qa-005-composite-repair"
+    question: "C919 复合材料坏了怎么修？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "复合材料损伤需超声波/X 射线等无损检测（内部脱层肉眼不可见）。修理采用补片胶接或螺接，工艺要求高、需专用设备和培训。相比金属打补丁更复杂——这也是复合材料占比受限的原因之一。"
+
+  - id: "mat-qa-006-composite-is-plastic"
+    question: "复合材料就是塑料吗？"
+    audience: "普通公众/中学生"
+    teaching_point: "不是。航空复合材料是碳纤维（增强体）+ 树脂（基体）的组合，碳纤维承担主要载荷、树脂固定形状，比强度远高于钢。和矿泉水瓶的塑料是完全不同的材料。C919 复合材料约占 12%。"
+
+  - id: "mat-qa-007-central-wingbox"
+    question: "C919 中央翼盒为什么用铝合金不用复合材料？"
+    audience: "有专业兴趣的公众/航空爱好者"
+    teaching_point: "中央翼盒是主承力结构，承受机翼弯矩扭矩。复合材料减重约 15-20% 但民机主承力盒段应用经验少、认证风险高。C919 作为首型号需积累适航经验，改回铝合金是用重量换可靠性和认证成熟度。"
+
+  - id: "mat-qa-008-recycling"
+    question: "C919 报废后复合材料能回收吗？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "金属（铝/钛/钢）可熔炼回收，但碳纤维复合材料回收困难——树脂基体热固性不能熔融。当前有热解法（高温烧掉树脂回收碳纤维）和化学法（溶剂溶解树脂），但回收纤维性能下降。这是复合材料大规模应用的长期挑战。"

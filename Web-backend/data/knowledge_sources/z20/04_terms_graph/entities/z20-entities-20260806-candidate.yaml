@@ -1,0 +1,59 @@
+# 直-20 实体定义
+# 字段对齐 GraphNode
+
+entities:
+  - entity_id: "z20_aircraft"
+    node_type: "aircraft"
+    canonical_name: "直-20"
+    aliases: ["Z-20", "入云龙"]
+    definition: "哈尔滨飞机工业集团研制的 10 吨级中型通用直升机"
+    source_id: "z20-science-overview-v1"
+
+  - entity_id: "z20_rotor"
+    node_type: "component"
+    canonical_name: "主旋翼"
+    aliases: ["旋翼系统"]
+    definition: "五叶主旋翼，直径 16 米"
+    source_id: "z20-science-rotor-flightcontrol-v1"
+
+  - entity_id: "z20_powerplant"
+    node_type: "system"
+    canonical_name: "动力系统"
+    aliases: ["发动机系统"]
+    definition: "2× WZ-10 涡轴发动机，单台 1,600-2,000 kW"
+    source_id: "z20-science-basic-parameters-v1"
+
+  - entity_id: "z20_flight_control"
+    node_type: "system"
+    canonical_name: "飞控系统"
+    aliases: ["电传飞控"]
+    definition: "电传飞控系统，中国首批大批量使用电传飞控的直升机"
+    source_id: "z20-science-rotor-flightcontrol-v1"
+
+  - entity_id: "wz10_engine"
+    node_type: "component"
+    canonical_name: "WZ-10 发动机"
+    aliases: ["WZ-10", "涡轴-10"]
+    definition: "国产涡轴发动机，单台功率 1,600-2,000 kW"
+    source_id: "z20-science-basic-parameters-v1"
+
+  - entity_id: "z20_antisub"
+    node_type: "aircraft"
+    canonical_name: "直-20 反潜型"
+    aliases: ["直-20反潜", "ASW variant"]
+    definition: "直-20 舰载反潜改型"
+    source_id: "z20-science-utility-platform-v1"
+
+  - entity_id: "uh60_aircraft"
+    node_type: "aircraft"
+    canonical_name: "UH-60 黑鹰"
+    aliases: ["UH-60", "黑鹰"]
+    definition: "美国西科斯基 10 吨级通用直升机"
+    source_id: "z20-science-vs-uh60-v1"
+
+  - entity_id: "mi17_aircraft"
+    node_type: "aircraft"
+    canonical_name: "米-17"
+    aliases: ["Mi-17"]
+    definition: "俄罗斯米里设计局中型运输直升机"
+    source_id: "z20-science-vs-mi17-v1"

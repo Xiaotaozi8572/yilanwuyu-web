@@ -1,0 +1,26 @@
+{
+  "template_id": "aviation_self_check",
+  "title": "Self-check prompt",
+  "task_type": "self_check",
+  "status": "active",
+  "active_version": "v2",
+  "activation_scope": [
+    "self_check"
+  ],
+  "concept_scope": [
+    "claim_review",
+    "boundary_review"
+  ],
+  "scene_scope": [
+    "text",
+    "scene"
+  ],
+  "constraints": [
+    "check_claim_support",
+    "check_scene_alignment",
+    "check_safety"
+  ],
+  "risk_boundaries": [
+    "no_new_facts_during_check"
+  ]
+}

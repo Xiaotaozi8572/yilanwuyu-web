@@ -1,0 +1,89 @@
+# C919 材料类术语
+# 按领域拆分：覆盖航空材料、结构工艺与材料力学概念
+# node_type: concept 或 component
+# ID 前缀：mat_
+
+terms:
+  - term_id: "mat_001"
+    canonical_name: "复合材料"
+    aliases: ["复合材料", "CFRP", "碳纤维复合材料", "composite material"]
+    node_type: "concept"
+    definition: "由碳纤维增强体与树脂基体复合而成的航空结构材料，C919 机身复合材料占比约 12%，用于雷达罩、襟翼等部件"
+    source_ref: "c919-graph-materials-v1"
+
+  - term_id: "mat_002"
+    canonical_name: "铝锂合金"
+    aliases: ["铝锂合金", "Al-Li alloy", "铝锂合金 2099", "Al-Li 2099"]
+    node_type: "concept"
+    definition: "添加锂元素降低密度、提高刚度的铝合金，C919 机身铝锂合金占比约 8.8%，用于机身蒙皮和框架"
+    source_ref: "c919-graph-materials-v1"
+
+  - term_id: "mat_003"
+    canonical_name: "钛合金"
+    aliases: ["钛合金", "titanium alloy", "Ti-6Al-4V", "TC4"]
+    node_type: "concept"
+    definition: "以钛为基的高强度耐高温合金，C919 用于发动机吊挂、起落架主承力件等关键部位"
+    source_ref: "c919-graph-materials-v1"
+
+  - term_id: "mat_004"
+    canonical_name: "碳纤维"
+    aliases: ["碳纤维", "carbon fiber", "T800", "T300", "PAN 基碳纤维"]
+    node_type: "concept"
+    definition: "含碳量 90% 以上的高强度纤维，是复合材料的主要增强体，常用 T800 级别碳纤维"
+    source_ref: "c919-graph-materials-v1"
+
+  - term_id: "mat_005"
+    canonical_name: "铝合金"
+    aliases: ["铝合金", "aluminum alloy", "2024", "7075", "硬铝合金"]
+    node_type: "concept"
+    definition: "以铝为基的传统航空结构材料，C919 用于机翼蒙皮、桁条等承力结构"
+    source_ref: "c919-graph-materials-v1"
+
+  - term_id: "mat_006"
+    canonical_name: "蜂窝结构"
+    aliases: ["蜂窝结构", "honeycomb structure", "蜂窝芯", "Nomex 蜂窝"]
+    node_type: "component"
+    definition: "由蒙皮和蜂窝芯组成的夹层结构，具有高比强度和比刚度，用于操纵面和舱内装饰"
+    source_ref: "c919-graph-materials-v1"
+
+  - term_id: "mat_007"
+    canonical_name: "预浸料"
+    aliases: ["预浸料", "prepreg", "预浸布", "碳纤维预浸料"]
+    node_type: "component"
+    definition: "预先浸渍树脂的碳纤维布料，在热压罐中加热加压固化成型为复合材料零件"
+    source_ref: "c919-graph-materials-v1"
+
+  - term_id: "mat_008"
+    canonical_name: "铺层设计"
+    aliases: ["铺层设计", "layup design", "铺层优化", "层合板设计"]
+    node_type: "concept"
+    definition: "根据载荷方向和强度要求优化复合材料各铺层的方向、厚度和顺序的设计方法"
+    source_ref: "c919-graph-materials-v1"
+
+  - term_id: "mat_009"
+    canonical_name: "损伤容限"
+    aliases: ["损伤容限", "damage tolerance", "损伤容限设计"]
+    node_type: "concept"
+    definition: "结构在存在裂纹等损伤情况下仍能承受设计载荷的设计理念，适航结构设计核心要求"
+    source_ref: "c919-graph-materials-v1"
+
+  - term_id: "mat_010"
+    canonical_name: "疲劳寿命"
+    aliases: ["疲劳寿命", "fatigue life", "疲劳强度"]
+    node_type: "concept"
+    definition: "结构在交变载荷下从开始使用到产生疲劳裂纹或断裂的循环次数，民用客机要求 6 万-9 万次起降"
+    source_ref: "c919-graph-materials-v1"
+
+  - term_id: "mat_011"
+    canonical_name: "应力集中"
+    aliases: ["应力集中", "stress concentration", "应力集中系数"]
+    node_type: "concept"
+    definition: "结构几何突变处（如孔、缺口、圆角）局部应力显著升高的现象，是疲劳裂纹的常见起源"
+    source_ref: "c919-graph-materials-v1"
+
+  - term_id: "mat_012"
+    canonical_name: "断裂韧性"
+    aliases: ["断裂韧性", "fracture toughness", "KIC"]
+    node_type: "concept"
+    definition: "材料抵抗裂纹扩展的能力，用临界应力强度因子 KIC 表征，是损伤容限设计的关键指标"
+    source_ref: "c919-graph-materials-v1"

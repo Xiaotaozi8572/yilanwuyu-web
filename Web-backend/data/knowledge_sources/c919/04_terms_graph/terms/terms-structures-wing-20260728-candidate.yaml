@@ -1,0 +1,90 @@
+# C919 机翼结构类术语
+# 领域：机翼结构与传力
+# 条目数：12
+# node_type 统一为 component
+# ID 前缀：wstr_
+
+terms:
+  - term_id: "wstr_001"
+    canonical_name: "翼盒"
+    aliases: ["翼盒", "wing box", "机翼盒段", "扭力盒"]
+    node_type: "component"
+    definition: "机翼主要承力盒形结构，由翼梁、翼肋、桁条和蒙皮组成，承受弯矩、剪力和扭矩，C919 翼盒是机翼主承力结构"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wstr_002"
+    canonical_name: "翼梁"
+    aliases: ["翼梁", "spar", "梁", "翼梁腹板"]
+    node_type: "component"
+    definition: "机翼主要纵向承力构件，承受弯矩引起的轴向力和剪力，C919 翼梁采用铝合金和复合材料"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wstr_003"
+    canonical_name: "翼肋"
+    aliases: ["翼肋", "rib", "翼肋腹板"]
+    node_type: "component"
+    definition: "机翼横向骨架构件，维持翼型形状并传递集中载荷，C919 翼肋间距优化设计平衡重量和稳定性"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wstr_004"
+    canonical_name: "桁条"
+    aliases: ["桁条", "stringer", "翼桁条"]
+    node_type: "component"
+    definition: "机翼纵向骨架构件，支撑蒙皮并承受弯矩应力，C919 机翼桁条采用铝合金挤压型材"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wstr_005"
+    canonical_name: "蒙皮"
+    aliases: ["蒙皮", "skin", "机翼蒙皮"]
+    node_type: "component"
+    definition: "机翼上下表面板件，承受剪流和轴向力，C919 机翼蒙皮采用铝合金和复合材料，上蒙皮受压稳定性要求高"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wstr_006"
+    canonical_name: "中央翼盒"
+    aliases: ["中央翼盒", "center wing box", "中央翼", "中央段"]
+    node_type: "component"
+    definition: "穿过机身的机翼中段盒形结构，传递左右机翼弯矩和剪力，C919 中央翼盒与机身中段通过接头连接"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wstr_007"
+    canonical_name: "外翼盒"
+    aliases: ["外翼盒", "outer wing box", "外翼"]
+    node_type: "component"
+    definition: "机身外侧的机翼盒段，承受机翼主要弯矩，C919 外翼盒采用铝合金和复合材料组合结构"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wstr_008"
+    canonical_name: "前梁"
+    aliases: ["前梁", "front spar", "前缘梁", "前墙"]
+    node_type: "component"
+    definition: "翼盒前部纵向主承力梁，承受主要弯矩和剪力，C919 前梁位置决定机翼前缘结构"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wstr_009"
+    canonical_name: "后梁"
+    aliases: ["后梁", "rear spar", "后缘梁", "后墙"]
+    node_type: "component"
+    definition: "翼盒后部纵向主承力梁，承受弯矩和剪力并连接襟翼副翼，C919 后梁悬挂后缘操纵面"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wstr_010"
+    canonical_name: "翼根"
+    aliases: ["翼根", "wing root", "机翼根部"]
+    node_type: "component"
+    definition: "机翼与机身连接的根部区域，承受最大弯矩和剪力，C919 翼根采用高强度铝合金和钛合金接头传力"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wstr_011"
+    canonical_name: "翼尖"
+    aliases: ["翼尖", "wing tip", "翼梢"]
+    node_type: "component"
+    definition: "机翼最外侧端部，C919 翼尖安装翼尖小翼使翼展增至 35.8m，降低诱导阻力"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wstr_012"
+    canonical_name: "翼根接头"
+    aliases: ["翼根接头", "wing root joint", "翼身接头", "根部连接"]
+    node_type: "component"
+    definition: "机翼与机身连接的传力接头，传递弯矩、剪力和扭矩，C919 翼根接头采用钛合金高强紧固件连接"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

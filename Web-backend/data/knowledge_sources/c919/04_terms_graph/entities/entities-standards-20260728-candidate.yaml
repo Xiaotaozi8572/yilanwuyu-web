@@ -1,0 +1,89 @@
+# C919 标准规范实体
+# 适航规章及航空工业标准
+# node_type: standard
+# node_id 前缀：std_
+
+entities:
+  - node_id: "std_ccar25"
+    node_type: "standard"
+    canonical_name: "CCAR-25"
+    aliases: ["CCAR-25", "中国民航规章第 25 部", "运输类飞机适航标准"]
+    description: "中国民航规章第 25 部《运输类飞机适航标准》，C919 型号合格审定主依据，含结构动力等条款"
+    applicable_aircraft: []
+
+  - node_id: "std_far25"
+    node_type: "standard"
+    canonical_name: "FAR-25"
+    aliases: ["FAR-25", "美国联邦航空规章第 25 部", "14 CFR Part 25"]
+    description: "美国联邦航空规章第 25 部《运输类飞机适航标准》，与 CCAR-25 对应，FAA 取证依据"
+    applicable_aircraft: []
+
+  - node_id: "std_cs25"
+    node_type: "standard"
+    canonical_name: "CS-25"
+    aliases: ["CS-25", "EASA 适航规范第 25 部", "Large Aeroplanes"]
+    description: "EASA 适航规范 CS-25《大型飞机》，与 CCAR-25/FAR-25 对应，C919 EASA 取证依据"
+    applicable_aircraft: []
+
+  - node_id: "std_arinc664"
+    node_type: "standard"
+    canonical_name: "ARINC 664"
+    aliases: ["ARINC 664", "AFDX", "ARINC 664 AFDX"]
+    description: "ARINC 664（AFDX）航空以太网标准，C919 航电网络采用 AFDX 高带宽实时通信"
+    applicable_aircraft: []
+
+  - node_id: "std_arinc429"
+    node_type: "standard"
+    canonical_name: "ARINC 429"
+    aliases: ["ARINC 429", "Mark 33"]
+    description: "ARINC 429 串行数据总线标准，C919 部分航电设备仍采用 ARINC 429 标记字协议通信"
+    applicable_aircraft: []
+
+  - node_id: "std_arinc825"
+    node_type: "standard"
+    canonical_name: "ARINC 825"
+    aliases: ["ARINC 825", "CANaerospace"]
+    description: "ARINC 825（CANaerospace）航空 CAN 总线标准，C919 部分系统采用 CAN 总线通信"
+    applicable_aircraft: []
+
+  - node_id: "std_do178"
+    node_type: "standard"
+    canonical_name: "DO-178"
+    aliases: ["DO-178", "DO-178C", "RTCA DO-178"]
+    description: "RTCA DO-178 机载软件适航审定标准，C919 航电软件按 DO-178C 等级开展验证"
+    applicable_aircraft: []
+
+  - node_id: "std_do254"
+    node_type: "standard"
+    canonical_name: "DO-254"
+    aliases: ["DO-254", "RTCA DO-254", "机载电子硬件设计保证"]
+    description: "RTCA DO-254 机载电子硬件设计保证标准，C919 复杂硬件按 DO-254 等级开展验证"
+    applicable_aircraft: []
+
+  - node_id: "std_do160"
+    node_type: "standard"
+    canonical_name: "DO-160"
+    aliases: ["DO-160", "DO-160G", "RTCA DO-160"]
+    description: "RTCA DO-160 机载设备环境条件与试验程序标准，C919 设备环境鉴定按 DO-160 执行"
+    applicable_aircraft: []
+
+  - node_id: "std_iso9001"
+    node_type: "standard"
+    canonical_name: "ISO 9001"
+    aliases: ["ISO 9001", "质量管理体系"]
+    description: "ISO 9001 质量管理体系标准，C919 各供应商应建立符合 ISO 9001 的质量体系"
+    applicable_aircraft: []
+
+  - node_id: "std_as9100"
+    node_type: "standard"
+    canonical_name: "AS9100"
+    aliases: ["AS9100", "航空航天质量管理体系", "SAE AS9100"]
+    description: "SAE AS9100 航空航天质量管理体系标准，C919 供应商须取得 AS9100 认证"
+    applicable_aircraft: []
+
+  - node_id: "std_gjb"
+    node_type: "standard"
+    canonical_name: "GJB 国军标"
+    aliases: ["GJB", "国军标", "国家军用标准"]
+    description: "中国国家军用标准（GJB），C919 部分国产化产品参考 GJB 体系保证质量一致性"
+    applicable_aircraft: []

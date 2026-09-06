@@ -1,0 +1,90 @@
+# C919 航电类术语
+# 领域：航空电子系统
+# 条目数：12
+# node_type 统一为 system
+# ID 前缀：av_
+
+terms:
+  - term_id: "av_001"
+    canonical_name: "IMA"
+    aliases: ["IMA", "Integrated Modular Avionics", "综合模块化航电"]
+    node_type: "system"
+    definition: "综合模块化航电架构，共享计算和网络资源取代独立 LRU，C919 采用 IMA 架构由昂际航电提供"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "av_002"
+    canonical_name: "ARINC 664"
+    aliases: ["ARINC 664", "AFDX", "Aircraft Full DupleX Ethernet"]
+    node_type: "concept"
+    definition: "航空电子以太网总线标准，提供高带宽双工通信，C919 航电网络采用 ARINC 664 AFDX 千兆总线"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "av_003"
+    canonical_name: "ARINC 429"
+    aliases: ["ARINC 429", "Mark 33"]
+    node_type: "concept"
+    definition: "传统航空电子串行数据总线标准，C919 部分传统设备仍通过 ARINC 429 与航电系统通信"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "av_004"
+    canonical_name: "显示单元"
+    aliases: ["显示单元", "display unit", "DU", "EFIS 显示器"]
+    node_type: "component"
+    definition: "驾驶舱液晶显示器，C919 采用大屏幕液晶显示系统，含主飞行显示和导航显示"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "av_005"
+    canonical_name: "FMS"
+    aliases: ["FMS", "Flight Management System", "飞行管理系统"]
+    node_type: "system"
+    definition: "飞行管理系统，管理飞行计划、性能和导航，C919 FMS 实现自动飞行和性能优化"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "av_006"
+    canonical_name: "飞行管理"
+    aliases: ["飞行管理", "flight management", "飞行管理功能"]
+    node_type: "system"
+    definition: "综合管理导航、性能和飞行计划的功能，C919 飞行管理由 FMS 和 MCDU 控制实现"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "av_007"
+    canonical_name: "气象雷达"
+    aliases: ["气象雷达", "weather radar", "WXR", "气象雷达系统"]
+    node_type: "system"
+    definition: "探测前方气象的雷达系统，C919 气象雷达探测降水和湍流辅助机组绕飞危险天气"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "av_008"
+    canonical_name: "TCAS"
+    aliases: ["TCAS", "Traffic Alert and Collision Avoidance System", "空中防撞系统"]
+    node_type: "system"
+    definition: "空中交通防撞系统，监测周围飞机并提示避让，C919 配备 TCAS II 提供决断告警"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "av_009"
+    canonical_name: "EGPWS"
+    aliases: ["EGPWS", "Enhanced Ground Proximity Warning System", "近地告警系统", "GPWS"]
+    node_type: "system"
+    definition: "增强型近地告警系统，防止可控飞行撞地，C919 EGPWS 结合地形数据库提供前视告警"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "av_010"
+    canonical_name: "ADS-B"
+    aliases: ["ADS-B", "Automatic Dependent Surveillance-Broadcast", "广播式自动相关监视"]
+    node_type: "system"
+    definition: "飞机自动广播位置等信息的监视系统，C919 配备 ADS-B Out 满足空管监视要求"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "av_011"
+    canonical_name: "惯导"
+    aliases: ["惯导", "INS", "IRS", "惯导系统", "惯性导航系统"]
+    node_type: "system"
+    definition: "惯性导航系统，利用陀螺和加速度计自主确定位置姿态，C919 采用激光陀螺惯导系统"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "av_012"
+    canonical_name: "GPS"
+    aliases: ["GPS", "Global Positioning System", "全球定位系统", "GNSS"]
+    node_type: "system"
+    definition: "全球卫星导航定位系统，C919 配备 GPS 接收机提供精确位置和时间，与惯导组合导航"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

@@ -1,0 +1,142 @@
+# C919 结构关系
+# 按结构分解拆分：part_of 关系，描述部件间的层级隶属
+# relation_type: part_of
+# edge_id 前缀：struct_
+
+relations:
+  # ========== 机翼内部部件 ==========
+  - edge_id: "struct_001"
+    source_node_id: "comp_wing"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "机翼是 C919 的主要气动结构部件，左右各一套属于机体结构"
+
+  - edge_id: "struct_002"
+    source_node_id: "comp_flap"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "襟翼安装于机翼后缘内侧，属于机翼增升装置"
+
+  - edge_id: "struct_003"
+    source_node_id: "comp_aileron"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "副翼安装于机翼后缘外侧，属于机翼滚转操纵面"
+
+  - edge_id: "struct_004"
+    source_node_id: "comp_slat"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "缝翼安装于机翼前缘，属于机翼增升装置"
+
+  - edge_id: "struct_005"
+    source_node_id: "comp_spoiler"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "扰流板安装于机翼上表面，属于机翼减速和滚转辅助面"
+
+  - edge_id: "struct_006"
+    source_node_id: "comp_winglet"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "翼尖小翼安装于机翼翼尖，属于机翼气动优化部件"
+
+  - edge_id: "struct_007"
+    source_node_id: "comp_center_wingbox"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "中央翼盒是机翼盒段贯穿机身中部的承力核心，属于机翼结构"
+
+  # ========== 机身分段 ==========
+  - edge_id: "struct_008"
+    source_node_id: "comp_fuselage"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "机身是 C919 主体结构，承载乘客、货物和各系统"
+
+  - edge_id: "struct_009"
+    source_node_id: "comp_fwd_fuselage"
+    target_node_id: "comp_fuselage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "前机身是机身前段，含驾驶舱和前起落架舱"
+
+  - edge_id: "struct_010"
+    source_node_id: "comp_mid_fuselage"
+    target_node_id: "comp_fuselage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "中机身是机身中段，连接中央翼盒和主起落架舱"
+
+  - edge_id: "struct_011"
+    source_node_id: "comp_aft_fuselage"
+    target_node_id: "comp_fuselage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "后机身是机身后段，含 APU 舱和尾椎"
+
+  # ========== 尾翼分解 ==========
+  - edge_id: "struct_012"
+    source_node_id: "comp_empennage"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "尾翼是 C919 尾部翼面组合，属于机体结构"
+
+  - edge_id: "struct_013"
+    source_node_id: "comp_vtail"
+    target_node_id: "comp_empennage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "垂直尾翼是尾翼的垂直翼面，提供航向稳定性"
+
+  - edge_id: "struct_014"
+    source_node_id: "comp_htail"
+    target_node_id: "comp_empennage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "水平尾翼是尾翼的水平翼面，提供纵向稳定性"
+
+  - edge_id: "struct_015"
+    source_node_id: "comp_rudder"
+    target_node_id: "comp_vtail"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "方向舵安装于垂直尾翼后缘，控制偏航运动"
+
+  - edge_id: "struct_016"
+    source_node_id: "comp_elevator"
+    target_node_id: "comp_htail"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "升降舵安装于水平尾翼后缘，控制俯仰运动"
+
+  # ========== 起落架 ==========
+  - edge_id: "struct_017"
+    source_node_id: "comp_landing_gear"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "起落架是 C919 地面支撑装置，属于机体结构"
+
+  - edge_id: "struct_018"
+    source_node_id: "comp_nose_gear"
+    target_node_id: "comp_landing_gear"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "前起落架是起落架系统的组成部分，安装于前机身下方"
+
+  - edge_id: "struct_019"
+    source_node_id: "comp_main_gear"
+    target_node_id: "comp_landing_gear"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "主起落架是起落架系统的组成部分，左右各一套安装于机身中部"

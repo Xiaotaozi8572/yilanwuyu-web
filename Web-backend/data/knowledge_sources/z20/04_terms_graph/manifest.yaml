@@ -1,0 +1,163 @@
+partition: "z20/04_terms_graph"
+partition_owner: "术语图谱组"
+sources:
+  - source_id: "z20-graph-term-terms-v1"
+    source_type: "graph"
+    title: "直-20 terms数据"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["z20"]
+    allowed_use: "terminology_graph"
+    aircraft: "z20"
+    knowledge_type: "definition"
+    files:
+      - path: "terms/z20-terms-20260806-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "术语图谱组"
+      content_nature: "terminology_graph"
+  - source_id: "z20-graph-term-terms-components-v1"
+    source_type: "graph"
+    title: "直-20 terms数据"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["z20"]
+    allowed_use: "terminology_graph"
+    aircraft: "z20"
+    knowledge_type: "definition"
+    files:
+      - path: "terms/z20-terms-components-20260806-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "术语图谱组"
+      content_nature: "terminology_graph"
+  - source_id: "z20-graph-term-terms-concepts-v1"
+    source_type: "graph"
+    title: "直-20 terms数据"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["z20"]
+    allowed_use: "terminology_graph"
+    aircraft: "z20"
+    knowledge_type: "definition"
+    files:
+      - path: "terms/z20-terms-concepts-20260806-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "术语图谱组"
+      content_nature: "terminology_graph"
+  - source_id: "z20-graph-term-terms-engines-v1"
+    source_type: "graph"
+    title: "直-20 terms数据"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["z20"]
+    allowed_use: "terminology_graph"
+    aircraft: "z20"
+    knowledge_type: "definition"
+    files:
+      - path: "terms/z20-terms-engines-20260806-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "术语图谱组"
+      content_nature: "terminology_graph"
+  - source_id: "z20-graph-term-terms-platforms-v1"
+    source_type: "graph"
+    title: "直-20 terms数据"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["z20"]
+    allowed_use: "terminology_graph"
+    aircraft: "z20"
+    knowledge_type: "definition"
+    files:
+      - path: "terms/z20-terms-platforms-20260806-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "术语图谱组"
+      content_nature: "terminology_graph"
+  - source_id: "z20-graph-term-terms-systems-v1"
+    source_type: "graph"
+    title: "直-20 terms数据"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["z20"]
+    allowed_use: "terminology_graph"
+    aircraft: "z20"
+    knowledge_type: "definition"
+    files:
+      - path: "terms/z20-terms-systems-20260806-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "术语图谱组"
+      content_nature: "terminology_graph"
+  - source_id: "z20-graph-entitie-entities-v1"
+    source_type: "graph"
+    title: "直-20 entities数据"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["z20"]
+    allowed_use: "terminology_graph"
+    aircraft: "z20"
+    knowledge_type: "definition"
+    files:
+      - path: "entities/z20-entities-20260806-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "术语图谱组"
+      content_nature: "terminology_graph"
+  - source_id: "z20-graph-entitie-entities-extra-v1"
+    source_type: "graph"
+    title: "直-20 entities数据"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["z20"]
+    allowed_use: "terminology_graph"
+    aircraft: "z20"
+    knowledge_type: "definition"
+    files:
+      - path: "entities/z20-entities-extra-20260806-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "术语图谱组"
+      content_nature: "terminology_graph"
+  - source_id: "z20-graph-relation-relations-v1"
+    source_type: "graph"
+    title: "直-20 relations数据"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["z20"]
+    allowed_use: "terminology_graph"
+    aircraft: "z20"
+    knowledge_type: "definition"
+    files:
+      - path: "relations/z20-relations-20260806-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "术语图谱组"
+      content_nature: "terminology_graph"
+  - source_id: "z20-graph-relation-relations-extra-v1"
+    source_type: "graph"
+    title: "直-20 relations数据"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["z20"]
+    allowed_use: "terminology_graph"
+    aircraft: "z20"
+    knowledge_type: "definition"
+    files:
+      - path: "relations/z20-relations-extra-20260806-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "术语图谱组"
+      content_nature: "terminology_graph"

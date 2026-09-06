@@ -1,0 +1,28 @@
+# j20-terms-weapons-20260806-candidate
+
+terms:
+  - canonical_name: "PL-15"
+    aliases: ["PL-15", "霹雳-15"]
+    node_type: "component"
+    definition: "中远程空空导弹"
+    source_id: "j20-science-avionics-weapons-v1"
+  - canonical_name: "PL-21"
+    aliases: ["PL-21", "霹雳-21"]
+    node_type: "component"
+    definition: "远程空空导弹（发展型）"
+    source_id: "j20-science-avionics-weapons-v1"
+  - canonical_name: "PL-10"
+    aliases: ["PL-10", "霹雳-10"]
+    node_type: "component"
+    definition: "近距格斗空空导弹"
+    source_id: "j20-science-avionics-weapons-v1"
+  - canonical_name: "LS-6 制导炸弹"
+    aliases: ["LS-6", "雷霆-6"]
+    node_type: "component"
+    definition: "卫星制导炸弹"
+    source_id: "j20-science-avionics-weapons-v1"
+  - canonical_name: "FT-7"
+    aliases: ["FT-7"]
+    node_type: "component"
+    definition: "精确制导炸弹"
+    source_id: "j20-science-avionics-weapons-v1"

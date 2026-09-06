@@ -1,0 +1,90 @@
+# C919 机翼气动类术语
+# 领域：机翼几何与气动设计
+# 条目数：12
+# node_type 统一为 concept
+# ID 前缀：wing_
+
+terms:
+  - term_id: "wing_001"
+    canonical_name: "超临界翼型"
+    aliases: ["超临界翼型", "supercritical airfoil", "超临界翼", "超临界机翼"]
+    node_type: "concept"
+    definition: "通过上表面平坦、下表面反曲设计延缓激波生成、降低波阻的跨声速翼型，C919 采用第四代超临界翼型，翼展 33.6m"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wing_002"
+    canonical_name: "后掠角"
+    aliases: ["后掠角", "sweep angle", "后掠", "Λ"]
+    node_type: "concept"
+    definition: "机翼参考线与飞机横轴的夹角，后掠可提高临界马赫数、降低波阻，C919 机翼后掠角约 25 度"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wing_003"
+    canonical_name: "展弦比"
+    aliases: ["展弦比", "aspect ratio", "AR"]
+    node_type: "concept"
+    definition: "翼展平方与机翼面积的比值 AR=b²/S，展弦比大则诱导阻力小，C919 展弦比约 9，含小翼翼展 35.8m"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wing_004"
+    canonical_name: "梢根比"
+    aliases: ["梢根比", "taper ratio", "尖根比", "λ"]
+    node_type: "concept"
+    definition: "翼尖弦长与翼根弦长之比，影响升力沿展向分布和诱导阻力，C919 采用适中梢根比使升力椭圆分布"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wing_005"
+    canonical_name: "安装角"
+    aliases: ["安装角", "incidence angle", "翼安装角"]
+    node_type: "concept"
+    definition: "机翼弦线与机身纵轴的夹角，使巡航时机身处于低阻力姿态，C919 机翼安装角约 2-3 度"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wing_006"
+    canonical_name: "扭转"
+    aliases: ["扭转", "washout", "几何扭转", "气动扭转"]
+    node_type: "concept"
+    definition: "沿展向改变翼型迎角的气动设计，翼尖负扭转可使翼根先失速，保证失速时的副翼有效性"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wing_007"
+    canonical_name: "襟翼"
+    aliases: ["襟翼", "flap", "后缘襟翼", "富勒襟翼"]
+    node_type: "concept"
+    definition: "机翼后缘可偏转的增升装置，起飞时增加升力、降落时增加升力和阻力，C919 采用富勒式后缘襟翼"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wing_008"
+    canonical_name: "缝翼"
+    aliases: ["缝翼", "slat", "前缘缝翼"]
+    node_type: "concept"
+    definition: "机翼前缘可伸出的增升装置，打开时形成缝隙引导附面层气流，延缓大迎角失速，C919 前缘缝翼在起飞降落时使用"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wing_009"
+    canonical_name: "副翼"
+    aliases: ["副翼", "aileron"]
+    node_type: "concept"
+    definition: "机翼外段后缘可差动偏转的操纵面，用于滚转控制，C919 副翼由液压作动器驱动"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wing_010"
+    canonical_name: "扰流板"
+    aliases: ["扰流板", "spoiler", "减速板", "地面扰流板"]
+    node_type: "concept"
+    definition: "机翼上表面可向上偏转的板面，空中用于减速和辅助滚转控制，地面用于破坏升力，C919 每侧机翼配备多块扰流板"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wing_011"
+    canonical_name: "翼尖小翼"
+    aliases: ["翼尖小翼", "winglet", "翼梢小翼", "融合小翼"]
+    node_type: "concept"
+    definition: "安装在翼尖的垂直或倾斜翼面，通过减弱翼尖涡流降低诱导阻力，C919 翼尖小翼使翼展增至 35.8m，可改善燃油效率约 3-5%"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wing_012"
+    canonical_name: "翼根"
+    aliases: ["翼根", "wing root", "机翼根部"]
+    node_type: "concept"
+    definition: "机翼与机身连接的根部区域，承受最大的弯矩和剪力，C919 翼根采用高强度铝合金和钛合金接头传力"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

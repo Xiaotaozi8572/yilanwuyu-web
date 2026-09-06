@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>运20 模拟驾驶舱</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { width: 100%; height: 100%; overflow: hidden; background: #060a12;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif; user-select: none; }
+  #app { position: fixed; inset: 0; }
+  canvas { display: block; }
+
+  /* ---------- 加载页 ---------- */
+  #loading { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; background: radial-gradient(ellipse at 50% 40%, #0d1626 0%, #060a12 70%);
+    transition: opacity .6s; }
+  #loading.done { opacity: 0; pointer-events: none; }
+  #loading .title { color: #d9e6f5; font-size: 22px; letter-spacing: 8px; margin-bottom: 6px; }
+  #loading .sub { color: #5f7289; font-size: 12px; letter-spacing: 4px; margin-bottom: 34px; }
+  #loading .bar { width: 240px; height: 3px; background: #1a2636; border-radius: 2px; overflow: hidden; }
+  #loading .bar i { display: block; height: 100%; width: 0%; border-radius: 2px;
+    background: linear-gradient(90deg, #1fb6d4, #6ee7ff); transition: width .2s; }
+  #loading .pct { color: #6ee7ff; font-size: 12px; margin-top: 12px; letter-spacing: 2px; }
+
+  /* ---------- 通用 HUD ---------- */
+  .hud { position: fixed; z-index: 10; pointer-events: none; }
+
+  /* 返回按钮 */
+  .back-btn {
+    position: absolute;
+    top: 9.829%;
+    left: 12.08%;
+    z-index: 10;
+    display: grid;
+    place-items: center;
+    width: 4.808%;
+    height: 8.547%;
+    overflow: visible;
+    border-radius: 0;
+    color: #fff;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .back-btn::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    pointer-events: none;
+    transition:
+      background .25s ease,
+      border-color .25s ease,
+      box-shadow .25s ease;
+  }
+
+  .back-btn::before {
+    content: '';
+    position: relative;
+    z-index: 1;
+    height: 31%;
+    aspect-ratio: 1;
+    border-left: clamp(2px, 0.25cqw, 4px) solid currentColor;
+    border-bottom: clamp(2px, 0.25cqw, 4px) solid currentColor;
+    transform: translateX(14%) rotate(45deg);
+    transition: transform .25s cubic-bezier(0.22, 0.75, 0.18, 1);
+  }
+
+  .back-btn:hover,
+  .back-btn:focus-visible {
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .back-btn:hover::after,
+  .back-btn:focus-visible::after {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.45);
+    box-shadow: inset 0 0 0 1px rgba(56, 232, 255, 0.32);
+  }
+
+  .back-btn:focus-visible {
+    outline: none;
+  }
+
+  .back-btn:active {
+    transform: none;
+  }/* 欢迎语 */
+  #welcome { top: 12%; left: 50%; transform: translateX(-50%); text-align: center;
+    color: #e8f2fc; transition: opacity 1s; }
+  #welcome .l1 { font-size: 20px; letter-spacing: 6px; text-shadow: 0 2px 12px rgba(0,0,0,.6); }
+  #welcome .l2 { font-size: 13px; letter-spacing: 3px; color: #9fb8d0; margin-top: 8px; }
+  #welcome.hide { opacity: 0; }
+
+  /* 底部提示 */
+  #tip { bottom: 3%; left: 50%; transform: translateX(-50%); color: rgba(200, 220, 240, .75);
+    font-size: 12px; letter-spacing: 2px; text-shadow: 0 1px 6px rgba(0,0,0,.8); }
+
+  /* ---------- 虚拟摇杆 ---------- */
+  #stick-zone { left: 5%; bottom: 9%; width: 168px; text-align: center; }
+  #stick-zone .label, #pedal-zone .label { color: rgba(210, 228, 245, .85); font-size: 13px;
+    letter-spacing: 4px; margin-bottom: 10px; text-shadow: 0 1px 6px rgba(0,0,0,.8); }
+  #joystick { position: relative; width: 148px; height: 148px; margin: 0 auto; border-radius: 50%;
+    background: radial-gradient(circle at 50% 45%, rgba(70, 95, 125, .35), rgba(15, 25, 40, .55));
+    border: 1.5px solid rgba(150, 190, 225, .4); pointer-events: auto; touch-action: none;
+    backdrop-filter: blur(3px); }
+  #joystick .cross { position: absolute; inset: 0; opacity: .35; }
+  #joystick .cross::before, #joystick .cross::after { content: ""; position: absolute; background: #9fc3e2; }
+  #joystick .cross::before { left: 50%; top: 8%; bottom: 8%; width: 1px; }
+  #joystick .cross::after { top: 50%; left: 8%; right: 8%; height: 1px; }
+  #stick-knob { position: absolute; left: 50%; top: 50%; width: 52px; height: 52px;
+    transform: translate(-50%, -50%); border-radius: 50%;
+    background: radial-gradient(circle at 38% 32%, #8feaff, #23b8d8 55%, #0f7f9c);
+    border: 2px solid rgba(220, 245, 255, .8);
+    box-shadow: 0 0 18px rgba(60, 210, 240, .55), inset 0 -4px 8px rgba(0, 40, 60, .5); }
+
+  /* ---------- 方向舵踏板 ---------- */
+  #pedal-zone { right: 5%; bottom: 9%; text-align: center; }
+  #pedals { display: flex; gap: 18px; pointer-events: auto; }
+  .pedal { width: 58px; height: 96px; border-radius: 14px; cursor: pointer; touch-action: none;
+    background: linear-gradient(180deg, rgba(70, 190, 220, .85), rgba(25, 120, 155, .9));
+    border: 2px solid rgba(190, 235, 250, .75);
+    box-shadow: 0 4px 14px rgba(0, 180, 220, .35), inset 0 2px 6px rgba(255,255,255,.35);
+    display: flex; flex-direction: column; justify-content: space-evenly; align-items: center;
+    transition: transform .12s, box-shadow .12s; }
+  .pedal i { display: block; width: 62%; height: 4px; border-radius: 2px; background: rgba(230, 250, 255, .85); }
+  .pedal.active { transform: translateY(6px) scale(.96);
+    box-shadow: 0 1px 6px rgba(0, 180, 220, .5), inset 0 2px 10px rgba(0, 40, 60, .6); }
+
+  /* ---------- 操纵提示气泡 ---------- */
+  #bubble { left: 22%; bottom: 30%; max-width: 320px; padding: 10px 18px; border-radius: 10px;
+    background: linear-gradient(90deg, #ffc93c, #ffb020); color: #4a3200;
+    font-size: 14px; letter-spacing: 1px; font-weight: 600;
+    box-shadow: 0 4px 18px rgba(255, 180, 30, .35); opacity: 0; transform: translateY(8px);
+    transition: opacity .25s, transform .25s; }
+  #bubble.show { opacity: 1; transform: translateY(0); }
+  #bubble::after { content: ""; position: absolute; left: 26px; bottom: -7px;
+    border: 8px solid transparent; border-top-color: #ffb020; border-bottom: 0; }
+
+  /* 姿态指示 */
+  #attitude { top: 5%; right: 4.5%; color: rgba(180, 210, 235, .8); font-size: 12px;
+    letter-spacing: 2px; text-align: right; line-height: 1.9; text-shadow: 0 1px 6px rgba(0,0,0,.8); }
+  #attitude b { color: #6ee7ff; font-weight: 600; }
+
+  /* 调试 */
+  #debug-panel { position: fixed; left: 8px; top: 8px; z-index: 99; background: rgba(0,0,0,.75);
+    color: #7fff9f; font: 12px/1.5 monospace; padding: 8px 10px; border-radius: 6px;
+    max-width: 46vw; max-height: 60vh; overflow: auto; white-space: pre-wrap; display: none; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<div id="loading">
+  <div class="title">运-20 模拟驾驶舱</div>
+  <div class="sub">Y-20 COCKPIT SIMULATOR</div>
+  <div class="bar"><i id="load-fill"></i></div>
+  <div class="pct" id="load-pct">0%</div>
+</div>
+
+<button class="back-btn" id="btn-back" type="button" aria-label="返回" title="返回"></button>
+
+<div class="hud" id="welcome">
+  <div class="l1">欢迎来到模拟驾驶舱</div>
+  <div class="l2">请尝试移动摇杆或踩下踏板</div>
+</div>
+
+<div class="hud" id="attitude">
+  俯仰 <b id="att-pitch">0.0°</b><br>
+  滚转 <b id="att-roll">0.0°</b><br>
+  航向 <b id="att-yaw">0.0°</b>
+</div>
+
+<div class="hud" id="bubble"></div>
+<div class="hud" id="tip">提示：拖拽圆球模拟拉杆 / 推杆，拖动画面可环顾驾驶舱</div>
+
+<div class="hud" id="stick-zone">
+  <div class="label">测 杆 操 控</div>
+  <div id="joystick">
+    <div class="cross"></div>
+    <div id="stick-knob"></div>
+  </div>
+</div>
+
+<div class="hud" id="pedal-zone">
+  <div class="label">方向舵踏板</div>
+  <div id="pedals">
+    <div class="pedal" id="pedal-l"><i></i><i></i><i></i><i></i></div>
+    <div class="pedal" id="pedal-r"><i></i><i></i><i></i><i></i></div>
+  </div>
+</div>
+
+<div id="debug-panel"></div>
+
+<script type="importmap">
+{ "imports": { "three": "./libs/three.module.js" } }
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from './libs/GLTFLoader.js';
+
+/* ================================================================
+ * 运20 模拟驾驶舱 —— 摇杆操纵，舷窗外环境联动变化
+ * 原理：驾驶舱模型固定，相机位于驾驶位；
+ *       天空球（360°全景）以相机为球心，摇杆输入驱动飞机姿态角
+ *       （俯仰/滚转/偏航），反向旋转天空球 → 窗外环境随之变化。
+ * ================================================================ */
+
+const DEBUG = new URLSearchParams(location.search).has('debug');
+const dbg = document.getElementById('debug-panel');
+if (DEBUG) dbg.style.display = 'block';
+if (window.self !== window.top) document.body.classList.add('embedded');
+
+/* ---------- 可配置参数 ---------- */
+const CFG = {
+  // 默认从飞机后上方观察，机尾靠近观察者，机头朝向远方。
+  camPos: new THREE.Vector3(-0.049, 3.3, -2.97),
+  camTarget: new THREE.Vector3(-0.049, 0.359, -0.133),
+  fov: 72,
+  skyRadius: 300,
+  maxPitchRate: THREE.MathUtils.degToRad(26),  // 满杆俯仰角速度 rad/s
+  maxRollRate:  THREE.MathUtils.degToRad(34),  // 满杆滚转角速度
+  maxYawRate:   THREE.MathUtils.degToRad(10),  // 满舵偏航角速度
+  attitudeLimit: { pitch: 1.1, roll: 1.2 },    // 姿态角限幅 rad
+  autoLevel: 0.55,        // 松杆后自动改平速率
+  stickVisualTilt: 0.32,  // 舱内操纵杆视觉偏转幅度 rad
+  // 舱内可动网格（节点名后缀匹配，包围盒分析得出，可用 ?debug 点击校准）
+  rig: {
+    sticks: ['Editable_mesh-22261658-019'],              // 中央操纵杆
+    pedalL: ['Editable_mesh-22261658-012'],              // 左踏板
+    pedalR: ['Editable_mesh-22261658-011'],              // 右踏板
+  },
+};
+/* 校准用：?cam=x,y,z&tgt=x,y,z 覆盖相机视点/目标 */
+const _cq = new URLSearchParams(location.search);
+if (_cq.has('cam')) CFG.camPos.fromArray(_cq.get('cam').split(',').map(Number));
+if (_cq.has('tgt')) CFG.camTarget.fromArray(_cq.get('tgt').split(',').map(Number));
+const HAS_CAMERA_OVERRIDE = _cq.has('cam') || _cq.has('tgt');
+
+function frameCockpitFromBounds(root, fill = 0.8) {
+  if (HAS_CAMERA_OVERRIDE) return;
+  root.updateWorldMatrix(true, true);
+  const box = new THREE.Box3().setFromObject(root);
+  const center = box.getCenter(new THREE.Vector3());
+  const size = box.getSize(new THREE.Vector3());
+  const diag = Math.max(size.length(), 0.001);
+  // 运-20 模型机头沿 +Z，相机从 -Z 后上方取景。
+  const baseDir = new THREE.Vector3(0, 0.72, -0.69);
+  baseDir.normalize();
+  const dist = (diag * 0.5) / Math.tan(THREE.MathUtils.degToRad(CFG.fov) / 2) / fill;
+  CFG.camTarget.copy(center);
+  CFG.camPos.copy(center).add(baseDir.multiplyScalar(dist));
+}
+
+/* ---------- 渲染器 / 场景 ---------- */
+const app = document.getElementById('app');
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.05;
+app.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(CFG.fov, innerWidth / innerHeight, 0.05, 1000);
+camera.position.copy(CFG.camPos);
+
+/* ---------- 天空球（舷窗外环境） ---------- */
+const skyGroup = new THREE.Group();          // 姿态旋转载体
+scene.add(skyGroup);
+const texLoader = new THREE.TextureLoader();
+const skyTex = texLoader.load('./assets/sky.png');
+skyTex.colorSpace = THREE.SRGBColorSpace;
+const sky = new THREE.Mesh(
+  new THREE.SphereGeometry(CFG.skyRadius, 64, 40),
+  new THREE.MeshBasicMaterial({ map: skyTex, side: THREE.BackSide, depthWrite: false })
+);
+sky.renderOrder = -1;
+skyGroup.add(sky);
+
+/* ---------- 灯光 ---------- */
+scene.add(new THREE.HemisphereLight(0xbfd8ee, 0x2a3340, 1.1));
+const sun = new THREE.DirectionalLight(0xfff2dd, 1.4);
+sun.position.set(30, 60, 80);
+scene.add(sun);
+
+/* ---------- 加载驾驶舱模型 ---------- */
+const loadFill = document.getElementById('load-fill');
+const loadPct = document.getElementById('load-pct');
+const cockpit = new THREE.Group();
+scene.add(cockpit);
+
+const rigMeshes = { sticks: [], pedalL: [], pedalR: [] };   // { pivot, base }
+let modelReady = false;
+
+new GLTFLoader().load('./assets/cockpit.glb',
+  (gltf) => {
+    try {
+      if (!gltf.scene) throw new Error('gltf.scene is undefined (loader returned no scene)');
+      applyGlassAdjust(gltf.scene);
+      cockpit.add(gltf.scene);
+      frameCockpitFromBounds(gltf.scene, 0.8);
+      /* 先收集匹配，遍历结束后再挂接 pivot —— 遍历中改挂父子关系会破坏 children 数组 */
+      const rigHits = [];
+      gltf.scene.traverse((o) => {
+        if (!o.isMesh) return;
+        for (const key of Object.keys(CFG.rig)) {
+          if (CFG.rig[key].some((s) => o.name.includes(s))) {
+            rigHits.push([o, rigMeshes[key]]);
+          }
+        }
+      });
+      for (const [o, bucket] of rigHits) attachPivot(o, bucket);
+      tuneAircraftMaterials(gltf.scene);
+      if (DEBUG) {
+        dumpMeshInfo(gltf.scene);
+        window.__rig = rigMeshes;   // 供自动化回归脚本核对杆/踏板挂接数量
+        window.__modelReady = () => modelReady;
+      }
+      modelReady = true;
+      document.getElementById('loading').classList.add('done');
+    } catch (e) {
+      loadPct.textContent = '回调错误：' + e.message + ' | ' + (e.stack || '').split('\n')[1];
+    }
+  },
+  (xhr) => {
+    const p = xhr.total ? Math.round(xhr.loaded / xhr.total * 100) : 0;
+    loadFill.style.width = p + '%';
+    loadPct.textContent = p + '%';
+  },
+  (err) => { loadPct.textContent = '模型加载失败：' + err.message + ' | ' + (err.stack || '').split('\n')[1]; }
+);
+
+/* 舷窗玻璃：模型内 "Glass Clear 001" 材质 alphaMode=OPAQUE 会挡住窗外天空，
+   改为透明渲染（不改动模型本身，R4） */
+function applyGlassAdjust(root) {
+  root.traverse((o) => {
+    if (!o.isMesh) return;
+    const mats = Array.isArray(o.material) ? o.material : [o.material];
+    for (const m of mats) {
+      if (!m) continue;
+      const isGlass = (m.name && /glass|clear|blend|window/i.test(m.name)) || m.transparent;
+      if (isGlass) {
+        m.transparent = true;
+        m.opacity = 0.12;
+        m.depthWrite = false;
+        m.side = THREE.DoubleSide;
+        if (m.color) m.color.setRGB(1, 1, 1);   // 去掉玻璃暗色调，让窗外环境更清晰
+      }
+    }
+  });
+}
+
+/* 保持模型在天空背景上的明暗层次一致。 */
+function tuneAircraftMaterials(root) {
+  root.traverse((o) => {
+    if (!o.isMesh) return;
+    const mats = Array.isArray(o.material) ? o.material : [o.material];
+    for (const m of mats) {
+      if (!m || !('metalness' in m)) continue;
+      m.metalness = Math.min(m.metalness, 0.35);
+      m.roughness = Math.max(m.roughness, 0.62);
+      m.envMapIntensity = 0.65;
+    }
+  });
+}
+
+/* 以网格包围盒底面中心为支点挂接，保证杆/踏板绕根部偏转 */
+function attachPivot(mesh, bucket) {
+  mesh.updateWorldMatrix(true, false);
+  const box = new THREE.Box3().setFromObject(mesh);
+  const bottom = new THREE.Vector3(
+    (box.min.x + box.max.x) / 2, box.min.y, (box.min.z + box.max.z) / 2);
+  const pivot = new THREE.Group();
+  scene.add(pivot);
+  pivot.position.copy(bottom);
+  pivot.updateMatrixWorld(true);
+  pivot.attach(mesh);
+  bucket.push(pivot);
+}
+
+/* ---------- 输入状态 ---------- */
+const input = { joyX: 0, joyY: 0, pedal: 0 };   // joyY: 前推为负
+const attitude = { pitch: 0, roll: 0, yaw: 0 }; // rad
+let lookYaw = 0, lookPitch = 0;                 // 环顾偏移
+let interacted = false;
+
+/* ---------- 虚拟摇杆 ---------- */
+const joy = document.getElementById('joystick');
+const knob = document.getElementById('stick-knob');
+const JOY_R = 48;
+let joyPointer = null;
+
+function setKnob(dx, dy) {
+  knob.style.transform = `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px))`;
+}
+function joyMove(e) {
+  const r = joy.getBoundingClientRect();
+  let dx = e.clientX - (r.left + r.width / 2);
+  let dy = e.clientY - (r.top + r.height / 2);
+  const len = Math.hypot(dx, dy);
+  if (len > JOY_R) { dx = dx / len * JOY_R; dy = dy / len * JOY_R; }
+  setKnob(dx, dy);
+  input.joyX = dx / JOY_R;          // 右为正
+  input.joyY = dy / JOY_R;          // 下（拉杆）为正，上（推杆）为负
+  markInteract();
+}
+joy.addEventListener('pointerdown', (e) => {
+  joyPointer = e.pointerId; joy.setPointerCapture(joyPointer); joyMove(e);
+});
+joy.addEventListener('pointermove', (e) => { if (e.pointerId === joyPointer) joyMove(e); });
+function joyRelease(e) {
+  if (e.pointerId !== joyPointer) return;
+  joyPointer = null; input.joyX = 0; input.joyY = 0;
+  setKnob(0, 0);
+}
+joy.addEventListener('pointerup', joyRelease);
+joy.addEventListener('pointercancel', joyRelease);
+
+/* ---------- 方向舵踏板 ---------- */
+function bindPedal(el, dir) {
+  const on = (e) => { e.preventDefault(); input.pedal = dir; el.classList.add('active'); markInteract(); };
+  const off = () => { if (input.pedal === dir) input.pedal = 0; el.classList.remove('active'); };
+  el.addEventListener('pointerdown', on);
+  el.addEventListener('pointerup', off);
+  el.addEventListener('pointerleave', off);
+  el.addEventListener('pointercancel', off);
+}
+const pedalL = document.getElementById('pedal-l');
+const pedalR = document.getElementById('pedal-r');
+bindPedal(pedalL, -1);
+bindPedal(pedalR, 1);
+
+/* ---------- 拖动环顾 ---------- */
+let lookPointer = null, lastLX = 0, lastLY = 0;
+renderer.domElement.addEventListener('pointerdown', (e) => {
+  lookPointer = e.pointerId; lastLX = e.clientX; lastLY = e.clientY;
+});
+addEventListener('pointermove', (e) => {
+  if (e.pointerId !== lookPointer) return;
+  lookYaw   = THREE.MathUtils.clamp(lookYaw   - (e.clientX - lastLX) * 0.0022, -0.9, 0.9);
+  lookPitch = THREE.MathUtils.clamp(lookPitch - (e.clientY - lastLY) * 0.0022, -0.45, 0.4);
+  lastLX = e.clientX; lastLY = e.clientY;
+});
+addEventListener('pointerup', (e) => { if (e.pointerId === lookPointer) lookPointer = null; });
+
+/* ---------- 提示气泡 ---------- */
+const bubble = document.getElementById('bubble');
+let bubbleText = '';
+function updateBubble() {
+  let t = '';
+  if (input.joyY < -0.35)      t = '向前推杆：飞机低头，准备下降';
+  else if (input.joyY > 0.35)  t = '向后拉杆：飞机抬头，准备爬升';
+  else if (input.joyX < -0.4)  t = '向左压杆：飞机向左滚转';
+  else if (input.joyX > 0.4)   t = '向右压杆：飞机向右滚转';
+  else if (input.pedal !== 0)  t = input.pedal < 0 ? '蹬左舵：机头向左偏转' : '蹬右舵：机头向右偏转';
+  if (t !== bubbleText) {
+    bubbleText = t;
+    if (t) { bubble.textContent = t; bubble.classList.add('show'); }
+    else bubble.classList.remove('show');
+  }
+}
+
+/* ---------- 欢迎语 ---------- */
+const welcome = document.getElementById('welcome');
+function markInteract() {
+  if (!interacted) { interacted = true; setTimeout(() => welcome.classList.add('hide'), 600); }
+}
+document.getElementById('btn-back').addEventListener('click', () => {
+  if (window.self !== window.top) window.parent.postMessage('y20-sim:exit', '*');
+  else history.back();
+});
+
+/* ---------- 姿态显示 ---------- */
+const elP = document.getElementById('att-pitch');
+const elR = document.getElementById('att-roll');
+const elY = document.getElementById('att-yaw');
+
+/* ---------- 主循环 ---------- */
+const clock = new THREE.Clock();
+const _q = new THREE.Quaternion(), _e = new THREE.Euler();
+
+function animate() {
+  requestAnimationFrame(animate);
+  const dt = Math.min(clock.getDelta(), 0.05);
+
+  /* 姿态积分：杆量 → 角速度 → 姿态角
+   * 符号约定（经干净天空球 + 物理推导校准）：
+   *   推杆(joyY=-1) → 低头 → 窗外地平线上移 → 天空球负俯仰
+   *   右压杆(joyX=+1) → 右滚转 → 地平线左高右低 → 天空球正滚转
+   *   蹬右舵(pedal=+1) → 机头右偏 → 环境左移 → 天空球正偏航
+   */
+  attitude.pitch +=  input.joyY * CFG.maxPitchRate * dt;
+  attitude.roll  +=  input.joyX * CFG.maxRollRate * dt;
+  attitude.yaw   +=  input.pedal * CFG.maxYawRate * dt;
+
+  /* 松杆自动改平（俯仰/滚转） */
+  const lvl = CFG.autoLevel * dt;
+  if (Math.abs(input.joyY) < 0.05) attitude.pitch -= attitude.pitch * lvl;
+  if (Math.abs(input.joyX) < 0.05) attitude.roll  -= attitude.roll  * lvl;
+
+  attitude.pitch = THREE.MathUtils.clamp(attitude.pitch, -CFG.attitudeLimit.pitch, CFG.attitudeLimit.pitch);
+  attitude.roll  = THREE.MathUtils.clamp(attitude.roll,  -CFG.attitudeLimit.roll,  CFG.attitudeLimit.roll);
+
+  /* 天空球反向旋转 → 窗外环境随姿态变化 */
+  skyGroup.position.copy(camera.position);
+  _e.set(attitude.pitch, attitude.yaw, attitude.roll, 'YXZ');
+  skyGroup.quaternion.setFromEuler(_e);
+
+  /* 舱内操纵杆/踏板联动 */
+  const tilt = -input.joyY * CFG.stickVisualTilt;
+  const rollT = -input.joyX * CFG.stickVisualTilt * 0.7;
+  for (const p of rigMeshes.sticks) { p.rotation.x = tilt; p.rotation.z = rollT; }
+  for (const p of rigMeshes.pedalL) p.rotation.x = input.pedal < 0 ? 0.18 : 0;
+  for (const p of rigMeshes.pedalR) p.rotation.x = input.pedal > 0 ? 0.18 : 0;
+
+  /* 相机：固定驾驶位 + 环顾 */
+  camera.position.copy(CFG.camPos);
+  const tgt = CFG.camTarget.clone();
+  const dir = tgt.sub(CFG.camPos).normalize();
+  const yawQ = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), lookYaw);
+  dir.applyQuaternion(yawQ);
+  const right = new THREE.Vector3().crossVectors(dir, new THREE.Vector3(0, 1, 0)).normalize();
+  dir.applyAxisAngle(right, lookPitch);
+  camera.lookAt(camera.position.clone().add(dir));
+
+  updateBubble();
+  elP.textContent = THREE.MathUtils.radToDeg(attitude.pitch).toFixed(1) + '°';
+  elR.textContent = THREE.MathUtils.radToDeg(attitude.roll).toFixed(1) + '°';
+  elY.textContent = ((THREE.MathUtils.radToDeg(attitude.yaw) % 360 + 360) % 360).toFixed(1) + '°';
+
+  renderer.render(scene, camera);
+}
+animate();
+
+addEventListener('resize', () => {
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+
+/* ---------- 调试：点击网格显示名称 ---------- */
+function dumpMeshInfo(root) {
+  const lines = [];
+  const tot = new THREE.Box3();
+  root.traverse((o) => {
+    if (!o.isMesh) return;
+    const b = new THREE.Box3().setFromObject(o);
+    tot.union(b);
+    const c = b.getCenter(new THREE.Vector3()), s = b.getSize(new THREE.Vector3());
+    lines.push(`${o.name}\n  c=(${c.x.toFixed(2)},${c.y.toFixed(2)},${c.z.toFixed(2)}) s=(${s.x.toFixed(2)},${s.y.toFixed(2)},${s.z.toFixed(2)})`);
+  });
+  const tc = tot.getCenter(new THREE.Vector3()), ts = tot.getSize(new THREE.Vector3());
+  lines.unshift(`TOTAL center=(${tc.x.toFixed(3)},${tc.y.toFixed(3)},${tc.z.toFixed(3)}) size=(${ts.x.toFixed(3)},${ts.y.toFixed(3)},${ts.z.toFixed(3)})\n`);
+  dbg.textContent = lines.join('\n');
+}
+if (DEBUG) {
+  const ray = new THREE.Raycaster(), mv = new THREE.Vector2();
+  renderer.domElement.addEventListener('dblclick', (e) => {
+    mv.set(e.clientX / innerWidth * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
+    ray.setFromCamera(mv, camera);
+    const hits = ray.intersectObjects(scene.children, true);
+    const h = hits.find((x) => x.object.isMesh && x.object !== sky);
+    if (h) dbg.textContent = 'PICK: ' + h.object.name + '\n\n' + dbg.textContent;
+  });
+  /* 计算一个 3/4 视角、铺满约 65% 画面的取景相机 */
+  window.__frame = () => {
+    const b = new THREE.Box3().setFromObject(cockpit);
+    const c = b.getCenter(new THREE.Vector3());
+    const s = b.getSize(new THREE.Vector3());
+    const diag = s.length();
+    const half = diag / 2;
+    const vfov = THREE.MathUtils.degToRad(CFG.fov);
+    let dist = (half) / Math.tan(vfov / 2);
+    dist = dist / 0.70;   // 放大取到 ~70%
+    // 3/4 上方视角方向（避开最长轴对齐，取一个斜向方向）
+    const dir = new THREE.Vector3(0.6, 0.5, 0.65).normalize();
+    const cam = c.clone().add(dir.multiplyScalar(dist));
+    const east = new THREE.Vector3(cam.x - c.x, 0, cam.z - c.z).normalize();
+    const target = c.clone().add(new THREE.Vector3(0, 0, 0));
+    const r = {
+      cam: cam.clone(),
+      tgt: target.clone(),
+      diag: diag,
+      dist: dist,
+      csv: `cam=${cam.toArray().map(v=>v.toFixed(2)).join(',')}&tgt=${target.toArray().map(v=>v.toFixed(2)).join(',')}`
+    };
+    dbg.textContent = 'FRAME: ' + r.csv + '\n\nsize=' + s.toArray().map(v=>v.toFixed(2)).join(',') + '  dist=' + dist.toFixed(2) + '\n\n' + dbg.textContent;
+    return r;
+  };
+}
+</script>
+</body>
+</html>

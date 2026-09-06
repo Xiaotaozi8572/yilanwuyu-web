@@ -1,0 +1,90 @@
+# C919 适航流程类术语
+# 领域：适航审定流程
+# 条目数：12
+# node_type 统一为 concept
+# ID 前缀：awproc_
+
+terms:
+  - term_id: "awproc_001"
+    canonical_name: "TC"
+    aliases: ["TC", "Type Certificate", "型号合格证", "型号合格证书"]
+    node_type: "concept"
+    definition: "型号合格证，民航局对型号设计符合适航标准的批准，C919 向 CAAC 申请 TC 进行型号审定"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "awproc_002"
+    canonical_name: "PC"
+    aliases: ["PC", "Production Certificate", "生产许可证", "生产合格证"]
+    node_type: "concept"
+    definition: "生产许可证，民航局对申请人生产能力符合型号设计的批准，C919 取得 TC 后申请 PC 进行生产审定"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "awproc_003"
+    canonical_name: "AC"
+    aliases: ["AC", "Airworthiness Certificate", "适航证", "单机适航证"]
+    node_type: "concept"
+    definition: "单机适航证，民航局对每架飞机符合型号设计并安全可飞的批准，C919 每架交付飞机须取得 AC"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "awproc_004"
+    canonical_name: "AD"
+    aliases: ["AD", "Airworthiness Directive", "适航指令", "紧急适航指令"]
+    node_type: "concept"
+    definition: "适航指令，民航局对机队存在的强制性纠正措施，C919 服役中如发现安全隐患 CAAC 颁发 AD 强制纠正"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "awproc_005"
+    canonical_name: "TIA"
+    aliases: ["TIA", "Type Inspection Authorization", "型号检查核准书"]
+    node_type: "concept"
+    definition: "型号检查核准书，CAAC 批准 C919 型号设计进入审定试飞阶段的文件，标志符合性验证基本完成"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "awproc_006"
+    canonical_name: "MRB"
+    aliases: ["MRB", "Maintenance Review Board", "维修审查委员会", "MRB 报告"]
+    node_type: "concept"
+    definition: "维修审查委员会及其报告，制定 C919 初始预定维修大纲和维修间隔，是持续适航基础"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "awproc_007"
+    canonical_name: "FSB"
+    aliases: ["FSB", "Flight Standardization Board", "飞行标准化委员会"]
+    node_type: "concept"
+    definition: "飞行标准化委员会，制定 C919 机组训练和资格要求，确定机型差异和模拟机鉴定标准"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "awproc_008"
+    canonical_name: "CRI"
+    aliases: ["CRI", "Certification Review Item", "审定审查项目"]
+    node_type: "concept"
+    definition: "审定审查项目，针对 C919 新技术或特殊设计的专项审定议题，记录 CAAC 与申请人达成的符合性方法"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "awproc_009"
+    canonical_name: "审定基础"
+    aliases: ["审定基础", "certification basis", "CB"]
+    node_type: "concept"
+    definition: "型号合格审定的适用规章和修正案集合，C919 审定基础以 CCAR-25 为主并列入专用条件"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "awproc_010"
+    canonical_name: "符合性方法"
+    aliases: ["符合性方法", "Means of Compliance", "MOC", "符合性验证方法"]
+    node_type: "concept"
+    definition: "向 CAAC 表明 C919 满足审定基础的方法，含分析、试验、演示等，C919 各条款按 MOC 表明符合性"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "awproc_011"
+    canonical_name: "持续适航"
+    aliases: ["持续适航", "continued airworthiness", "持续适航管理"]
+    node_type: "concept"
+    definition: "飞机服役期保持符合型号设计的适航状态，C919 通过维修、AD 和服务通告等保证持续适航"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "awproc_012"
+    canonical_name: "维修"
+    aliases: ["维修", "maintenance", "飞机维修", "维护"]
+    node_type: "concept"
+    definition: "保持或恢复 C919 飞机适航状态的工作，含航线维修、定检和大修，按 MRB 报告和维修手册执行"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

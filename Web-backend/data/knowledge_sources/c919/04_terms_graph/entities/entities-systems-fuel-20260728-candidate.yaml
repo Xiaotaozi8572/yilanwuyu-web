@@ -1,0 +1,91 @@
+# C919 燃油系统实体
+# 燃油存储、输送及管理系统
+# node_type: system
+# node_id 前缀：sfuel_
+
+entities:
+  - node_id: "sfuel_center_tank"
+    node_type: "system"
+    canonical_name: "中央油箱"
+    aliases: ["center tank", "中央油箱", "中翼油箱"]
+    description: "位于中央翼盒内的油箱，C919 中央油箱容量较大，先消耗后保持机翼油箱供油平衡"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfuel_left_wing_tank"
+    node_type: "system"
+    canonical_name: "左机翼油箱"
+    aliases: ["left wing tank", "左机翼油箱", "左翼油箱"]
+    description: "左外翼内部油箱，C919 左翼油箱与右翼油箱对称，存储燃油并平衡机翼重量"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfuel_right_wing_tank"
+    node_type: "system"
+    canonical_name: "右机翼油箱"
+    aliases: ["right wing tank", "右机翼油箱", "右翼油箱"]
+    description: "右外翼内部油箱，C919 右翼油箱与左翼油箱对称，存储燃油并平衡机翼重量"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfuel_refuel_port"
+    node_type: "system"
+    canonical_name: "加油口"
+    aliases: ["refuel port", "加油接头", "压力加油口"]
+    description: "地面压力加油接口，C919 机翼下侧设左右加油口，由 Parker 提供加油阀组件"
+    specifications:
+      supplier: "Parker"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfuel_defuel_port"
+    node_type: "system"
+    canonical_name: "抽油口"
+    aliases: ["defuel port", "抽油接头", "放油口"]
+    description: "抽油及放沉淀接口，C919 维护时通过抽油口抽出燃油，每个油箱设放沉淀阀"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfuel_transfer_pump"
+    node_type: "system"
+    canonical_name: "输油泵"
+    aliases: ["transfer pump", "燃油输送泵", "增压泵"]
+    description: "油箱内部电动离心增压泵，C919 每个油箱配备双泵冗余，保证发动机供油压力稳定"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfuel_quantity_sensor"
+    node_type: "system"
+    canonical_name: "油量传感器"
+    aliases: ["fuel quantity sensor", "油量探针", "电容式油量传感器"]
+    description: "测量油箱油量的电容式探针，C919 每个油箱布设多组油量传感器并与 FQIS 计算总油量"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfuel_vent"
+    node_type: "system"
+    canonical_name: "通气系统"
+    aliases: ["vent system", "油箱通气", "通气口"]
+    description: "维持油箱内压力平衡的通气系统，C919 油箱通过通气口与外界连通防止超压或负压"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfuel_iggs"
+    node_type: "system"
+    canonical_name: "惰性气体发生器"
+    aliases: ["IGGS", "inert gas generation system", "氮气发生器", "OBIGGS"]
+    description: "生成富氮空气充入油箱的防火系统，C919 装备惰性气体发生器降低油箱氧含量防爆"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfuel_filter"
+    node_type: "system"
+    canonical_name: "燃油过滤器"
+    aliases: ["fuel filter", "燃油滤", "油滤"]
+    description: "过滤燃油中颗粒和水分的元件，C919 供油路设两级过滤带旁通和堵塞指示"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfuel_bypass_valve"
+    node_type: "system"
+    canonical_name: "旁通阀"
+    aliases: ["bypass valve", "燃油旁通阀"]
+    description: "油滤堵塞时开启旁通油路的阀，C919 油滤旁通阀在压差超限后开启保证发动机供油不中断"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sfuel_crossfeed_valve"
+    node_type: "system"
+    canonical_name: "交输阀"
+    aliases: ["crossfeed valve", "交输油阀", "交叉供油阀"]
+    description: "连接左右燃油系统的阀门，C919 交输阀打开后可由一侧油箱向另一侧发动机供油"
+    applicable_aircraft: ["c919"]

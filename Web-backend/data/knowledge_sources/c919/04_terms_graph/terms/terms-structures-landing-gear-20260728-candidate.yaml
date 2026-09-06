@@ -1,0 +1,90 @@
+# C919 起落架结构类术语
+# 领域：起落架结构与机构
+# 条目数：12
+# node_type 统一为 component
+# ID 前缀：lgstr_
+
+terms:
+  - term_id: "lgstr_001"
+    canonical_name: "前起落架"
+    aliases: ["前起落架", "nose landing gear", "前起", "鼻轮"]
+    node_type: "component"
+    definition: "飞机前部起落架，支撑前机身并具备地面转向功能，C919 前起落架向前收起于前机身舱内"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lgstr_002"
+    canonical_name: "主起落架"
+    aliases: ["主起落架", "main landing gear", "主起", "主轮"]
+    node_type: "component"
+    definition: "飞机主要承重起落架，承受大部分着陆和地面载荷，C919 主起落架每侧多轮多支柱设计"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lgstr_003"
+    canonical_name: "机轮"
+    aliases: ["机轮", "wheel", "轮子"]
+    node_type: "component"
+    definition: "起落架轮子组件，C919 机轮配备无内胎轮胎和刹车组件，主起多机轮设计分散载荷"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lgstr_004"
+    canonical_name: "刹车"
+    aliases: ["刹车", "brake", "刹车组件", "制动器"]
+    node_type: "component"
+    definition: "机轮内的制动装置，C919 采用多盘式碳刹车，配备防滑系统和自动刹车功能"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lgstr_005"
+    canonical_name: "轮胎"
+    aliases: ["轮胎", "tire", "机轮轮胎"]
+    node_type: "component"
+    definition: "机轮外充气轮胎，吸收着陆冲击和支撑重量，C919 轮胎由米其林（Michelin）供应"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lgstr_006"
+    canonical_name: "减震支柱"
+    aliases: ["减震支柱", "shock absorber", "shock strut", "缓冲支柱", "油气减震器"]
+    node_type: "component"
+    definition: "起落架缓冲支柱，吸收着陆冲击能量，C919 减震支柱采用油气式设计"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lgstr_007"
+    canonical_name: "收放机构"
+    aliases: ["收放机构", "retraction mechanism", "收放系统", "收放作动器"]
+    node_type: "component"
+    definition: "起落架收放的动力和传动机构，C919 收放机构由液压作动器驱动，配备应急放系统"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lgstr_008"
+    canonical_name: "转弯机构"
+    aliases: ["转弯机构", "steering mechanism", "前轮转弯", "鼻轮转向"]
+    node_type: "component"
+    definition: "前起落架的地面转向机构，C919 前轮转弯由液压作动器驱动，具备大角度低速和小角度高速模式"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lgstr_009"
+    canonical_name: "舱门"
+    aliases: ["舱门", "gear door", "起落架舱门"]
+    node_type: "component"
+    definition: "起落架舱的舱门，收起后关闭减小阻力，C919 起落架舱门由液压作动器驱动"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lgstr_010"
+    canonical_name: "支柱"
+    aliases: ["支柱", "strut", "起落架支柱", "主支柱"]
+    node_type: "component"
+    definition: "起落架主承力柱状构件，传递载荷到机身或机翼，C919 主支柱承受着陆压缩和侧向载荷"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lgstr_011"
+    canonical_name: "摇臂"
+    aliases: ["摇臂", "rocker arm", "摇臂机构", "trunnion arm"]
+    node_type: "component"
+    definition: "起落架传力摇臂，连接支柱和机轮轴，C919 摇臂式起落架改善着陆缓冲和收放空间"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lgstr_012"
+    canonical_name: "扭力臂"
+    aliases: ["扭力臂", "torque arm", "防扭臂", "torque link"]
+    node_type: "component"
+    definition: "防止支柱内外筒相对转动的连接臂，C919 扭力臂保证机轮保持航向，避免支柱旋转"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

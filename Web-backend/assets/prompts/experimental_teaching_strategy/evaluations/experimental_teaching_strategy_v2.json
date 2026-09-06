@@ -1,0 +1,20 @@
+{
+  "snapshot_id": "experimental_teaching_strategy_v2",
+  "template_id": "experimental_teaching_strategy",
+  "version": "v2",
+  "test_cases": [
+    "teaching_order_compare",
+    "candidate_label",
+    "no_runtime_selection"
+  ],
+  "dimension_scores": {
+    "faithfulness": 0.96,
+    "experiment_clarity": 0.88,
+    "governance": 0.94
+  },
+  "violations": [],
+  "improvements": [
+    "Candidate-only labeling is explicit."
+  ],
+  "final_decision": "hold"
+}

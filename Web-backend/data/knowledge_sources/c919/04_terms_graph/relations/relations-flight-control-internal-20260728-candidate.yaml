@@ -1,0 +1,92 @@
+# C919 飞控系统内部关系
+# 描述飞控计算机、传感器、作动器的层级与功能关系
+# relation_type: part_of / controls / feeds_to
+# edge_id 前缀：rfc_
+
+relations:
+  # ========== part_of 飞控组件归属 ==========
+  - edge_id: "rfc_001"
+    source_node_id: "comp_fcc"
+    target_node_id: "sys_flight_control"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "飞控计算机(FCC)是飞控系统的大脑，三余度配置实现控制律计算"
+
+  - edge_id: "rfc_002"
+    source_node_id: "comp_pfc"
+    target_node_id: "sys_flight_control"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "主飞行控制计算机(PFC)计算控制律并输出舵面指令"
+
+  - edge_id: "rfc_003"
+    source_node_id: "comp_ace"
+    target_node_id: "sys_flight_control"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "作动器控制电子(ACE)接收 PFC 指令并驱动对应作动器"
+
+  - edge_id: "rfc_004"
+    source_node_id: "comp_sidestick"
+    target_node_id: "sys_flight_control"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "侧杆位于飞行员左右两侧，提供滚转与俯仰操纵输入"
+
+  - edge_id: "rfc_005"
+    source_node_id: "comp_rudder_pedal"
+    target_node_id: "sys_flight_control"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "脚蹬位于飞行员脚部位置，提供偏航操纵与刹车输入"
+
+  - edge_id: "rfc_006"
+    source_node_id: "comp_trim_switch"
+    target_node_id: "sys_flight_control"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "配平开关位于侧杆或顶部板，飞行员手动调整配平偏置"
+
+  - edge_id: "rfc_007"
+    source_node_id: "act_elevator"
+    target_node_id: "sys_flight_control"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "升降舵作动器驱动升降舵偏转，由 ACE 输出指令控制"
+
+  - edge_id: "rfc_008"
+    source_node_id: "act_aileron"
+    target_node_id: "sys_flight_control"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "副翼作动器驱动副翼偏转，由 ACE 输出指令控制"
+
+  - edge_id: "rfc_009"
+    source_node_id: "act_rudder"
+    target_node_id: "sys_flight_control"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "方向舵作动器驱动方向舵偏转，由 ACE 输出指令控制"
+
+  - edge_id: "rfc_010"
+    source_node_id: "act_spoiler"
+    target_node_id: "sys_flight_control"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "扰流板作动器驱动扰流板偏转，由 ACE 输出指令控制"
+
+  # ========== controls 飞控控制 ==========
+  - edge_id: "rfc_011"
+    source_node_id: "comp_fcc"
+    target_node_id: "act_elevator"
+    relation_type: "controls"
+    confidence: 0.95
+    description: "FCC 计算控制律后通过 ACE 控制升降舵作动器偏转"
+
+  # ========== feeds_to 飞控信号流向 ==========
+  - edge_id: "rfc_012"
+    source_node_id: "comp_sidestick"
+    target_node_id: "comp_pfc"
+    relation_type: "feeds_to"
+    confidence: 0.95
+    description: "侧杆的操纵输入信号送至 PFC，作为控制律计算的飞行员输入"

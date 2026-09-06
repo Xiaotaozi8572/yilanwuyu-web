@@ -1,0 +1,113 @@
+# C919 发动机内部结构关系
+# 描述 LEAP-1C 涡扇发动机的内部部件层级与功能关系
+# relation_type: part_of / controls / parameter_of / feeds_to
+# edge_id 前缀：reng_
+
+relations:
+  # ========== part_of 发动机内部部件归属 ==========
+  - edge_id: "reng_001"
+    source_node_id: "comp_fan"
+    target_node_id: "sys_leap1c"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "风扇是 LEAP-1C 涡扇发动机最前部的大型旋转部件，吸入空气并产生大部分推力"
+
+  - edge_id: "reng_002"
+    source_node_id: "comp_lpc"
+    target_node_id: "sys_leap1c"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "低压压气机位于风扇后部，对进入核心机的空气进行预压缩"
+
+  - edge_id: "reng_003"
+    source_node_id: "comp_hpc"
+    target_node_id: "sys_leap1c"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "高压压气机对空气进行高压压缩，为燃烧室提供高压气体"
+
+  - edge_id: "reng_004"
+    source_node_id: "comp_combustor"
+    target_node_id: "sys_leap1c"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "燃烧室将高压空气与燃油混合燃烧，产生高温高压燃气驱动涡轮"
+
+  - edge_id: "reng_005"
+    source_node_id: "comp_hpt"
+    target_node_id: "sys_leap1c"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "高压涡轮承受燃烧室高温燃气冲击，驱动高压压气机旋转"
+
+  - edge_id: "reng_006"
+    source_node_id: "comp_lpt"
+    target_node_id: "sys_leap1c"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "低压涡轮位于高压涡轮后部，驱动低压压气机和风扇旋转"
+
+  - edge_id: "reng_007"
+    source_node_id: "comp_fan_blade"
+    target_node_id: "comp_fan"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "风扇叶片是风扇的旋转气动部件，LEAP-1C 采用复合材料降低重量"
+
+  - edge_id: "reng_008"
+    source_node_id: "comp_fan_case"
+    target_node_id: "comp_fan"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "风扇机匣包覆风扇叶片，具备包容性以防止叶片失效飞出"
+
+  - edge_id: "reng_009"
+    source_node_id: "comp_thrust_reverser"
+    target_node_id: "sys_leap1c"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "反推装置安装于短舱后部，着陆时打开使风扇气流反向产生反推力"
+
+  - edge_id: "reng_010"
+    source_node_id: "comp_nacelle"
+    target_node_id: "sys_leap1c"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "短舱是发动机外部的气动整流罩，包覆发动机核心并降低阻力"
+
+  - edge_id: "reng_011"
+    source_node_id: "comp_oil_system"
+    target_node_id: "sys_leap1c"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "滑油系统为发动机轴承和齿轮箱提供润滑与冷却"
+
+  - edge_id: "reng_012"
+    source_node_id: "comp_ignition_system"
+    target_node_id: "sys_leap1c"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "点火系统为燃烧室提供点火能量，启动和应急时点燃燃油混合气"
+
+  # ========== controls 发动机控制关系 ==========
+  - edge_id: "reng_013"
+    source_node_id: "comp_fadec"
+    target_node_id: "sys_leap1c"
+    relation_type: "controls"
+    confidence: 1.0
+    description: "全权数字发动机控制(FADEC)系统对发动机燃油流量和可变几何进行精确控制"
+
+  # ========== parameter_of 发动机关键参数 ==========
+  - edge_id: "reng_014"
+    source_node_id: "param_thrust_129_98kn"
+    target_node_id: "sys_leap1c"
+    relation_type: "parameter_of"
+    confidence: 1.0
+    description: "LEAP-1C28 发动机最大推力 129.98 kN，是 C919 选型的关键性能参数"
+
+  - edge_id: "reng_015"
+    source_node_id: "param_bypass_ratio"
+    target_node_id: "sys_leap1c"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "涵道比是 LEAP-1C 的关键循环参数，高涵道比带来低油耗低噪声"

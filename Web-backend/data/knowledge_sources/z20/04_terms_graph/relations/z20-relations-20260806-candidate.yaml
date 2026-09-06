@@ -1,0 +1,107 @@
+# 直-20 关系种子
+# 字段对齐 GraphEdge
+
+relations:
+  - edge_id: "z20_rotor_part_of_z20"
+    source_node_id: "z20_rotor"
+    target_node_id: "z20_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+
+  - edge_id: "z20_powerplant_part_of_z20"
+    source_node_id: "z20_powerplant"
+    target_node_id: "z20_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+
+  - edge_id: "z20_fc_part_of_z20"
+    source_node_id: "z20_flight_control"
+    target_node_id: "z20_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+
+  - edge_id: "wz10_part_of_powerplant"
+    source_node_id: "wz10_engine"
+    target_node_id: "z20_powerplant"
+    relation_type: "part_of"
+    confidence: 1.0
+
+  - edge_id: "z20_antisub_derives_z20"
+    source_node_id: "z20_antisub"
+    target_node_id: "z20_aircraft"
+    relation_type: "derives_from"
+    confidence: 0.9
+    metadata:
+      note: "反潜型是直-20 的舰载改型"
+
+  - edge_id: "z20_derives_s70_role"
+    source_node_id: "z20_aircraft"
+    target_node_id: "uh60_aircraft"
+    relation_type: "derives_from"
+    confidence: 0.6
+    metadata:
+      note: "直-20 参考黑鹰构型思路但为自主设计"
+
+  - edge_id: "z20_mtow_param_of_aircraft"
+    source_node_id: "z20_aircraft"
+    target_node_id: "z20_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "最大起飞重量"
+      value: "10,000"
+      unit: "kg"
+
+  - edge_id: "z20_speed_param_of_aircraft"
+    source_node_id: "z20_aircraft"
+    target_node_id: "z20_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "最大速度"
+      value: "360"
+      unit: "km/h"
+
+  - edge_id: "z20_rotor_diam_param_of_rotor"
+    source_node_id: "z20_rotor"
+    target_node_id: "z20_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "主旋翼直径"
+      value: "16"
+      unit: "m"
+
+  - edge_id: "z20_ff2013_param_of_aircraft"
+    source_node_id: "z20_aircraft"
+    target_node_id: "z20_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "首飞日期"
+      value: "2013-12-23"
+
+  - edge_id: "z20_service2019_param_of_aircraft"
+    source_node_id: "z20_aircraft"
+    target_node_id: "z20_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "列装日期"
+      value: "2019-10-01"
+
+  - edge_id: "z20_compared_uh60"
+    source_node_id: "z20_aircraft"
+    target_node_id: "uh60_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    metadata:
+      comparison_source: "z20-science-vs-uh60-v1"
+
+  - edge_id: "z20_compared_mi17"
+    source_node_id: "z20_aircraft"
+    target_node_id: "mi17_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    metadata:
+      comparison_source: "z20-science-vs-mi17-v1"

@@ -1,0 +1,125 @@
+{
+  "suite": "smoke",
+  "case_count": 3,
+  "passed_count": 3,
+  "pass_rate": 1.0,
+<<<<<<< Updated upstream
+  "latency_ms": 1147,
+=======
+  "latency_ms": 89,
+>>>>>>> Stashed changes
+  "cases": [
+    {
+      "case_id": "text_qa",
+      "passed": true,
+      "run_id": "eval_text_smoke",
+      "action_decision": "PASS",
+      "prompt_template_id": "aviation_basic_safe",
+      "prompt_version": "v2",
+      "prompt_snapshot_id": "aviation_basic_safe_v2",
+      "prompt_route_reason": "missing_required_variables"
+    },
+    {
+      "case_id": "insufficient_evidence",
+      "passed": true,
+      "run_id": "eval_missing_evidence",
+      "action_decision": "PASS",
+      "is_final_fact_prompt": false,
+      "prompt_template_id": "aviation_basic_safe",
+      "prompt_version": "v2",
+      "prompt_snapshot_id": "aviation_basic_safe_v2",
+      "prompt_route_reason": "missing_required_variables"
+    },
+    {
+      "case_id": "voice_mock",
+      "passed": true,
+<<<<<<< Updated upstream
+      "run_id": "run_cbc2d403a92f",
+      "action_decision": "PASS",
+      "normalized_query": "机翼升力",
+      "request_source": "voice",
+      "answer_id": "answer_eac4687f1276",
+      "evidence_package_id": "evidence_pkg_81eae8532dff",
+      "spoken_answer": {
+        "answer_brief": "机翼通过翼型和迎角改变周围气流压力分布，从而产生升力。",
+        "spoken_steps": [
+          "机翼上下表面的压强差形成向上的气动力。",
+          "机翼使气流向下偏转，飞机受到向上的反作用力。"
+        ],
+        "follow_up_prompt": "是否需要我换一种表达方式？",
+        "source_answer_id": "answer_eac4687f1276",
+        "source_evidence_package_id": "evidence_pkg_81eae8532dff",
+        "new_claim_ids": []
+      },
+      "tts_chunk_count": 4,
+      "metrics": {
+        "raw_audio_persisted": false,
+        "private_payload_logged": false,
+        "state_transition_count": 7
+      },
+      "client_event_types": [
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "voice.state",
+        "asr.partial",
+        "asr.final",
+        "answer.display",
+        "voice.state",
+        "voice.state",
+        "tts.chunk",
+        "tts.chunk",
+        "tts.chunk",
+        "tts.chunk",
+        "voice.state"
+      ],
+      "client_close_code": 1000,
+      "port_released": true,
+      "pending_task_count": 0,
+      "prompt_template_id": "aviation_fact_qa",
+      "prompt_version": "v2",
+      "prompt_snapshot_id": "aviation_fact_qa_v2",
+      "prompt_route_reason": "default_concept_route"
+=======
+      "run_id": "run_eb4d56724534",
+      "action_decision": "PASS",
+      "prompt_template_id": "aviation_basic_safe",
+      "prompt_version": "v2",
+      "prompt_snapshot_id": "aviation_basic_safe_v2",
+      "prompt_route_reason": "missing_required_variables",
+      "tts_prompt_template_id": "spoken_answer_style_prompt",
+      "tts_prompt_version": "v2",
+      "tts_prompt_snapshot_id": "spoken_answer_style_prompt_v2",
+      "tts_prompt_route_reason": null
+>>>>>>> Stashed changes
+    }
+  ],
+  "mock_offline": true
+}

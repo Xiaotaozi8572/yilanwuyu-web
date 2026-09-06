@@ -1,0 +1,27 @@
+{
+  "template_id": "barge_in_feedback_prompt",
+  "version": "v1",
+  "change_reason": "Initial interruption-aware rewrite prompt.",
+  "created_at": "2026-07-09T00:00:00Z",
+  "review_status": "active",
+  "snapshot_id": "barge_in_feedback_prompt_v1",
+  "variables": [
+    {
+      "name": "memory_context",
+      "source": "memory_context",
+      "value_type": "learner_summary",
+      "required": false,
+      "missing_behavior": "omit",
+      "description": "Optional pacing preferences."
+    },
+    {
+      "name": "output_contract",
+      "source": "runtime",
+      "value_type": "json_schema_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Runtime spoken output rules."
+    }
+  ],
+  "content": "You are handling a spoken interruption.\n1. Identify what part of the answer should continue and what should change.\n2. Use {{memory_context}} only to adapt pace or phrasing.\n3. Keep the revised reply shorter than the interrupted one.\n4. Do not add new facts after the interruption.\n5. Follow {{output_contract}} exactly."
+}

@@ -1,0 +1,236 @@
+partition: "c919/01_science/06_comparison"
+partition_owner: "科普证据组"
+sources:
+  - source_id: "c919-science-vs-b737-v1"
+    source_type: "table"
+    title: "C919 与波音 737 对比"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919", "b737"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "comparison"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-vs-b737-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "comparison"
+      source_statement: "Wikipedia Comac C919、Boeing 737 NG、Boeing 737 MAX，2026-07 访问"
+      verification: "对比维度成对出现，缺失维度已在文中标注"
+      stale: false
+
+  - source_id: "c919-science-vs-a320-v1"
+    source_type: "table"
+    title: "C919 与空客 A320 对比"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919", "a320"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "comparison"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-vs-a320-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "comparison"
+      source_statement: "Wikipedia Comac C919、Airbus A320neo，2026-07 访问"
+      verification: "对比维度成对出现"
+      stale: false
+
+  - source_id: "c919-science-vs-arj21-v1"
+    source_type: "table"
+    title: "C919 与 ARJ21 对比"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919", "arj21"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "comparison"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-vs-arj21-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "comparison"
+      source_statement: "Wikipedia Comac C919、Comac ARJ21，2026-07 访问"
+      verification: "对比维度成对出现"
+      stale: false
+
+  - source_id: "c919-science-vs-widebody-v1"
+    source_type: "text"
+    title: "C919 与宽体客机的定位区分"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "comparison"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-vs-widebody-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "comparison"
+      source_statement: "Wikipedia Comac C919、Airbus A330、Boeing 787，2026-07 访问"
+      verification: "核心论点为定位区分分析，对比数据来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-vs-a320neo-engine-v1"
+    source_type: "table"
+    title: "C919 与 A320neo 发动机对比：LEAP-1C vs LEAP-1A vs PW1100G"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919", "a320"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "comparison"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-vs-a320neo-engine-comparison-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "comparison"
+      source_statement: "Wikipedia Comac C919、Airbus A320neo，2026-07-29 访问"
+      verification: "LEAP-1C28/1C30 推力、与 LEAP-1A 共享型号合格证、CJ-1000A 时间线经 Wikipedia 核对；PW1100G 数据来自公开资料"
+      stale: false
+
+  - source_id: "c919-science-vs-b737max-aero-v1"
+    source_type: "table"
+    title: "C919 与 B737 MAX 气动设计对比：翼展、超临界机翼、翼尖小翼"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919", "b737"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "comparison"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-vs-b737max-aerodynamic-comparison-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "comparison"
+      source_statement: "Wikipedia Comac C919、Boeing 737 MAX，2026-07-29 访问"
+      verification: "C919 翼展/巡航 Mach/升限/机身截面/超临界机翼数据经 Wikipedia 核对；B737 MAX 数据来自 Wikipedia 公开资料"
+      stale: false
+
+  - source_id: "c919-science-vs-a320-avionics-v1"
+    source_type: "table"
+    title: "C919 与 A320 航电系统对比：IMA 架构、ARINC 664、显示系统"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919", "a320"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "comparison"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-vs-a320-avionics-comparison-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "comparison"
+      source_statement: "Wikipedia Comac C919、Airbus A320，2026-07-29 访问"
+      verification: "C919 航电供应商经 Wikipedia 核对；IMA vs 联邦式、ARINC 664 vs 429 为通用航电知识"
+      stale: false
+
+  - source_id: "c919-science-vs-b737-economics-v1"
+    source_type: "table"
+    title: "C919 与 B737 经济性对比：价格、油耗、维护成本、座公里成本"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919", "b737"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "comparison"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-vs-b737-economics-comparison-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "comparison"
+      source_statement: "Wikipedia Comac C919、Boeing 737，2026-07-29 访问"
+      verification: "C919 目录价格 6.53 亿、座位/航程、国产化率经 Wikipedia 核对；B737 数据来自公开资料；具体 CASK 数值因运营数据不足未引用"
+      stale: false
+
+  - source_id: "c919-science-vs-a320-range-payload-v1"
+    source_type: "table"
+    title: "C919 vs A320：航程与载荷对比"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919", "a320"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "range_payload_comparison"
+    knowledge_type: "comparison"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-vs-a320-range-payload-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "comparison"
+      source_statement: "Wikipedia Comac C919 与 Airbus A320neo 公开技术规格，2026-07-29 访问"
+      verification: "C919 航程 4,075/5,555 km、载荷 20.4 吨来自 Wikipedia；A320neo 参数参考空客公开资料"
+      stale: false
+
+  - source_id: "c919-science-vs-b737max-orders-v1"
+    source_type: "table"
+    title: "C919 vs B737 MAX：订单与交付对比"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919", "b737"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "orders_delivery_comparison"
+    knowledge_type: "comparison"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-vs-b737max-orders-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "comparison"
+      source_statement: "Wikipedia Comac C919 与 Boeing 737 MAX 公开订单/交付数据，2026-07-29 访问"
+      verification: "C919 订单 1,000+、交付 37、4,200 试飞小时来自 Wikipedia；B737 MAX 数据参考波音公开资料"
+      stale: false
+
+  - source_id: "c919-science-vs-arj21-positioning-v1"
+    source_type: "table"
+    title: "C919 vs ARJ21：定位对比与差异化分析"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919", "arj21"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "positioning_comparison"
+    knowledge_type: "comparison"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-vs-arj21-positioning-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "comparison"
+      source_statement: "Wikipedia Comac C919 与 Comac ARJ21 公开资料，2026-07-29 访问"
+      verification: "C919 座位、航程、试飞数据来自 Wikipedia；ARJ21 参数参考 ARJ21 公开资料"
+      stale: false

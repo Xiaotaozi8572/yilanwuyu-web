@@ -1,0 +1,93 @@
+# C919 环控系统内部关系
+# 描述环控系统空调、引气、增压、配气的层级与功能关系
+# relation_type: part_of / depends_on / feeds_to / controls
+# edge_id 前缀：recs_
+
+relations:
+  # ========== part_of 环控组件归属 ==========
+  - edge_id: "recs_001"
+    source_node_id: "comp_air_cycle_machine"
+    target_node_id: "sys_ecs"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "空调组件(左/右)是环控系统的核心，将引气冷却为合适温度送入客舱"
+
+  - edge_id: "recs_002"
+    source_node_id: "sys_bleed_air"
+    target_node_id: "sys_ecs"
+    relation_type: "part_of"
+    confidence: 0.95
+    description: "引气系统是环控系统的气源，从发动机压气机或 APU 引出高压空气"
+
+  - edge_id: "recs_003"
+    source_node_id: "comp_recirculation_fan"
+    target_node_id: "sys_ecs"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "再循环风扇抽取部分客舱回风与新空气混合，提高空调效率"
+
+  - edge_id: "recs_004"
+    source_node_id: "comp_water_separator"
+    target_node_id: "sys_ecs"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "水分离器去除空调空气中的冷凝水，防止管道结冰与客舱喷水"
+
+  - edge_id: "recs_005"
+    source_node_id: "comp_air_distribution"
+    target_node_id: "sys_ecs"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "配气管道将调温调湿后的空气分配至客舱各出风口"
+
+  - edge_id: "recs_006"
+    source_node_id: "sys_cabin_pressure_control"
+    target_node_id: "sys_ecs"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "客舱压力控制系统是环控系统的组成部分，维持客舱增压"
+
+  - edge_id: "recs_007"
+    source_node_id: "comp_outflow_valve"
+    target_node_id: "sys_ecs"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "外流阀位于后机身下部，调节排出机外空气量控制客舱压力"
+
+  - edge_id: "recs_008"
+    source_node_id: "comp_cabin_temp_controller"
+    target_node_id: "sys_ecs"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "座舱温度控制器根据设定温度调节空调组件冷热空气比例"
+
+  # ========== depends_on 环控依赖 ==========
+  - edge_id: "recs_009"
+    source_node_id: "comp_air_cycle_machine"
+    target_node_id: "sys_bleed_air"
+    relation_type: "depends_on"
+    confidence: 1.0
+    description: "空调组件依赖引气系统提供的高压空气作为工作气源"
+
+  # ========== feeds_to 环控气流流向 ==========
+  - edge_id: "recs_010"
+    source_node_id: "comp_water_separator"
+    target_node_id: "comp_air_distribution"
+    relation_type: "feeds_to"
+    confidence: 0.95
+    description: "经水分离器除水后的空气送至配气管道分配到客舱"
+
+  # ========== controls 环控控制 ==========
+  - edge_id: "recs_011"
+    source_node_id: "comp_outflow_valve"
+    target_node_id: "comp_cabin_pressure"
+    relation_type: "controls"
+    confidence: 0.95
+    description: "外流阀开度控制客舱压力变化率与最终压力高度"
+
+  - edge_id: "recs_012"
+    source_node_id: "comp_cabin_temp_controller"
+    target_node_id: "comp_air_cycle_machine"
+    relation_type: "controls"
+    confidence: 0.95
+    description: "座舱温度控制器通过调节空调组件的冷热路空气流量控制客舱温度"

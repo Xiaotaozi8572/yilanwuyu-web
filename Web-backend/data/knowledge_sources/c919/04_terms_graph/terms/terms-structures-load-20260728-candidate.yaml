@@ -1,0 +1,90 @@
+# C919 载荷强度类术语
+# 领域：结构载荷与强度
+# 条目数：12
+# node_type 统一为 concept
+# ID 前缀：strload_
+
+terms:
+  - term_id: "strload_001"
+    canonical_name: "极限载荷"
+    aliases: ["极限载荷", "ultimate load", "设计极限载荷"]
+    node_type: "concept"
+    definition: "限制载荷乘以安全系数得到的载荷，结构在极限载荷下至少保持 3 秒不破坏，C919 按 1.5 倍限制载荷设计"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "strload_002"
+    canonical_name: "限制载荷"
+    aliases: ["限制载荷", "limit load", "使用载荷"]
+    node_type: "concept"
+    definition: "飞机服役期内预期承受的最大载荷，结构在此载荷下不应产生有害永久变形，C919 按 CCAR-25 规定限制载荷"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "strload_003"
+    canonical_name: "安全系数"
+    aliases: ["安全系数", "factor of safety", "安全裕度"]
+    node_type: "concept"
+    definition: "极限载荷与限制载荷的比值，航空结构通常取 1.5，考虑材料分散性和分析不确定性，C919 适航取 1.5"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "strload_004"
+    canonical_name: "疲劳"
+    aliases: ["疲劳", "fatigue", "疲劳损伤", "疲劳破坏"]
+    node_type: "concept"
+    definition: "结构在交变载荷作用下产生裂纹并扩展的现象，C919 按 CCAR-25.571 疲劳评定设计，保证服役期内不发生疲劳破坏"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "strload_005"
+    canonical_name: "疲劳寿命"
+    aliases: ["疲劳寿命", "fatigue life", "疲劳循环寿命"]
+    node_type: "concept"
+    definition: "结构在交变载荷下从开始到破坏的循环次数，C919 设计服役寿命目标 90000 飞行小时或 75000 起落"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "strload_006"
+    canonical_name: "损伤容限"
+    aliases: ["损伤容限", "damage tolerance", "裂纹容限"]
+    node_type: "concept"
+    definition: "结构在含裂纹状态下仍能承受许用载荷并允许检测的设计原则，C919 关键结构按损伤容限设计保证裂纹可检"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "strload_007"
+    canonical_name: "裂纹"
+    aliases: ["裂纹", "crack", "疲劳裂纹", "宏观裂纹"]
+    node_type: "concept"
+    definition: "结构在应力集中或疲劳作用下产生的局部断裂，C919 通过无损检测和损伤容限设计管理裂纹"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "strload_008"
+    canonical_name: "应力"
+    aliases: ["应力", "stress", "内力集度"]
+    node_type: "concept"
+    definition: "单位面积上的内力，分为正应力和剪应力，C919 结构应力分析保证所有工况下应力低于许用值"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "strload_009"
+    canonical_name: "应变"
+    aliases: ["应变", "strain", "相对变形"]
+    node_type: "concept"
+    definition: "单位长度的变形量，与应力通过材料本构关系联系，C919 应变测量用于试验和服役监控"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "strload_010"
+    canonical_name: "屈服"
+    aliases: ["屈服", "yield", "屈服点", "屈服强度"]
+    node_type: "concept"
+    definition: "材料开始产生永久变形的应力点，对应屈服强度，C919 结构在限制载荷下应力不超过屈服强度"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "strload_011"
+    canonical_name: "断裂"
+    aliases: ["断裂", "fracture", "断裂破坏", "断裂失效"]
+    node_type: "concept"
+    definition: "材料或结构完全分离失效，含延性断裂和脆性断裂，C919 结构设计避免脆性断裂"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "strload_012"
+    canonical_name: "许用应力"
+    aliases: ["许用应力", "allowable stress", "许用值"]
+    node_type: "concept"
+    definition: "结构设计允许的最大应力值，由材料强度和安全系数确定，C919 各部位许用应力按材料手册和试验确定"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

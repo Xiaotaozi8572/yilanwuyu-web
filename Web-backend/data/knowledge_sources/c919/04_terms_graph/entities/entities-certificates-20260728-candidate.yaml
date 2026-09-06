@@ -1,0 +1,102 @@
+# C919 证书文档实体
+# 适航证件及运行类文档
+# node_type: certificate
+# node_id 前缀：cert_
+
+entities:
+  - node_id: "cert_tc"
+    node_type: "certificate"
+    canonical_name: "型号合格证"
+    aliases: ["TC", "Type Certificate", "型号合格证"]
+    description: "中国民航局颁发的 C919 型号合格证（TC），2022-09-29 取得，证明型号设计满足适航标准"
+    specifications:
+      issue_date: "2022-09-29"
+      authority: "CAAC"
+    applicable_aircraft: []
+
+  - node_id: "cert_pc"
+    node_type: "certificate"
+    canonical_name: "生产许可证"
+    aliases: ["PC", "Production Certificate", "生产许可证"]
+    description: "中国民航局颁发的 C919 生产许可证（PC），证明中国商飞质量体系满足批量生产要求"
+    specifications:
+      authority: "CAAC"
+    applicable_aircraft: []
+
+  - node_id: "cert_ac"
+    node_type: "certificate"
+    canonical_name: "适航证"
+    aliases: ["AC", "Airworthiness Certificate", "单机适航证"]
+    description: "每架交付 C919 取得的单机适航证（AC），证明该架机适航状态满足要求"
+    specifications:
+      authority: "CAAC"
+    applicable_aircraft: []
+
+  - node_id: "cert_ad"
+    node_type: "certificate"
+    canonical_name: "适航指令"
+    aliases: ["AD", "Airworthiness Directive", "适航指令"]
+    description: "民航局针对 C919 运行中发现的强制纠正措施发布的适航指令（AD），运营人必须执行"
+    specifications:
+      authority: "CAAC"
+    applicable_aircraft: []
+
+  - node_id: "cert_maintenance_program"
+    node_type: "certificate"
+    canonical_name: "维修大纲"
+    aliases: ["MRB Report", "维修审查委员会报告", "MRBR"]
+    description: "C919 维修大纲（MRBR），规定各部件检修间隔和任务，由维修审查委员会批准"
+    applicable_aircraft: []
+
+  - node_id: "cert_afm"
+    node_type: "certificate"
+    canonical_name: "飞行手册"
+    aliases: ["AFM", "Aircraft Flight Manual", "飞机飞行手册"]
+    description: "C919 经批准的飞机飞行手册（AFM），规定正常运行及限制下的操作程序和数据"
+    applicable_aircraft: []
+
+  - node_id: "cert_icao_annex8"
+    node_type: "certificate"
+    canonical_name: "ICAO Annex 8"
+    aliases: ["ICAO Annex 8", "国际民用航空公约附件 8"]
+    description: "国际民用航空公约附件 8《航空器的适航性》，C919 出口需满足该国际适航要求"
+    applicable_aircraft: []
+
+  - node_id: "cert_ccar25"
+    node_type: "certificate"
+    canonical_name: "CCAR-25"
+    aliases: ["CCAR-25", "中国民航规章第 25 部", "运输类飞机适航标准"]
+    description: "中国民航规章第 25 部《运输类飞机适航标准》，C919 型号合格审定主要依据"
+    applicable_aircraft: []
+
+  - node_id: "cert_easa"
+    node_type: "certificate"
+    canonical_name: "EASA 认证"
+    aliases: ["EASA 认证", "EASA 型号合格证", "欧洲适航认证"]
+    description: "C919 申请的 EASA 型号合格证，认可后可向欧洲市场出口，处于审定推进中"
+    specifications:
+      authority: "EASA"
+    applicable_aircraft: []
+
+  - node_id: "cert_faa"
+    node_type: "certificate"
+    canonical_name: "FAA 认证"
+    aliases: ["FAA 认证", "FAA 型号合格证", "美国适航认证"]
+    description: "C919 申请的 FAA 型号合格证，认可后可向美国市场出口，受中美双边适航协定影响"
+    specifications:
+      authority: "FAA"
+    applicable_aircraft: []
+
+  - node_id: "cert_type_rating"
+    node_type: "certificate"
+    canonical_name: "型别评级"
+    aliases: ["型别评级", "Type Rating", "机型签注"]
+    description: "C919 机型型别评级，飞行员须完成 C919 改装训练并通过考核取得型别等级签注"
+    applicable_aircraft: []
+
+  - node_id: "cert_ops_spec"
+    node_type: "certificate"
+    canonical_name: "运行规范"
+    aliases: ["Op Specs", "运行规范", "运营人运行规范"]
+    description: "运营人运行规范，C919 投入商业运营前由民航局批准纳入航司运行合格证"
+    applicable_aircraft: []

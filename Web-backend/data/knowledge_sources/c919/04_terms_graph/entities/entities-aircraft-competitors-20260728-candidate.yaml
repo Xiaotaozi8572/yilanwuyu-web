@@ -1,0 +1,165 @@
+# C919 竞争机型实体
+# C919 同级别窄体客机市场主要竞争机型
+# node_type: aircraft
+# node_id 前缀：acomp_
+
+entities:
+  - node_id: "acomp_a320"
+    node_type: "aircraft"
+    canonical_name: "空客 A320"
+    aliases: ["A320", "A320ceo", "Airbus A320"]
+    description: "空客 A320 CEO 系列窄体客机，C919 直接对标机型，机身宽度 3.95m，与 C919 机身宽度 3.96m 接近"
+    specifications:
+      wingspan_m: 35.8
+      length_m: 37.57
+      height_m: 11.76
+      mtow_kg: 78000
+      range_km: 6100
+      seats: "150-180"
+      cruise_mach: 0.78
+      engines: "2× CFM56-5B 或 V2500"
+    applicable_aircraft: ["a320"]
+
+  - node_id: "acomp_a319"
+    node_type: "aircraft"
+    canonical_name: "空客 A319"
+    aliases: ["A319", "Airbus A319"]
+    description: "空客 A319 缩短型窄体客机，A320 的缩短衍生型，座位数较少，航程更远"
+    specifications:
+      wingspan_m: 35.8
+      length_m: 33.84
+      height_m: 11.76
+      mtow_kg: 75500
+      range_km: 6700
+      seats: "124-156"
+      cruise_mach: 0.78
+      engines: "2× CFM56-5B 或 V2500"
+    applicable_aircraft: ["a319"]
+
+  - node_id: "acomp_a321"
+    node_type: "aircraft"
+    canonical_name: "空客 A321"
+    aliases: ["A321", "Airbus A321"]
+    description: "空客 A321 加长型窄体客机，A320 的加长衍生型，座位数更多，与 C919-800 改型竞争"
+    specifications:
+      wingspan_m: 35.8
+      length_m: 44.51
+      height_m: 11.76
+      mtow_kg: 89000
+      range_km: 5950
+      seats: "170-220"
+      cruise_mach: 0.78
+      engines: "2× CFM56-5B 或 V2500"
+    applicable_aircraft: ["a321"]
+
+  - node_id: "acomp_a320neo"
+    node_type: "aircraft"
+    canonical_name: "空客 A320neo"
+    aliases: ["A320neo", "A320 NEO", "Airbus A320neo"]
+    description: "空客 A320 NEO 换发升级型，换装 LEAP-1A 或 PW1100G 发动机，燃油效率提升约 15%，C919 主要竞争对手"
+    specifications:
+      wingspan_m: 35.8
+      length_m: 37.57
+      height_m: 11.76
+      mtow_kg: 79000
+      range_km: 6500
+      seats: "150-194"
+      cruise_mach: 0.78
+      engines: "2× LEAP-1A 或 PW1100G"
+    applicable_aircraft: ["a320neo"]
+
+  - node_id: "acomp_a321neo"
+    node_type: "aircraft"
+    canonical_name: "空客 A321neo"
+    aliases: ["A321neo", "Airbus A321neo"]
+    description: "空客 A321 NEO 换发加长型，航程可达 7400km（LR 版本），直接压制 C919 加长型市场空间"
+    specifications:
+      wingspan_m: 35.8
+      length_m: 44.51
+      height_m: 11.76
+      mtow_kg: 97000
+      range_km: 7400
+      seats: "180-244"
+      cruise_mach: 0.78
+      engines: "2× LEAP-1A 或 PW1100G"
+    applicable_aircraft: ["a321neo"]
+
+  - node_id: "acomp_b737_800"
+    node_type: "aircraft"
+    canonical_name: "波音 737-800"
+    aliases: ["B737-800", "737-800", "Boeing 737-800"]
+    description: "波音 737 NG 系列主力窄体客机，C919 主要对标机型之一，全球单通道市场保有量最大机型之一"
+    specifications:
+      wingspan_m: 35.79
+      length_m: 39.5
+      height_m: 12.55
+      mtow_kg: 79010
+      range_km: 5765
+      seats: "162-189"
+      cruise_mach: 0.785
+      engines: "2× CFM56-7B"
+    applicable_aircraft: ["b737_800"]
+
+  - node_id: "acomp_b737max8"
+    node_type: "aircraft"
+    canonical_name: "波音 737 MAX 8"
+    aliases: ["B737MAX8", "737 MAX 8", "Boeing 737 MAX 8"]
+    description: "波音 737 MAX 系列换发升级型，换装 LEAP-1B 发动机，燃油效率提升约 14%，与 C919 直接竞争"
+    specifications:
+      wingspan_m: 35.92
+      length_m: 39.52
+      height_m: 12.29
+      mtow_kg: 82191
+      range_km: 6570
+      seats: "178-210"
+      cruise_mach: 0.79
+      engines: "2× LEAP-1B"
+    applicable_aircraft: ["b737max8"]
+
+  - node_id: "acomp_b737max9"
+    node_type: "aircraft"
+    canonical_name: "波音 737 MAX 9"
+    aliases: ["B737MAX9", "737 MAX 9", "Boeing 737 MAX 9"]
+    description: "波音 737 MAX 系列加长型，座位数更多，与 C919-800 改型及 A321neo 竞争"
+    specifications:
+      wingspan_m: 35.92
+      length_m: 42.16
+      height_m: 12.29
+      mtow_kg: 88314
+      range_km: 6570
+      seats: "193-220"
+      cruise_mach: 0.79
+      engines: "2× LEAP-1B"
+    applicable_aircraft: ["b737max9"]
+
+  - node_id: "acomp_b737_700"
+    node_type: "aircraft"
+    canonical_name: "波音 737-700"
+    aliases: ["B737-700", "737-700", "Boeing 737-700"]
+    description: "波音 737 NG 系列缩短型，座位数较少，与 C919-600 缩短型改型处于同一细分市场"
+    specifications:
+      wingspan_m: 35.79
+      length_m: 33.63
+      height_m: 12.55
+      mtow_kg: 77510
+      range_km: 6230
+      seats: "126-149"
+      cruise_mach: 0.785
+      engines: "2× CFM56-7B"
+    applicable_aircraft: ["b737_700"]
+
+  - node_id: "acomp_e190"
+    node_type: "aircraft"
+    canonical_name: "巴航工业 E190"
+    aliases: ["E190", "Embraer E190", "E190-100"]
+    description: "巴航工业 E-Jet 系列支线客机，座位数低于 C919，与 C919-600 缩短型在支线市场存在交叉竞争"
+    specifications:
+      wingspan_m: 28.72
+      length_m: 36.24
+      height_m: 10.57
+      mtow_kg: 51800
+      range_km: 4537
+      seats: "96-114"
+      cruise_mach: 0.78
+      engines: "2× GE CF34-10E"
+    applicable_aircraft: ["e190"]

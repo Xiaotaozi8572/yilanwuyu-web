@@ -1,0 +1,623 @@
+partition: "c919/01_science/02_structure_systems"
+partition_owner: "科普证据组"
+sources:
+  - source_id: "c919-science-fuselage-v1"
+    source_type: "text"
+    title: "C919 机体结构概述"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "fuselage"
+    concept: "fuselage_structure"
+    knowledge_type: "component_role"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-fuselage-structure-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "component_role"
+      source_statement: "Wikipedia Comac C919，2026-07 访问"
+      verification: "Wikipedia 综合资料"
+      stale: false
+
+  - source_id: "c919-science-wing-v1"
+    source_type: "text"
+    title: "C919 机翼结构"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "wing"
+    concept: "wing_structure"
+    knowledge_type: "component_role"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-wing-structure-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "component_role"
+      source_statement: "Wikipedia Comac C919，2026-07 访问"
+      verification: "与航空工业西飞公开报道交叉核对"
+      stale: false
+
+  - source_id: "c919-science-empennage-v1"
+    source_type: "text"
+    title: "C919 尾翼结构"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "empennage"
+    concept: "empennage_structure"
+    knowledge_type: "component_role"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-empennage-structure-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "component_role"
+      source_statement: "Wikipedia Comac C919，2026-07 访问"
+      verification: "Wikipedia 综合资料"
+      stale: false
+
+  - source_id: "c919-science-landing-gear-v1"
+    source_type: "text"
+    title: "C919 起落架系统"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "landing_gear"
+    concept: "landing_gear_system"
+    knowledge_type: "component_role"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-landing-gear-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "component_role"
+      source_statement: "Wikipedia Comac C919，2026-07 访问"
+      verification: "与利勃海尔公开资料交叉核对"
+      stale: false
+
+  - source_id: "c919-science-propulsion-v1"
+    source_type: "text"
+    title: "C919 动力系统与 LEAP-1C 发动机"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "propulsion"
+    concept: "leap_1c_engine"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-propulsion-leap1c-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919 与 CFM International 公开资料，2026-07 访问"
+      verification: "LEAP-1C 推力数据经 Wikipedia 与 CFM 公开资料交叉核对"
+      stale: false
+
+  - source_id: "c919-science-avionics-v1"
+    source_type: "text"
+    title: "C919 航电系统"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "avionics"
+    concept: "avionics_system"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-avionics-system-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919，2026-07 访问"
+      verification: "与昂际航电公开资料交叉核对"
+      stale: false
+
+  - source_id: "c919-science-flight-control-v1"
+    source_type: "text"
+    title: "C919 电传飞控系统"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "flight_control"
+    concept: "fly_by_wire"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-flight-control-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919，2026-07 访问"
+      verification: "与霍尼韦尔航空航天公开资料交叉核对"
+      stale: false
+
+  - source_id: "c919-science-hydraulic-v1"
+    source_type: "text"
+    title: "C919 液压系统"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "hydraulic"
+    concept: "hydraulic_system"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-hydraulic-system-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919，2026-07 访问"
+      verification: "Wikipedia 综合资料"
+      stale: false
+
+  - source_id: "c919-science-fuel-v1"
+    source_type: "text"
+    title: "C919 燃油系统"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "fuel"
+    concept: "fuel_system"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-fuel-system-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919，2026-07 访问"
+      verification: "Wikipedia 综合资料"
+      stale: false
+
+  - source_id: "c919-science-cabin-v1"
+    source_type: "text"
+    title: "C919 客舱系统"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "cabin"
+    concept: "cabin_system"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-cabin-system-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919，2026-07 访问"
+      verification: "与中航工业嘉泰航空设备公开资料交叉核对"
+      stale: false
+
+  - source_id: "c919-science-electrical-v1"
+    source_type: "text"
+    title: "C919 电源系统与辅助动力装置"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "cabin"
+    concept: "electrical_system"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-electrical-power-apu-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919，2026-07 访问"
+      verification: "与霍尼韦尔 HGT750 公开资料交叉核对"
+      stale: false
+
+  - source_id: "c919-science-ecs-v1"
+    source_type: "text"
+    title: "C919 环控系统与气源系统"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "cabin"
+    concept: "environmental_control_system"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-ecs-air-management-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919 与 Liebherr 航空航天公开资料，2026-07 访问"
+      verification: "与 Liebherr ECS 技术资料交叉核对"
+      stale: false
+
+  - source_id: "c919-science-lighting-fire-v1"
+    source_type: "text"
+    title: "C919 照明、防火与其它系统"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "lighting_fire"
+    concept: "lighting_fire_system"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-lighting-fire-other-systems-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919 与行业通用运输类飞机系统配置，2026-07 访问"
+      verification: "Wikipedia 综合资料"
+      stale: false
+
+  - source_id: "c919-science-navigation-system-v1"
+    source_type: "text"
+    title: "C919 导航系统：IRS LASEREF IV、PBN、GPS"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "avionics"
+    concept: "navigation_system"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-navigation-system-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919 与 Honeywell 航空航天公开资料，2026-07-29 访问"
+      verification: "IRS 型号 LASEREF IV、FMS TrueCourse 经 Wikipedia 与 Honeywell 资料交叉核对"
+      stale: false
+
+  - source_id: "c919-science-communication-system-v1"
+    source_type: "text"
+    title: "C919 通信系统：VHF/HF、卫星通信、RCCAC 合资"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "avionics"
+    concept: "communication_system"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-communication-system-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "通信导航供应商 RCCAC、IFE 供应商 Thales-CETCA 经 Wikipedia 核对"
+      stale: false
+
+  - source_id: "c919-science-ice-protection-v1"
+    source_type: "text"
+    title: "C919 防冰系统：机翼前缘引气防冰、发动机进气道防冰、风挡电加热"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "ecs"
+    concept: "ice_protection_system"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-ice-protection-system-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919 与 Liebherr 航空航天公开资料，2026-07-29 访问"
+      verification: "短舱供应商 Nexcelle PANACHE 经 Wikipedia 核对；防冰架构为通用民机系统"
+      stale: false
+
+  - source_id: "c919-science-oxygen-system-v1"
+    source_type: "text"
+    title: "C919 氧气系统：机组氧气面罩、乘客化学氧发生器、14,000 ft 自动释放"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "cabin"
+    concept: "oxygen_system"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-oxygen-system-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919 与 CCAR-25 部适航标准，2026-07-29 访问"
+      verification: "14,000 ft 自动释放阈值为 CCAR-25 部通用要求；空气管理供应商 Liebherr 经 Wikipedia 核对"
+      stale: false
+
+  - source_id: "c919-science-water-waste-v1"
+    source_type: "text"
+    title: "C919 水废水系统：淡水箱、真空马桶、引气增压"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "cabin"
+    concept: "water_waste_system"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-water-waste-system-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "客舱系统供应商经 Wikipedia 核对；真空马桶、引气增压为通用民机系统架构"
+      stale: false
+
+  - source_id: "c919-science-apu-details-v1"
+    source_type: "text"
+    title: "C919 APU 详细：Honeywell HGT750[C]、地面/空中启动、供电供气"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "apu"
+    concept: "auxiliary_power_unit"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-apu-details-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919 与 Honeywell 航空航天公开资料，2026-07-29 访问"
+      verification: "APU 型号 HGT750[C] 与供应商 Honeywell 经 Wikipedia 核对"
+      stale: false
+
+  - source_id: "c919-science-landing-gear-details-v1"
+    source_type: "text"
+    title: "C919 起落架详细：Liebherr LAMC、前轮 Honeywell、刹车 Carbenix、Michelin 轮胎"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "landing_gear"
+    concept: "landing_gear_details"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-landing-gear-details-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919 与 Liebherr 航空航天公开资料，2026-07-29 访问"
+      verification: "主起落架 Liebherr LAMC、前轮 Honeywell、轮胎 Michelin 经 Wikipedia 核对一致"
+      stale: false
+
+  - source_id: "c919-science-wing-structure-details-v1"
+    source_type: "text"
+    title: "C919 机翼结构详节：超临界翼型与中央翼盒"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "wing"
+    concept: "wing_structure_details"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-wing-structure-details-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "翼展 35.8 m、超临界翼型效率 +20%/-8% 来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-fuselage-structure-details-v1"
+    source_type: "text"
+    title: "C919 机身结构详节：尺寸、材料与分段制造"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "fuselage"
+    concept: "fuselage_structure_details"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-fuselage-structure-details-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "机身 3.96 m 宽、铝锂合金 8.8%、复合材料 12% 来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-empennage-details-v1"
+    source_type: "text"
+    title: "C919 尾翼详节：垂直尾翼与水平尾翼"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "empennage"
+    concept: "empennage_details"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-empennage-details-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919 与 Hongfei（Honeywell-AVIC）公开资料，2026-07-29 访问"
+      verification: "尾翼复合材料占比、飞控供应商 Hongfei 来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-engine-nacelle-details-v1"
+    source_type: "text"
+    title: "C919 发动机短舱详节：Nexcelle PANACHE 与 O-Duct 反推"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "engine_nacelle"
+    concept: "engine_nacelle_details"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-engine-nacelle-details-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919 与 Nexcelle 公司公开资料，2026-07-29 访问"
+      verification: "Nexcelle PANACHE 短舱、O-Duct 反推供应商来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-hydraulic-system-details-v1"
+    source_type: "text"
+    title: "C919 液压系统详节：Parker-AVIC 与余度设计"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "hydraulic"
+    concept: "hydraulic_system_details"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-hydraulic-system-details-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919 与 Parker Hannifin 公开资料，2026-07-29 访问"
+      verification: "Parker-AVIC 供应商来自 Wikipedia；液压系统参数参考同类窄体客机公开资料"
+      stale: false
+
+  - source_id: "c919-science-fuel-system-details-v1"
+    source_type: "text"
+    title: "C919 燃油系统详节：Parker-AVIC 与惰性气体系统"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "fuel"
+    concept: "fuel_system_details"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-fuel-system-details-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919 与 Parker Hannifin 公开资料，2026-07-29 访问"
+      verification: "Parker-AVIC 燃油供应商、LEAP-1C 推力数据来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-avionics-ima-v1"
+    source_type: "text"
+    title: "C919 航电 IMA 架构：AVIAGE 系统与 ARINC 664"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    component: "avionics"
+    concept: "ima_architecture"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-avionics-ima-architecture-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919 与 ARINC 664/653 标准，2026-07-29 访问"
+      verification: "AVIAGE Systems、TrueCourse FMS、Honeywell LASEREF IV 供应商来自 Wikipedia"
+      stale: false

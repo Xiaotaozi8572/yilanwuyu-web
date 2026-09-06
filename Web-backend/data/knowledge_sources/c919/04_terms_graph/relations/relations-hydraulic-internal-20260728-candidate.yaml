@@ -1,0 +1,93 @@
+# C919 液压系统内部关系
+# 描述液压系统 A/B 双余度架构及附件的层级与功能关系
+# relation_type: part_of / provides_power_to / feeds_to / redundant_with
+# edge_id 前缀：rhyd_
+
+relations:
+  # ========== part_of 液压系统组件归属 ==========
+  - edge_id: "rhyd_001"
+    source_node_id: "comp_edp"
+    target_node_id: "sys_hydraulic"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "发动机驱动泵(EDP)由发动机附件齿轮箱驱动，是液压系统主液压源"
+
+  - edge_id: "rhyd_002"
+    source_node_id: "comp_emp"
+    target_node_id: "sys_hydraulic"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "电动泵(EMP)由电力系统驱动，是液压系统的备用液压源"
+
+  - edge_id: "rhyd_003"
+    source_node_id: "comp_hydraulic_accumulator"
+    target_node_id: "sys_hydraulic"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "液压蓄压器储存液压能，缓冲压力脉动并提供瞬态大流量"
+
+  - edge_id: "rhyd_004"
+    source_node_id: "comp_hydraulic_reservoir"
+    target_node_id: "sys_hydraulic"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "液压油箱储存液压油，为液压泵提供油源并补充泄漏损失"
+
+  - edge_id: "rhyd_005"
+    source_node_id: "comp_hydraulic_filter"
+    target_node_id: "sys_hydraulic"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "液压油滤过滤液压油中的杂质颗粒，保护作动器与精密阀件"
+
+  - edge_id: "rhyd_006"
+    source_node_id: "comp_pressure_transducer"
+    target_node_id: "sys_hydraulic"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "压力传感器实时监测液压系统压力，反馈至驾驶舱指示"
+
+  - edge_id: "rhyd_007"
+    source_node_id: "sys_hydraulic_a"
+    target_node_id: "sys_hydraulic"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "液压系统 A 是液压系统的主余度通道，正常为左系统供压"
+
+  - edge_id: "rhyd_008"
+    source_node_id: "sys_hydraulic_b"
+    target_node_id: "sys_hydraulic"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "液压系统 B 是液压系统的备用余度通道，正常为右系统供压"
+
+  # ========== provides_power_to 液压动力分配 ==========
+  - edge_id: "rhyd_009"
+    source_node_id: "comp_edp"
+    target_node_id: "sys_hydraulic_a"
+    relation_type: "provides_power_to"
+    confidence: 0.95
+    description: "EDP 为液压系统 A 提供主液压动力，发动机运转时持续供压"
+
+  - edge_id: "rhyd_010"
+    source_node_id: "comp_emp"
+    target_node_id: "sys_hydraulic_b"
+    relation_type: "provides_power_to"
+    confidence: 0.95
+    description: "EMP 为液压系统 B 提供备用液压动力，地面或应急时启用"
+
+  # ========== feeds_to 液压油路流向 ==========
+  - edge_id: "rhyd_011"
+    source_node_id: "comp_hydraulic_filter"
+    target_node_id: "comp_hydraulic_reservoir"
+    relation_type: "feeds_to"
+    confidence: 0.9
+    description: "回油经油滤过滤后流回油箱，形成液压油循环回路"
+
+  # ========== redundant_with 液压余度 ==========
+  - edge_id: "rhyd_012"
+    source_node_id: "sys_hydraulic_a"
+    target_node_id: "sys_hydraulic_b"
+    relation_type: "redundant_with"
+    confidence: 1.0
+    description: "液压系统 A 与液压系统 B 互为余度，单一失效时仍可维持飞控与起落架基本功能"

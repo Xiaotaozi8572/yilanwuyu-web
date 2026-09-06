@@ -1,0 +1,243 @@
+partition: "c919/01_science/05_applications_value"
+partition_owner: "科普证据组"
+sources:
+  - source_id: "c919-science-commercial-value-v1"
+    source_type: "text"
+    title: "C919 的商业价值"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "commercial_value"
+    knowledge_type: "value_analysis"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-commercial-value-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "opinion_analysis"
+      source_statement: "Wikipedia Comac C919 订单与交付数据，2026-07 访问；行业分析补充"
+      verification: "订单和交付数据经 Wikipedia 与行业报道交叉核对；商业预测属于 opinion_analysis"
+      stale: false
+
+  - source_id: "c919-science-strategic-value-v1"
+    source_type: "text"
+    title: "C919 的战略意义与产业链"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "strategic_significance"
+    knowledge_type: "value_analysis"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-strategic-value-supply-chain-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "opinion_analysis"
+      source_statement: "综合行业分析，2026-07 访问"
+      verification: "供应链信息以 Wikipedia 为准；国产化率 60% 为行业估算非官方数据"
+      stale: false
+
+  - source_id: "c919-science-technology-spillover-v1"
+    source_type: "text"
+    title: "C919 技术溢出与未来展望"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    knowledge_type: "value_analysis"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-technology-spillover-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "opinion_analysis"
+      source_statement: "综合行业分析与媒体报道，2026-07 访问"
+      verification: "本资料包含分析性内容，属于 opinion_analysis，不构成参数类证据"
+      stale: false
+
+  - source_id: "c919-science-orders-customers-v1"
+    source_type: "text"
+    title: "C919 订单与客户分析：确认订单、主要客户、租赁公司"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "orders_customers"
+    knowledge_type: "value_analysis"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-orders-customers-analysis-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "opinion_analysis"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "已交付 37 架、目录价格 6.53 亿、运营商三大航经 Wikipedia 核对；具体订单数字为商业敏感信息未引用"
+      stale: false
+
+  - source_id: "c919-science-localization-rate-v1"
+    source_type: "text"
+    title: "C919 国产化率分析：60% 成本构成、各系统国产化进展"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "localization_rate"
+    knowledge_type: "value_analysis"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-localization-rate-analysis-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "opinion_analysis"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "国产化率 60%、成本构成、CJ-1000A 时间线经 Wikipedia 核对；国产化率为按成本计算的行业估算"
+      stale: false
+
+  - source_id: "c919-science-supply-chain-layout-v1"
+    source_type: "text"
+    title: "C919 供应链布局：合资模式、国际供应商、国产替代"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "supply_chain"
+    knowledge_type: "system_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-supply-chain-layout-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "system_explanation"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "完整供应商清单、合资公司构成、CJ-1000A 时间线、LEAP-1C 暂停事件经 Wikipedia 核对"
+      stale: false
+
+  - source_id: "c919-science-international-cooperation-v1"
+    source_type: "text"
+    title: "C919 国际合作与技术引进：Bombardier 合作、EASA 认证、出口前景"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "international_cooperation"
+    knowledge_type: "value_analysis"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-international-cooperation-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "opinion_analysis"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "供应商清单、EASA 验证时间线、FAA 未申请、LEAP-1C 暂停事件经 Wikipedia 核对；出口前景为分析性判断"
+      stale: false
+
+  - source_id: "c919-science-economic-impact-v1"
+    source_type: "text"
+    title: "C919 经济影响评估：产业链带动、就业、技术溢出"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "economic_impact"
+    knowledge_type: "value_analysis"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-economic-impact-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "opinion_analysis"
+      source_statement: "Wikipedia Comac C919，2026-07-29 访问"
+      verification: "立项预算、目录价格、已交付数据、国产化率、CJ-1000A 时间线经 Wikipedia 核对；经济影响评估属于 opinion_analysis"
+      stale: false
+
+  - source_id: "c919-science-orders-by-airline-v1"
+    source_type: "text"
+    title: "C919 分航司订单：东航、国航、南航、西藏航空"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "orders_by_airline"
+    knowledge_type: "value_analysis"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-orders-by-airline-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "opinion_analysis"
+      source_statement: "Wikipedia Comac C919 与东航/国航/南航/西藏航空公开资料，2026-07-29 访问"
+      verification: "东航/国航/南航/西藏航空订单、目录价、关税政策来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-tariff-impact-v1"
+    source_type: "text"
+    title: "C919 关税影响分析：125% 关税下的市场机遇"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "tariff_impact"
+    knowledge_type: "value_analysis"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-tariff-impact-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "opinion_analysis"
+      source_statement: "Wikipedia Comac C919 与波音/空客公开目录价，2026-07-29 访问"
+      verification: "2025 年 4 月 125% 关税、瑞安航空 2025 年 5 月表态来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-fleet-operations-v1"
+    source_type: "text"
+    title: "C919 机队运营分析：44 架已造、37 架交付、100 万旅客"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "fleet_operations"
+    knowledge_type: "value_analysis"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-fleet-operations-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "opinion_analysis"
+      source_statement: "Wikipedia Comac C919 与东航/国航/南航公开运营公告，2026-07-29 访问"
+      verification: "44 架已造、37 架交付、100 万人次、春运 33 架、2024-12 16 架运营来自 Wikipedia"
+      stale: false

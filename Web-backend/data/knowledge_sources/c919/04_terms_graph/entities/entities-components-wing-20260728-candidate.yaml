@@ -1,0 +1,117 @@
+# C919 机翼部件实体
+# 机翼结构分解及翼面部件
+# node_type: component
+# node_id 前缀：cwing_
+
+entities:
+  - node_id: "cwing_wing"
+    node_type: "component"
+    canonical_name: "机翼"
+    aliases: ["wing", "主翼", "C919 机翼"]
+    description: "C919 产生升力的主要气动部件，采用第四代超临界翼型，翼展 33.6m（含小翼 35.8m），后掠角约 25°"
+    specifications:
+      wingspan_m: 35.8
+      sweep_deg: 25
+      airfoil: "超临界翼型"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cwing_center_box"
+    node_type: "component"
+    canonical_name: "中央翼盒"
+    aliases: ["center wing box", "中央翼", "中翼盒"]
+    description: "机身中部贯穿的机翼承力盒段，连接左右外翼，承受机翼弯矩和剪力，同时作为中央油箱使用"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cwing_outer_wing"
+    node_type: "component"
+    canonical_name: "外翼"
+    aliases: ["outer wing", "左右外翼"]
+    description: "中央翼盒两侧延伸至翼尖的机翼主体段，C919 外翼采用复合材料占比 12% 的混合结构"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cwing_flap"
+    node_type: "component"
+    canonical_name: "襟翼"
+    aliases: ["flap", "后缘襟翼", "富勒襟翼"]
+    description: "机翼后缘内侧可偏转增升装置，采用富勒式设计，起飞/降落时下偏增加升力和阻力"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cwing_slat"
+    node_type: "component"
+    canonical_name: "缝翼"
+    aliases: ["slat", "前缘缝翼"]
+    description: "机翼前缘可伸出增升装置，打开时形成缝隙引导附面层，延缓大迎角失速"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cwing_aileron"
+    node_type: "component"
+    canonical_name: "副翼"
+    aliases: ["aileron", "副翼操纵面"]
+    description: "机翼后缘外侧可动翼面，左右差动偏转实现飞机滚转操纵"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cwing_spoiler"
+    node_type: "component"
+    canonical_name: "扰流板"
+    aliases: ["spoiler", "减速板", "地面扰流板"]
+    description: "机翼上表面可向上偏转的板面，空中减速、辅助滚转，地面破坏升力"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cwing_winglet"
+    node_type: "component"
+    canonical_name: "翼尖小翼"
+    aliases: ["winglet", "翼梢小翼"]
+    description: "安装在翼尖的垂直翼面，使翼展从 33.6m 增至 35.8m，通过减弱翼尖涡流降低诱导阻力，改善燃油效率约 3-5%"
+    specifications:
+      wingspan_with_winglet_m: 35.8
+      wingspan_without_winglet_m: 33.6
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cwing_spars"
+    node_type: "component"
+    canonical_name: "翼梁"
+    aliases: ["spar", "梁"]
+    description: "机翼内部沿翼展方向的主要承力构件，承受弯曲载荷产生的剪力和弯矩，C919 采用铝合金翼梁"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cwing_ribs"
+    node_type: "component"
+    canonical_name: "翼肋"
+    aliases: ["rib", "翼肋"]
+    description: "机翼内部沿弦向布置的承力构件，维持机翼翼型形状，传递气动载荷至翼梁"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cwing_stringer"
+    node_type: "component"
+    canonical_name: "桁条"
+    aliases: ["stringer", "纵梁", "长桁"]
+    description: "机翼蒙皮内侧沿翼展方向布置的加强构件，提高蒙皮稳定性并承受轴向载荷"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cwing_skin"
+    node_type: "component"
+    canonical_name: "蒙皮"
+    aliases: ["skin", "机翼蒙皮"]
+    description: "覆盖机翼骨架的外表面板材，承受分布气动载荷并形成光滑气动外形，C919 部分蒙皮采用复合材料"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cwing_front_spar"
+    node_type: "component"
+    canonical_name: "前梁"
+    aliases: ["front spar", "前缘梁"]
+    description: "机翼最前方的纵向主承力梁，位于翼型前部约 15% 弦长位置，承受主要剪力"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cwing_rear_spar"
+    node_type: "component"
+    canonical_name: "后梁"
+    aliases: ["rear spar", "后缘梁"]
+    description: "机翼最后方的纵向主承力梁，位于翼型后部约 60% 弦长位置，与襟翼副翼铰链相连"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cwing_root"
+    node_type: "component"
+    canonical_name: "翼根"
+    aliases: ["wing root", "机翼根部"]
+    description: "机翼与机身/中央翼盒连接的根部区域，承受机翼最大弯矩和剪力，是机翼最关键承力区"
+    applicable_aircraft: ["c919"]

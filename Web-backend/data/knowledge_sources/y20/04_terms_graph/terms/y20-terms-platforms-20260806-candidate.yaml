@@ -1,0 +1,33 @@
+# y20-terms-platforms-20260806-candidate
+
+terms:
+  - canonical_name: "伊尔-76"
+    aliases: ["伊尔-76", "Il-76"]
+    node_type: "aircraft"
+    definition: "俄罗斯大型运输机"
+    source_id: "y20-science-vs-il76-v1"
+  - canonical_name: "C-17"
+    aliases: ["C-17", "环球霸王III"]
+    node_type: "aircraft"
+    definition: "美国大型运输机"
+    source_id: "y20-science-vs-c17-v1"
+  - canonical_name: "A400M"
+    aliases: ["A400M", "大西洋"]
+    node_type: "aircraft"
+    definition: "欧洲中型运输机"
+    source_id: "y20-science-vs-a400m-v1"
+  - canonical_name: "安-124"
+    aliases: ["安-124", "An-124"]
+    node_type: "aircraft"
+    definition: "俄罗斯超大型运输机"
+    source_id: "y20-science-vs-an124-v1"
+  - canonical_name: "西安飞机工业集团"
+    aliases: ["西飞", "AVIC Xi'an"]
+    node_type: "concept"
+    definition: "运-20研制单位"
+    source_id: "y20-science-overview-v1"
+  - canonical_name: "唐长红"
+    aliases: ["唐长红"]
+    node_type: "concept"
+    definition: "运-20总设计师"
+    source_id: "y20-science-overview-v1"

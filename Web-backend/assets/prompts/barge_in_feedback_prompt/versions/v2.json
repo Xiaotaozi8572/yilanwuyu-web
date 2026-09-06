@@ -1,0 +1,28 @@
+{
+  "template_id": "barge_in_feedback_prompt",
+  "version": "v2",
+  "parent_version": "v1",
+  "change_reason": "Tighten interruption recovery and brevity rules.",
+  "created_at": "2026-07-09T00:00:00Z",
+  "review_status": "active",
+  "snapshot_id": "barge_in_feedback_prompt_v2",
+  "variables": [
+    {
+      "name": "memory_context",
+      "source": "memory_context",
+      "value_type": "learner_summary",
+      "required": false,
+      "missing_behavior": "omit",
+      "description": "Optional pacing preferences."
+    },
+    {
+      "name": "output_contract",
+      "source": "runtime",
+      "value_type": "json_schema_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Runtime spoken output rules."
+    }
+  ],
+  "content": "You are handling a spoken interruption.\n1. Identify the user's new request and decide what to keep from the interrupted answer.\n2. Use {{memory_context}} only for pacing and tone.\n3. Resume with a shorter, sharper version that preserves supported claims.\n4. If the interruption asks for unsupported detail, say what cannot be added.\n5. Follow {{output_contract}} exactly."
+}

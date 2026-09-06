@@ -1,0 +1,38 @@
+# C919 历史里程碑分区评测种子
+
+seeds:
+  - question: "C919 是什么时候首飞的？"
+    expected_intent_type: "parameter_fact"
+    expected_complexity: "L1"
+    expected_evidence_partitions: ["c919/01_science/04_history_milestones"]
+    notes: "首飞日期，必须精确到日"
+
+  - question: "C919 什么时候获得型号合格证的？"
+    expected_intent_type: "parameter_fact"
+    expected_complexity: "L1"
+    expected_evidence_partitions: ["c919/01_science/04_history_milestones"]
+    notes: "取证日期"
+
+  - question: "C919 第一架交付给了哪家航空公司？什么时候交付的？"
+    expected_intent_type: "milestone_event"
+    expected_complexity: "L1"
+    expected_evidence_partitions: ["c919/01_science/04_history_milestones"]
+    notes: "交付里程碑"
+
+  - question: "C919 项目是什么时候立项的？中国商飞是什么时候成立的？"
+    expected_intent_type: "milestone_event"
+    expected_complexity: "L1"
+    expected_evidence_partitions: ["c919/01_science/04_history_milestones"]
+    notes: "立项历史"
+
+  - question: "C919 试飞用了多少架原型机？分别做什么？"
+    expected_intent_type: "milestone_event"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/04_history_milestones"]
+    notes: "试飞历程"
+
+  - question: "C919 从立项到商业运营用了多少年？经历哪些重要阶段？"
+    expected_intent_type: "milestone_event"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/04_history_milestones"]
+    notes: "全生命周期里程碑"

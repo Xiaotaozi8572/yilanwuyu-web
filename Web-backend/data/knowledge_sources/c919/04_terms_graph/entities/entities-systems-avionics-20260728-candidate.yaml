@@ -1,0 +1,125 @@
+# C919 航电系统实体
+# 航空电子系统及通信导航设备
+# node_type: system
+# node_id 前缀：sav_
+
+entities:
+  - node_id: "sav_ima"
+    node_type: "system"
+    canonical_name: "IMA 核心处理平台"
+    aliases: ["IMA", "integrated modular avionics", "综合模块化航电"]
+    description: "综合模块化航电核心计算平台，C919 IMA 由 Collins 等提供，集成多模块完成计算任务"
+    specifications:
+      supplier: "Collins"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sav_display"
+    node_type: "system"
+    canonical_name: "显示单元"
+    aliases: ["display unit", "DU", "电子飞行仪表"]
+    description: "驾驶舱主飞行显示和导航显示器，C919 采用 5 块 15 英寸液晶显示器，玻璃座舱布局"
+    specifications:
+      screen_count: 5
+      screen_size_inch: 15
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sav_fms"
+    node_type: "system"
+    canonical_name: "飞行管理系统"
+    aliases: ["FMS", "flight management system", "飞行管理计算机"]
+    description: "飞行计划与性能管理计算机，C919 FMS 完成导航数据库管理、航路优化及性能计算"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sav_weather_radar"
+    node_type: "system"
+    canonical_name: "气象雷达"
+    aliases: ["weather radar", "WXR", "前视气象雷达"]
+    description: "前视气象雷达探测航路天气，C919 气象雷达由 Honeywell 提供，具备湍流和风切变探测"
+    specifications:
+      supplier: "Honeywell"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sav_tcas"
+    node_type: "system"
+    canonical_name: "空中防撞系统"
+    aliases: ["TCAS", "traffic alert and collision avoidance system", "防撞系统"]
+    description: "空中交通防撞系统，C919 TCAS 询问应答周围飞机并发出交通告警和避让建议"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sav_egpws"
+    node_type: "system"
+    canonical_name: "增强型近地告警系统"
+    aliases: ["EGPWS", "TAWS", "近地告警系统"]
+    description: "增强型近地告警系统，C919 EGPWS 由 Honeywell 提供，防止可控飞行撞地"
+    specifications:
+      supplier: "Honeywell"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sav_adsb"
+    node_type: "system"
+    canonical_name: "广播式自动相关监视"
+    aliases: ["ADS-B", "ADS-B Out/In", "自动相关监视广播"]
+    description: "广播式自动相关监视系统，C919 ADS-B 自动播报位置速度等信息提升空管监视能力"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sav_irs"
+    node_type: "system"
+    canonical_name: "惯性基准系统"
+    aliases: ["IRS", "inertial reference system", "惯导"]
+    description: "惯性导航基准系统，C919 配备 3 套 IRS 提供姿态航向位置基准，与 GPS 组合"
+    specifications:
+      count: 3
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sav_gps"
+    node_type: "system"
+    canonical_name: "全球定位系统"
+    aliases: ["GPS", "global positioning system", "卫星导航"]
+    description: "卫星导航定位接收机，C919 配备多套 GPS 接收机，与 IRS 组合提供高精度位置"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sav_vhf"
+    node_type: "system"
+    canonical_name: "甚高频通信"
+    aliases: ["VHF", "very high frequency radio", "甚高频电台"]
+    description: "甚高频空地话音通信电台，C919 配备 3 部 VHF 电台用于空管话音通信"
+    specifications:
+      count: 3
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sav_hf"
+    node_type: "system"
+    canonical_name: "高频通信"
+    aliases: ["HF", "high frequency radio", "高频电台"]
+    description: "高频远距话音通信电台，C919 配备 HF 电台用于越洋及远距空地通信"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sav_satcom"
+    node_type: "system"
+    canonical_name: "卫星通信"
+    aliases: ["SATCOM", "satellite communication", "卫星通讯"]
+    description: "卫星通信系统，C919 可选装卫星通信实现全球话音和数据链路覆盖"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sav_acars"
+    node_type: "system"
+    canonical_name: "飞机通信寻址报告系统"
+    aliases: ["ACARS", "aircraft communication addressing and reporting system", "数据链"]
+    description: "空地数据链系统，C919 ACARS 通过 VHF 或卫星自动报告飞机状态和机组信息"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sav_fdr"
+    node_type: "system"
+    canonical_name: "飞行记录仪"
+    aliases: ["FDR", "flight data recorder", "黑匣子", "飞行数据记录器"]
+    description: "飞行数据记录器，C919 FDR 记录至少 25 小时关键飞行参数并具备水下定位信标"
+    specifications:
+      recording_hours: 25
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sav_data_loader"
+    node_type: "system"
+    canonical_name: "数据加载机"
+    aliases: ["data loader", "数据加载器", "DLU"]
+    description: "向航电系统加载导航数据库和软件的数据加载设备，C919 通过数据加载机更新航线及软件"
+    applicable_aircraft: ["c919"]

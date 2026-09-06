@@ -1,0 +1,20 @@
+{
+  "snapshot_id": "asr_correction_prompt_v2",
+  "template_id": "asr_correction_prompt",
+  "version": "v2",
+  "test_cases": [
+    "partial_audio",
+    "uncertain_term",
+    "scene_reference"
+  ],
+  "dimension_scores": {
+    "fidelity": 0.95,
+    "uncertainty_handling": 0.96,
+    "scene_alignment": 0.89
+  },
+  "violations": [],
+  "improvements": [
+    "Uncertain transcript spans are preserved more safely."
+  ],
+  "final_decision": "approve"
+}

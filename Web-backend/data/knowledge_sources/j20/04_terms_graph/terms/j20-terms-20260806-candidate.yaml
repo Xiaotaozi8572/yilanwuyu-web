@@ -1,0 +1,104 @@
+# 歼-20 术语与别名
+
+terms:
+  - canonical_name: "歼-20"
+    aliases: ["J-20", "歼-20", "威龙", "Chengdu J-20"]
+    node_type: "aircraft"
+    definition: "成都飞机工业集团研制的双发重型隐身战斗机"
+    source_id: "j20-science-overview-v1"
+
+  - canonical_name: "隐身"
+    aliases: ["隐身", "stealth", "雷达隐身"]
+    node_type: "concept"
+    definition: "降低雷达散射截面，使敌方雷达难以发现和跟踪"
+    source_id: "j20-science-stealth-v1"
+
+  - canonical_name: "雷达散射截面"
+    aliases: ["RCS", "雷达散射截面"]
+    node_type: "concept"
+    definition: "衡量目标雷达回波强度的等效面积"
+    source_id: "j20-science-stealth-v1"
+
+  - canonical_name: "鸭式布局"
+    aliases: ["鸭式布局", "鸭翼", "canard"]
+    node_type: "concept"
+    definition: "在主机翼前方布置小前翼的气动布局"
+    source_id: "j20-science-canard-aero-v1"
+
+  - canonical_name: "DSI 进气道"
+    aliases: ["DSI", "无隔道超声速进气道", "鼓包式进气道"]
+    node_type: "concept"
+    definition: "无隔道超声速进气道，兼有减阻与隐身效果"
+    source_id: "j20-science-airframe-v1"
+
+  - canonical_name: "超声速巡航"
+    aliases: ["超巡", "supercruise"]
+    node_type: "concept"
+    definition: "不使用加力燃烧室持续超声速飞行"
+    source_id: "j20-science-supercruise-v1"
+
+  - canonical_name: "WS-10C"
+    aliases: ["涡扇-10C", "WS-10C"]
+    node_type: "component"
+    definition: "沈阳发动机研究所的国产涡扇发动机，歼-20 现役主力动力"
+    source_id: "j20-science-powerplant-v1"
+
+  - canonical_name: "WS-15"
+    aliases: ["涡扇-15", "WS-15"]
+    node_type: "component"
+    definition: "歼-20 的终极动力，推力约 180 kN，隐身喷口+矢量推力+超巡"
+    source_id: "j20-science-powerplant-v1"
+
+  - canonical_name: "AESA 雷达"
+    aliases: ["有源相控阵雷达", "AESA"]
+    node_type: "concept"
+    definition: "有源相控阵雷达，歼-20 使用 Type 1475（KLJ-5）"
+    source_id: "j20-science-avionics-weapons-v1"
+
+  - canonical_name: "IRST"
+    aliases: ["红外搜索跟踪", "IRST"]
+    node_type: "concept"
+    definition: "被动红外探测系统，支持静默作战"
+    source_id: "j20-science-avionics-weapons-v1"
+
+  - canonical_name: "PL-15"
+    aliases: ["PL-15", "霹雳-15"]
+    node_type: "component"
+    definition: "中国中远程空空导弹，歼-20 主弹舱武器"
+    source_id: "j20-science-avionics-weapons-v1"
+
+  - canonical_name: "PL-10"
+    aliases: ["PL-10", "霹雳-10"]
+    node_type: "component"
+    definition: "中国近距格斗空空导弹，歼-20 侧弹舱武器"
+    source_id: "j20-science-avionics-weapons-v1"
+
+  - canonical_name: "主弹舱"
+    aliases: ["主弹舱", "机腹弹舱"]
+    node_type: "component"
+    definition: "歼-20 机腹内埋主武器舱，容纳 4-6 枚中远程导弹"
+    source_id: "j20-science-airframe-v1"
+
+  - canonical_name: "侧弹舱"
+    aliases: ["侧弹舱"]
+    node_type: "component"
+    definition: "歼-20 两侧各一个的近距格斗弹内埋舱"
+    source_id: "j20-science-airframe-v1"
+
+  - canonical_name: "成都飞机工业集团"
+    aliases: ["成飞", "CAC"]
+    node_type: "concept"
+    definition: "歼-20 研制单位，中国航空工业集团成员企业"
+    source_id: "j20-science-overview-v1"
+
+  - canonical_name: "F-22"
+    aliases: ["F-22", "猛禽", "Raptor"]
+    node_type: "aircraft"
+    definition: "美国洛克希德·马丁的双发重型隐身制空战斗机"
+    source_id: "j20-science-vs-f22-v1"
+
+  - canonical_name: "F-35"
+    aliases: ["F-35", "闪电II", "Lightning II"]
+    node_type: "aircraft"
+    definition: "美国多用途第五代战斗机"
+    source_id: "j20-science-vs-f35-v1"

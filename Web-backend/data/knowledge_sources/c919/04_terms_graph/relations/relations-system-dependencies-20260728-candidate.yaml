@@ -1,0 +1,117 @@
+# C919 系统间依赖关系
+# 描述机载系统之间的能量与功能依赖关系
+# relation_type: depends_on
+# edge_id 前缀：rdep_
+
+relations:
+  # ========== 飞控与作动依赖 ==========
+  - edge_id: "rdep_001"
+    source_node_id: "sys_flight_control"
+    target_node_id: "sys_hydraulic"
+    relation_type: "depends_on"
+    confidence: 1.0
+    description: "飞控系统舵面作动器由液压系统驱动，依赖液压提供作动力"
+
+  - edge_id: "rdep_002"
+    source_node_id: "sys_flight_control"
+    target_node_id: "sys_electrical"
+    relation_type: "depends_on"
+    confidence: 1.0
+    description: "飞控计算机和作动器控制电子依赖电力系统提供电源"
+
+  - edge_id: "rdep_003"
+    source_node_id: "sys_flight_control"
+    target_node_id: "sys_avionics"
+    relation_type: "depends_on"
+    confidence: 0.95
+    description: "飞控系统依赖航电系统提供大气数据、惯性与导航输入"
+
+  # ========== 环控与引气依赖 ==========
+  - edge_id: "rdep_004"
+    source_node_id: "sys_ecs"
+    target_node_id: "sys_bleed_air"
+    relation_type: "depends_on"
+    confidence: 1.0
+    description: "环控系统空调组件依赖引气系统提供高压气源"
+
+  - edge_id: "rdep_005"
+    source_node_id: "sys_bleed_air"
+    target_node_id: "c919_propulsion"
+    relation_type: "depends_on"
+    confidence: 0.95
+    description: "空中引气系统依赖发动机压气机引气作为主气源"
+
+  # ========== 液压与电力依赖 ==========
+  - edge_id: "rdep_006"
+    source_node_id: "sys_hydraulic"
+    target_node_id: "sys_electrical"
+    relation_type: "depends_on"
+    confidence: 0.95
+    description: "液压电动泵依赖电力系统供电才能运行"
+
+  # ========== 燃油与发动机依赖 ==========
+  - edge_id: "rdep_007"
+    source_node_id: "c919_propulsion"
+    target_node_id: "sys_fuel"
+    relation_type: "depends_on"
+    confidence: 1.0
+    description: "发动机依赖燃油系统持续供应燃油维持运转"
+
+  - edge_id: "rdep_008"
+    source_node_id: "c919_propulsion"
+    target_node_id: "sys_electrical"
+    relation_type: "depends_on"
+    confidence: 0.95
+    description: "发动机启动依赖电力系统供电点火，FADEC 也需电源"
+
+  # ========== APU 依赖 ==========
+  - edge_id: "rdep_009"
+    source_node_id: "sys_apu"
+    target_node_id: "sys_fuel"
+    relation_type: "depends_on"
+    confidence: 1.0
+    description: "APU 依赖燃油系统供油维持运行"
+
+  - edge_id: "rdep_010"
+    source_node_id: "sys_apu"
+    target_node_id: "sys_electrical"
+    relation_type: "depends_on"
+    confidence: 0.95
+    description: "APU 启动依赖电力系统供电给起动机，ECU 也需供电"
+
+  # ========== 防冰与起落架依赖 ==========
+  - edge_id: "rdep_011"
+    source_node_id: "sys_anti_ice"
+    target_node_id: "sys_bleed_air"
+    relation_type: "depends_on"
+    confidence: 1.0
+    description: "防冰系统依赖引气系统提供热空气加温机翼前缘和发动机进气道"
+
+  - edge_id: "rdep_012"
+    source_node_id: "comp_brake"
+    target_node_id: "sys_hydraulic"
+    relation_type: "depends_on"
+    confidence: 1.0
+    description: "起落架刹车依赖液压系统提供刹车作动压力"
+
+  - edge_id: "rdep_013"
+    source_node_id: "comp_nose_lg"
+    target_node_id: "sys_hydraulic"
+    relation_type: "depends_on"
+    confidence: 0.95
+    description: "前起落架转弯作动器依赖液压系统供压实现地面转向"
+
+  # ========== 增升与航电依赖 ==========
+  - edge_id: "rdep_014"
+    source_node_id: "sys_high_lift"
+    target_node_id: "sys_hydraulic"
+    relation_type: "depends_on"
+    confidence: 0.95
+    description: "增升系统(襟翼缝翼)的作动器依赖液压系统提供动力"
+
+  - edge_id: "rdep_015"
+    source_node_id: "sys_avionics"
+    target_node_id: "sys_electrical"
+    relation_type: "depends_on"
+    confidence: 1.0
+    description: "航电系统所有计算机与显示单元依赖电力系统供电运行"

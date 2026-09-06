@@ -1,0 +1,149 @@
+# C919 机型实体
+# 按机型与变型拆分：C919 各系列型号与对标机型
+# node_type: aircraft
+# node_id 前缀：c919_ / a320 / b737 / arj21
+
+entities:
+  - node_id: "c919_100std"
+    node_type: "aircraft"
+    canonical_name: "C919-100STD"
+    aliases: ["C919-100STD", "C919 标准型", "C919-100"]
+    description: "C919 系列基本标准型窄体客机，2022-09-29 取得型号合格证"
+    specifications:
+      wingspan_m: 35.8
+      length_m: 38.9
+      height_m: 11.95
+      mtow_kg: 77300
+      range_km: 4075
+      seats: "158-168"
+      cruise_mach: 0.785
+      engines: "2× LEAP-1C"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_100er"
+    node_type: "aircraft"
+    canonical_name: "C919-100ER"
+    aliases: ["C919-100ER", "C919 延程型", "C919-100 ER"]
+    description: "C919 系列延程型，通过增加燃油容量和提升 MTOW 实现更远航程"
+    specifications:
+      wingspan_m: 35.8
+      length_m: 38.9
+      height_m: 11.95
+      mtow_kg: 78900
+      range_km: 5555
+      seats: "158-168"
+      cruise_mach: 0.785
+      engines: "2× LEAP-1C"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_600"
+    node_type: "aircraft"
+    canonical_name: "C919-600"
+    aliases: ["C919-600", "C919 缩短型", "C919-600 概念型"]
+    description: "C919 系列缩短型改型，面向中短程高密度市场，座位数较少"
+    specifications:
+      wingspan_m: 35.8
+      length_m: 35.5
+      height_m: 11.95
+      mtow_kg: 75000
+      range_km: 4100
+      seats: "140-150"
+      cruise_mach: 0.785
+      engines: "2× LEAP-1C"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "c919_800"
+    node_type: "aircraft"
+    canonical_name: "C919-800"
+    aliases: ["C919-800", "C919 加长型", "C919-800 概念型"]
+    description: "C919 系列加长型改型，面向中长程大客流市场，机身加长约 4 米"
+    specifications:
+      wingspan_m: 35.8
+      length_m: 42.8
+      height_m: 11.95
+      mtow_kg: 80000
+      range_km: 3900
+      seats: "180-190"
+      cruise_mach: 0.785
+      engines: "2× LEAP-1C"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "a320ceo"
+    node_type: "aircraft"
+    canonical_name: "空客 A320"
+    aliases: ["A320", "A320ceo", "Airbus A320"]
+    description: "空客 A320 CEO（当前发动机选项）系列窄体客机，C919 直接对标机型"
+    specifications:
+      wingspan_m: 35.8
+      length_m: 37.57
+      height_m: 11.76
+      mtow_kg: 78000
+      range_km: 6100
+      seats: "150-180"
+      cruise_mach: 0.78
+      engines: "2× CFM56-5B 或 V2500"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "a320neo"
+    node_type: "aircraft"
+    canonical_name: "空客 A320neo"
+    aliases: ["A320neo", "A320 NEO", "Airbus A320neo"]
+    description: "空客 A320 NEO（新发动机选项）换发升级型，燃油效率提升约 15%"
+    specifications:
+      wingspan_m: 35.8
+      length_m: 37.57
+      height_m: 11.76
+      mtow_kg: 79000
+      range_km: 6500
+      seats: "150-194"
+      cruise_mach: 0.78
+      engines: "2× LEAP-1A 或 PW1100G"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "b737_800"
+    node_type: "aircraft"
+    canonical_name: "波音 737-800"
+    aliases: ["B737-800", "737-800", "Boeing 737-800"]
+    description: "波音 737NG 系列主力窄体客机，与 C919 同级别直接竞争机型"
+    specifications:
+      wingspan_m: 35.79
+      length_m: 39.5
+      height_m: 12.55
+      mtow_kg: 79010
+      range_km: 5765
+      seats: "162-189"
+      cruise_mach: 0.785
+      engines: "2× CFM56-7B"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "b737max8"
+    node_type: "aircraft"
+    canonical_name: "波音 737 MAX 8"
+    aliases: ["B737MAX8", "737 MAX 8", "Boeing 737 MAX 8"]
+    description: "波音 737MAX 系列主力换发型，换装 LEAP-1B 发动机，燃油效率提升约 14%"
+    specifications:
+      wingspan_m: 35.92
+      length_m: 39.52
+      height_m: 12.30
+      mtow_kg: 82200
+      range_km: 6570
+      seats: "162-210"
+      cruise_mach: 0.79
+      engines: "2× CFM LEAP-1B"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "arj21_700"
+    node_type: "aircraft"
+    canonical_name: "ARJ21-700"
+    aliases: ["ARJ21", "ARJ21-700", "翔凤", "Xiangfeng"]
+    description: "中国商飞研制的 78-90 座级支线喷气客机，C919 项目的前期技术积累"
+    specifications:
+      wingspan_m: 27.29
+      length_m: 33.46
+      height_m: 8.45
+      mtow_kg: 43000
+      range_km: 3700
+      seats: "78-90"
+      cruise_mach: 0.78
+      engines: "2× GE CF34-10A"
+    applicable_aircraft: ["c919"]

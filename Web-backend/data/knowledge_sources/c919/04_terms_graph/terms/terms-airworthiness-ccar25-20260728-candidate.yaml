@@ -1,0 +1,90 @@
+# C919 CCAR-25 条款类术语
+# 领域：CCAR-25 适航条款
+# 条目数：12
+# node_type 统一为 concept
+# ID 前缀：ccar_
+
+terms:
+  - term_id: "ccar_001"
+    canonical_name: "CCAR-25"
+    aliases: ["CCAR-25", "中国民用航空规章第 25 部", "运输类飞机适航标准"]
+    node_type: "concept"
+    definition: "中国民用航空规章第 25 部运输类飞机适航标准，C919 按 CCAR-25 申请型号合格审定"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ccar_002"
+    canonical_name: "25.305强度"
+    aliases: ["25.305", "CCAR-25.305", "强度和变形", "25.305 强度"]
+    node_type: "concept"
+    definition: "CCAR-25.305 强度和变形条款，要求结构在限制载荷下无有害变形、极限载荷下不破坏，C919 结构按此设计"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ccar_003"
+    canonical_name: "25.331操纵"
+    aliases: ["25.331", "CCAR-25.331", "机动载荷", "25.331 机动"]
+    node_type: "concept"
+    definition: "CCAR-25.331 机动载荷条款，规定对称机动俯仰机动情况载荷，C919 按 25.331 设计机动载荷"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ccar_004"
+    canonical_name: "25.341阵风"
+    aliases: ["25.341", "CCAR-25.341", "阵风载荷", "25.341 突风"]
+    node_type: "concept"
+    definition: "CCAR-25.341 阵风载荷条款，规定离散阵风和连续湍流载荷，C919 按 25.341 设计阵风载荷"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ccar_005"
+    canonical_name: "25.473起落架"
+    aliases: ["25.473", "CCAR-25.473", "着陆载荷", "25.473 着陆"]
+    node_type: "concept"
+    definition: "CCAR-25.473 着陆载荷条款，规定起落架着陆冲击载荷情况，C919 起落架按 25.473 设计"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ccar_006"
+    canonical_name: "25.571疲劳"
+    aliases: ["25.571", "CCAR-25.571", "结构疲劳评定", "25.571 疲劳"]
+    node_type: "concept"
+    definition: "CCAR-25.571 结构疲劳评定条款，要求疲劳、损伤容限和声疲劳评定，C919 按 25.571 进行疲劳评定"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ccar_007"
+    canonical_name: "25.631鸟撞"
+    aliases: ["25.631", "CCAR-25.631", "鸟撞情况", "25.631 鸟撞"]
+    node_type: "concept"
+    definition: "CCAR-25.631 鸟撞条款，规定尾翼和机翼等部位鸟撞损伤要求，C919 按 25.631 进行鸟撞评定"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ccar_008"
+    canonical_name: "25.729襟翼"
+    aliases: ["25.729", "CCAR-25.729", "襟翼", "25.729 襟翼操纵"]
+    node_type: "concept"
+    definition: "CCAR-25.729 襟翼操纵条款，规定襟翼位置和操纵可靠性要求，C919 襟翼系统按 25.729 设计"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ccar_009"
+    canonical_name: "25.901动力"
+    aliases: ["25.901", "CCAR-25.901", "动力装置", "25.901 动力装置"]
+    node_type: "concept"
+    definition: "CCAR-25.901 动力装置条款，规定发动机安装和功能要求，C919 LEAP-1C 动力装置按 25.901 设计"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ccar_010"
+    canonical_name: "25.1309系统"
+    aliases: ["25.1309", "CCAR-25.1309", "系统安全性", "25.1309 设备系统安装"]
+    node_type: "concept"
+    definition: "CCAR-25.1309 设备系统安装条款，规定系统安全性评估要求，C919 各系统按 25.1309 进行安全性分析"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ccar_011"
+    canonical_name: "25.1322警告"
+    aliases: ["25.1322", "CCAR-25.1322", "警告灯", "25.1322 警告系统"]
+    node_type: "concept"
+    definition: "CCAR-25.1322 警告灯条款，规定告警颜色和优先级要求，C919 告警系统按 25.1322 设计颜色和分级"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ccar_012"
+    canonical_name: "CCAR-25 附录C"
+    aliases: ["附录C", "CCAR-25 附录 C", "结冰条件", "Appendix C"]
+    node_type: "concept"
+    definition: "CCAR-25 附录 C 规定飞机结冰大气条件，C919 防冰系统按附录 C 结冰包线设计保证结冰区安全飞行"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

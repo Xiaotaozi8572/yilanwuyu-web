@@ -1,0 +1,98 @@
+rag:
+  repository:
+    provider: sqlite
+    path: data/processed/knowledge.sqlite3
+  chunking:
+    min_chars: 300
+    target_chars: 450
+    max_chars: 600
+    overlap_chars: 80
+  generation:
+    max_input_tokens: 8192
+    token_budget_ratio: 0.8
+  retrieval:
+    rrf_k: 60
+    fusion_top_k: 30
+    rerank_top_k: 10
+    max_retrieve_loops: 2
+    recovery_top_k_increment: 5
+    # R0/T2-3: RAG prefetch 等待预算（毫秒）。prefetch 含 query embedding 与全通道
+    # 检索，超时后回退到同步 plan_retrieval 路径，避免单点卡死整个请求。
+    prefetch_timeout_ms: 2000
+    # 通用 component 桶：承载跨部件原理/历史/对比内容，不参与具体 component 严格过滤
+    general_component_buckets: [principle, history, overall, comparison, application]
+    # RRF 通道权重：默认等权 1.0。dense 语义匹配更准，适当提权；
+    # 未列出的通道（或 key 缺失）权重为 1.0。
+    # scene/visual/graph 通道预留（数据未入库，暂未启用），已从权重表移除。
+    channel_weights:
+      keyword: 1.0
+      dense: 1.2
+      parent: 1.1
+      table: 1.0
+    channels:
+      keyword:
+        enabled: true
+        top_k: 20
+        # R0/T2-8: keyword 是最小核心通道（失败才终止整体检索）。
+        optional: false
+      table:
+        enabled: true
+        top_k: 10
+        # 非核心通道失败时降级（保留已成功候选），不丢弃 keyword 结果。
+        optional: true
+      dense:
+        enabled: true
+        top_k: 20
+        optional: true
+      parent:
+        enabled: true
+        top_k: 5
+        optional: true
+      scene:
+        # 通道预留，数据未入库，暂未启用
+        enabled: false
+        top_k: 10
+        optional: true
+      visual:
+        # 通道预留，数据未入库，暂未启用
+        enabled: false
+        top_k: 8
+        optional: true
+      graph:
+        # 通道预留，数据未入库，暂未启用
+        enabled: false
+        top_k: 10
+        max_hops: 2
+        optional: true
+  web_search:
+    enabled: true
+    timeout: 10
+    max_results: 5
+    provider: duckduckgo
+  embedding:
+    provider: bge_m3
+    dimension: 1024
+    vector_index: ann
+  gate:
+    allowed_core_review_status: [reviewed]
+    min_core_items: 1
+    require_parameter_source: true
+    require_visual_text_cross_check: true
+    require_minimum_authority: true
+  eligibility:
+    mock_vector_min_score: 0.92
+    non_mock_vector_min_score: 0.72
+    lexical_min_terms: 1
+  rerank:
+    authority_scores:
+      official: 1.0
+      project_reviewed: 0.8
+      standard: 0.6
+    weights:
+      query_relevance: 0.30
+      scene_match: 0.20
+      source_authority: 0.15
+      modality_support: 0.10
+      claim_support: 0.15
+      freshness_version: 0.05
+      pedagogical_fit: 0.05

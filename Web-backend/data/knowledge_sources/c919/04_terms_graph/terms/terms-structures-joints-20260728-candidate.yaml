@@ -1,0 +1,76 @@
+# C919 结构连接类术语
+# 领域：结构连接与紧固
+# 条目数：10
+# node_type 统一为 concept
+# ID 前缀：joint_
+
+terms:
+  - term_id: "joint_001"
+    canonical_name: "铆接"
+    aliases: ["铆接", "riveting", "铆钉连接", "铆接接头"]
+    node_type: "concept"
+    definition: "用铆钉永久连接金属板件的方法，C919 机身蒙皮与桁条大量采用铆接，自动化钻孔铆接保证质量"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "joint_002"
+    canonical_name: "螺栓连接"
+    aliases: ["螺栓连接", "bolted joint", "螺栓接头", "螺接"]
+    node_type: "concept"
+    definition: "用螺栓螺母连接构件的可拆卸连接，传递大载荷，C919 翼身接头和起落架接头采用高强螺栓连接"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "joint_003"
+    canonical_name: "焊接"
+    aliases: ["焊接", "welding", "焊接接头"]
+    node_type: "concept"
+    definition: "通过加热熔化使构件永久连接的方法，C919 部分钛合金和铝合金构件采用搅拌摩擦焊或电子束焊"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "joint_004"
+    canonical_name: "胶接"
+    aliases: ["胶接", "adhesive bonding", "胶粘连接", "胶接接头"]
+    node_type: "concept"
+    definition: "用结构胶粘剂连接构件的方法，可减重和避免应力集中，C919 复合材料构件和夹层结构采用胶接"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "joint_005"
+    canonical_name: "混合连接"
+    aliases: ["混合连接", "hybrid joint", "胶铆混合", "胶螺混合"]
+    node_type: "concept"
+    definition: "胶接与铆接或螺栓连接组合的连接方式，兼顾强度和疲劳性能，C919 关键部位采用混合连接"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "joint_006"
+    canonical_name: "搭接"
+    aliases: ["搭接", "lap joint", "搭接接头"]
+    node_type: "concept"
+    definition: "两板件部分重叠连接的形式，机身蒙皮纵向对接常用搭接，C919 蒙皮搭接接头需注意疲劳"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "joint_007"
+    canonical_name: "对接"
+    aliases: ["对接", "butt joint", "对接接头"]
+    node_type: "concept"
+    definition: "两板件端面对齐连接的形式，需对接条加强，C919 蒙皮环向对接采用对接接头"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "joint_008"
+    canonical_name: "角接"
+    aliases: ["角接", "corner joint", "角接接头", "T 形接头"]
+    node_type: "concept"
+    definition: "两构件成角度连接的形式，常见 T 形和 L 形接头，C919 桁条与蒙皮连接类似角接"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "joint_009"
+    canonical_name: "紧固件"
+    aliases: ["紧固件", "fastener", "紧固件系统"]
+    node_type: "component"
+    definition: "连接构件的机械元件，含铆钉、螺栓、螺母等，C919 采用航空级高强紧固件，部分为钛合金避免电偶腐蚀"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "joint_010"
+    canonical_name: "密封"
+    aliases: ["密封", "sealing", "密封剂", "密封连接"]
+    node_type: "concept"
+    definition: "防止气体或液体泄漏的连接处理，C919 气密舱蒙皮接缝和紧固件采用密封胶密封保证增压"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

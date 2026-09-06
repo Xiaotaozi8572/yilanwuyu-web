@@ -1,0 +1,68 @@
+memory:
+  backend: local
+  # Python 侧等待记忆读取的分级超时（毫秒）：
+  #   fast_path：RETRIEVE 预取路径上的并发记忆读取（热点回答路径，维持 150ms 契约）；
+  #   normal：CLARIFY 等非热点路径的记忆读取（默认同样 150ms，可按路径独立调优）。
+  # 超时/异常统一降级为空长期记忆上下文并输出 WARN（含耗时与降级原因）。
+  read_timeout:
+    fast_path_ms: 150
+    normal_ms: 150
+  remote:
+    schema_version: v1
+    deadline_ms: 150
+    capability_ttl_seconds: 60
+    circuit_failure_threshold: 3
+    circuit_open_seconds: 10
+    tls_required: true
+    identity_metadata_key: x-memory-test-session
+  shadow:
+    answer_deadline_ms: 150
+    score_tolerance: 0.01
+    max_aggregate_records: 32
+    max_critical_differences: 0
+    minimum_status_identity_policy_agreement: 1.0
+    minimum_source_closure_agreement: 0.99
+    minimum_canonical_item_f1: 0.95
+    minimum_temporal_update_accuracy: 0.95
+  cutover:
+    capability_key_env: MEMORY_CUTOVER_CAPABILITY_KEY
+  outbox:
+    enabled: false
+    path: tmp/memory-system/m2/memory-outbox.sqlite3
+    batch_size: 20
+    retry_base_seconds: 1
+    retry_max_seconds: 300
+    claim_lease_seconds: 30
+    dlq_retention_seconds: 604800
+  store:
+    provider: sqlite
+    path: data/processed/memory.sqlite3
+  max_context_items: 5
+  default_expiration_days: 30
+  low_confidence_threshold: 0.6
+  stale_after_days: 14
+  allowed_long_term_types:
+    - preference
+    - misconception
+    - summary
+    - policy
+    - reflection
+    - prompt_asset_candidate
+  retrieval_weights:
+    semantic_relevance: 0.30
+    scope_match: 0.20
+    scene_match: 0.15
+    confidence: 0.15
+    stability: 0.10
+    recency_bonus: 0.10
+    explicit_confirmation_bonus: 0.10
+    expiry_penalty: 0.40
+    conflict_penalty: 0.50
+    privacy_penalty: 1.00
+  privacy:
+    default_long_term_allowed: false
+    high_privacy_requires_explicit_authorization: true
+  semantic_index:
+    enabled: true
+    embedding_provider: providers.embedding.default
+    embedding_dimension: 1024

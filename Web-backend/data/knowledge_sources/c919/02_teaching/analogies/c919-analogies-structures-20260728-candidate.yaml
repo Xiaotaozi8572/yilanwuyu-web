@@ -1,0 +1,84 @@
+# C919 结构专项类比素材库
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / concept / analogy / explanation
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+analogies:
+  - id: "struct-ana-001-fuselage-tube"
+    concept: "机身（Fuselage）"
+    analogy: "像一根加强的铝合金圆管——装人装货"
+    explanation: >
+      C919 机身是半硬壳式结构，像一根加强的铝合金圆管：蒙皮承受拉压、桁条纵向加强、框横向加强。
+      机身宽度 3.96 米，分前机身/中机身/后机身三段，由 AVIC 体系（西飞/沈飞/成飞）制造。
+      内部分上下两层：上层客舱、下层货舱。
+
+  - id: "struct-ana-002-wing-box-load-carrying"
+    concept: "中央翼盒（Center Wing Box）"
+    analogy: "挑扁担的中央支点——承受最大载荷"
+    explanation: >
+      中央翼盒是机翼与机身连接的关键结构，承受机翼传来的弯矩和剪力，像挑扁担的中央支点承受最大载荷。
+      C919 中央翼盒原计划用复合材料减重，为降低设计与认证风险最终改为铝合金——这是典型的"用气动/结构收益换研制风险"取舍。
+
+  - id: "struct-ana-003-empennage-tail-fin"
+    concept: "尾翼（Empennage）"
+    analogy: "箭尾的羽毛——保持方向稳定"
+    explanation: >
+      C919 尾翼包括垂尾（垂直安定面+方向舵）和平尾（水平安定面+升降舵）。
+      像箭尾的羽毛保持箭的方向稳定，尾翼保持飞机的航向和俯仰稳定。
+      垂尾/平尾主结构采用复合材料（占 C919 复合材料用量的主要部分），由沈飞制造。
+
+  - id: "struct-ana-004-landing-gear-leg"
+    concept: "起落架（Landing Gear）"
+    analogy: "飞机的腿——承受着陆冲击"
+    explanation: >
+      C919 前三点式起落架像飞机的腿：前起落架（机头下，2 轮）+ 主起落架（机身中部，左右各 2 轮），
+      共 6 个轮子。着陆时要承受数倍于自重的冲击力。主起落架由 Liebherr-AVIC 合资提供，
+      前轮转向由 Honeywell 提供，刹车用 Carbenix 碳盘，轮胎用米其林 Air X。
+
+  - id: "struct-ana-005-pressure-cabin-balloon"
+    concept: "增压舱（Pressurized Cabin）"
+    analogy: "充气的气球——内外压差撑起形状"
+    explanation: >
+      C919 客舱是增压舱，巡航时内外压差约 0.06-0.07 MPa（相当于 0.6-0.7 个大气压）。
+      像充气的气球——内外压差撑起形状。机身蒙皮必须承受这个压差带来的循环载荷，
+      按 CCAR-25.365 进行增压载荷设计验证，并通过疲劳试验验证寿命。
+
+  - id: "struct-ana-006-fatigue-bending-paperclip"
+    concept: "疲劳（Fatigue）"
+    analogy: "反复折回形针——多次小载荷导致断裂"
+    explanation: >
+      飞机每次起降经历一次增压/减压循环，机身蒙皮承受循环载荷。像反复折回形针——单次折不断，
+      但反复多次后会疲劳断裂。C919 按 CCAR-25.571 进行疲劳寿命评估和损伤容限分析，
+      保证在两次检查间裂纹不会扩展到临界尺寸。
+
+  - id: "struct-ana-007-damage-tolerance-crack-growth"
+    concept: "损伤容限（Damage Tolerance）"
+    analogy: "假设有裂缝也要撑到下次检查"
+    explanation: >
+      损伤容限设计假设结构存在初始裂纹，验证在两次检查之间裂纹不会扩展到临界尺寸。
+      可以类比"假设有裂缝也要撑到下次检查"。C919 通过裂纹扩展分析+无损检测周期，
+      保证结构在裂纹被发现前仍能承受设计载荷。这是 CCAR-25.571 的核心要求。
+
+  - id: "struct-ana-008-composite-sandwich-honeycomb"
+    concept: "复合材料三明治结构（Composite Sandwich）"
+    analogy: "三明治——碳纤维面包+蜂窝夹心"
+    explanation: >
+      碳纤维复合材料结构件常做成"三明治"——两面是碳纤维层压板（像面包，承力），
+      中间是蜂窝芯或泡沫芯（像夹心，撑起形状增加抗弯刚度）。C919 复合材料约占 12%，
+      主要用于尾翼、整流罩、翼尖小翼等部位。
+
+  - id: "struct-ana-009-aluminum-lithium-lighter-alloy"
+    concept: "铝锂合金（Al-Li Alloy）"
+    analogy: "掺了轻元素的铝合金——更轻更强"
+    explanation: >
+      铝锂合金是在铝合金中加入锂元素，锂比铝轻，每加 1% 锂减重约 3%、提高刚度约 5%。
+      C919 铝锂合金占约 8.8%，主要用于机身蒙皮，比普通铝合金更轻、更强。
+
+  - id: "struct-ana-010-titanium-high-stress"
+    concept: "钛合金（Titanium Alloy）"
+    analogy: "高强度耐高温的"硬骨头"——用于关键受力部位"
+    explanation: >
+      钛合金强度高、耐高温、抗腐蚀，但成本高、加工难。C919 钛合金占约 7%，
+      主要用于发动机吊架、起落架主结构、高应力紧固件等关键受力部位，像"硬骨头"撑起最关键的连接。

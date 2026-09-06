@@ -1,0 +1,95 @@
+# C919 规格对比关系
+# 描述 C919 与 A320/B737 在主要几何与规格参数上的对比关系
+# relation_type: compared_with / parameter_of
+# edge_id 前缀：rcspec_
+
+relations:
+  # ========== compared_with 翼展对比 ==========
+  - edge_id: "rcspec_001"
+    source_node_id: "c919_aircraft"
+    target_node_id: "a320_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    description: "C919 翼展 33.6 米，与空客 A320 翼展 35.8 米相比，C919 略小但仍属同级"
+
+  - edge_id: "rcspec_002"
+    source_node_id: "c919_aircraft"
+    target_node_id: "b737_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    description: "C919 翼展 33.6 米与波音 737 翼展约 35.8 米相比，属同级窄体客机"
+
+  # ========== compared_with 机身宽度对比 ==========
+  - edge_id: "rcspec_003"
+    source_node_id: "c919_aircraft"
+    target_node_id: "a320_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    description: "C919 机身宽度 3.96 米，与 A320 机身宽度 3.95 米基本相当，客舱舒适度接近"
+
+  - edge_id: "rcspec_004"
+    source_node_id: "c919_aircraft"
+    target_node_id: "b737_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    description: "C919 机身宽度 3.96 米，比波音 737 机身宽度 3.76 米更宽，客舱通道更舒适"
+
+  # ========== compared_with 机长对比 ==========
+  - edge_id: "rcspec_005"
+    source_node_id: "c919_aircraft"
+    target_node_id: "a320_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.95
+    description: "C919 标准型机长约 38.9 米，与 A320 标准型机长 37.57 米相近"
+
+  - edge_id: "rcspec_006"
+    source_node_id: "c919_aircraft"
+    target_node_id: "b737_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.95
+    description: "C919 标准型机长约 38.9 米，与 B737-800 机长 39.5 米基本相当"
+
+  # ========== compared_with 机高对比 ==========
+  - edge_id: "rcspec_007"
+    source_node_id: "c919_aircraft"
+    target_node_id: "a320_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.9
+    description: "C919 机高约 12 米，与 A320 机高 11.76 米接近"
+
+  - edge_id: "rcspec_008"
+    source_node_id: "c919_aircraft"
+    target_node_id: "b737_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.9
+    description: "C919 机高约 12 米，与 B737 机高 12.5 米接近"
+
+  # ========== compared_with 座位数对比 ==========
+  - edge_id: "rcspec_009"
+    source_node_id: "c919_aircraft"
+    target_node_id: "a320_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    description: "C919 标准两舱布局 158 座，与 A320 两舱布局 150 座相比，C919 略多"
+
+  - edge_id: "rcspec_010"
+    source_node_id: "c919_aircraft"
+    target_node_id: "b737_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    description: "C919 标准两舱布局 158 座，与 B737-800 两舱布局 162 座相比，C919 略少"
+
+  # ========== compared_with 发动机与巡航对比 ==========
+  - edge_id: "rcspec_011"
+    source_node_id: "c919_aircraft"
+    target_node_id: "a320neo_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.95
+    description: "C919 装备 LEAP-1C，A320neo 装备 LEAP-1A，同属 LEAP 系列发动机"
+
+  - edge_id: "rcspec_012"
+    source_node_id: "c919_aircraft"
+    target_node_id: "b737max_aircraft"
+    relation_type: "compared_with"
+    confidence: 0.95
+    description: "C919 巡航 Mach 0.785，与 B737 MAX 巡航 Mach 0.79 相比，速度基本相当"

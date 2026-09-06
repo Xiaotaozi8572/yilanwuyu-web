@@ -1,0 +1,90 @@
+# C919 防冰类术语
+# 领域：飞机防冰与除冰
+# 条目数：12
+# node_type 统一为 system
+# ID 前缀：ice_
+
+terms:
+  - term_id: "ice_001"
+    canonical_name: "防冰"
+    aliases: ["防冰", "anti-ice", "anti-icing", "防冰系统"]
+    node_type: "system"
+    definition: "防止飞机表面结冰的系统，C919 机翼前缘和发动机进气道采用热气防冰防止结冰"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ice_002"
+    canonical_name: "除冰"
+    aliases: ["除冰", "de-ice", "de-icing", "除冰系统"]
+    node_type: "system"
+    definition: "去除已结冰的冰层的方法，C919 风挡和皮托管采用电除冰，机翼可间歇供气除冰"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ice_003"
+    canonical_name: "引气防冰"
+    aliases: ["引气防冰", "bleed air anti-ice", "热气防冰"]
+    node_type: "system"
+    definition: "利用发动机引气热能防止结冰的方法，C919 机翼前缘和发动机进气道采用引气防冰"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ice_004"
+    canonical_name: "电加热"
+    aliases: ["电加热", "electrical heating", "电热防冰", "电热除冰"]
+    node_type: "system"
+    definition: "利用电能发热防冰除冰的方法，C919 风挡、皮托管和传感器采用电加热防冰"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ice_005"
+    canonical_name: "气动除冰"
+    aliases: ["气动除冰", "pneumatic de-ice", "气动除冰套", "充气除冰带"]
+    node_type: "system"
+    definition: "用可充气橡皮套破裂冰层的除冰方法，C919 不采用气动除冰，多用于涡桨飞机"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ice_006"
+    canonical_name: "结冰"
+    aliases: ["结冰", "icing", "飞机结冰", "冰积聚"]
+    node_type: "concept"
+    definition: "过冷水滴撞击飞机表面结冰的现象，C919 按 CCAR-25 附录 C 结冰条件设计防冰系统"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ice_007"
+    canonical_name: "过冷水"
+    aliases: ["过冷水", "supercooled water", "过冷水滴", "过冷液态水"]
+    node_type: "concept"
+    definition: "温度低于 0℃ 仍保持液态的水滴，撞击飞机表面立即结冰，是飞机结冰的主要原因"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ice_008"
+    canonical_name: "冰探测器"
+    aliases: ["冰探测器", "ice detector", "结冰探测器", "冰敏感器"]
+    node_type: "component"
+    definition: "探测飞机结冰的传感器，C919 配备冰探测器在结冰时向机组告警并自动启动防冰"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ice_009"
+    canonical_name: "风挡加热"
+    aliases: ["风挡加热", "windshield heating", "风挡防冰", "风挡电加热"]
+    node_type: "system"
+    definition: "防止驾驶舱风挡结冰和起雾的电加热系统，C919 风挡加热保证机组视野和风挡强度"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ice_010"
+    canonical_name: "皮托管加热"
+    aliases: ["皮托管加热", "pitot heat", "皮托管防冰", "空速管加热"]
+    node_type: "system"
+    definition: "防止皮托管结冰堵塞的电加热，C919 皮托管加热在地面和空中均可使用保证空速测量"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ice_011"
+    canonical_name: "传感器加热"
+    aliases: ["传感器加热", "sensor heating", "迎角传感器加热", "总温传感器加热"]
+    node_type: "system"
+    definition: "防止大气数据传感器结冰失效的加热系统，C919 迎角和总温传感器配备电加热"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ice_012"
+    canonical_name: "短舱防冰"
+    aliases: ["短舱防冰", "cowl anti-ice", "发动机短舱防冰", "进气道防冰"]
+    node_type: "system"
+    definition: "防止发动机进气道结冰的防冰系统，C919 发动机短舱采用引气防冰保证发动机进气安全"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

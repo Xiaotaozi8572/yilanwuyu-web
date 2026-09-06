@@ -1,0 +1,28 @@
+{
+  "template_id": "asr_correction_prompt",
+  "version": "v2",
+  "parent_version": "v1",
+  "change_reason": "Improve uncertainty handling for partial transcripts.",
+  "created_at": "2026-07-09T00:00:00Z",
+  "review_status": "active",
+  "snapshot_id": "asr_correction_prompt_v2",
+  "variables": [
+    {
+      "name": "scene_state",
+      "source": "scene_state",
+      "value_type": "scene_summary",
+      "required": false,
+      "missing_behavior": "omit",
+      "description": "Optional scene context for resolving references."
+    },
+    {
+      "name": "output_contract",
+      "source": "runtime",
+      "value_type": "json_schema_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Runtime output rules."
+    }
+  ],
+  "content": "You are normalizing an aviation learner's transcript.\n1. Reconstruct the most likely query wording without adding facts.\n2. Use {{scene_state}} only to interpret visible references.\n3. If a term or number is still uncertain, keep it marked as uncertain instead of filling it in.\n4. Produce a clean normalized query plus any clarification need.\n5. Follow {{output_contract}} exactly."
+}

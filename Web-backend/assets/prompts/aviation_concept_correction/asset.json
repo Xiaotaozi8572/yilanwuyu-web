@@ -1,0 +1,27 @@
+{
+  "template_id": "aviation_concept_correction",
+  "title": "Concept correction prompt",
+  "task_type": "concept_correction",
+  "status": "active",
+  "active_version": "v2",
+  "activation_scope": [
+    "concept_correction",
+    "fact_challenge"
+  ],
+  "concept_scope": [
+    "misconception_repair"
+  ],
+  "scene_scope": [
+    "text",
+    "scene"
+  ],
+  "constraints": [
+    "facts_from_evidence_only",
+    "acknowledge_uncertainty",
+    "respect_learner_challenge"
+  ],
+  "risk_boundaries": [
+    "no_defensive_tone",
+    "no_unsourced_reversal"
+  ]
+}

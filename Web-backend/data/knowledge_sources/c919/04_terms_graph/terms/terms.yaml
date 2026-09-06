@@ -1,0 +1,418 @@
+# C919 术语与别名
+# 字段对应 GraphNode.aliases、GraphNode.canonical_name
+# 内容基于 01_science 已有事实，覆盖机型/结构部件/系统/发动机/气动原理/材料/适航/电传八大类
+
+terms:
+  # ========== 机型类（5） ==========
+  - term_id: "T001"
+    canonical_name: "C919"
+    aliases: ["C919", "C919 客机", "C919 飞机", "中国商飞 C919", "国产大飞机"]
+    node_type: "aircraft"
+    definition: "中国商飞研制的 150-190 座级窄体干线客机，对标空客 A320 和波音 737"
+    source_ref: "c919-science-overview-v1"
+
+  - term_id: "T002"
+    canonical_name: "ARJ21"
+    aliases: ["ARJ21", "ARJ21 支线客机", "翔凤"]
+    node_type: "aircraft"
+    definition: "中国商飞研制的 78-90 座级支线喷气式客机，C919 的前期技术积累"
+    source_ref: "c919-science-vs-arj21-v1"
+
+  - term_id: "T003"
+    canonical_name: "空客 A320"
+    aliases: ["A320", "Airbus A320", "A320neo", "A320ceo"]
+    node_type: "aircraft"
+    definition: "空客公司的窄体客机系列，C919 的直接对标机型"
+    source_ref: "c919-science-vs-a320-v1"
+
+  - term_id: "T004"
+    canonical_name: "波音 737"
+    aliases: ["B737", "Boeing 737", "737NG", "737 MAX"]
+    node_type: "aircraft"
+    definition: "波音公司的经典窄体客机系列，C919 的主要竞争机型之一"
+    source_ref: "c919-science-vs-b737-v1"
+
+  - term_id: "T005"
+    canonical_name: "CJ-1000A"
+    aliases: ["CJ-1000A", "长江-1000A", "长江 1000A"]
+    node_type: "component"
+    definition: "中国航发集团研制的 C919 国产替代涡扇发动机，技术参考 LEAP-1C"
+    source_ref: "c919-science-propulsion-v1"
+
+  # ========== 结构部件类（11） ==========
+  - term_id: "T006"
+    canonical_name: "机翼"
+    aliases: ["机翼", "wing", "主翼"]
+    node_type: "component"
+    definition: "C919 产生升力的主要气动部件，采用超临界翼型设计，翼展约 35.8 米"
+    source_ref: "c919-science-wing-v1"
+
+  - term_id: "T007"
+    canonical_name: "机身"
+    aliases: ["机身", "fuselage", "机体"]
+    node_type: "component"
+    definition: "C919 的主体结构，用于载客、载货及安装各系统，采用铝锂合金和复合材料"
+    source_ref: "c919-science-fuselage-v1"
+
+  - term_id: "T008"
+    canonical_name: "尾翼"
+    aliases: ["尾翼", "empennage", "垂直尾翼", "水平尾翼"]
+    node_type: "component"
+    definition: "C919 尾部的翼面组合，提供纵向和航向稳定性和操纵性"
+    source_ref: "c919-science-empennage-v1"
+
+  - term_id: "T009"
+    canonical_name: "起落架"
+    aliases: ["起落架", "landing gear", "前起落架", "主起落架"]
+    node_type: "component"
+    definition: "C919 在地面停放、滑行、起降时支撑飞机的装置，由 Liebherr 提供"
+    source_ref: "c919-science-landing-gear-v1"
+
+  - term_id: "T010"
+    canonical_name: "襟翼"
+    aliases: ["襟翼", "flap", "后缘襟翼"]
+    node_type: "component"
+    definition: "机翼后缘的可动翼面，用于在起降阶段增加升力"
+    source_ref: "c919-science-wing-v1"
+
+  - term_id: "T011"
+    canonical_name: "副翼"
+    aliases: ["副翼", "aileron"]
+    node_type: "component"
+    definition: "机翼后缘外侧的可动翼面，通过差动偏转控制飞机滚转"
+    source_ref: "c919-science-wing-v1"
+
+  - term_id: "T012"
+    canonical_name: "前缘缝翼"
+    aliases: ["前缘缝翼", "slat", "缝翼"]
+    node_type: "component"
+    definition: "机翼前缘的可动翼面，用于增加最大升力系数，防止大迎角失速"
+    source_ref: "c919-science-wing-v1"
+
+  - term_id: "T013"
+    canonical_name: "扰流板"
+    aliases: ["扰流板", "spoiler", "减速板"]
+    node_type: "component"
+    definition: "机翼上表面的可动板面，用于空中减速和辅助滚转控制、地面破坏升力"
+    source_ref: "c919-science-wing-v1"
+
+  - term_id: "T014"
+    canonical_name: "翼尖小翼"
+    aliases: ["翼尖小翼", "winglet", "翼梢小翼"]
+    node_type: "component"
+    definition: "安装在翼尖的垂直翼面，用于降低诱导阻力、改善燃油效率"
+    source_ref: "c919-science-wing-v1"
+
+  - term_id: "T015"
+    canonical_name: "方向舵"
+    aliases: ["方向舵", "rudder"]
+    node_type: "component"
+    definition: "垂直尾翼后缘的可动翼面，控制飞机偏航运动"
+    source_ref: "c919-science-empennage-v1"
+
+  - term_id: "T016"
+    canonical_name: "升降舵"
+    aliases: ["升降舵", "elevator"]
+    node_type: "component"
+    definition: "水平尾翼后缘的可动翼面，控制飞机俯仰运动"
+    source_ref: "c919-science-empennage-v1"
+
+  # ========== 系统类（10） ==========
+  - term_id: "T017"
+    canonical_name: "飞控系统"
+    aliases: ["飞控系统", "飞行控制系统", "电传飞控", "FBW", "Fly-By-Wire"]
+    node_type: "system"
+    definition: "C919 的全权限数字式电传飞行控制系统，采用四余度架构"
+    source_ref: "c919-science-flight-control-v1"
+
+  - term_id: "T018"
+    canonical_name: "液压系统"
+    aliases: ["液压系统", "hydraulic", "三余度液压"]
+    node_type: "system"
+    definition: "C919 的三余度液压动力系统，驱动飞控舵面、起落架等关键作动器"
+    source_ref: "c919-science-hydraulic-v1"
+
+  - term_id: "T019"
+    canonical_name: "燃油系统"
+    aliases: ["燃油系统", "fuel system", "燃油箱"]
+    node_type: "system"
+    definition: "C919 的燃油储存与供给系统，为发动机和 APU 提供燃料"
+    source_ref: "c919-science-fuel-v1"
+
+  - term_id: "T020"
+    canonical_name: "航电系统"
+    aliases: ["航电系统", "航电", "avionics", "IMA", "综合模块化航电"]
+    node_type: "system"
+    definition: "C919 的航空电子系统，采用基于以太网的 IMA 综合模块化架构"
+    source_ref: "c919-science-avionics-v1"
+
+  - term_id: "T021"
+    canonical_name: "电气系统"
+    aliases: ["电气系统", "电源系统", "electrical power", "EPS"]
+    node_type: "system"
+    definition: "C919 的电力生成与分配系统，由发动机发电机和 APU 驱动"
+    source_ref: "c919-science-electrical-v1"
+
+  - term_id: "T022"
+    canonical_name: "环控系统"
+    aliases: ["环控系统", "ECS", "环境控制系统", "空调系统"]
+    node_type: "system"
+    definition: "C919 的客舱空调与增压系统，由发动机引气驱动，Liebherr 提供"
+    source_ref: "c919-science-ecs-v1"
+
+  - term_id: "T023"
+    canonical_name: "防火系统"
+    aliases: ["防火系统", "fire protection", "火警系统"]
+    node_type: "system"
+    definition: "C919 的发动机/APU/货舱火警探测与灭火系统"
+    source_ref: "c919-science-lighting-fire-v1"
+
+  - term_id: "T024"
+    canonical_name: "照明系统"
+    aliases: ["照明系统", "lighting", "客舱照明", "外部照明"]
+    node_type: "system"
+    definition: "C919 的内外部照明系统，含 LED 情景照明和外部航行灯"
+    source_ref: "c919-science-lighting-fire-v1"
+
+  - term_id: "T025"
+    canonical_name: "客舱系统"
+    aliases: ["客舱系统", "客舱", "cabin", "座舱"]
+    node_type: "system"
+    definition: "C919 的乘客舱室与内饰系统，采用 3-3 布局"
+    source_ref: "c919-science-cabin-v1"
+
+  - term_id: "T026"
+    canonical_name: "APU"
+    aliases: ["APU", "辅助动力装置", "auxiliary power unit", "HGT750"]
+    node_type: "component"
+    definition: "Honeywell HGT750 辅助动力装置，提供地面电源和气源"
+    source_ref: "c919-science-electrical-v1"
+
+  # ========== 发动机类（10） ==========
+  - term_id: "T027"
+    canonical_name: "LEAP-1C"
+    aliases: ["LEAP-1C", "LEAP-1C28", "LEAP-1C30", "CFM LEAP-1C"]
+    node_type: "component"
+    definition: "CFM 国际为 C919 定制的涡扇发动机，涵道比约 11:1"
+    source_ref: "c919-science-propulsion-v1"
+
+  - term_id: "T028"
+    canonical_name: "FADEC"
+    aliases: ["FADEC", "全权限数字式发动机控制", "Full Authority Digital Engine Control"]
+    node_type: "concept"
+    definition: "发动机的全权限数字式电子控制系统，实现对推力的精确管理"
+    source_ref: "c919-science-engine-principle-v1"
+
+  - term_id: "T029"
+    canonical_name: "涡扇发动机"
+    aliases: ["涡扇发动机", "turbofan", "涡轮风扇发动机"]
+    node_type: "concept"
+    definition: "由风扇、压气机、燃烧室、涡轮组成的喷气发动机，C919 采用 LEAP-1C 涡扇"
+    source_ref: "c919-science-engine-principle-v1"
+
+  - term_id: "T030"
+    canonical_name: "涵道比"
+    aliases: ["涵道比", "bypass ratio", "通道比"]
+    node_type: "concept"
+    definition: "涡扇发动机外涵道与内涵道的空气流量之比，LEAP-1C 涵道比约 11:1"
+    source_ref: "c919-science-engine-principle-v1"
+
+  - term_id: "T031"
+    canonical_name: "风扇"
+    aliases: ["风扇", "fan", "发动机风扇"]
+    node_type: "component"
+    definition: "涡扇发动机前部的大直径旋转叶片，产生外涵道气流"
+    source_ref: "c919-science-engine-principle-v1"
+
+  - term_id: "T032"
+    canonical_name: "压气机"
+    aliases: ["压气机", "compressor", "高压压气机", "低压压气机"]
+    node_type: "component"
+    definition: "涡扇发动机中压缩进入空气的旋转部件，分高压和低压级"
+    source_ref: "c919-science-engine-principle-v1"
+
+  - term_id: "T033"
+    canonical_name: "燃烧室"
+    aliases: ["燃烧室", "combustor", "combustion chamber", "TAPS 燃烧室"]
+    node_type: "component"
+    definition: "涡扇发动机中燃料与高压空气混合燃烧的部件，LEAP 采用 TAPS 低排放技术"
+    source_ref: "c919-science-engine-principle-v1"
+
+  - term_id: "T034"
+    canonical_name: "涡轮"
+    aliases: ["涡轮", "turbine", "高压涡轮", "低压涡轮"]
+    node_type: "component"
+    definition: "涡扇发动机中利用高温燃气膨胀做功驱动压气机和风扇的旋转部件"
+    source_ref: "c919-science-engine-principle-v1"
+
+  - term_id: "T035"
+    canonical_name: "短舱"
+    aliases: ["短舱", "nacelle", "发动机短舱", "PANACHE 短舱"]
+    node_type: "component"
+    definition: "包裹发动机的流线型外壳，LEAP-1C 采用 Nexcelle 整体式短舱"
+    source_ref: "c919-science-propulsion-v1"
+
+  - term_id: "T036"
+    canonical_name: "反推装置"
+    aliases: ["反推装置", "thrust reverser", "反推力装置"]
+    node_type: "component"
+    definition: "着陆时改变发动机排气方向以产生反向推力的装置，集成于短舱内"
+    source_ref: "c919-science-propulsion-v1"
+
+  # ========== 气动原理类（10） ==========
+  - term_id: "T037"
+    canonical_name: "升力"
+    aliases: ["升力", "lift"]
+    node_type: "concept"
+    definition: "垂直于飞行方向、克服飞机重力的气动力，由机翼上下表面压差产生"
+    source_ref: "c919-science-aerodynamics-v1"
+
+  - term_id: "T038"
+    canonical_name: "阻力"
+    aliases: ["阻力", "drag", "诱导阻力", "寄生阻力", "激波阻力"]
+    node_type: "concept"
+    definition: "平行于飞行方向、阻碍飞机前进的气动力，含诱导阻力和寄生阻力"
+    source_ref: "c919-science-aerodynamics-v1"
+
+  - term_id: "T039"
+    canonical_name: "升阻比"
+    aliases: ["升阻比", "L/D", "升阻比 L/D"]
+    node_type: "concept"
+    definition: "升力与阻力的比值，衡量气动效率的关键参数，升阻比越高越省油"
+    source_ref: "c919-science-aerodynamics-v1"
+
+  - term_id: "T040"
+    canonical_name: "迎角"
+    aliases: ["迎角", "angle of attack", "AoA", "攻角"]
+    node_type: "concept"
+    definition: "机翼弦线与来流方向的夹角，增大迎角可增加升力但超过临界值会失速"
+    source_ref: "c919-science-aerodynamics-v1"
+
+  - term_id: "T041"
+    canonical_name: "失速"
+    aliases: ["失速", "stall", "失速保护"]
+    node_type: "concept"
+    definition: "机翼迎角超过临界值后气流分离、升力急剧下降的现象"
+    source_ref: "c919-science-aerodynamics-v1"
+
+  - term_id: "T042"
+    canonical_name: "激波"
+    aliases: ["激波", "shock wave", "激波阻力"]
+    node_type: "concept"
+    definition: "跨声速飞行时气流加速至声速附近形成的压缩波，产生波阻"
+    source_ref: "c919-science-aerodynamics-v1"
+
+  - term_id: "T043"
+    canonical_name: "超临界机翼"
+    aliases: ["超临界机翼", "超临界翼型", "supercritical wing"]
+    node_type: "concept"
+    definition: "通过上表面平坦设计延缓激波生成的跨声速机翼构型，C919 采用第四代设计"
+    source_ref: "c919-science-aerodynamics-v1"
+
+  - term_id: "T044"
+    canonical_name: "附面层"
+    aliases: ["附面层", "边界层", "boundary layer"]
+    node_type: "concept"
+    definition: "紧贴机翼表面流速受粘性影响的薄层空气，其分离会导致失速"
+    source_ref: "c919-science-aerodynamics-v1"
+
+  - term_id: "T045"
+    canonical_name: "雷诺数"
+    aliases: ["雷诺数", "Reynolds number", "Re"]
+    node_type: "concept"
+    definition: "表征流体惯性力与粘性力之比的无量纲数，影响气动特性缩比试验"
+    source_ref: "c919-science-aerodynamics-v1"
+
+  - term_id: "T046"
+    canonical_name: "马赫数"
+    aliases: ["马赫数", "Mach number", "M"]
+    node_type: "concept"
+    definition: "流速与当地声速之比，C919 巡航马赫数约 0.785"
+    source_ref: "c919-science-flight-mechanics-v1"
+
+  # ========== 材料类（4） ==========
+  - term_id: "T047"
+    canonical_name: "复合材料"
+    aliases: ["复合材料", "CFRP", "碳纤维复合材料", "composite material"]
+    node_type: "concept"
+    definition: "由碳纤维与树脂基体复合而成的航空结构材料，C919 机身复合材料占比约 12%"
+    source_ref: "c919-science-composite-material-v1"
+
+  - term_id: "T048"
+    canonical_name: "铝锂合金"
+    aliases: ["铝锂合金", "Al-Li alloy", "铝锂合金 2099"]
+    node_type: "concept"
+    definition: "添加锂元素的铝合金，密度更低、刚度更高，C919 机身占比约 8.8%"
+    source_ref: "c919-science-fuselage-v1"
+
+  - term_id: "T049"
+    canonical_name: "钛合金"
+    aliases: ["钛合金", "titanium alloy", "Ti-6Al-4V"]
+    node_type: "concept"
+    definition: "以钛为基的高强度耐高温合金，用于发动机吊挂和关键承力结构"
+    source_ref: "c919-science-composite-material-v1"
+
+  - term_id: "T050"
+    canonical_name: "碳纤维"
+    aliases: ["碳纤维", "carbon fiber", "T800", "T300"]
+    node_type: "concept"
+    definition: "含碳量 90% 以上的高强度纤维，是复合材料的主要增强体"
+    source_ref: "c919-science-composite-material-v1"
+
+  # ========== 适航类（5） ==========
+  - term_id: "T051"
+    canonical_name: "适航"
+    aliases: ["适航", "airworthiness", "适航审定", "适航标准"]
+    node_type: "concept"
+    definition: "航空器符合批准的型号设计并处于安全运行状态的品质"
+    source_ref: "c919-science-airworthiness-v1"
+
+  - term_id: "T052"
+    canonical_name: "型号合格证"
+    aliases: ["型号合格证", "TC", "Type Certificate"]
+    node_type: "concept"
+    definition: "证明航空器设计符合适航标准的官方批准文件，C919 于 2022-09-29 取得"
+    source_ref: "c919-science-airworthiness-v1"
+
+  - term_id: "T053"
+    canonical_name: "生产许可证"
+    aliases: ["生产许可证", "PC", "Production Certificate"]
+    node_type: "concept"
+    definition: "批准制造企业按批准设计批量生产航空器的许可文件"
+    source_ref: "c919-science-airworthiness-v1"
+
+  - term_id: "T054"
+    canonical_name: "CCAR-25"
+    aliases: ["CCAR-25", "CCAR25", "运输类飞机适航标准"]
+    node_type: "concept"
+    definition: "中国民航局运输类飞机适航标准，等效 FAA Part 25 / EASA CS-25"
+    source_ref: "c919-science-airworthiness-v1"
+
+  - term_id: "T055"
+    canonical_name: "适航指令"
+    aliases: ["适航指令", "AD", "Airworthiness Directive", "CAD"]
+    node_type: "concept"
+    definition: "民航当局针对已发现的不安全状态发布的强制纠正措施文件"
+    source_ref: "c919-science-airworthiness-v1"
+
+  # ========== 电传类（3） ==========
+  - term_id: "T056"
+    canonical_name: "电传操纵"
+    aliases: ["电传操纵", "fly-by-wire", "FBW", "电传飞控"]
+    node_type: "concept"
+    definition: "以电信号替代机械连杆传递飞行员操纵指令的飞行操纵方式"
+    source_ref: "c919-science-fly-by-wire-v1"
+
+  - term_id: "T057"
+    canonical_name: "控制律"
+    aliases: ["控制律", "control law", "normal law", "alternate law", "direct law"]
+    node_type: "concept"
+    definition: "飞控计算机中的飞行控制算法，C919 具有正常/降级/直接三级控制律"
+    source_ref: "c919-science-fc-laws-v1"
+
+  - term_id: "T058"
+    canonical_name: "余度管理"
+    aliases: ["余度管理", "redundancy management", "余度架构", "四余度"]
+    node_type: "concept"
+    definition: "通过多通道表决实现故障容忍的设计方法，C919 飞控采用四余度架构"
+    source_ref: "c919-science-fly-by-wire-v1"

@@ -1,0 +1,83 @@
+# C919 讲解侧问答种子（非评测种子）
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / question / audience / teaching_point
+# 注意：本文件是"讲解侧"问答种子，用于讲解者预判听众问题、准备讲解口径，不是评测题库。
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+qa_seeds:
+  - id: "qa-001-capacity"
+    question: "C919 能坐多少人？"
+    audience: "普通公众"
+    teaching_point: "讲清座级范围与布局：标准布局 158 座（8 公务舱 + 150 经济舱），全经济舱 168 座，高密度布局约 190 座，单通道 3-3 布局。强调与 A320/B737 同级。"
+
+  - id: "qa-002-range"
+    question: "C919 能飞多远？"
+    audience: "普通公众"
+    teaching_point: "标准型 4,075 公里（约上海→新加坡），延程型 5,555 公里（约上海→迪拜）。用城市对让公众建立距离感，避免只念数字。"
+
+  - id: "qa-003-in-operation"
+    question: "C919 现在投入运营了吗？"
+    audience: "普通公众"
+    teaching_point: "2023 年 5 月 28 日起由东方航空执飞商业航班。截至 2026 年 5 月，东航、国航、南航共运营 40 架。客观说明已在运营，不夸大。"
+
+  - id: "qa-004-engine-domestic"
+    question: "C919 的发动机是国产的吗？"
+    audience: "普通公众/中学生"
+    teaching_point: "当前使用 CFM 国际（美法合资）LEAP-1C；国产 CJ-1000A 在研，预计 2027-2028 取证。强调选用成熟发动机是行业通行做法，不是 C919 独有缺陷。"
+
+  - id: "qa-005-safety"
+    question: "C919 的安全性能如何？"
+    audience: "普通公众"
+    teaching_point: "按 CCAR-25 部（等效 FAA Part 25 / EASA CS-25）设计验证，累计安全飞行超 20 万小时。飞控四余度、多重冗余。强调'取证是门槛、持续适航是长期保障'，不绝对化。"
+
+  - id: "qa-006-passenger-experience"
+    question: "坐 C919 和坐 A320/B737 有什么不同？"
+    audience: "普通公众"
+    teaching_point: "对普通乘客飞行体验差异不大。C919 客舱比 B737 略宽，中间座位比两侧宽约 1.5 厘米，行李架更大，客舱压力高度约 1,830 米降低长途疲劳。"
+
+  - id: "qa-007-international-routes"
+    question: "C919 什么时候能飞国际航线？"
+    audience: "普通公众"
+    teaching_point: "需起降国家民航当局认可。已获 CAAC 型号合格证，可在中国及与 CAAC 有双边协议的 30 多个国家运行。FAA/EASA 认可需双边谈判，暂无确切时间表。"
+
+  - id: "qa-008-localization-rate"
+    question: "C919 的国产化率有多少？"
+    audience: "中学生/有专业兴趣的公众"
+    teaching_point: "按价值量约 60%。机体结构 100% 国产，发动机和部分航电/飞控核心部件依赖进口或合资。讲清'国产化率'按重量 vs. 按价值量口径不同，避免笼统说'80%'。"
+
+  - id: "qa-009-name-meaning"
+    question: "C919 为什么叫 C919？"
+    audience: "中学生"
+    teaching_point: "C 代表 China 和 COMAC（中国商飞）；第一个 9 寓意'长长久久'；19 代表 190 座级（最大载客量约 190 人）。用名字讲清定位。"
+
+  - id: "qa-010-vs-arj21"
+    question: "C919 和 ARJ21 有什么区别？"
+    audience: "普通公众"
+    teaching_point: "C919 是 150-190 座干线窄体客机，ARJ21 是 78-90 座支线客机。两者构成产品线互补：支线连接中小城市，干线连接枢纽。用'中巴车 vs 城际大巴'类比。"
+
+  - id: "qa-011-fly-by-wire-vs-autopilot"
+    question: "电传操纵是不是就是自动驾驶？"
+    audience: "中学生"
+    teaching_point: "不是。电传是操纵方式（电信号替代机械钢索），飞行员仍主动操纵；自动驾驶是飞控系统按指令自动控制飞行轨迹。电传可叠加包线保护和自动驾驶，但两者是不同概念。"
+
+  - id: "qa-012-why-8-years-certification"
+    question: "为什么一架飞机要试飞 8 年？"
+    audience: "中学生"
+    teaching_point: "适航审定要验证性能、结构、系统可靠性、紧急撤离等数千项。C919 用 6 架原型机覆盖不同试飞科目，依据 CCAR-25 部。强调'取证是几千项考试'，不是走形式。"
+
+  - id: "qa-013-supercritical-wing"
+    question: "C919 的机翼为什么上表面是平的？"
+    audience: "中学生/有专业兴趣的公众"
+    teaching_point: "这是超临界机翼：上表面平坦延缓激波、降低跨声速阻力；下表面弯度大、靠后缘补回升力。气动效率提升约 20%、阻力降低约 8%。"
+
+  - id: "qa-014-price-competitiveness"
+    question: "C919 的造价是多少？有竞争力吗？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "目录价约 6.53 亿元人民币（约 1.01 亿美元），略低于 A320neo（约 1.1 亿美元）和 B737 MAX（约 1.2 亿美元）。但目录价不等于实际成交价，且运营成本和定价由航空公司决定。"
+
+  - id: "qa-015-supply-chain-risk"
+    question: "C919 会不会被卡脖子？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "存在两类风险：地缘政治风险（2025 年 5 月 LEAP-1C 曾被暂停出口、7 月恢复）和技术依赖风险（航电/飞控核心受外方制约）。应对策略：研制 CJ-1000A、提升合资企业自主技术比重。客观说明风险与应对，不回避。"

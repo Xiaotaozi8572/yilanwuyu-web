@@ -1,0 +1,47 @@
+# C919 结构专项讲解侧问答种子（非评测种子）
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / question / audience / teaching_point
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+qa_seeds:
+  - id: "struct-qa-001-fuselage-width"
+    question: "C919 机身比 B737 宽吗？宽多少？"
+    audience: "普通公众/有专业兴趣的公众"
+    teaching_point: "C919 机身直径约 3.96 米，比 B737（约 3.76 米）宽约 20 厘米。这让中间座位比两侧宽约 1.5 厘米，行李架也更大。与 A320（约 3.95 米）基本同级。"
+
+  - id: "struct-qa-002-pressure-cabin-design"
+    question: "C919 客舱怎么保证高空不漏气？"
+    audience: "中学生/有专业兴趣的公众"
+    teaching_point: "客舱是增压舱，按 CCAR-25.365 设计，蒙皮承受内外压差约 0.06-0.07 MPa。有正压/负压安全阀保护，超压自动放气。机身蒙皮经过数千次疲劳循环验证。"
+
+  - id: "struct-qa-003-landing-gear-strength"
+    question: "C919 起落架怎么承受着陆冲击？"
+    audience: "中学生/航空爱好者"
+    teaching_point: "起落架按 CCAR-25.473 设计，需承受着陆瞬间数倍于自重的冲击载荷。主起落架支柱有缓冲器（油气减震），吸收冲击能量。轮胎充气约 200 psi，航空级多层帘布结构。"
+
+  - id: "struct-qa-004-fatigue-life"
+    question: "C919 机身能飞多少次起降？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "C919 按 CCAR-25.571 损伤容限和疲劳寿命设计，目标服役寿命约 60000-90000 起降（与同代窄体客机相当）。每次增压/减压是一个疲劳循环，机身蒙皮和接头是疲劳关键部位。"
+
+  - id: "struct-qa-005-wing-bending"
+    question: "C919 机翼在空中会弯曲吗？弯多少？"
+    audience: "普通公众/中学生"
+    teaching_point: "会弯曲。机翼在升力作用下向上弯曲，满载燃油时翼尖可上翘数米。这是正常弹性变形，机翼按 CCAR-25.305 设计，极限载荷下翼尖变形可达数米而不破坏。机翼柔性反而有助于减缓突风载荷。"
+
+  - id: "struct-qa-006-door-design"
+    question: "C919 舱门在高空会被吸出去吗？"
+    audience: "普通公众"
+    teaching_point: "不会。C919 客舱门是"堵盖式"设计（Plug Door），门比门框大，靠内外压差把门压紧在门框上。高空客舱压力高于外界，压差越大门压得越紧，不可能被吸出。这是民机舱门的标准安全设计。"
+
+  - id: "struct-qa-007-emergency-evacuation"
+    question: "C919 紧急撤离能在多久内完成？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "按 CCAR-25.803 要求，满客（约 190 人）需在 90 秒内通过一半可用出口完成撤离。C919 通过了实际撤离演示，应急滑梯在几秒内自动充气展开。这是适航取证的强制科目。"
+
+  - id: "struct-qa-008-window-size"
+    question: "C919 舷窗为什么这么小？"
+    audience: "普通公众"
+    teaching_point: "舷窗大小是结构强度与视野的权衡。每个舷窗都在机身蒙皮上开孔，孔周围有应力集中，需加强框边。窗口越小结构越强、增压疲劳寿命越长。C919 舷窗尺寸与 A320/B737 同级，符合行业标准。"

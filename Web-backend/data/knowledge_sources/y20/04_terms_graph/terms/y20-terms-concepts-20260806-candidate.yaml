@@ -1,0 +1,33 @@
+# y20-terms-concepts-20260806-candidate
+
+terms:
+  - canonical_name: "战略运输机"
+    aliases: ["战略运输机", "战略空运"]
+    node_type: "concept"
+    definition: "远程重型投送"
+    source_id: "y20-science-overview-v1"
+  - canonical_name: "短距起降"
+    aliases: ["短距起降", "STOL"]
+    node_type: "concept"
+    definition: "野战机场起降能力"
+    source_id: "y20-science-highwing-shortfield-v1"
+  - canonical_name: "大涵道比"
+    aliases: ["大涵道比", "bypass ratio"]
+    node_type: "concept"
+    definition: "高燃油效率涡扇特征"
+    source_id: "y20-science-powerplant-v1"
+  - canonical_name: "上单翼气动"
+    aliases: ["上单翼布局"]
+    node_type: "concept"
+    definition: "货舱门空间与发动机离地"
+    source_id: "y20-science-highwing-shortfield-v1"
+  - canonical_name: "空投作业"
+    aliases: ["空投作业"]
+    node_type: "concept"
+    definition: "尾门空投与伞降流程"
+    source_id: "y20-science-overview-v1"
+  - canonical_name: "重心管理"
+    aliases: ["重心管理"]
+    node_type: "concept"
+    definition: "装货顺序控制重心"
+    source_id: "y20-science-overview-v1"

@@ -1,0 +1,114 @@
+# C919 里程碑事件实体
+# 项目研制及运营关键节点
+# node_type: milestone
+# node_id 前缀：ms_
+
+entities:
+  - node_id: "ms_2008_approval"
+    node_type: "milestone"
+    canonical_name: "2008 项目立项"
+    aliases: ["2008 立项", "C919 立项", "2008 项目启动"]
+    description: "2008 年国务院批准 C919 大型客机项目立项，中国商飞正式启动窄体干线客机研制"
+    specifications:
+      date: "2008"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ms_2010_tc_apply"
+    node_type: "milestone"
+    canonical_name: "2010 申请型号合格证"
+    aliases: ["2010 申请 TC", "2010 TC 申请"]
+    description: "2010 年中国商飞向民航局正式提交 C919 型号合格证（TC）申请，适航审定启动"
+    specifications:
+      date: "2010"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ms_2015_rollout"
+    node_type: "milestone"
+    canonical_name: "2015 总装下线"
+    aliases: ["2015 下线", "C919 下线", "2015 总装下线"]
+    description: "2015-11-02 首架 C919 在上海浦东总装下线，机身宽度 3.96m 实体首次公开亮相"
+    specifications:
+      date: "2015-11-02"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ms_2017_firstflight"
+    node_type: "milestone"
+    canonical_name: "2017 首飞"
+    aliases: ["2017 首飞", "C919 首飞", "首飞"]
+    description: "2017-05-05 首架 C919（B-001A）在上海浦东成功首飞，巡航 Mach 0.785 检验基本飞行"
+    specifications:
+      date: "2017-05-05"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ms_2019_six_aircraft"
+    node_type: "milestone"
+    canonical_name: "2019 六架齐备"
+    aliases: ["2019 六架齐备", "六架机齐备"]
+    description: "2019 年 C919 六架试飞原型机全部投入试飞，试飞科目全面展开"
+    specifications:
+      date: "2019"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ms_2020_tia"
+    node_type: "milestone"
+    canonical_name: "2020 型号合格审定试飞"
+    aliases: ["2020 TIA", "2020 TIA 阶段", "审定试飞"]
+    description: "2020 年 C919 进入 TIA（型号合格审定试飞）阶段，正式开展适航局方试飞"
+    specifications:
+      date: "2020"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ms_2022_tc"
+    node_type: "milestone"
+    canonical_name: "2022 取得型号合格证"
+    aliases: ["2022 TC", "2022 取证", "取得 TC"]
+    description: "2022-09-29 C919 取得中国民航局颁发的型号合格证（TC），具备量产适航基础"
+    specifications:
+      date: "2022-09-29"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ms_2022_delivery"
+    node_type: "milestone"
+    canonical_name: "2022 首架交付"
+    aliases: ["2022 交付", "首架交付", "交付首家航司"]
+    description: "2022-12-09 首架 C919（B-002U）交付首家用户东航，国产大飞机进入运营阶段"
+    specifications:
+      date: "2022-12-09"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ms_2023_first_commercial"
+    node_type: "milestone"
+    canonical_name: "2023 商业首航"
+    aliases: ["2023 首航", "商业首航", "东航首航"]
+    description: "2023-05-28 东航 C919 执行上海虹桥至成都天府首航，C919 正式投入商业运营"
+    specifications:
+      date: "2023-05-28"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ms_2024_airchina"
+    node_type: "milestone"
+    canonical_name: "2024 国航接收"
+    aliases: ["2024 国航", "国航接收 C919"]
+    description: "2024 年国航接收 C919 投入北京首都始发航线，C919 运营航司进一步扩展"
+    specifications:
+      date: "2024"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ms_2025_springfestival"
+    node_type: "milestone"
+    canonical_name: "2025 春运保障"
+    aliases: ["2025 春运", "C919 春运"]
+    description: "2025 年 C919 首次完整参与春运保障，验证大规模商业运营可靠性"
+    specifications:
+      date: "2025"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ms_2026_c919_600"
+    node_type: "milestone"
+    canonical_name: "2026 C919-600 出厂"
+    aliases: ["2026 C919-600", "C919-600 出厂", "缩短型出厂"]
+    description: "2026 年 C919-600 缩短型计划出厂，面向中短程高密度市场，座位数 140-150"
+    specifications:
+      date: "2026"
+      seats: "140-150"
+    applicable_aircraft: ["c919"]

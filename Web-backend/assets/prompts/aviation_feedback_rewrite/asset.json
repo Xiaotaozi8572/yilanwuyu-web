@@ -1,0 +1,26 @@
+{
+  "template_id": "aviation_feedback_rewrite",
+  "title": "Feedback rewrite prompt",
+  "task_type": "feedback_rewrite",
+  "status": "active",
+  "active_version": "v2",
+  "activation_scope": [
+    "feedback"
+  ],
+  "concept_scope": [
+    "answer_rewrite"
+  ],
+  "scene_scope": [
+    "text",
+    "scene"
+  ],
+  "constraints": [
+    "preserve_supported_claims",
+    "do_not_add_new_facts",
+    "respond_to_feedback_signal"
+  ],
+  "risk_boundaries": [
+    "no_unsourced_expansion",
+    "no_removed_safety_caveats"
+  ]
+}

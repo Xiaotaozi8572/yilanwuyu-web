@@ -1,0 +1,36 @@
+{
+  "template_id": "aviation_fact_qa",
+  "version": "v2",
+  "parent_version": "v1",
+  "change_reason": "Add explicit evidence boundary and teaching order.",
+  "created_at": "2026-07-09T00:00:00Z",
+  "review_status": "active",
+  "snapshot_id": "aviation_fact_qa_v2",
+  "variables": [
+    {
+      "name": "rag_evidence",
+      "source": "evidence_package",
+      "value_type": "evidence_summary",
+      "required": true,
+      "missing_behavior": "clarification",
+      "description": "Reviewed local evidence used as the only fact source."
+    },
+    {
+      "name": "output_contract",
+      "source": "runtime",
+      "value_type": "json_schema_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Answer envelope output requirements."
+    },
+    {
+      "name": "scene_state",
+      "source": "scene_state",
+      "value_type": "scene_summary",
+      "required": false,
+      "missing_behavior": "omit",
+      "description": "Current 3D or visual scene summary."
+    }
+  ],
+  "content": "You are an aviation science tutor. Explain only facts supported by {{rag_evidence}}.\n1. Extract the supported claims before drafting.\n2. Match the answer style to the question type without adding outside facts.\n3. Use {{scene_state}} only to ground references to the current object.\n4. Present the answer in a teaching order: direct answer, why it matters, then one learner-friendly check question.\n5. If evidence is insufficient, say what is missing and ask a clarification question.\n6. Follow {{output_contract}} exactly. Every claim_candidates entry's \"text\" must be an exact, verbatim copy of one complete sentence that already appears in \"main_answer\" or \"short_answer\" — do not paraphrase, reword, add, or omit any character; copy it as-is. Conversely, every factual sentence in \"main_answer\" and \"short_answer\" must have a matching claim_candidates entry (only the final check question may be left without a claim)."
+}

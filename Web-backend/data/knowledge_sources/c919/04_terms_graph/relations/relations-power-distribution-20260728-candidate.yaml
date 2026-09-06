@@ -1,0 +1,94 @@
+# C919 能量分配关系
+# 描述发动机、APU、应急电源向各系统的能量分配关系
+# relation_type: provides_power_to / feeds_to
+# edge_id 前缀：rpow_
+
+relations:
+  # ========== 发动机供能 ==========
+  - edge_id: "rpow_001"
+    source_node_id: "sys_leap1c"
+    target_node_id: "comp_idg"
+    relation_type: "provides_power_to"
+    confidence: 1.0
+    description: "发动机通过附件齿轮箱驱动 IDG，提供主交流电力"
+
+  - edge_id: "rpow_002"
+    source_node_id: "sys_leap1c"
+    target_node_id: "comp_edp"
+    relation_type: "provides_power_to"
+    confidence: 1.0
+    description: "发动机通过附件齿轮箱驱动 EDP，提供液压动力"
+
+  - edge_id: "rpow_003"
+    source_node_id: "sys_leap1c"
+    target_node_id: "sys_bleed_air"
+    relation_type: "provides_power_to"
+    confidence: 1.0
+    description: "发动机压气机引气为引气系统提供主气源"
+
+  # ========== APU 供能 ==========
+  - edge_id: "rpow_004"
+    source_node_id: "sys_apu"
+    target_node_id: "comp_apu_generator"
+    relation_type: "provides_power_to"
+    confidence: 1.0
+    description: "APU 驱动 APU 发电机，提供地面或备用电力"
+
+  - edge_id: "rpow_005"
+    source_node_id: "sys_apu"
+    target_node_id: "comp_apu_bleed"
+    relation_type: "provides_power_to"
+    confidence: 1.0
+    description: "APU 提供 APU 引气，作为地面气源或主发动机启动气源"
+
+  - edge_id: "rpow_006"
+    source_node_id: "sys_apu"
+    target_node_id: "comp_ground_power"
+    relation_type: "provides_power_to"
+    confidence: 0.9
+    description: "APU 提供地面电力，支持停机坪作业与客舱服务"
+
+  # ========== 应急供能 ==========
+  - edge_id: "rpow_007"
+    source_node_id: "comp_battery"
+    target_node_id: "comp_emergency_bus"
+    relation_type: "provides_power_to"
+    confidence: 0.95
+    description: "蓄电池在主电源失效时为应急汇流条提供直流电源"
+
+  - edge_id: "rpow_008"
+    source_node_id: "comp_rat"
+    target_node_id: "comp_emergency_bus"
+    relation_type: "provides_power_to"
+    confidence: 0.95
+    description: "RAT 放出后为应急汇流条提供应急液压与电力"
+
+  # ========== 电力系统下游分配 ==========
+  - edge_id: "rpow_009"
+    source_node_id: "sys_electrical"
+    target_node_id: "sys_avionics"
+    relation_type: "provides_power_to"
+    confidence: 0.95
+    description: "电力系统为航电系统各计算机与显示单元提供电源"
+
+  - edge_id: "rpow_010"
+    source_node_id: "sys_electrical"
+    target_node_id: "comp_cabin_lighting"
+    relation_type: "provides_power_to"
+    confidence: 0.95
+    description: "电力系统为客舱照明提供电源"
+
+  # ========== 液压系统下游分配 ==========
+  - edge_id: "rpow_011"
+    source_node_id: "sys_hydraulic"
+    target_node_id: "comp_landing_gear"
+    relation_type: "provides_power_to"
+    confidence: 0.95
+    description: "液压系统为起落架收放与刹车提供液压动力"
+
+  - edge_id: "rpow_012"
+    source_node_id: "sys_hydraulic"
+    target_node_id: "sys_flight_control"
+    relation_type: "provides_power_to"
+    confidence: 0.95
+    description: "液压系统为飞控舵面作动器提供液压动力"

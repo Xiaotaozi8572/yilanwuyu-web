@@ -1,0 +1,32 @@
+# C919 应用与价值分区评测种子
+
+seeds:
+  - question: "C919 已经交付了多少架？"
+    expected_intent_type: "parameter_fact"
+    expected_complexity: "L1"
+    expected_evidence_partitions: ["c919/01_science/05_applications_value", "c919/01_science/04_history_milestones"]
+    notes: "交付数据"
+
+  - question: "C919 获得了多少架订单？"
+    expected_intent_type: "parameter_fact"
+    expected_complexity: "L1"
+    expected_evidence_partitions: ["c919/01_science/05_applications_value"]
+    notes: "订单数据"
+
+  - question: "C919 的国产化率大概是多少？"
+    expected_intent_type: "value_analysis"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/05_applications_value"]
+    notes: "国产化率，属于行业估算，注意标记 opinion_analysis"
+
+  - question: "C919 对中国航空工业有什么战略意义？"
+    expected_intent_type: "value_analysis"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/05_applications_value"]
+    notes: "战略意义分析"
+
+  - question: "C919 的供应链体系是怎样的？"
+    expected_intent_type: "value_analysis"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/05_applications_value"]
+    notes: "产业链分析"

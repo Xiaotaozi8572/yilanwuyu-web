@@ -1,0 +1,43 @@
+# y20-terms-systems-20260806-candidate
+
+terms:
+  - canonical_name: "动力系统"
+    aliases: ["动力系统", "四发动力"]
+    node_type: "system"
+    definition: "四发涡扇动力"
+    source_id: "y20-science-powerplant-v1"
+  - canonical_name: "货舱系统"
+    aliases: ["货舱系统", "装载系统"]
+    node_type: "system"
+    definition: "装卸与固定系统"
+    source_id: "y20-science-cargo-hold-v1"
+  - canonical_name: "航电系统"
+    aliases: ["航电系统"]
+    node_type: "system"
+    definition: "导航通信与任务航电"
+    source_id: "y20-science-overview-v1"
+  - canonical_name: "飞控系统"
+    aliases: ["飞控系统"]
+    node_type: "system"
+    definition: "大型运输机飞控"
+    source_id: "y20-science-overview-v1"
+  - canonical_name: "燃油系统"
+    aliases: ["燃油系统"]
+    node_type: "system"
+    definition: "大容量机翼油箱"
+    source_id: "y20-science-overview-v1"
+  - canonical_name: "空投系统"
+    aliases: ["空投系统", "空降系统"]
+    node_type: "system"
+    definition: "尾门空投与伞降"
+    source_id: "y20-science-overview-v1"
+  - canonical_name: "防除冰系统"
+    aliases: ["防除冰系统"]
+    node_type: "system"
+    definition: "机翼发动机防冰"
+    source_id: "y20-science-overview-v1"
+  - canonical_name: "空中加油系统"
+    aliases: ["空中加油", "受油系统"]
+    node_type: "system"
+    definition: "受油/加油能力"
+    source_id: "y20-science-powerplant-v1"

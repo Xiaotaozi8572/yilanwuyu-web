@@ -1,0 +1,90 @@
+# C919 气动阻力类术语
+# 领域：阻力构成与减阻
+# 条目数：12
+# node_type 统一为 concept
+# ID 前缀：drag_
+
+terms:
+  - term_id: "drag_001"
+    canonical_name: "阻力"
+    aliases: ["阻力", "drag", "总阻力", "D"]
+    node_type: "concept"
+    definition: "平行于来流方向、阻碍飞机前进的气动力，由诱导阻力和寄生阻力两部分组成，C919 巡航阻力构成飞行的能量消耗"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "drag_002"
+    canonical_name: "诱导阻力"
+    aliases: ["诱导阻力", "induced drag", "升力诱导阻力"]
+    node_type: "concept"
+    definition: "因机翼产生升力时翼尖涡流导致的阻力，与升力系数平方成正比、与展弦比成反比，C919 翼尖小翼可有效降低诱导阻力"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "drag_003"
+    canonical_name: "寄生阻力"
+    aliases: ["寄生阻力", "parasite drag", "废阻力", "零升阻力"]
+    node_type: "concept"
+    definition: "与升力无关的气动阻力，包含摩擦阻力、压差阻力和干扰阻力，C919 通过流线外形和表面光洁度降低寄生阻力"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "drag_004"
+    canonical_name: "激波阻力"
+    aliases: ["激波阻力", "wave drag", "波阻"]
+    node_type: "concept"
+    definition: "跨声速飞行时激波形成产生的阻力，C919 通过超临界翼型将阻力发散马赫数推迟至约 0.82 以上"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "drag_005"
+    canonical_name: "摩擦阻力"
+    aliases: ["摩擦阻力", "skin friction drag", "表面摩擦阻力"]
+    node_type: "concept"
+    definition: "气流粘性在飞机表面产生的剪切力造成的阻力，与表面积和附面层状态有关，层流摩擦阻力低于湍流"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "drag_006"
+    canonical_name: "压差阻力"
+    aliases: ["压差阻力", "pressure drag", "形状阻力", "form drag"]
+    node_type: "concept"
+    definition: "物体前后压差形成的阻力，与外形流线程度有关，流线型机身可显著降低压差阻力"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "drag_007"
+    canonical_name: "干扰阻力"
+    aliases: ["干扰阻力", "interference drag"]
+    node_type: "concept"
+    definition: "部件组合后气流相互干扰产生的附加阻力，C919 通过翼身整流罩和过渡段优化降低干扰阻力"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "drag_008"
+    canonical_name: "阻力发散"
+    aliases: ["阻力发散", "drag divergence", "阻力发散马赫数", "Mdd"]
+    node_type: "concept"
+    definition: "飞行马赫数超过临界值后阻力系数急剧上升的现象，对应马赫数称为阻力发散马赫数，C919 超临界翼型使 Mdd 高于巡航马赫数"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "drag_009"
+    canonical_name: "阻力系数"
+    aliases: ["阻力系数", "drag coefficient", "CD"]
+    node_type: "concept"
+    definition: "无量纲量 CD=D/(0.5·ρ·V²·S)，由寄生阻力系数和诱导阻力系数组成，C919 巡航阻力系数约 0.027-0.030"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "drag_010"
+    canonical_name: "减阻"
+    aliases: ["减阻", "drag reduction", "降阻"]
+    node_type: "concept"
+    definition: "通过气动外形优化、表面处理、翼尖小翼等措施降低阻力的设计手段，C919 综合减阻使巡航升阻比达到约 19"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "drag_011"
+    canonical_name: "层流"
+    aliases: ["层流", "laminar flow", "层流附面层"]
+    node_type: "concept"
+    definition: "流体分层流动、互不混合的状态，层流附面层摩擦阻力低但易分离，C919 通过翼型设计维持自然层流区"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "drag_012"
+    canonical_name: "湍流"
+    aliases: ["湍流", "turbulent flow", "湍流附面层"]
+    node_type: "concept"
+    definition: "流体不规则脉动、强烈混合的状态，湍流附面层摩擦阻力高但抗分离能力强，机翼后段多为湍流附面层"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

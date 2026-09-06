@@ -1,0 +1,96 @@
+# C919 设施与生产关系
+# 描述 C919 国内各大部件生产设施与总装/试飞的关系
+# relation_type: produces / supplies
+# edge_id 前缀：rfac_
+
+relations:
+  # ========== 上海总装与设计 ==========
+  - edge_id: "rfac_001"
+    source_node_id: "facility_shanghai_final_assembly"
+    target_node_id: "c919_aircraft"
+    relation_type: "produces"
+    confidence: 1.0
+    description: "上海浦东总装线(中国商飞总装制造中心)完成 C919 整机总装与交付"
+
+  - edge_id: "rfac_002"
+    source_node_id: "facility_shanghai_design_institute"
+    target_node_id: "c919_aircraft"
+    relation_type: "produces"
+    confidence: 1.0
+    description: "上海飞机设计研究院承担 C919 工程设计与系统集成"
+
+  - edge_id: "rfac_003"
+    source_node_id: "facility_shanghai_flight_test"
+    target_node_id: "c919_aircraft"
+    relation_type: "produces"
+    confidence: 0.95
+    description: "中国商飞试飞中心承担 C919 试飞验证与适航取证"
+
+  # ========== 西安机翼与起落架 ==========
+  - edge_id: "rfac_004"
+    source_node_id: "facility_xian_wing"
+    target_node_id: "comp_wing"
+    relation_type: "produces"
+    confidence: 0.95
+    description: "西安飞机工业(西飞)承担 C919 机翼总装生产"
+
+  - edge_id: "rfac_005"
+    source_node_id: "facility_xian_wing"
+    target_node_id: "comp_center_wingbox"
+    relation_type: "produces"
+    confidence: 0.95
+    description: "西飞承担 C919 中央翼盒生产，机翼主承力件"
+
+  - edge_id: "rfac_006"
+    source_node_id: "facility_xian_lg"
+    target_node_id: "comp_landing_gear"
+    relation_type: "produces"
+    confidence: 0.9
+    description: "西安起落架基地参与 C919 起落架部件制造"
+
+  # ========== 沈阳机身与机尾 ==========
+  - edge_id: "rfac_007"
+    source_node_id: "facility_shenyang_fuselage"
+    target_node_id: "comp_fwd_fuselage"
+    relation_type: "produces"
+    confidence: 0.95
+    description: "沈阳飞机工业(沈飞)承担 C919 前机身(含机头)生产"
+
+  - edge_id: "rfac_008"
+    source_node_id: "facility_shenyang_aftbody"
+    target_node_id: "comp_aft_fuselage"
+    relation_type: "produces"
+    confidence: 0.95
+    description: "沈飞承担 C919 后机身(含尾椎)生产"
+
+  # ========== 成都机头 ==========
+  - edge_id: "rfac_009"
+    source_node_id: "facility_chengdu_nose"
+    target_node_id: "comp_cockpit"
+    relation_type: "produces"
+    confidence: 0.95
+    description: "成都飞机工业(成飞)承担 C919 机头/驾驶舱段生产"
+
+  # ========== 南昌前机身 ==========
+  - edge_id: "rfac_010"
+    source_node_id: "facility_nanchang_fwd_fuselage"
+    target_node_id: "comp_mid_fuselage"
+    relation_type: "produces"
+    confidence: 0.9
+    description: "洪都航空(南昌)承担 C919 中后机身段部分生产"
+
+  # ========== 复合材料 ==========
+  - edge_id: "rfac_011"
+    source_node_id: "facility_shanghai_composite"
+    target_node_id: "comp_radome"
+    relation_type: "produces"
+    confidence: 0.9
+    description: "上海复合材料制造中心承担 C919 雷达罩与复合材料部件生产"
+
+  # ========== 垂尾 ==========
+  - edge_id: "rfac_012"
+    source_node_id: "facility_shenyang_tail"
+    target_node_id: "comp_vertical_stabilizer"
+    relation_type: "produces"
+    confidence: 0.9
+    description: "沈飞/哈飞联合承担 C919 垂直尾翼部件生产"

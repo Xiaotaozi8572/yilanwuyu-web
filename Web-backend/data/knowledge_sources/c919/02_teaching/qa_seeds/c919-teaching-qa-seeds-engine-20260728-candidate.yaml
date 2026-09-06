@@ -1,0 +1,47 @@
+# C919 发动机专项讲解侧问答种子（非评测种子）
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / question / audience / teaching_point
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+qa_seeds:
+  - id: "eng-qa-001-engine-model"
+    question: "C919 用的是什么发动机？"
+    audience: "普通公众/中学生"
+    teaching_point: "当前使用 CFM 国际（美法合资）LEAP-1C。标准型 LEAP-1C28 推力 129.98 kN，延程型 LEAP-1C30 推力 137.14 kN。CFM 是 GE 航空+赛峰合资，选用成熟发动机是行业通行做法。"
+
+  - id: "eng-qa-002-cj1000a"
+    question: "国产发动机什么时候能装 C919？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "国产 CJ-1000A（长江-1000A）由中国航发集团研制，对标 LEAP-1C 同代水平，预计 2027-2028 取证。差距主要在长期可靠性数据和供应链成熟度。先用 LEAP-1C、同步研制 CJ-1000A 是两条腿走路策略。"
+
+  - id: "eng-qa-003-bypass-ratio"
+    question: "涵道比 11:1 是什么意思？"
+    audience: "航空爱好者/有专业兴趣的公众"
+    teaching_point: "11 份空气中约 10 份走外涵道只加速不烧油、1 份进核心机燃烧。高涵道比推进效率高、油耗低（较 CFM56 降约 15%），但风扇直径增大受离地间隙限制、推力响应变慢。11:1 是同代工程平衡点。"
+
+  - id: "eng-qa-004-thrust-weight"
+    question: "C919 发动机推力够用吗？"
+    audience: "航空爱好者"
+    teaching_point: "两台 LEAP-1C 合计约 26 吨推力，托起最大起飞重量约 77 吨的飞机，推重比约 0.34，是窄体客机典型水平。推力选型需兼顾起降、高温高原、单发失效复飞等工况，不是越大越好。"
+
+  - id: "eng-qa-005-fuel-consumption"
+    question: "C919 比老款 A320/B737 省油吗？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "LEAP-1C 较上一代 CFM56 降油耗约 15%。C919 综合气动效率提升和发动机油耗降低，整体燃油效率较上一代窄体客机基准提升约 15-20%。但与装 LEAP-1A 的 A320neo 基本同级。"
+
+  - id: "eng-qa-006-engine-location"
+    question: "C919 发动机为什么挂在机翼下面？"
+    audience: "中学生/航空爱好者"
+    teaching_point: "翼下吊挂是现代客机的主流布局：结构上传力路径短（机翼直接承受发动机重量）、维护方便（地面可达）、进气气流稳定。缺点是发动机离地近需防异物损伤。C919 与 A320/B737 一样采用翼下吊挂。"
+
+  - id: "eng-qa-007-reverse-thrust"
+    question: "C919 落地后发动机为什么会有很大的声音？"
+    audience: "普通公众"
+    teaching_point: "那是反推装置打开的声音。着陆后发动机打开反推（Thrust Reverser），把排气向前偏转产生反向推力减速。反推配合刹车和扰流板缩短着陆滑跑距离，尤其在湿滑跑道很重要。反推不是发动机故障。"
+
+  - id: "eng-qa-008-engine-bird-strike"
+    question: "C919 发动机吸入飞鸟会怎样？"
+    audience: "普通公众/中学生"
+    teaching_point: "按 CCAR-25.901/E 部要求，发动机需通过鸟击试验：吸入规定数量和大小的鸟后不爆炸、不失控、能继续产生部分推力。C919 的 LEAP-1C 风扇叶片采用复合材料，经过鸟击验证。但大鸟群仍可能导致发动机失效，所以机场有驱鸟措施。"

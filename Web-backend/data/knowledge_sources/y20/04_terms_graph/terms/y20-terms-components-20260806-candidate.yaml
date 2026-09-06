@@ -1,0 +1,53 @@
+# y20-terms-components-20260806-candidate
+
+terms:
+  - canonical_name: "机身"
+    aliases: ["机身", "fuselage"]
+    node_type: "component"
+    definition: "机身长47米"
+    source_id: "y20-science-overview-v1"
+  - canonical_name: "上单翼"
+    aliases: ["上单翼", "机翼"]
+    node_type: "component"
+    definition: "后掠上单翼，翼展50米"
+    source_id: "y20-science-highwing-shortfield-v1"
+  - canonical_name: "T形尾翼"
+    aliases: ["T形尾翼", "尾翼"]
+    node_type: "component"
+    definition: "位于机翼后上方"
+    source_id: "y20-science-overview-v1"
+  - canonical_name: "货舱"
+    aliases: ["货舱", "cargo hold"]
+    node_type: "component"
+    definition: "高约4米的货舱段"
+    source_id: "y20-science-cargo-hold-v1"
+  - canonical_name: "尾门坡道"
+    aliases: ["尾门坡道", "尾货门"]
+    node_type: "component"
+    definition: "装卸与空投的尾部通道"
+    source_id: "y20-science-cargo-hold-v1"
+  - canonical_name: "货舱地板"
+    aliases: ["货舱地板"]
+    node_type: "component"
+    definition: "强化地板支撑重载"
+    source_id: "y20-science-cargo-hold-v1"
+  - canonical_name: "前起落架"
+    aliases: ["前起落架"]
+    node_type: "component"
+    definition: "前三点起落架前轮"
+    source_id: "y20-science-overview-v1"
+  - canonical_name: "主起落架"
+    aliases: ["主起落架"]
+    node_type: "component"
+    definition: "多轮主起落架"
+    source_id: "y20-science-overview-v1"
+  - canonical_name: "发动机短舱"
+    aliases: ["发动机短舱", "短舱"]
+    node_type: "component"
+    definition: "四发短舱吊架"
+    source_id: "y20-science-powerplant-v1"
+  - canonical_name: "客舱甲板"
+    aliases: ["客舱甲板"]
+    node_type: "component"
+    definition: "货舱上方加装的人员甲板"
+    source_id: "y20-science-cargo-hold-v1"

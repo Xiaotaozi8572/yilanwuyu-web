@@ -1,0 +1,90 @@
+# C919 复合材料类术语
+# 领域：复合材料
+# 条目数：12
+# node_type 统一为 concept
+# ID 前缀：matcomp_
+
+terms:
+  - term_id: "matcomp_001"
+    canonical_name: "复合材料"
+    aliases: ["复合材料", "composite material", "复合材料", "复合材质"]
+    node_type: "concept"
+    definition: "由两种或以上材料组合形成的新型材料，C919 复合材料用量约 12%，主要用于尾翼、整流罩等"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matcomp_002"
+    canonical_name: "碳纤维"
+    aliases: ["碳纤维", "carbon fiber", "CF", "碳纤维增强体"]
+    node_type: "concept"
+    definition: "高强度高模量碳元素纤维，作为复合材料增强体，C919 复合件主要采用碳纤维增强环氧树脂"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matcomp_003"
+    canonical_name: "玻璃纤维"
+    aliases: ["玻璃纤维", "glass fiber", "GF", "玻纤"]
+    node_type: "concept"
+    definition: "玻璃熔融拉制的纤维，强度和模量低于碳纤维，C919 部分非承力件采用玻璃纤维复合材料"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matcomp_004"
+    canonical_name: "环氧树脂"
+    aliases: ["环氧树脂", "epoxy resin", "epoxy", "环氧基体"]
+    node_type: "concept"
+    definition: "复合材料常用热固性树脂基体，C919 复合件采用高性能环氧树脂作为基体材料"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matcomp_005"
+    canonical_name: "预浸料"
+    aliases: ["预浸料", "prepreg", "预浸渍料"]
+    node_type: "concept"
+    definition: "纤维预先浸渍树脂的半成品材料，按铺层设计贴模后固化成型，C919 复合件采用碳纤维预浸料"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matcomp_006"
+    canonical_name: "铺层"
+    aliases: ["铺层", "layup", "铺层设计", "铺贴"]
+    node_type: "concept"
+    definition: "按设计角度和顺序铺贴预浸料的过程，决定层合板力学性能，C919 复合件铺层经优化设计"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matcomp_007"
+    canonical_name: "固化"
+    aliases: ["固化", "cure", "热压固化", "固化工艺"]
+    node_type: "concept"
+    definition: "在温度和压力下使树脂交联固化的过程，C919 复合件在热压罐中按固化工艺曲线成型"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matcomp_008"
+    canonical_name: "RTM"
+    aliases: ["RTM", "Resin Transfer Molding", "树脂传递模塑"]
+    node_type: "concept"
+    definition: "将液态树脂注入闭合模具中预制件成型的工艺，C919 部分复合件采用 RTM 工艺降低成本"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matcomp_009"
+    canonical_name: "蜂窝"
+    aliases: ["蜂窝", "honeycomb", "蜂窝芯", "蜂窝结构"]
+    node_type: "concept"
+    definition: "六边形蜂窝状芯材，重量轻刚度大，C919 夹层结构采用 Nomex 蜂窝芯提高比刚度"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matcomp_010"
+    canonical_name: "夹层"
+    aliases: ["夹层", "sandwich", "夹层结构", "夹芯结构"]
+    node_type: "concept"
+    definition: "两面板中间夹芯材的复合结构，重量轻刚度大，C919 操纵面和整流罩采用夹层结构"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matcomp_011"
+    canonical_name: "各向异性"
+    aliases: ["各向异性", "anisotropy", "各向异性材料"]
+    node_type: "concept"
+    definition: "材料性能随方向变化的特性，复合材料多为各向异性，C919 复合件设计需考虑铺层方向力学差异"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matcomp_012"
+    canonical_name: "层间剪切"
+    aliases: ["层间剪切", "interlaminar shear", "层间剪切强度"]
+    node_type: "concept"
+    definition: "复合材料层间承受剪切的能力，是层合板薄弱环节，C919 复合件设计避免层间剪切主导失效"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

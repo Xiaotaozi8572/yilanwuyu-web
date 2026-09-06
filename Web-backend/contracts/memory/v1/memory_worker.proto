@@ -1,0 +1,98 @@
+syntax = "proto3";
+
+package yilan.memory.v1;
+
+option java_multiple_files = true;
+option java_package = "com.yilan.memory.contract.v1";
+
+// Replaceable, stateless Java-to-Python intelligence plugin. The service can
+// propose candidates and calculate embeddings; it cannot persist, promote,
+// confirm, disable, delete, or otherwise govern authoritative memory.
+service CandidateProposalService {
+  rpc ProposeCandidates(ProposalRequest) returns (ProposalResponse);
+  rpc EmbedMemoryTexts(EmbeddingRequest) returns (EmbeddingResponse);
+}
+
+message ProposalRequest {
+  string request_id = 1;
+  string schema_version = 2;
+  string event_id = 3;
+  string source_id = 4;
+  // Default typed maximum source bytes: 4096. Input must be valid UTF-8; the
+  // worker rejects larger input and never persists this field.
+  string authorized_source_text = 5;
+  repeated string allowed_candidate_types = 6;
+  string locale = 7;
+  string policy_version = 8;
+  string traceparent = 9;
+}
+
+message ProposalResponse {
+  string request_id = 1;
+  string schema_version = 2;
+  // The default typed maximum proposals: 6; the worker enforces this bound.
+  repeated CandidateProposal proposals = 3;
+  // The default typed maximum response bytes: 16384; failure returns no
+  // proposals and a diagnostic code.
+  string diagnostic_code = 4;
+  string trace_id = 5;
+}
+
+message CandidateProposal {
+  string candidate_id = 1;
+  string memory_type = 2;
+  string normalized_value_json = 3;
+  double confidence = 4;
+  string privacy_class = 5;
+  repeated SourceSpan source_spans = 6;
+  ModelMetadata model_metadata = 7;
+}
+
+message SourceSpan {
+  string source_id = 1;
+  // UTF-8 byte offsets into the complete authorized_source_text, with
+  // start_offset < end_offset and both positions at UTF-8 character boundaries.
+  uint32 start_offset = 2;
+  uint32 end_offset = 3;
+  string source_digest = 4;
+}
+
+message ModelMetadata {
+  string model_id = 1;
+  string model_version = 2;
+  string prompt_version = 3;
+  string provider_id = 4;
+}
+
+message EmbeddingRequest {
+  string request_id = 1;
+  string schema_version = 2;
+  repeated EmbeddingInput inputs = 3;
+  string requested_model_id = 4;
+  string requested_model_version = 5;
+  uint32 requested_dimension = 6;
+  string requested_normalization = 7;
+  string traceparent = 8;
+}
+
+message EmbeddingInput {
+  string source_id = 1;
+  string authorized_text = 2;
+}
+
+message EmbeddingResponse {
+  string request_id = 1;
+  string schema_version = 2;
+  repeated EmbeddingResult results = 3;
+  string diagnostic_code = 4;
+  string trace_id = 5;
+}
+
+message EmbeddingResult {
+  string source_id = 1;
+  repeated float values = 2;
+  string model_id = 3;
+  string model_version = 4;
+  uint32 dimension = 5;
+  string normalization = 6;
+}

@@ -1,0 +1,76 @@
+# C919 附面层类术语
+# 领域：附面层与粘性流动
+# 条目数：10
+# node_type 统一为 concept
+# ID 前缀：bl_
+
+terms:
+  - term_id: "bl_001"
+    canonical_name: "附面层"
+    aliases: ["附面层", "边界层", "boundary layer", "粘性底层"]
+    node_type: "concept"
+    definition: "紧贴物面流速受粘性影响的薄层流体，分层流附面层和湍流附面层，其分离会导致失速，C919 翼型设计控制附面层发展"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "bl_002"
+    canonical_name: "层流附面层"
+    aliases: ["层流附面层", "laminar boundary layer"]
+    node_type: "concept"
+    definition: "流体分层流动、互不混合的附面层，摩擦阻力低但抗分离能力弱，C919 翼型前段维持层流以降低摩擦阻力"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "bl_003"
+    canonical_name: "湍流附面层"
+    aliases: ["湍流附面层", "turbulent boundary layer"]
+    node_type: "concept"
+    definition: "流体不规则脉动、强烈混合的附面层，摩擦阻力高但抗分离能力强，C919 机翼后段多为湍流附面层"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "bl_004"
+    canonical_name: "转捩"
+    aliases: ["转捩", "transition", "层流转捩"]
+    node_type: "concept"
+    definition: "附面层从层流发展为湍流的过程，受雷诺数、压力梯度和表面粗糙度影响，C919 通过翼型优化推迟转捩位置"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "bl_005"
+    canonical_name: "分离"
+    aliases: ["分离", "separation", "气流分离", "附面层分离"]
+    node_type: "concept"
+    definition: "附面层在逆压梯度作用下脱离物面的现象，导致升力下降和阻力增加，C919 通过缝翼和涡发生器抑制分离"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "bl_006"
+    canonical_name: "再附"
+    aliases: ["再附", "reattachment", "气流再附"]
+    node_type: "concept"
+    definition: "分离后的气流重新贴合物面的现象，常见于激波诱导分离后的再附，影响抖振边界和操纵特性"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "bl_007"
+    canonical_name: "位移厚度"
+    aliases: ["位移厚度", "displacement thickness", "δ*"]
+    node_type: "concept"
+    definition: "附面层使外部无粘流流线外移的等效厚度 δ*=∫(1-ρu/ρeue)dy，反映附面层对外部流场的阻塞效应"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "bl_008"
+    canonical_name: "动量厚度"
+    aliases: ["动量厚度", "momentum thickness", "θ"]
+    node_type: "concept"
+    definition: "附面层动量损失的等效厚度 θ=∫(ρu/ρeue)(1-u/ue)dy，用于计算表面摩擦阻力"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "bl_009"
+    canonical_name: "表面摩擦"
+    aliases: ["表面摩擦", "skin friction", "壁面剪切应力"]
+    node_type: "concept"
+    definition: "粘性流体在物面产生的切向剪切应力，是摩擦阻力的来源，层流表面摩擦低于湍流"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "bl_010"
+    canonical_name: "涡发生器"
+    aliases: ["涡发生器", "vortex generator", "VG"]
+    node_type: "concept"
+    definition: "安装在机翼或机身表面的小翼片，通过产生流向涡为附面层注入能量，延缓分离，C919 在特定位置安装涡发生器改善大迎角特性"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

@@ -1,0 +1,92 @@
+# C919 航电系统内部关系
+# 描述 IMA 综合模块化航电架构的内部组件与功能关系
+# relation_type: part_of / controls / feeds_to
+# edge_id 前缀：rav_
+
+relations:
+  # ========== part_of 航电组件归属 IMA ==========
+  - edge_id: "rav_001"
+    source_node_id: "comp_display_unit"
+    target_node_id: "sys_avionics"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "显示单元是 IMA 航电的人机界面，包含主飞行显示(PFD)和导航显示(ND)"
+
+  - edge_id: "rav_002"
+    source_node_id: "comp_display_management_computer"
+    target_node_id: "sys_avionics"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "显示管理计算机集中处理图像数据，分配至各显示单元呈现"
+
+  - edge_id: "rav_003"
+    source_node_id: "comp_fmc"
+    target_node_id: "sys_avionics"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "飞行管理计算机(FMC)负责导航、飞行计划与性能计算"
+
+  - edge_id: "rav_004"
+    source_node_id: "comp_adc"
+    target_node_id: "sys_avionics"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "大气数据计算机(ADC)将皮托管和静压孔数据转换为大气数据参数"
+
+  - edge_id: "rav_005"
+    source_node_id: "comp_irs"
+    target_node_id: "sys_avionics"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "惯性基准系统(IRS)提供飞机姿态、航向和加速度信息"
+
+  - edge_id: "rav_006"
+    source_node_id: "sys_comm_nav"
+    target_node_id: "sys_avionics"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "通信导航系统是航电系统的组成部分，含 VHF、HF、无线电导航等"
+
+  - edge_id: "rav_007"
+    source_node_id: "sys_weather_radar"
+    target_node_id: "sys_avionics"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "气象雷达是航电系统的组成部分，探测航路恶劣天气"
+
+  - edge_id: "rav_008"
+    source_node_id: "sys_egpws"
+    target_node_id: "sys_avionics"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "近地警告系统(EGPWS)是航电系统的组成部分，提供地形与下降率警告"
+
+  - edge_id: "rav_009"
+    source_node_id: "sys_tcas"
+    target_node_id: "sys_avionics"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "空中防撞系统(TCAS)是航电系统的组成部分，监控周边飞机避免相撞"
+
+  - edge_id: "rav_010"
+    source_node_id: "comp_data_loader"
+    target_node_id: "sys_avionics"
+    relation_type: "part_of"
+    confidence: 0.95
+    description: "数据加载机为航电子系统提供导航数据库和软件加载接口"
+
+  # ========== controls 航电控制关系 ==========
+  - edge_id: "rav_011"
+    source_node_id: "comp_fmc"
+    target_node_id: "sys_navigation"
+    relation_type: "controls"
+    confidence: 0.95
+    description: "飞行管理计算机控制导航计算与飞行计划执行"
+
+  # ========== feeds_to 航电数据流向 ==========
+  - edge_id: "rav_012"
+    source_node_id: "sys_egpws"
+    target_node_id: "comp_display_unit"
+    relation_type: "feeds_to"
+    confidence: 0.95
+    description: "EGPWS 警告信息通过显示管理计算机送至显示单元呈现给飞行员"

@@ -1,0 +1,28 @@
+{
+  "template_id": "experimental_teaching_strategy",
+  "version": "v2",
+  "parent_version": "v1",
+  "change_reason": "Add explicit candidate-only labeling and evaluation hooks.",
+  "created_at": "2026-07-09T00:00:00Z",
+  "review_status": "candidate",
+  "snapshot_id": "experimental_teaching_strategy_v2",
+  "variables": [
+    {
+      "name": "rag_evidence",
+      "source": "evidence_package",
+      "value_type": "evidence_summary",
+      "required": true,
+      "missing_behavior": "clarification",
+      "description": "Evidence boundary for the experiment."
+    },
+    {
+      "name": "output_contract",
+      "source": "runtime",
+      "value_type": "json_schema_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Runtime output rules."
+    }
+  ],
+  "content": "You are prototyping a teaching strategy.\n1. Read {{rag_evidence}} first and list the claims that may be taught.\n2. Compare two supported explanation orders briefly.\n3. Note the likely learner tradeoff without claiming it is approved for runtime.\n4. Keep every claim inside the evidence boundary.\n5. Follow {{output_contract}} exactly."
+}

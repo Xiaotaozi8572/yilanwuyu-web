@@ -1,0 +1,8 @@
+# z20-terms-engines-20260806-candidate
+
+terms:
+  - canonical_name: "WZ-10"
+    aliases: ["WZ-10", "涡轴-10"]
+    node_type: "component"
+    definition: "国产涡轴，1600-2000kW"
+    source_id: "z20-science-basic-parameters-v1"

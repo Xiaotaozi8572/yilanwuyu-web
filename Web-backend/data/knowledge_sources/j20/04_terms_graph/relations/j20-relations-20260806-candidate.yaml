@@ -1,0 +1,99 @@
+# 歼-20 关系种子
+# 字段对齐 GraphEdge
+# relation_type: part_of / depends_on / derives_from / parameter_of / compared_with
+
+relations:
+  - edge_id: "j20_airframe_part_of_j20"
+    source_node_id: "j20_airframe"
+    target_node_id: "j20_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+
+  - edge_id: "j20_powerplant_part_of_j20"
+    source_node_id: "j20_powerplant"
+    target_node_id: "j20_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+
+  - edge_id: "j20_avionics_part_of_j20"
+    source_node_id: "j20_avionics"
+    target_node_id: "j20_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+
+  - edge_id: "j20_weapons_part_of_j20"
+    source_node_id: "j20_weapons"
+    target_node_id: "j20_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+
+  - edge_id: "j20_stealth_part_of_j20"
+    source_node_id: "j20_stealth"
+    target_node_id: "j20_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+
+  - edge_id: "ws15_part_of_powerplant"
+    source_node_id: "ws15_engine"
+    target_node_id: "j20_powerplant"
+    relation_type: "part_of"
+    confidence: 1.0
+
+  - edge_id: "j20_avionics_depends_powerplant"
+    source_node_id: "j20_avionics"
+    target_node_id: "j20_powerplant"
+    relation_type: "depends_on"
+    confidence: 0.7
+    metadata:
+      note: "发电机由发动机驱动"
+
+  - edge_id: "j20_stealth_depends_airframe"
+    source_node_id: "j20_stealth"
+    target_node_id: "j20_airframe"
+    relation_type: "depends_on"
+    confidence: 0.9
+    metadata:
+      note: "隐身以外形设计为基础"
+
+  - edge_id: "j20_mach2_param_of_aircraft"
+    source_node_id: "j20_aircraft"
+    target_node_id: "j20_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "最大速度"
+      value: "Mach 2.0"
+
+  - edge_id: "j20_ff2011_param_of_aircraft"
+    source_node_id: "j20_aircraft"
+    target_node_id: "j20_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "首飞日期"
+      value: "2011-01-11"
+
+  - edge_id: "j20_service2017_param_of_aircraft"
+    source_node_id: "j20_aircraft"
+    target_node_id: "j20_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "服役日期"
+      value: "2017-03-08"
+
+  - edge_id: "j20_compared_f22"
+    source_node_id: "j20_aircraft"
+    target_node_id: "f22_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    metadata:
+      comparison_source: "j20-science-vs-f22-v1"
+
+  - edge_id: "j20_compared_f35"
+    source_node_id: "j20_aircraft"
+    target_node_id: "f35_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    metadata:
+      comparison_source: "j20-science-vs-f35-v1"

@@ -1,0 +1,93 @@
+# C919 材料实体
+# 机体结构及系统所用材料
+# node_type: material
+# node_id 前缀：mat_
+
+entities:
+  - node_id: "mat_al_li"
+    node_type: "material"
+    canonical_name: "铝锂合金"
+    aliases: ["铝锂合金", "Al-Li alloy", "Aluminum Lithium"]
+    description: "C919 广泛应用的先进轻质合金，全机铝锂合金占比约 8.8%，用于机身桁条蒙皮减重"
+    specifications:
+      usage_pct: 8.8
+    applicable_aircraft: ["c919"]
+
+  - node_id: "mat_2024_al"
+    node_type: "material"
+    canonical_name: "2024 铝合金"
+    aliases: ["2024 铝合金", "2024 Aluminum", "Al 2024"]
+    description: "传统航空铝合金，以铜为主要合金元素，C919 部分机身蒙皮及翼肋沿用 2024 合金"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "mat_7075_al"
+    node_type: "material"
+    canonical_name: "7075 铝合金"
+    aliases: ["7075 铝合金", "7075 Aluminum", "Al 7075"]
+    description: "高强度铝合金，以锌为主要合金元素，C919 起落架及高承载接头采用 7075 合金"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "mat_titanium"
+    node_type: "material"
+    canonical_name: "钛合金"
+    aliases: ["钛合金", "Titanium alloy", "Ti alloy"]
+    description: "高比强度耐高温合金，C919 发动机吊架、高承载区及防火墙采用钛合金"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "mat_carbon_composite"
+    node_type: "material"
+    canonical_name: "碳纤维复合材料"
+    aliases: ["碳纤维复合材料", "CFRP", "Carbon Fiber Composite"]
+    description: "C919 全机复合材料占比约 12%，碳纤维用于机翼蒙皮、尾翼及 LEAP-1C 风扇叶片"
+    specifications:
+      usage_pct: 12
+    applicable_aircraft: ["c919"]
+
+  - node_id: "mat_epoxy"
+    node_type: "material"
+    canonical_name: "环氧树脂"
+    aliases: ["环氧树脂", "Epoxy resin", "Epoxy"]
+    description: "碳纤维复合材料基体树脂，C919 复合件采用环氧树脂体系提供韧性及耐热性能"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "mat_honeycomb"
+    node_type: "material"
+    canonical_name: "蜂窝芯"
+    aliases: ["蜂窝芯", "Honeycomb core", "Nomex 蜂窝"]
+    description: "夹层结构芯材，C919 客舱地板、舱门及部分整流罩采用 Nomex 蜂窝夹芯结构减重"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "mat_fiberglass"
+    node_type: "material"
+    canonical_name: "玻璃纤维"
+    aliases: ["玻璃纤维", "Fiberglass", "Glass fiber"]
+    description: "玻璃纤维复合材料，C919 雷达罩及部分整流罩采用玻璃纤维保证透波及成形"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "mat_aluminum"
+    node_type: "material"
+    canonical_name: "铝合金"
+    aliases: ["铝合金", "Aluminum alloy", "Al alloy"]
+    description: "传统航空主结构材料，C919 机身及机翼主体仍以铝合金为基，搭配铝锂合金减重"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "mat_stainless_steel"
+    node_type: "material"
+    canonical_name: "不锈钢"
+    aliases: ["不锈钢", "Stainless steel", "CRES"]
+    description: "耐腐蚀高强度钢，C919 液压管路、紧固件及高温区结构件采用不锈钢"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "mat_copper"
+    node_type: "material"
+    canonical_name: "铜"
+    aliases: ["铜", "Copper", "Cu"]
+    description: "导电导热金属，C919 电气线束导体、汇流条及热交换器采用铜及铜合金"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "mat_rubber"
+    node_type: "material"
+    canonical_name: "橡胶"
+    aliases: ["橡胶", "Rubber", "Elastomer"]
+    description: "弹性密封材料，C919 舱门密封、减震件及液压密封采用航空耐油橡胶"
+    applicable_aircraft: ["c919"]

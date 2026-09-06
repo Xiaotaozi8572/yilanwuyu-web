@@ -1,0 +1,91 @@
+# C919 对比与派生关系
+# 按机型对比拆分：compared_with / derives_from / parameter_of 关系
+# edge_id 前缀：cmprel_
+
+relations:
+  # ========== compared_with 机型对比 ==========
+  - edge_id: "cmprel_001"
+    source_node_id: "c919_aircraft"
+    target_node_id: "a320_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    description: "C919 与空客 A320 同属 150-190 座级窄体干线客机，是直接对标机型"
+
+  - edge_id: "cmprel_002"
+    source_node_id: "c919_aircraft"
+    target_node_id: "b737_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    description: "C919 与波音 737 同属 150-190 座级窄体干线客机，是主要竞争机型"
+
+  # ========== derives_from 派生 ==========
+  - edge_id: "cmprel_003"
+    source_node_id: "c919_600"
+    target_node_id: "c919_100std"
+    relation_type: "derives_from"
+    confidence: 0.85
+    description: "C919-600 缩短型派生自 C919-100STD 标准型，缩短机身适配中短程市场"
+
+  - edge_id: "cmprel_004"
+    source_node_id: "c919_800"
+    target_node_id: "c919_100std"
+    relation_type: "derives_from"
+    confidence: 0.85
+    description: "C919-800 加长型派生自 C919-100STD 标准型，加长机身适配大客流市场"
+
+  - edge_id: "cmprel_005"
+    source_node_id: "c919_cj1000a"
+    target_node_id: "c919_leap1c"
+    relation_type: "derives_from"
+    confidence: 0.8
+    description: "CJ-1000A 国产发动机在技术路线上参考 LEAP-1C 的设计理念"
+
+  # ========== parameter_of 参数关系 ==========
+  - edge_id: "cmprel_006"
+    source_node_id: "comp_wing"
+    target_node_id: "comp_wing"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "翼展约 35.8 米，是 C919 机翼的关键几何参数"
+
+  - edge_id: "cmprel_007"
+    source_node_id: "c919_aircraft"
+    target_node_id: "c919_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "最大起飞重量约 77,300 kg（MTOW），是 C919 的关键重量参数"
+
+  - edge_id: "cmprel_008"
+    source_node_id: "c919_aircraft"
+    target_node_id: "c919_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "标准航程 4,075 km，延程航程 5,555 km，是 C919 的关键性能参数"
+
+  - edge_id: "cmprel_009"
+    source_node_id: "c919_leap1c"
+    target_node_id: "c919_leap1c"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "LEAP-1C28 最大起飞推力 129.98 kN，LEAP-1C30 为 137.14 kN"
+
+  - edge_id: "cmprel_010"
+    source_node_id: "c919_aircraft"
+    target_node_id: "c919_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "典型客载 158-168 座，3-3 经济舱布局，是 C919 的客舱容量参数"
+
+  - edge_id: "cmprel_011"
+    source_node_id: "c919_aircraft"
+    target_node_id: "c919_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "巡航速度约 Mach 0.785，是 C919 的关键飞行性能参数"
+
+  - edge_id: "cmprel_012"
+    source_node_id: "c919_aircraft"
+    target_node_id: "c919_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "最大使用高度 12,200 m，是 C919 的关键飞行包线参数"

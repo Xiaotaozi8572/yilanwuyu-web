@@ -1,0 +1,90 @@
+# C919 尾翼结构类术语
+# 领域：尾翼结构与操纵面
+# 条目数：12
+# node_type 统一为 component
+# ID 前缀：emp_
+
+terms:
+  - term_id: "emp_001"
+    canonical_name: "垂直尾翼"
+    aliases: ["垂直尾翼", "vertical tail", "垂尾", "垂直安定面"]
+    node_type: "component"
+    definition: "飞机垂直尾翼组件，提供航向稳定性，C919 垂尾采用铝合金和复合材料结构，后掠角设计"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "emp_002"
+    canonical_name: "水平尾翼"
+    aliases: ["水平尾翼", "horizontal tail", "平尾", "水平安定面"]
+    node_type: "component"
+    definition: "飞机水平尾翼组件，提供纵向稳定性和俯仰操纵，C919 平尾采用全动或可调安装角设计"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "emp_003"
+    canonical_name: "方向舵"
+    aliases: ["方向舵", "rudder", "方向舵面"]
+    node_type: "component"
+    definition: "垂尾后缘可偏转的操纵面，用于航向控制，C919 方向舵由液压作动器驱动，配偏航阻尼器"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "emp_004"
+    canonical_name: "升降舵"
+    aliases: ["升降舵", "elevator", "升降舵面"]
+    node_type: "component"
+    definition: "平尾后缘可偏转的操纵面，用于俯仰控制，C919 升降舵由电传操纵系统通过作动器驱动"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "emp_005"
+    canonical_name: "安定面"
+    aliases: ["安定面", "stabilizer", "固定安定面"]
+    node_type: "component"
+    definition: "尾翼固定的安定面部分，提供稳定性，C919 水平安定面可通过配平机构调整安装角"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "emp_006"
+    canonical_name: "配平片"
+    aliases: ["配平片", "trim tab", "配平调整片"]
+    node_type: "component"
+    definition: "操纵面后缘的小可调翼面，用于卸除驾驶杆力实现配平，C919 通过配平片或安定面配平实现巡航卸载"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "emp_007"
+    canonical_name: "腹鳍"
+    aliases: ["腹鳍", "ventral fin", "下垂尾", "腹翅"]
+    node_type: "component"
+    definition: "机身下部腹部的垂直翼面，辅助增强航向稳定性，大迎角时垂尾效率降低时发挥作用"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "emp_008"
+    canonical_name: "背鳍"
+    aliases: ["背鳍", "dorsal fin", "脊鳍"]
+    node_type: "component"
+    definition: "机身背部垂尾前方的整流翼面，改善垂尾根部流场和航向稳定性，延长垂尾有效展长"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "emp_009"
+    canonical_name: "翼根"
+    aliases: ["尾翼翼根", "tail root", "尾翼根部"]
+    node_type: "component"
+    definition: "尾翼与机身连接的根部区域，承受尾翼弯矩和剪力，C919 尾翼根部接头采用高强度紧固件"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "emp_010"
+    canonical_name: "翼尖"
+    aliases: ["尾翼翼尖", "tail tip", "垂尾顶", "平尾尖"]
+    node_type: "component"
+    definition: "尾翼最外端，C919 垂尾顶部常安装天线和频闪灯，平尾翼尖减轻结构重量"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "emp_011"
+    canonical_name: "后掠角"
+    aliases: ["尾翼后掠角", "tail sweep angle", "后掠"]
+    node_type: "concept"
+    definition: "尾翼参考线与横轴的夹角，后掠可提高尾翼临界马赫数并降低波阻，C919 垂尾和平尾均采用后掠设计"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "emp_012"
+    canonical_name: "安装角"
+    aliases: ["尾翼安装角", "tail incidence", "配平角"]
+    node_type: "concept"
+    definition: "尾翼弦线与机身纵轴的夹角，影响纵向平衡，C919 水平安定面安装角可通过配平机构调节"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

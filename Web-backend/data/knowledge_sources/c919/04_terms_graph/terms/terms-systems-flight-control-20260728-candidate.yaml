@@ -1,0 +1,90 @@
+# C919 飞控类术语
+# 领域：飞行控制系统
+# 条目数：12
+# node_type 统一为 system
+# ID 前缀：fc_
+
+terms:
+  - term_id: "fc_001"
+    canonical_name: "电传操纵"
+    aliases: ["电传操纵", "fly-by-wire", "FBW", "电传飞控"]
+    node_type: "system"
+    definition: "用电气信号取代机械拉杆传递驾驶员指令的飞控系统，C919 全权限数字式电传飞控采用三余度架构"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fc_002"
+    canonical_name: "控制律"
+    aliases: ["控制律", "control law", "控制规律"]
+    node_type: "system"
+    definition: "飞控计算机将驾驶员输入和飞机状态转换为舵面指令的算法，C919 控制律实现正常/降级/直接三级模式"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fc_003"
+    canonical_name: "正常模式"
+    aliases: ["正常模式", "normal mode", "正常控制律"]
+    node_type: "system"
+    definition: "飞控全功能工作模式，提供增稳和包线保护，C919 正常模式保证最佳操纵品质和安全性"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fc_004"
+    canonical_name: "备用模式"
+    aliases: ["备用模式", "alternate mode", "降级模式", "备用控制律"]
+    node_type: "system"
+    definition: "飞控部分功能失效后的降级模式，丧失部分包线保护，C919 备用模式在故障时自动切换"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fc_005"
+    canonical_name: "直接模式"
+    aliases: ["直接模式", "direct mode", "直接控制律"]
+    node_type: "system"
+    definition: "飞控最简化模式，驾驶员指令直接对应舵面偏转无增稳，C919 直接模式作为最后备份保证安全着陆"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fc_006"
+    canonical_name: "包线保护"
+    aliases: ["包线保护", "envelope protection", "飞行包线保护"]
+    node_type: "system"
+    definition: "飞控防止飞机超出安全飞行边界的功能，C919 包线保护涵盖俯仰、坡度、失速和超速"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fc_007"
+    canonical_name: "俯仰保护"
+    aliases: ["俯仰保护", "pitch protection", "俯仰姿态保护"]
+    node_type: "system"
+    definition: "防止飞机俯仰角超出安全范围的飞控功能，C919 俯仰保护限制过大上仰和下俯"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fc_008"
+    canonical_name: "坡度保护"
+    aliases: ["坡度保护", "bank angle protection", "滚转保护"]
+    node_type: "system"
+    definition: "防止飞机坡度角超出安全范围的飞控功能，C919 坡度保护限制过大滚转角"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fc_009"
+    canonical_name: "失速保护"
+    aliases: ["失速保护", "stall protection", "失速预防"]
+    node_type: "system"
+    definition: "防止飞机进入失速的飞控功能，含抖杆器和自动推杆，C919 失速保护通过迎角限制和抖振预警实现"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fc_010"
+    canonical_name: "超速保护"
+    aliases: ["超速保护", "overspeed protection", "速度保护"]
+    node_type: "system"
+    definition: "防止飞机速度超过最大允许速度的飞控功能，C919 超速保护自动拉起或减速"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fc_011"
+    canonical_name: "余度"
+    aliases: ["余度", "redundancy", "冗余", "多余度"]
+    node_type: "system"
+    definition: "为提高可靠性采用多套相同或相似部件的设计，C919 飞控采用三余度计算机和作动器余度"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fc_012"
+    canonical_name: "作动器"
+    aliases: ["作动器", "actuator", "液压作动器", "伺服作动器"]
+    node_type: "component"
+    definition: "将液压或电力转换为机械运动驱动舵面的装置，C919 舵面由液压作动器驱动，部分采用电液作动器"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

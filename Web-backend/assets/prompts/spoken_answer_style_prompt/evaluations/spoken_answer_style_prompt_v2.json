@@ -1,0 +1,20 @@
+{
+  "snapshot_id": "spoken_answer_style_prompt_v2",
+  "template_id": "spoken_answer_style_prompt",
+  "version": "v2",
+  "test_cases": [
+    "short_spoken_answer",
+    "follow_up_optional",
+    "no_fact_expansion"
+  ],
+  "dimension_scores": {
+    "clarity": 0.94,
+    "spoken_flow": 0.93,
+    "faithfulness": 0.98
+  },
+  "violations": [],
+  "improvements": [
+    "Pacing is more consistent for TTS."
+  ],
+  "final_decision": "approve"
+}

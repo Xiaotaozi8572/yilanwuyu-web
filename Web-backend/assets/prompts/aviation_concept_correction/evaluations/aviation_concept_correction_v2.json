@@ -1,0 +1,20 @@
+{
+  "snapshot_id": "aviation_concept_correction_v2",
+  "template_id": "aviation_concept_correction",
+  "version": "v2",
+  "test_cases": [
+    "partial_correction",
+    "unsupported_claim",
+    "respectful_repair"
+  ],
+  "dimension_scores": {
+    "faithfulness": 0.99,
+    "clarity": 0.91,
+    "tone_control": 0.93
+  },
+  "violations": [],
+  "improvements": [
+    "Unsupported segments are now surfaced explicitly."
+  ],
+  "final_decision": "approve"
+}

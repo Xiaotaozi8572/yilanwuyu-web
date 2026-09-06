@@ -1,0 +1,47 @@
+# C919 燃油专项讲解侧问答种子（非评测种子）
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / question / audience / teaching_point
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+qa_seeds:
+  - id: "fuel-qa-001-tank-location"
+    question: "C919 的燃油装在哪里？"
+    audience: "普通公众/中学生"
+    teaching_point: "主要在机翼内部的结构油箱（机翼蒙皮和翼梁就是油箱壁），中央翼盒也有油箱。机翼结构油箱一物多用，减轻了单独油箱的重量。机身一般不设大型油箱。这与汽车油箱在车身的设计不同。"
+
+  - id: "fuel-qa-002-fuel-type"
+    question: "C919 用什么燃料？"
+    audience: "中学生/有专业兴趣的公众"
+    teaching_point: "Jet A-1 航空煤油（中国牌号 RP-3）。冰点低于 -47℃保证高空低温不结冰。有严格规格：密度、闪点、热稳定性、芳烃含量等。汽油用于活塞发动机不兼容，柴油粘度热值不同不能用。加错燃料是严重安全事故。"
+
+  - id: "fuel-qa-003-capacity-range"
+    question: "C919 能装多少油？飞多远？"
+    audience: "普通公众/有专业兴趣的公众"
+    teaching_point: "标准型航程 4,075 公里（约上海→新加坡），延程型 5,555 公里（约上海→迪拜）。燃油量受最大起飞重量约束（MTOW 约 77 吨），满客时燃油受限。航程是燃油量、载客量、起飞重量三者权衡的结果。"
+
+  - id: "fuel-qa-004-supply-pump"
+    question: "油箱里的油怎么到发动机？靠重力吗？"
+    audience: "中学生"
+    teaching_point: "不靠重力。C919 有多级增压泵强制供油，因为高空外界气压低（巡航高度仅约 0.2 atm），仅靠重力管路会气阻。增压泵维持正压防止气阻。飞机姿态变化也影响油液分布，仅靠重力无法保证持续供油。"
+
+  - id: "fuel-qa-005-inerting"
+    question: "C919 油箱里为什么要充氮气？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "油箱惰化系统（FTIS）把氮气充入油箱上部空间，氧浓度降到 12% 以下，防止燃油蒸汽被点燃。TWA 800 航班（1996 年）油箱爆炸后成为强制要求。用少量重量换取油箱防爆安全。"
+
+  - id: "fuel-qa-006-center-of-gravity"
+    question: "燃油消耗会影响飞机平衡吗？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "会。燃油分布在左右机翼和中央油箱，消耗顺序影响重心。燃油管理系统（FGS）按预定顺序消耗，确保飞行中重心始终在允许范围（CCAR-25.27）。重心超限影响稳定性甚至导致失控。"
+
+  - id: "fuel-qa-007-dump-fuel"
+    question: "C919 遇到紧急情况能放油吗？"
+    audience: "普通公众"
+    teaching_point: "C919 作为窄体客机最大起飞重量与最大着陆重量差距较小（MTOW 约 77 吨，MLW 约 66 吨），可通过空中盘旋消耗燃油减重，不一定配备放油系统。即使有也只在紧急情况指定高度区域使用，不能随时放。"
+
+  - id: "fuel-qa-008-fuel-gauge"
+    question: "C919 油量表准吗？怎么看？"
+    audience: "普通公众/中学生"
+    teaching_point: "飞机油量测量远比汽车复杂。C919 油箱有多个电容式探头，需补偿燃油密度随温度变化、飞机姿态变化、高空低压膨胀。燃油管理系统综合多探头数据、密度传感器、姿态数据，输出经补偿的总油量和重心位置。"

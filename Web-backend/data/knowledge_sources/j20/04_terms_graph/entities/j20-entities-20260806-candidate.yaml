@@ -1,0 +1,66 @@
+# 歼-20 实体定义
+# 字段对齐 GraphNode
+
+entities:
+  - entity_id: "j20_aircraft"
+    node_type: "aircraft"
+    canonical_name: "歼-20"
+    aliases: ["J-20", "威龙"]
+    definition: "成都飞机工业集团研制的双发重型隐身制空战斗机"
+    source_id: "j20-science-overview-v1"
+
+  - entity_id: "j20_airframe"
+    node_type: "component"
+    canonical_name: "机体"
+    aliases: ["机身", "气动布局"]
+    definition: "鸭式+大三角翼+DSI 进气道+双外倾垂尾的总体构型"
+    source_id: "j20-science-airframe-v1"
+
+  - entity_id: "j20_powerplant"
+    node_type: "system"
+    canonical_name: "动力系统"
+    aliases: ["发动机系统"]
+    definition: "从 AL-31FM2 到 WS-10C/WS-15 的双发动力体系"
+    source_id: "j20-science-powerplant-v1"
+
+  - entity_id: "j20_avionics"
+    node_type: "system"
+    canonical_name: "航电系统"
+    aliases: ["航电", "雷达"]
+    definition: "Type 1475 AESA 雷达 + 光电全向感知的综合航电"
+    source_id: "j20-science-avionics-weapons-v1"
+
+  - entity_id: "j20_weapons"
+    node_type: "system"
+    canonical_name: "武器系统"
+    aliases: ["武器", "弹舱"]
+    definition: "主弹舱+侧弹舱全内埋武器系统"
+    source_id: "j20-science-avionics-weapons-v1"
+
+  - entity_id: "j20_stealth"
+    node_type: "system"
+    canonical_name: "隐身设计"
+    aliases: ["隐身", "stealth"]
+    definition: "外形、材料、内埋三位一体的低可探测设计"
+    source_id: "j20-science-stealth-v1"
+
+  - entity_id: "ws15_engine"
+    node_type: "component"
+    canonical_name: "WS-15 发动机"
+    aliases: ["WS-15", "涡扇-15"]
+    definition: "歼-20 终极动力，推力约 180 kN"
+    source_id: "j20-science-powerplant-v1"
+
+  - entity_id: "f22_aircraft"
+    node_type: "aircraft"
+    canonical_name: "F-22"
+    aliases: ["猛禽", "Raptor"]
+    definition: "美国双发重型隐身制空战斗机"
+    source_id: "j20-science-vs-f22-v1"
+
+  - entity_id: "f35_aircraft"
+    node_type: "aircraft"
+    canonical_name: "F-35"
+    aliases: ["闪电II", "Lightning II"]
+    definition: "美国多用途第五代战斗机"
+    source_id: "j20-science-vs-f35-v1"

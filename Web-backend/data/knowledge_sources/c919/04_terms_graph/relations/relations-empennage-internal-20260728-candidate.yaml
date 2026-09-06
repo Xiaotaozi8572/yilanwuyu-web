@@ -1,0 +1,93 @@
+# C919 尾翼内部结构关系
+# 描述垂直尾翼、水平尾翼及其操纵面的层级与功能关系
+# relation_type: part_of / controls / parameter_of / depends_on
+# edge_id 前缀：remp_
+
+relations:
+  # ========== part_of 尾翼分系统归属 ==========
+  - edge_id: "remp_001"
+    source_node_id: "comp_vertical_stabilizer"
+    target_node_id: "comp_empennage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "垂直尾翼是尾翼的垂直组成部分，提供航向静稳定性"
+
+  - edge_id: "remp_002"
+    source_node_id: "comp_horizontal_stabilizer"
+    target_node_id: "comp_empennage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "水平尾翼是尾翼的水平组成部分，提供俯仰静稳定性与纵向配平"
+
+  - edge_id: "remp_003"
+    source_node_id: "comp_rudder"
+    target_node_id: "comp_vertical_stabilizer"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "方向舵安装于垂直尾翼后缘，属于航向操纵面，左右偏转产生偏航力矩"
+
+  - edge_id: "remp_004"
+    source_node_id: "comp_elevator"
+    target_node_id: "comp_horizontal_stabilizer"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "升降舵安装于水平尾翼后缘，属于俯仰操纵面，上下偏转产生俯仰力矩"
+
+  - edge_id: "remp_005"
+    source_node_id: "comp_vertical_fin"
+    target_node_id: "comp_vertical_stabilizer"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "垂尾安定面是垂直尾翼的固定部分，提供航向静稳定性"
+
+  - edge_id: "remp_006"
+    source_node_id: "comp_horizontal_fin"
+    target_node_id: "comp_horizontal_stabilizer"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "平尾安定面是水平尾翼的固定部分，可由配平作动器调整安装角"
+
+  - edge_id: "remp_007"
+    source_node_id: "comp_trim_tab"
+    target_node_id: "comp_elevator"
+    relation_type: "part_of"
+    confidence: 0.9
+    description: "配平片安装于升降舵后缘，用于减小或消除操纵杆力实现纵向配平"
+
+  # ========== controls 操纵面对应作动 ==========
+  - edge_id: "remp_008"
+    source_node_id: "act_rudder"
+    target_node_id: "comp_rudder"
+    relation_type: "controls"
+    confidence: 0.95
+    description: "方向舵作动器驱动方向舵偏转，实现飞机的航向操纵"
+
+  - edge_id: "remp_009"
+    source_node_id: "act_elevator"
+    target_node_id: "comp_elevator"
+    relation_type: "controls"
+    confidence: 0.95
+    description: "升降舵作动器驱动升降舵偏转，实现飞机的俯仰操纵"
+
+  - edge_id: "remp_010"
+    source_node_id: "act_stabilizer_trim"
+    target_node_id: "comp_horizontal_stabilizer"
+    relation_type: "controls"
+    confidence: 0.95
+    description: "配平作动器调整水平尾翼安定面安装角，实现长时间纵向配平"
+
+  # ========== parameter_of 尾翼关键参数 ==========
+  - edge_id: "remp_011"
+    source_node_id: "param_vertical_stabilizer_sweep"
+    target_node_id: "comp_vertical_stabilizer"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    description: "垂直尾翼后掠角是垂尾关键几何参数，影响航向稳定性临界马赫数"
+
+  # ========== depends_on 尾翼连接依赖 ==========
+  - edge_id: "remp_012"
+    source_node_id: "comp_empennage"
+    target_node_id: "comp_aft_fuselage"
+    relation_type: "depends_on"
+    confidence: 0.95
+    description: "尾翼整体结构连接于后机身尾部，依赖后机身提供主支撑与载荷传递"

@@ -1,0 +1,83 @@
+syntax = "proto3";
+
+package yilan.memory.v1;
+
+option java_multiple_files = true;
+option java_package = "com.yilan.memory.contract.v1";
+
+// At-least-once event submission. Identity is authenticated from signed gRPC
+// metadata; CloudEvents subject is an opaque, server-verified binding value.
+service MemoryEventService {
+  rpc SubmitMemoryEvents(SubmitMemoryEventsRequest) returns (SubmitMemoryEventsResponse);
+}
+
+message SubmitMemoryEventsRequest {
+  string request_id = 1;
+  string schema_version = 2;
+  repeated MemoryEventEnvelope events = 3;
+  string traceparent = 4;
+}
+
+message SubmitMemoryEventsResponse {
+  string request_id = 1;
+  string schema_version = 2;
+  repeated EventReceipt receipts = 3;
+  string trace_id = 4;
+}
+
+// CloudEvents 1.0 semantic envelope with a minimized, schema-versioned payload.
+// The idempotency boundary is (id, event_schema_version).
+message MemoryEventEnvelope {
+  string specversion = 1;
+  string id = 2;
+  string source = 3;
+  string type = 4;
+  string subject = 5;
+  string time = 6;
+  string dataschema = 7;
+  string datacontenttype = 8;
+  string traceparent = 9;
+  bytes data = 10;
+  string event_schema_version = 11;
+  // Optional authority metadata. Zero preserves legacy producer behavior and
+  // is normalized by Java to GENERAL before durable persistence.
+  SourceKind source_kind = 12;
+  // Producer-declared consent version at event creation time. Presence is
+  // required so an explicit revision 0 remains distinct from no declaration.
+  optional int64 consent_revision = 13;
+  // Event privacy is mandatory at ingress; the unspecified zero value is
+  // rejected before durable persistence.
+  PrivacyLevel privacy_level = 14;
+}
+
+// Java validates and persists this source authority metadata. Candidate
+// proposals and worker/model annotations never supply trusted source kinds.
+enum SourceKind {
+  SOURCE_KIND_UNSPECIFIED = 0;
+  GENERAL = 1;
+  EXPLICIT_DECLARATION = 2;
+  EPISODE = 3;
+  SCORED_ASSESSMENT = 4;
+}
+
+// Producer-declared privacy level, validated and mapped by the Java authority.
+enum PrivacyLevel {
+  PRIVACY_LEVEL_UNSPECIFIED = 0;
+  LOW = 1;
+  STANDARD = 2;
+  HIGH = 3;
+}
+
+message EventReceipt {
+  string event_id = 1;
+
+  enum Result {
+    RESULT_UNSPECIFIED = 0;
+    ACCEPTED = 1;
+    DUPLICATE = 2;
+    REJECTED = 3;
+  }
+
+  Result result = 2;
+  string reason_code = 3;
+}

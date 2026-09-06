@@ -1,0 +1,18 @@
+# y20-terms-equipment-20260806-candidate
+
+terms:
+  - canonical_name: "15式坦克"
+    aliases: ["15式坦克", "15式轻型坦克"]
+    node_type: "concept"
+    definition: "可装2辆"
+    source_id: "y20-science-cargo-hold-v1"
+  - canonical_name: "99A坦克"
+    aliases: ["99A坦克", "99A主战坦克"]
+    node_type: "concept"
+    definition: "可装1辆"
+    source_id: "y20-science-cargo-hold-v1"
+  - canonical_name: "YY-20 加油机"
+    aliases: ["YY-20", "运油-20"]
+    node_type: "aircraft"
+    definition: "约90吨燃油的加油改型"
+    source_id: "y20-science-powerplant-v1"

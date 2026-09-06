@@ -1,0 +1,76 @@
+# C919 载荷因子类术语
+# 领域：载荷因子与飞行包线
+# 条目数：10
+# node_type 统一为 concept
+# ID 前缀：load_
+
+terms:
+  - term_id: "load_001"
+    canonical_name: "载荷因子"
+    aliases: ["载荷因子", "load factor", "n", "过载系数"]
+    node_type: "concept"
+    definition: "飞机升力与重力的比值 n=L/W，以 g 为单位，C919 限制载荷因子正常类 +2.5g 至 -1.0g"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "load_002"
+    canonical_name: "过载"
+    aliases: ["过载", "g-load", "g 力", "加速度过载"]
+    node_type: "concept"
+    definition: "飞机加速度与重力加速度的比值，机动和阵风都会产生过载，C919 结构按限制载荷和极限载荷设计"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "load_003"
+    canonical_name: "限制载荷"
+    aliases: ["限制载荷", "limit load", "使用载荷"]
+    node_type: "concept"
+    definition: "飞机服役期内预期承受的最大载荷，结构在此载荷下不应产生有害永久变形，C919 按 CCAR-25 规定限制载荷"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "load_004"
+    canonical_name: "极限载荷"
+    aliases: ["极限载荷", "ultimate load", "设计极限载荷"]
+    node_type: "concept"
+    definition: "限制载荷乘以安全系数（通常 1.5）得到的载荷，结构在极限载荷下至少保持 3 秒不破坏，C919 按 1.5 倍限制载荷设计"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "load_005"
+    canonical_name: "安全系数"
+    aliases: ["安全系数", "factor of safety", "安全裕度"]
+    node_type: "concept"
+    definition: "极限载荷与限制载荷的比值，航空结构通常取 1.5，考虑材料分散性和分析不确定性，C919 适航取 1.5"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "load_006"
+    canonical_name: "阵风载荷"
+    aliases: ["阵风载荷", "gust load", "突风载荷"]
+    node_type: "concept"
+    definition: "大气湍流垂直阵风引起的附加气动载荷，C919 按 CCAR-25.341 阵风载荷标准设计，飞控阵风减缓系统降低载荷"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "load_007"
+    canonical_name: "机动载荷"
+    aliases: ["机动载荷", "maneuver load", "机动载荷因子"]
+    node_type: "concept"
+    definition: "飞机机动飞行产生的附加载荷，C919 按 CCAR-25.331 对称机动和非对称机动载荷设计结构"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "load_008"
+    canonical_name: "突风响应"
+    aliases: ["突风响应", "gust response", "阵风响应"]
+    node_type: "concept"
+    definition: "飞机遭遇阵风时的加速度和载荷响应，C919 飞控主动控制可减缓突风响应，改善乘坐品质"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "load_009"
+    canonical_name: "包线"
+    aliases: ["包线", "envelope", "飞行包线", "V-n 图"]
+    node_type: "concept"
+    definition: "飞机允许的速度和载荷因子范围，含对称和不对称包线，C919 飞控包线保护防止超出结构或气动限制"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "load_010"
+    canonical_name: "抖振边界"
+    aliases: ["抖振边界", "buffet boundary", "抖振包线"]
+    node_type: "concept"
+    definition: "飞机开始出现抖振的速度和载荷因子边界，C919 飞控保证巡航和机动状态在抖振边界内留有裕度"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

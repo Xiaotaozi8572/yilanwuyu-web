@@ -1,0 +1,142 @@
+# C919 结构部件实体
+# 按结构分解拆分：机身/机翼/尾翼/起落架及其子部件
+# node_type: component
+# node_id 前缀：comp_
+
+entities:
+  # ========== 机翼及翼面部件 ==========
+  - node_id: "comp_wing"
+    node_type: "component"
+    canonical_name: "机翼"
+    aliases: ["wing", "主翼", "C919 机翼"]
+    description: "C919 产生升力的主要气动部件，采用第四代超临界翼型设计，翼展约 35.8 米，后掠角约 25°，安装角 3°"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "comp_flap"
+    node_type: "component"
+    canonical_name: "襟翼"
+    aliases: ["flap", "后缘襟翼", "富勒襟翼"]
+    description: "机翼后缘内侧可偏转增升装置，采用富勒式设计，起飞/降落时下偏增加升力和阻力"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "comp_aileron"
+    node_type: "component"
+    canonical_name: "副翼"
+    aliases: ["aileron", "副翼操纵面"]
+    description: "机翼后缘外侧可动翼面，左右差动偏转实现飞机滚转操纵"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "comp_slat"
+    node_type: "component"
+    canonical_name: "缝翼"
+    aliases: ["slat", "前缘缝翼"]
+    description: "机翼前缘可伸出增升装置，打开时形成缝隙引导附面层，延缓大迎角失速"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "comp_spoiler"
+    node_type: "component"
+    canonical_name: "扰流板"
+    aliases: ["spoiler", "减速板", "地面扰流板"]
+    description: "机翼上表面可向上偏转的板面，空中减速、辅助滚转，地面破坏升力"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "comp_winglet"
+    node_type: "component"
+    canonical_name: "翼尖小翼"
+    aliases: ["winglet", "翼梢小翼"]
+    description: "安装在翼尖的垂直翼面，通过减弱翼尖涡流降低诱导阻力，改善燃油效率约 3-5%"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "comp_center_wingbox"
+    node_type: "component"
+    canonical_name: "中央翼盒"
+    aliases: ["center wing box", "中央翼", "中翼盒"]
+    description: "机身中部贯穿的机翼承力盒段，连接左右机翼并承受机翼弯矩和剪力，同时作为中央油箱"
+    applicable_aircraft: ["c919"]
+
+  # ========== 机身部件 ==========
+  - node_id: "comp_fuselage"
+    node_type: "component"
+    canonical_name: "机身"
+    aliases: ["fuselage", "机体", "C919 机身"]
+    description: "C919 主体结构，用于载客载货及安装各系统，机长约 38.9 米，机身直径约 3.96 米，采用铝锂合金和复合材料"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "comp_fwd_fuselage"
+    node_type: "component"
+    canonical_name: "前机身"
+    aliases: ["forward fuselage", "机头段", "前段机身"]
+    description: "机身前段结构，含驾驶舱、雷达罩、前起落架舱，承载飞行机组和航电设备"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "comp_mid_fuselage"
+    node_type: "component"
+    canonical_name: "中机身"
+    aliases: ["mid fuselage", "center fuselage", "机身中段"]
+    description: "机身中段结构，连接中央翼盒，承载主客舱中段和主起落架舱"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "comp_aft_fuselage"
+    node_type: "component"
+    canonical_name: "后机身"
+    aliases: ["aft fuselage", "tail fuselage", "机身后段"]
+    description: "机身后段结构，含 APU 舱、尾椎和水平尾翼安装接口"
+    applicable_aircraft: ["c919"]
+
+  # ========== 尾翼及操纵面 ==========
+  - node_id: "comp_empennage"
+    node_type: "component"
+    canonical_name: "尾翼"
+    aliases: ["empennage", "tail assembly", "C919 尾翼"]
+    description: "C919 尾部翼面组合，由垂直尾翼和水平尾翼组成，提供纵向和航向稳定性"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "comp_vtail"
+    node_type: "component"
+    canonical_name: "垂直尾翼"
+    aliases: ["vertical tail", "fin", "垂尾"]
+    description: "尾翼垂直翼面，提供航向稳定性，后缘安装方向舵，根部安装 APU 进气口"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "comp_htail"
+    node_type: "component"
+    canonical_name: "水平尾翼"
+    aliases: ["horizontal tail", "平尾", "水平安定面"]
+    description: "尾翼水平翼面，提供纵向稳定性，后缘安装升降舵，C919 采用低平尾布局"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "comp_rudder"
+    node_type: "component"
+    canonical_name: "方向舵"
+    aliases: ["rudder", "方向舵面"]
+    description: "垂直尾翼后缘可动翼面，通过左右偏转控制飞机偏航运动"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "comp_elevator"
+    node_type: "component"
+    canonical_name: "升降舵"
+    aliases: ["elevator", "升降舵面"]
+    description: "水平尾翼后缘可动翼面，通过上下偏转控制飞机俯仰运动"
+    applicable_aircraft: ["c919"]
+
+  # ========== 起落架 ==========
+  - node_id: "comp_landing_gear"
+    node_type: "component"
+    canonical_name: "起落架"
+    aliases: ["landing gear", "C919 起落架", "起落架系统"]
+    description: "C919 地面支撑装置，由 Liebherr 提供，含前起落架和主起落架，可收放式前三点布局"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "comp_nose_gear"
+    node_type: "component"
+    canonical_name: "前起落架"
+    aliases: ["nose landing gear", "nose gear", "NLG"]
+    description: "前机身下方可收放起落架，双轮式，提供地面转向操纵"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "comp_main_gear"
+    node_type: "component"
+    canonical_name: "主起落架"
+    aliases: ["main landing gear", "main gear", "MLG"]
+    description: "机身中部下方可收放起落架，左右各一套，每套四轮式，承担主要起降载荷"
+    applicable_aircraft: ["c919"]

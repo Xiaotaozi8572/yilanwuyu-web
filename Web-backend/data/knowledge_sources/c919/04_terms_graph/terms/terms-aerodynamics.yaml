@@ -1,0 +1,126 @@
+# C919 气动原理类术语
+# 按领域拆分：覆盖升力、阻力、翼型、气流等气动概念
+# node_type 统一为 concept
+# ID 前缀：aero_
+
+terms:
+  # ========== 升力与阻力 ==========
+  - term_id: "aero_001"
+    canonical_name: "升力"
+    aliases: ["升力", "lift", "升力系数", "L"]
+    node_type: "concept"
+    definition: "垂直于来流方向、克服飞机重力的气动力，由机翼上下表面压差产生；升力公式 L=0.5·ρ·V²·S·CL"
+    source_ref: "c919-graph-aerodynamics-v1"
+
+  - term_id: "aero_002"
+    canonical_name: "阻力"
+    aliases: ["阻力", "drag", "总阻力", "D"]
+    node_type: "concept"
+    definition: "平行于来流方向、阻碍飞机前进的气动力，由诱导阻力和寄生阻力两部分组成"
+    source_ref: "c919-graph-aerodynamics-v1"
+
+  - term_id: "aero_003"
+    canonical_name: "升阻比"
+    aliases: ["升阻比", "L/D", "升阻比 K", "气动效率"]
+    node_type: "concept"
+    definition: "升力与阻力的比值，衡量飞机气动效率的关键参数，C919 巡航升阻比约 18-20，越高越省油"
+    source_ref: "c919-graph-aerodynamics-v1"
+
+  - term_id: "aero_004"
+    canonical_name: "迎角"
+    aliases: ["迎角", "angle of attack", "AoA", "攻角", "α"]
+    node_type: "concept"
+    definition: "机翼弦线与来流方向的夹角，增大迎角可增加升力系数，但超过临界迎角会引发失速"
+    source_ref: "c919-graph-aerodynamics-v1"
+
+  - term_id: "aero_005"
+    canonical_name: "失速"
+    aliases: ["失速", "stall", "气流分离", "失速迎角"]
+    node_type: "concept"
+    definition: "机翼迎角超过临界值后气流分离、升力急剧下降的现象，C919 飞控系统具备失速保护功能"
+    source_ref: "c919-graph-aerodynamics-v1"
+
+  - term_id: "aero_006"
+    canonical_name: "激波"
+    aliases: ["激波", "shock wave", "压缩波", "激波阻力"]
+    node_type: "concept"
+    definition: "跨声速飞行时气流加速至声速附近形成的强压缩波，产生波阻并可能导致气流分离"
+    source_ref: "c919-graph-aerodynamics-v1"
+
+  - term_id: "aero_007"
+    canonical_name: "超临界机翼"
+    aliases: ["超临界机翼", "超临界翼型", "supercritical wing", "超临界翼"]
+    node_type: "concept"
+    definition: "通过上表面平坦、下表面反曲设计延缓激波生成、降低波阻的跨声速机翼构型，C919 采用第四代超临界翼型"
+    source_ref: "c919-graph-aerodynamics-v1"
+
+  - term_id: "aero_008"
+    canonical_name: "附面层"
+    aliases: ["附面层", "边界层", "boundary layer", "粘性底层"]
+    node_type: "concept"
+    definition: "紧贴机翼表面流速受粘性影响的薄层空气，分层流和湍流附面层，其分离会导致失速"
+    source_ref: "c919-graph-aerodynamics-v1"
+
+  - term_id: "aero_009"
+    canonical_name: "雷诺数"
+    aliases: ["雷诺数", "Reynolds number", "Re"]
+    node_type: "concept"
+    definition: "表征流体惯性力与粘性力之比的无量纲数 Re=ρ·V·c/μ，影响气动特性缩比试验和转捩位置"
+    source_ref: "c919-graph-aerodynamics-v1"
+
+  - term_id: "aero_010"
+    canonical_name: "马赫数"
+    aliases: ["马赫数", "Mach number", "M", "飞行马赫数"]
+    node_type: "concept"
+    definition: "流速与当地声速之比 M=V/a，C919 巡航马赫数约 0.785，临界马赫数约 0.82"
+    source_ref: "c919-graph-aerodynamics-v1"
+
+  - term_id: "aero_011"
+    canonical_name: "诱导阻力"
+    aliases: ["诱导阻力", "induced drag", "升力诱导阻力"]
+    node_type: "concept"
+    definition: "因机翼产生升力时翼尖涡流导致的阻力，与升力系数平方成正比、展弦比成反比"
+    source_ref: "c919-graph-aerodynamics-v1"
+
+  - term_id: "aero_012"
+    canonical_name: "寄生阻力"
+    aliases: ["寄生阻力", "parasite drag", "废阻力", "零升阻力"]
+    node_type: "concept"
+    definition: "与升力无关的气动阻力，包含摩擦阻力、压差阻力和干扰阻力"
+    source_ref: "c919-graph-aerodynamics-v1"
+
+  - term_id: "aero_013"
+    canonical_name: "翼尖涡流"
+    aliases: ["翼尖涡流", "wingtip vortex", "尾涡", "翼尖涡"]
+    node_type: "concept"
+    definition: "机翼下表面高压气流绕过翼尖流向上表面低压区形成的旋转涡流，是诱导阻力的主要来源"
+    source_ref: "c919-graph-aerodynamics-v1"
+
+  # ========== 增升与操纵装置 ==========
+  - term_id: "aero_014"
+    canonical_name: "襟翼"
+    aliases: ["襟翼", "flap", "后缘襟翼", "富勒襟翼"]
+    node_type: "concept"
+    definition: "机翼后缘可偏转的增升装置，起飞时增加升力、降落时增加升力和阻力，C919 采用富勒式后缘襟翼"
+    source_ref: "c919-graph-aerodynamics-v1"
+
+  - term_id: "aero_015"
+    canonical_name: "缝翼"
+    aliases: ["缝翼", "slat", "前缘缝翼", "克鲁格襟翼"]
+    node_type: "concept"
+    definition: "机翼前缘可伸出的增升装置，打开时形成缝隙引导附面层气流，延缓大迎角失速"
+    source_ref: "c919-graph-aerodynamics-v1"
+
+  - term_id: "aero_016"
+    canonical_name: "扰流板"
+    aliases: ["扰流板", "spoiler", "减速板", "地面扰流板"]
+    node_type: "concept"
+    definition: "机翼上表面可向上偏转的板面，空中用于减速和辅助滚转控制，地面用于破坏升力"
+    source_ref: "c919-graph-aerodynamics-v1"
+
+  - term_id: "aero_017"
+    canonical_name: "翼尖小翼"
+    aliases: ["翼尖小翼", "winglet", "翼梢小翼", "融合小翼"]
+    node_type: "concept"
+    definition: "安装在翼尖的垂直或倾斜翼面，通过减弱翼尖涡流降低诱导阻力，可改善燃油效率约 3-5%"
+    source_ref: "c919-graph-aerodynamics-v1"

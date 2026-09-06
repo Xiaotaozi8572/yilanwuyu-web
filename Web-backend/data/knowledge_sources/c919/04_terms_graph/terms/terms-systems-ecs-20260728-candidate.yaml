@@ -1,0 +1,90 @@
+# C919 环控类术语
+# 领域：环境控制系统
+# 条目数：12
+# node_type 统一为 system
+# ID 前缀：ecs_
+
+terms:
+  - term_id: "ecs_001"
+    canonical_name: "引气"
+    aliases: ["引气", "bleed air", "发动机引气", "压气机引气"]
+    node_type: "system"
+    definition: "从发动机压气机抽取的高压高温空气，C919 引气作为环控、防冰和增压系统的气源"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ecs_002"
+    canonical_name: "座舱增压"
+    aliases: ["座舱增压", "cabin pressurization", "增压系统", "客舱增压"]
+    node_type: "system"
+    definition: "维持客舱压力高于外界大气压的系统，C919 增压系统维持客舱高度 2400m 以下，压差约 0.06 MPa"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ecs_003"
+    canonical_name: "座舱高度"
+    aliases: ["座舱高度", "cabin altitude", "客舱高度"]
+    node_type: "concept"
+    definition: "客舱内气压对应的海拔高度，C919 巡航时座舱高度不超过 2400m，保证旅客舒适"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ecs_004"
+    canonical_name: "空调组件"
+    aliases: ["空调组件", "air conditioning pack", "Pack", "制冷组件"]
+    node_type: "component"
+    definition: "将引气调节为适宜温度和压力空气的装置，C919 配备两套空调组件为客舱供气"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ecs_005"
+    canonical_name: "空气循环机"
+    aliases: ["空气循环机", "air cycle machine", "ACM", "涡轮冷却器"]
+    node_type: "component"
+    definition: "利用涡轮膨胀冷却空气的装置，C919 空调组件采用空气循环制冷原理"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ecs_006"
+    canonical_name: "热交换器"
+    aliases: ["热交换器", "heat exchanger", "换热器", "散热器"]
+    node_type: "component"
+    definition: "两种流体间传递热量的装置，C919 空调组件热交换器用冲压空气冷却引气"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ecs_007"
+    canonical_name: "水分离器"
+    aliases: ["水分离器", "water separator", "除水器", "凝水分离器"]
+    node_type: "component"
+    definition: "分离空调空气中冷凝水的装置，C919 水分离器去除空气中水分防止管路结冰和喷水"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ecs_008"
+    canonical_name: "温度控制"
+    aliases: ["温度控制", "temperature control", "温度调节"]
+    node_type: "system"
+    definition: "调节客舱和驾驶舱温度的系统，C919 温度控制系统按区域调节冷热空气混合比例"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ecs_009"
+    canonical_name: "压力调节"
+    aliases: ["压力调节", "pressure control", "压力调节器", "压力控制"]
+    node_type: "system"
+    definition: "调节客舱压力变化率的系统，C919 压力调节器按飞行阶段控制座舱压力和变化率避免耳压"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ecs_010"
+    canonical_name: "冲压空气"
+    aliases: ["冲压空气", "ram air", "冲压气流"]
+    node_type: "concept"
+    definition: "利用飞机前进速度获取的空气，C919 冲压空气用于空调组件散热和应急通风"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ecs_011"
+    canonical_name: "OAT"
+    aliases: ["OAT", "Outside Air Temperature", "外界气温", "外部空气温度"]
+    node_type: "concept"
+    definition: "飞机外部自由流的空气温度，C919 总温传感器测量外界气温用于性能计算和系统控制"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "ecs_012"
+    canonical_name: "过滤器"
+    aliases: ["过滤器", "filter", "空气滤", "HEPA 滤芯"]
+    node_type: "component"
+    definition: "去除空气中颗粒和污染物的装置，C919 客舱空气再循环系统配备 HEPA 过滤器保证空气质量"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

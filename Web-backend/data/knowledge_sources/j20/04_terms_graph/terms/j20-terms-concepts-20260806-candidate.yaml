@@ -1,0 +1,63 @@
+# j20-terms-concepts-20260806-candidate
+
+terms:
+  - canonical_name: "隐身"
+    aliases: ["隐身", "雷达隐身"]
+    node_type: "concept"
+    definition: "降低雷达散射截面"
+    source_id: "j20-science-stealth-v1"
+  - canonical_name: "雷达散射截面"
+    aliases: ["RCS", "雷达散射截面"]
+    node_type: "concept"
+    definition: "目标雷达回波强度度量"
+    source_id: "j20-science-stealth-principle-v1"
+  - canonical_name: "超声速巡航"
+    aliases: ["超巡", "supercruise"]
+    node_type: "concept"
+    definition: "不加力持续超声速飞行"
+    source_id: "j20-science-supercruise-v1"
+  - canonical_name: "鸭式布局"
+    aliases: ["鸭式布局", "canard"]
+    node_type: "concept"
+    definition: "前翼+主翼的气动布局"
+    source_id: "j20-science-canard-aerodynamics-v1"
+  - canonical_name: "涡升力"
+    aliases: ["涡升力"]
+    node_type: "concept"
+    definition: "涡流为机翼增能"
+    source_id: "j20-science-canard-aerodynamics-v1"
+  - canonical_name: "大迎角机动"
+    aliases: ["大迎角机动"]
+    node_type: "concept"
+    definition: "高迎角下的机动能力"
+    source_id: "j20-science-canard-aerodynamics-v1"
+  - canonical_name: "电传飞控"
+    aliases: ["电传飞控", "fly-by-wire"]
+    node_type: "concept"
+    definition: "电信号控制舵面"
+    source_id: "j20-science-overview-v1"
+  - canonical_name: "传感器融合"
+    aliases: ["传感器融合"]
+    node_type: "concept"
+    definition: "多源信息融合"
+    source_id: "j20-science-overview-v1"
+  - canonical_name: "有源相控阵"
+    aliases: ["AESA", "有源相控阵雷达"]
+    node_type: "concept"
+    definition: "独立T/R模块相控阵"
+    source_id: "j20-science-avionics-weapons-v1"
+  - canonical_name: "推力矢量"
+    aliases: ["推力矢量", "TVC"]
+    node_type: "concept"
+    definition: "喷口改变推力方向"
+    source_id: "j20-science-powerplant-v1"
+  - canonical_name: "雷达吸波材料"
+    aliases: ["吸波材料", "RAM"]
+    node_type: "concept"
+    definition: "吸收雷达波的材料"
+    source_id: "j20-science-stealth-principle-v1"
+  - canonical_name: "飞行包线"
+    aliases: ["飞行包线"]
+    node_type: "concept"
+    definition: "速度/高度/过载安全边界"
+    source_id: "j20-science-overview-v1"

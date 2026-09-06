@@ -1,0 +1,88 @@
+# C919 推进系统实体
+# 动力装置及推进相关子系统
+# node_type: system
+# node_id 前缀：sprop_
+
+entities:
+  - node_id: "sprop_leap1c28"
+    node_type: "system"
+    canonical_name: "LEAP-1C28 发动机"
+    aliases: ["LEAP-1C28", "CFM LEAP-1C28"]
+    description: "CFM 国际公司为 C919 研制的涡扇发动机基线型号，推力 129.98kN，涵道比 11:1，C919 标准型装机"
+    specifications:
+      thrust_kn: 129.98
+      bypass_ratio: 11
+      supplier: "CFM International"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sprop_leap1c30"
+    node_type: "system"
+    canonical_name: "LEAP-1C30 发动机"
+    aliases: ["LEAP-1C30", "CFM LEAP-1C30"]
+    description: "CFM 国际公司为 C919 研制的升级推力涡扇发动机，推力 137.14kN，适配大 MTOW 及高原高温运行"
+    specifications:
+      thrust_kn: 137.14
+      bypass_ratio: 11
+      supplier: "CFM International"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sprop_cj1000a"
+    node_type: "system"
+    canonical_name: "CJ-1000A 发动机"
+    aliases: ["CJ-1000A", "长江-1000A", "国产大涵道比涡扇"]
+    description: "中国自主研发的大涵道比涡扇发动机，作为 C919 国产动力替代方案，涵道比约 10:1"
+    specifications:
+      bypass_ratio: 10
+      manufacturer: "中国航发集团"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sprop_fuel_system"
+    node_type: "system"
+    canonical_name: "发动机燃油系统"
+    aliases: ["engine fuel system", "发动机供油"]
+    description: "向发动机供油的子系统，包含燃油控制器、燃油泵、燃油滑油热交换器，按 FADEC 精确控制供油"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sprop_nacelle"
+    node_type: "system"
+    canonical_name: "发动机短舱系统"
+    aliases: ["nacelle system", "短舱"]
+    description: "包裹发动机的整流系统，C919 短舱由 Nexcelle 提供，集成反推、消声、防冰功能"
+    specifications:
+      supplier: "Nexcelle"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sprop_thrust_reverser"
+    node_type: "system"
+    canonical_name: "反推系统"
+    aliases: ["thrust reverser system", "推力反向系统"]
+    description: "着陆减速用的推力反向系统，C919 采用外涵折流门式反推，由液压作动打开"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sprop_pylon"
+    node_type: "system"
+    canonical_name: "发动机吊架"
+    aliases: ["pylon", "发动机挂架", "吊架"]
+    description: "连接发动机与机翼的承力结构，传递发动机推力、重量及惯性载荷至机翼，内含管路线束通道"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sprop_intake"
+    node_type: "system"
+    canonical_name: "进气系统"
+    aliases: ["intake system", "进气道系统"]
+    description: "整流进入发动机气流的进气段系统，配备热防冰引气，保证发动机进气畸变可控"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sprop_exhaust"
+    node_type: "system"
+    canonical_name: "排气系统"
+    aliases: ["exhaust system", "尾喷管系统"]
+    description: "发动机排气段系统，加速燃气产生推力，LEAP-1C 采用分离式内外涵喷管降低噪声"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "sprop_thrust_management"
+    node_type: "system"
+    canonical_name: "推力管理系统"
+    aliases: ["thrust management", "FADEC", "推力控制"]
+    description: "发动机全权限数字电子控制系统（FADEC），C919 通过 EEC 实现推力等级、油门管理与故障监控"
+    applicable_aircraft: ["c919"]

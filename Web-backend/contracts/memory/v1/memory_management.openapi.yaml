@@ -1,0 +1,620 @@
+openapi: 3.1.0
+info:
+  title: Yilan Governed Memory Management API
+  version: 1.0.0
+  description: >-
+    Self-service and minimized audit operations for governed memory. The
+    authenticated subject is always taken from the verified credential and
+    can never be selected by a request body, path, or query parameter.
+servers:
+  - url: /
+security:
+  - bearerAuth: []
+paths:
+  /v1/me/memory-consent:
+    get:
+      operationId: getMemoryConsent
+      x-required-role: learner
+      responses:
+        '200':
+          description: Current versioned consent
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConsentView'
+    put:
+      operationId: replaceMemoryConsent
+      x-required-role: learner
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+        - $ref: '#/components/parameters/IfMatch'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConsentUpdate'
+      responses:
+        '200':
+          description: Replaced consent version
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConsentView'
+        '409':
+          $ref: '#/components/responses/Conflict'
+  /v1/me/memories:
+    get:
+      operationId: listMyMemories
+      x-required-role: learner
+      parameters:
+        - $ref: '#/components/parameters/Cursor'
+        - name: type
+          in: query
+          schema:
+            type: string
+        - name: status
+          in: query
+          schema:
+            type: string
+        - name: effective_after
+          in: query
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: Subject-bound page of governed memories
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MemoryPage'
+    delete:
+      operationId: forgetAllMyMemories
+      x-required-role: learner
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+      responses:
+        '202':
+          $ref: '#/components/responses/ForgetAccepted'
+  /v1/me/memories/{id}:
+    parameters:
+      - $ref: '#/components/parameters/MemoryId'
+    get:
+      operationId: getMyMemory
+      x-required-role: learner
+      responses:
+        '200':
+          description: Governed memory detail and minimized provenance
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MemoryDetail'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    delete:
+      operationId: forgetMyMemory
+      x-required-role: learner
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+      responses:
+        '202':
+          $ref: '#/components/responses/ForgetAccepted'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /v1/me/memories/{id}:confirm:
+    parameters:
+      - $ref: '#/components/parameters/MemoryId'
+    post:
+      operationId: confirmMyMemory
+      x-required-role: learner
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+        - $ref: '#/components/parameters/IfMatch'
+      responses:
+        '200':
+          description: Appended confirmation transition
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MemoryDetail'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/Conflict'
+  /v1/me/memories/{id}:correct:
+    parameters:
+      - $ref: '#/components/parameters/MemoryId'
+    post:
+      operationId: correctMyMemory
+      x-required-role: learner
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+        - $ref: '#/components/parameters/IfMatch'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CorrectionRequest'
+      responses:
+        '200':
+          description: Appended correction version
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MemoryDetail'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/Conflict'
+  /v1/me/memories/{id}:disable:
+    parameters:
+      - $ref: '#/components/parameters/MemoryId'
+    post:
+      operationId: disableMyMemory
+      x-required-role: learner
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+        - $ref: '#/components/parameters/IfMatch'
+      responses:
+        '200':
+          description: Appended disable transition
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MemoryDetail'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/Conflict'
+  /v1/me/memory-timeline:
+    get:
+      operationId: getMyMemoryTimeline
+      x-required-role: learner
+      parameters:
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Minimized append-only memory evolution timeline
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TimelinePage'
+  /v1/me/memory-graph:
+    get:
+      operationId: getMyMemoryGraph
+      x-required-role: learner
+      responses:
+        '200':
+          description: Restricted subject-bound relationship projection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MemoryGraph'
+  /v1/audit/memory-events:
+    get:
+      operationId: listMinimizedMemoryAuditEvents
+      x-required-role: auditor
+      parameters:
+        - $ref: '#/components/parameters/Cursor'
+        - name: event_type
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Minimized audit events without protected payloads
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuditEventPage'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: signed-session
+  parameters:
+    IdempotencyKey:
+      name: Idempotency-Key
+      in: header
+      required: true
+      description: Unique key scoped to the authenticated subject and operation.
+      schema:
+        type: string
+        minLength: 16
+        maxLength: 128
+    IfMatch:
+      name: If-Match
+      in: header
+      required: true
+      description: Expected opaque version tag for append-only mutation.
+      schema:
+        type: string
+    MemoryId:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    Cursor:
+      name: cursor
+      in: query
+      required: false
+      schema:
+        type: string
+  responses:
+    Conflict:
+      description: Stale version or idempotency conflict
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+    NotFound:
+      description: Memory not found; foreign and nonexistent identifiers are indistinguishable
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+    Forbidden:
+      description: Authenticated role is not permitted
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+    ForgetAccepted:
+      description: Forget request accepted and reads blocked
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ForgetReceipt'
+  schemas:
+    ConsentView:
+      type: object
+      additionalProperties: false
+      required: [version, long_term_enabled, allowed_categories, effective_at]
+      properties:
+        version:
+          type: string
+        long_term_enabled:
+          type: boolean
+        allowed_categories:
+          type: array
+          items:
+            type: string
+        effective_at:
+          type: string
+          format: date-time
+    ConsentUpdate:
+      type: object
+      additionalProperties: false
+      required: [long_term_enabled, allowed_categories]
+      properties:
+        long_term_enabled:
+          type: boolean
+        allowed_categories:
+          type: array
+          uniqueItems: true
+          items:
+            type: string
+        retention_days:
+          type: integer
+          minimum: 1
+    MemorySummary:
+      type: object
+      additionalProperties: false
+      required: [id, version, type, status, confirmation_status]
+      properties:
+        id:
+          type: string
+          format: uuid
+        version:
+          type: string
+        type:
+          type: string
+        status:
+          type: string
+        confirmation_status:
+          type: string
+        display_value:
+          type: object
+          additionalProperties: true
+        confidence_band:
+          type: string
+        effective_at:
+          type: string
+          format: date-time
+        expires_at:
+          type: [string, 'null']
+          format: date-time
+    MemoryDetail:
+      type: object
+      additionalProperties: false
+      required:
+        - id
+        - version
+        - type
+        - status
+        - confirmation_status
+        - use_class
+        - privacy_class
+        - source_summary
+      properties:
+        id:
+          type: string
+          format: uuid
+        version:
+          type: string
+        type:
+          type: string
+        status:
+          type: string
+        confirmation_status:
+          type: string
+        display_value:
+          type: object
+          additionalProperties: true
+        confidence_band:
+          type: string
+        effective_at:
+          type: string
+          format: date-time
+        expires_at:
+          type: [string, 'null']
+          format: date-time
+        use_class:
+          type: string
+          enum: [REQUIRED, OPTIONAL, PROHIBITED]
+        privacy_class:
+          type: string
+          enum: [STANDARD, SENSITIVE, HIGH]
+        source_summary:
+          type: array
+          items:
+            type: string
+        reason:
+          type: string
+        usage_history:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            required: [occurred_at, outcome]
+            properties:
+              occurred_at:
+                type: string
+                format: date-time
+              request_ref:
+                type: string
+                description: Opaque request reference; never a subject identifier.
+              task_type:
+                type: string
+              outcome:
+                type: string
+                enum: [APPLIED, OMITTED]
+    MemoryPage:
+      type: object
+      additionalProperties: false
+      required: [items]
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/MemorySummary'
+        next_cursor:
+          type: [string, 'null']
+    CorrectionRequest:
+      type: object
+      additionalProperties: false
+      required: [corrected_value]
+      properties:
+        corrected_value:
+          type: object
+          additionalProperties: true
+        reason:
+          type: string
+    ForgetReceipt:
+      type: object
+      additionalProperties: false
+      required: [request_id, state, requested_at]
+      properties:
+        request_id:
+          type: string
+          format: uuid
+        state:
+          type: string
+          enum: [BLOCKED, PROCESSING, COMPLETE]
+        requested_at:
+          type: string
+          format: date-time
+    TimelinePage:
+      type: object
+      additionalProperties: false
+      required: [items]
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/TimelineItem'
+        next_cursor:
+          type: [string, 'null']
+    TimelineItem:
+      type: object
+      additionalProperties: false
+      required: [event_type, occurred_at, memory_ref, outcome, event_digest]
+      properties:
+        event_type:
+          type: string
+          enum:
+            - CREATED
+            - CONFIRMED
+            - CORRECTED
+            - DISABLED
+            - SUPERSEDED
+            - EXPIRED
+            - FORGET_REQUESTED
+            - FORGET_COMPLETED
+        occurred_at:
+          type: string
+          format: date-time
+        memory_ref:
+          type: string
+          description: Opaque subject-bound memory reference.
+          pattern: '^[A-Za-z0-9._:-]{1,128}$'
+        version:
+          type: string
+        policy_version:
+          type: string
+        outcome:
+          type: string
+          enum: [APPLIED, BLOCKED, OBSOLETE, REJECTED]
+        event_digest:
+          type: string
+          description: Lowercase SHA-256 digest of the minimized event record.
+          pattern: '^[a-f0-9]{64}$'
+    MemoryGraph:
+      type: object
+      additionalProperties: false
+      required: [nodes, edges]
+      properties:
+        nodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/GraphNode'
+        edges:
+          type: array
+          items:
+            $ref: '#/components/schemas/GraphEdge'
+    GraphNode:
+      type: object
+      additionalProperties: false
+      required: [node_ref, node_type, version, status, node_digest]
+      properties:
+        node_ref:
+          type: string
+          description: Opaque graph-local reference.
+          pattern: '^[A-Za-z0-9._:-]{1,128}$'
+        node_type:
+          type: string
+          enum: [MEMORY, SOURCE, SCENE]
+        version:
+          type: string
+        status:
+          type: string
+          enum: [PENDING, ACTIVE, DISABLED, SUPERSEDED, EXPIRED]
+        effective_at:
+          type: string
+          format: date-time
+        expires_at:
+          type: [string, 'null']
+          format: date-time
+        node_digest:
+          type: string
+          pattern: '^[a-f0-9]{64}$'
+    GraphEdge:
+      type: object
+      additionalProperties: false
+      required: [edge_ref, from_ref, to_ref, relation_type, edge_digest]
+      properties:
+        edge_ref:
+          type: string
+          description: Opaque graph-local edge reference.
+          pattern: '^[A-Za-z0-9._:-]{1,128}$'
+        from_ref:
+          type: string
+          pattern: '^[A-Za-z0-9._:-]{1,128}$'
+        to_ref:
+          type: string
+          pattern: '^[A-Za-z0-9._:-]{1,128}$'
+        relation_type:
+          type: string
+          enum: [DERIVED_FROM, PRECEDES, SUPERSEDES, CONFLICTS_WITH, VALID_DURING]
+        effective_at:
+          type: string
+          format: date-time
+        version:
+          type: string
+        edge_digest:
+          type: string
+          pattern: '^[a-f0-9]{64}$'
+    AuditEventPage:
+      type: object
+      additionalProperties: false
+      required: [items]
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/MinimizedAuditEvent'
+        next_cursor:
+          type: [string, 'null']
+    MinimizedAuditEvent:
+      type: object
+      additionalProperties: false
+      required:
+        - event_ref
+        - event_type
+        - occurred_at
+        - subject_ref
+        - actor_role
+        - outcome
+        - event_digest
+      properties:
+        event_ref:
+          type: string
+          description: Opaque audit event reference.
+          pattern: '^[A-Za-z0-9._:-]{1,128}$'
+        event_type:
+          type: string
+          enum:
+            - CONSENT_CHANGED
+            - MEMORY_CONFIRMED
+            - MEMORY_CORRECTED
+            - MEMORY_DISABLED
+            - FORGET_REQUESTED
+            - FORGET_COMPLETED
+            - ACCESS_DENIED
+            - EVENT_REJECTED
+        occurred_at:
+          type: string
+          format: date-time
+        subject_ref:
+          type: string
+          description: Non-reversible opaque subject reference, never direct identity.
+          pattern: '^[A-Za-z0-9._:-]{1,128}$'
+        actor_role:
+          type: string
+          enum: [LEARNER, ADMIN, AUDITOR, SYSTEM]
+        policy_version:
+          type: string
+        memory_ref:
+          type: string
+          description: Optional opaque subject-bound memory reference.
+          pattern: '^[A-Za-z0-9._:-]{1,128}$'
+        outcome:
+          type: string
+          enum: [ACCEPTED, APPLIED, BLOCKED, COMPLETE, DENIED, REJECTED]
+        reason_code:
+          type: string
+          description: Stable minimized code without source or payload content.
+        event_digest:
+          type: string
+          pattern: '^[a-f0-9]{64}$'
+    Problem:
+      type: object
+      additionalProperties: true
+      required: [type, title, status]
+      properties:
+        type:
+          type: string
+          format: uri-reference
+        title:
+          type: string
+        status:
+          type: integer
+        code:
+          type: string

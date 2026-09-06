@@ -1,0 +1,90 @@
+# C919 气动升力类术语
+# 领域：升力原理与气动特性
+# 条目数：12
+# node_type 统一为 concept
+# ID 前缀：lift_
+
+terms:
+  - term_id: "lift_001"
+    canonical_name: "升力"
+    aliases: ["升力", "lift", "L"]
+    node_type: "concept"
+    definition: "垂直于来流方向、克服飞机重力的气动力，由机翼上下表面压差产生；公式 L=0.5·ρ·V²·S·CL，C919 巡航升力等于飞机重量"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lift_002"
+    canonical_name: "升力系数"
+    aliases: ["升力系数", "lift coefficient", "CL"]
+    node_type: "concept"
+    definition: "无量纲量 CL=L/(0.5·ρ·V²·S)，反映机翼产生升力的能力，随迎角线性增大直至失速，C919 巡航升力系数约 0.5"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lift_003"
+    canonical_name: "迎角"
+    aliases: ["迎角", "angle of attack", "AoA", "攻角", "α"]
+    node_type: "concept"
+    definition: "机翼弦线与来流方向的夹角，增大迎角可增加升力系数，但超过临界迎角会引发失速，C919 巡航迎角约 2-3 度"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lift_004"
+    canonical_name: "失速"
+    aliases: ["失速", "stall", "气流分离"]
+    node_type: "concept"
+    definition: "机翼迎角超过临界值后气流分离、升力急剧下降的现象，C919 通过飞控包线保护和抖振预警避免进入失速"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lift_005"
+    canonical_name: "抖振"
+    aliases: ["抖振", "buffet", "抖振边界"]
+    node_type: "concept"
+    definition: "机翼气流分离或激波诱导产生的气动振动现象，C919 在大迎角或高速时会出现抖振，是失速临近的预警信号"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lift_006"
+    canonical_name: "临界迎角"
+    aliases: ["临界迎角", "critical angle of attack", "失速迎角"]
+    node_type: "concept"
+    definition: "升力系数达到最大值对应的迎角，超过后气流分离导致失速，典型运输类飞机临界迎角约 14-16 度"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lift_007"
+    canonical_name: "升阻比"
+    aliases: ["升阻比", "L/D", "升阻比 K", "气动效率"]
+    node_type: "concept"
+    definition: "升力与阻力的比值，衡量飞机气动效率的关键参数，C919 巡航升阻比约 18-20，越高越省油"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lift_008"
+    canonical_name: "升力斜线"
+    aliases: ["升力斜线", "lift slope", "升力系数斜率", "CLa"]
+    node_type: "concept"
+    definition: "升力系数随迎角线性段的斜率 dCL/dα，二维薄翼理论值约 2π/弧度，有限翼展机翼受展弦比影响而降低"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lift_009"
+    canonical_name: "涡量"
+    aliases: ["涡量", "vorticity", "旋度"]
+    node_type: "concept"
+    definition: "流体微元旋转角速度的两倍，是描述流场旋涡强度的物理量，机翼尾涡和翼尖涡均伴随高涡量区域"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lift_010"
+    canonical_name: "环量"
+    aliases: ["环量", "circulation", "Γ"]
+    node_type: "concept"
+    definition: "速度沿封闭曲线的线积分 Γ=∮V·dl，根据库塔-儒科夫斯基定理升力 L=ρ·V·Γ，是升力产生的数学本质"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lift_011"
+    canonical_name: "压力中心"
+    aliases: ["压力中心", "center of pressure", "压心"]
+    node_type: "concept"
+    definition: "气动力合力作用线与翼弦的交点，随迎角变化而移动，亚声速时随迎角增大前移"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "lift_012"
+    canonical_name: "气动中心"
+    aliases: ["气动中心", "aerodynamic center", "焦点", "AC"]
+    node_type: "concept"
+    definition: "俯仰力矩系数不随迎角变化的参考点，亚声速薄翼约位于 1/4 弦长处，是飞机纵向稳定性分析的关键参考点"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

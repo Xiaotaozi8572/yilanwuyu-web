@@ -1,0 +1,163 @@
+# ==============================================================================
+# 模型供应商配置（providers.yaml）
+# 翼览无余 AI 智能导师 —— LLM（大语言模型）与 Embedding（向量嵌入）供应商接入配置
+#
+# 【加载方式】
+#   由 core/settings.py 读取，合并进全局 Settings，再被各业务层按字段路径消费。
+#
+# 【密钥原则】
+#   本项目一律通过 api_key_env 字段引用环境变量名（如 DEEPSEEK_API_KEY），
+#   代码运行时执行 os.environ.get(该名字) 读取真正密钥；配置文件内不存放任何明文密钥。
+#   环境变量缺失时客户端明确报 MISSING_API_KEY，不回退到配置文件明文。
+#
+# 【环境变量生效提醒】
+#   本项目没有 dotenv 自动加载，.env 里的变量必须手动 export / set 进运行进程环境
+#   才会被 os.environ 读到（例如：export DEEPSEEK_API_KEY=sk-xxx）。
+#
+# 【字段读取状态说明】
+#   注释中标注“说明性配置，代码当前未读取”的字段仅为文档/预留用途，
+#   改动它们不会影响运行行为；其余字段均有对应代码消费。
+# ==============================================================================
+providers:
+  # ----------------------------------------------------------------------------
+  # LLM（大语言模型）接入配置
+  # ----------------------------------------------------------------------------
+  llm:
+    # 默认 LLM 供应商名；值必须与下方某个 provider 块的键名一致（deepseek / mock）。
+    default: deepseek
+
+    # 密钥缺失时的降级策略：mock = 使用本地模拟客户端，不发真实请求。
+    # 【说明性配置，代码当前未读取】实际是否走 mock 由下方 enabled + 密钥是否存在决定。
+    missing_key_strategy: mock
+
+    # 全局 LLM 开关：false = 强制使用 MockModelClient（纯离线，不发请求）；
+    # true = 按 default 指定的供应商发起真实调用。
+    enabled: true
+
+    # 是否允许在模型出错（超时 / 限流 / 输出不合法等）时回退。
+    fallback_allowed: true
+
+    # 允许触发回退的错误码白名单（ModelErrorCode 的枚举值）。
+    fallback_reason_allowlist: [model_disabled, timeout, rate_limited, structured_output_invalid]
+
+    # 全局请求超时（毫秒），用于构造 ModelOptions.timeout_seconds。
+    # 生产实测：完整管线 prompt（约 14KB 证据注入）下 deepseek-v4-flash 生成耗时
+    # 可达 30-120s，60s 会触发超时重试导致整次问答约 2.5 分钟抖动，
+    # 故放宽到 180s，让单次生成一次性完成。
+    timeout_ms: 180000
+
+    # 全局最大重试次数，用于构造 ModelOptions.max_retries。
+    max_retries: 1
+
+    # ---------------- mock 供应商（离线/无密钥时的兜底）----------------
+    mock:
+      # mock 供应商的显示别名（default 为 mock 时读入 ModelSettings，供追踪标识）。
+      model_alias: deepseek-flash
+      # mock 是否支持结构化输出。
+      # 【说明性配置，代码当前未读取】MockModelClient 构造时不消费该字段。
+      structured_output: true
+
+    # ---------------- deepseek 供应商（官方 DeepSeek API）----------------
+    deepseek:
+      # 是否启用 DeepSeek 供应商。
+      # 【说明性配置，代码当前未读取】真正控制开关的是上方 llm.enabled 与 llm.default。
+      enabled: true
+      # 显示别名，用于追踪 / ModelResult.model_alias，【不会发送给 API】。
+      model_alias: deepseek-v4-flash
+      # 【真正发给 DeepSeek 的模型名】请求体 {"model": "deepseek-v4-flash"}。
+      # 模型名优先级：环境变量 DEEPSEEK_MODEL（非空时） > 本字段 model_id。
+      # DeepSeek 官方 v4 系列：deepseek-v4-flash / deepseek-v4-pro。
+      # 【T38 核实留痕（2026-08-16）】模型名真实存在：DeepSeek 2026-04-24 发布 V4 系列，
+      # 官方定价页 api-docs.deepseek.com 列明 deepseek-v4-flash（当前版本 V4-Flash-0731）；
+      # 旧别名 deepseek-chat / deepseek-reasoner 已于 2026-07-24 停用，使用新名是正确选择。
+      # 历史记录中"真实 model_id 待 P3+ 核验"（STATUS.md:1651）自本注记起关闭。
+      model_id: deepseek-v4-flash
+      # 读取 API 密钥所用的【环境变量名】（如 DEEPSEEK_API_KEY）。
+      api_key_env: DEEPSEEK_API_KEY
+      # Base URL 兜底值：当环境变量 DEEPSEEK_BASE_URL 为空时，用它填充该环境变量。
+      base_url: https://api.deepseek.com
+      # 读取 Base URL 所用的环境变量名（环境变量优先于上方 base_url 兜底值）。
+      base_url_env: DEEPSEEK_BASE_URL
+      # 模型名兜底值：当环境变量 DEEPSEEK_MODEL 为空时，用它填充该环境变量。
+      model: deepseek-v4-flash
+      # 读取模型名所用的环境变量名（优先级：DEEPSEEK_MODEL > model > model_id）。
+      model_env: DEEPSEEK_MODEL
+      # 拼接在 base_url 之后的接口路径；最终请求 URL = base_url + chat_path。
+      chat_path: /chat/completions
+      # 单次请求超时（秒）。
+      # 【说明性配置，代码当前未读取】实际超时取上方 llm.timeout_ms（毫秒）换算。
+      timeout_seconds: 60
+      # 请求重试次数。
+      # 【说明性配置，代码当前未读取】实际重试取上方 llm.max_retries。
+      max_retries: 2
+      # 采样温度（temperature）。ModelFactory 会读取并校验必须为有限数值。
+      temperature: 0.2
+      # 是否启用供应商级回退。
+      # 【说明性配置，代码当前未读取】回退逻辑由上方 llm.fallback_allowed 控制。
+      fallback_enabled: true
+      # 是否在日志中打印请求体。
+      # 【说明性配置，代码当前未读取】
+      log_prompt_body: false
+      # 视为限流并触发重试的状态码列表。
+      # 【说明性配置，代码当前未读取】客户端目前固定将 HTTP 429 视为限流。
+      rate_limit_status_codes: [429]
+      # 是否流式输出。
+      # 【说明性配置，代码当前未读取】
+      stream: false
+      # 是否启用 HTTP/2。
+      # 【说明性配置，代码当前未读取】客户端当前固定启用 http2。
+      http2: true
+      # 连接池大小。
+      # 【说明性配置，代码当前未读取】
+      max_connections: 10
+
+  # ----------------------------------------------------------------------------
+  # Embedding（向量嵌入）接入配置
+  # ----------------------------------------------------------------------------
+  embedding:
+    # 默认向量嵌入供应商名；值必须与下方某个 provider 块一致（bge_m3 / qwen / nvidia / mock）。
+    # 该值同时被 memory.yaml 的 semantic_index.embedding_provider 以点分引用
+    # providers.embedding.default 的方式间接引用。
+    # RAG 知识检索不经过此处，由 configs/rag.yaml 的 embedding.provider 直接指定。
+    default: bge_m3
+
+    # 供应商缺失时的降级策略。
+    # 【说明性配置，代码当前未读取】实际降级由 QwenEmbeddingProvider 内部处理：
+    # 无密钥 / 请求失败时自动回退为字符哈希 mock 向量（is_mock=True）。
+    missing_provider_strategy: token_similarity_fallback
+
+    # ---------------- qwen 供应商（阿里云百炼 DashScope text-embedding）----------------
+    qwen:
+      # 读取 API 密钥所用的【环境变量名】（如 DASHSCOPE_API_KEY）。
+      api_key_env: DASHSCOPE_API_KEY
+      # DashScope 原生 text-embedding 接口完整 URL（含路径）。
+      # 留空则使用代码内置默认值；
+      # 注意：这是 native 接口，不要换成 compatible-mode（OpenAI 兼容）端点，
+      # 二者的请求体格式不同。
+      base_url: "https://dashscope.aliyuncs.com/api/v1/services/embeddings/text-embedding/text-embedding"
+      # 嵌入模型名：text-embedding-v3（官方仍在售，1024 维）；
+      # text-embedding-v4 也兼容同一 native 接口。
+      model: text-embedding-v3
+      # 向量维度。
+      # 【说明性配置，代码当前未读取】实际维度由 rag.yaml 的 embedding.dimension
+      # 与 memory.yaml 的 semantic_index.embedding_dimension 决定（当前均为 1024）。
+      dimension: 1024
+
+    # ---------------- nvidia 供应商（NVIDIA NIM bge-m3 向量嵌入）----------------
+    nvidia:
+      # 读取 API 密钥所用的【环境变量名】（如 NVIDIA_API_KEY）。
+      api_key_env: NVIDIA_API_KEY
+      # NVIDIA NIM OpenAI 兼容 embeddings 端点（bge-m3 为 1024 维多语言模型）。
+      # 注意：这是 /v1/embeddings OpenAI 兼容接口，请求体与 DashScope native 不同。
+      base_url: "https://integrate.api.nvidia.com/v1/embeddings"
+      # 嵌入模型名：nvidia/nv-embedqa-e5-v5（1024 维，需 input_type 参数）。
+      model: nvidia/nv-embedqa-e5-v5
+      # 向量维度。
+      # 【说明性配置，代码当前未读取】实际维度由 rag.yaml 的 embedding.dimension 决定。
+      dimension: 1024
+
+    # ---------------- mock 供应商（本地字符哈希向量，离线兜底）----------------
+    mock:
+      # mock 供应商的默认维度。
+      # 【说明性配置，代码当前未读取】实际维度由调用方传入（如 rag.yaml 的 dimension）。
+      dimension: 8

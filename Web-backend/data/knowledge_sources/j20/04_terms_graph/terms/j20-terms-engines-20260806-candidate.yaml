@@ -1,0 +1,28 @@
+# j20-terms-engines-20260806-candidate
+
+terms:
+  - canonical_name: "AL-31FM2"
+    aliases: ["AL-31FM2"]
+    node_type: "component"
+    definition: "俄制发动机，首飞原型机用"
+    source_id: "j20-science-powerplant-v1"
+  - canonical_name: "WS-10B"
+    aliases: ["WS-10B", "涡扇-10B"]
+    node_type: "component"
+    definition: "国产过渡发动机"
+    source_id: "j20-science-powerplant-v1"
+  - canonical_name: "WS-10C"
+    aliases: ["WS-10C", "涡扇-10C"]
+    node_type: "component"
+    definition: "现役主力，142-147 kN，超巡"
+    source_id: "j20-science-powerplant-v1"
+  - canonical_name: "WS-10B-3"
+    aliases: ["WS-10B-3"]
+    node_type: "component"
+    definition: "矢量推力验证型号"
+    source_id: "j20-science-powerplant-v1"
+  - canonical_name: "WS-15"
+    aliases: ["WS-15", "涡扇-15"]
+    node_type: "component"
+    definition: "终极动力，约180 kN"
+    source_id: "j20-science-powerplant-v1"

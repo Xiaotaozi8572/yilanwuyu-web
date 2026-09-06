@@ -1,0 +1,22 @@
+# data/knowledge_sources/c919/object.yaml
+object_id: c919
+display_name: "中国商飞 C919"
+aliases:
+  - "C919"
+  - "国产大飞机"
+  - "中国商飞窄体客机"
+aircraft_family: "narrow_body"
+manufacturer: "COMAC"
+partition_enable:
+  01_science: true
+  02_teaching: true
+  03_multimodal: false
+  04_terms_graph: true
+  90_reference_only: false
+partition_owners:
+  01_science: "科普证据组"
+  02_teaching: "教学设计组"
+  03_multimodal: "视觉资产组"
+  04_terms_graph: "术语图谱组"
+  90_reference_only: "资料转化组"
+notes: "V1 仅启用 01-04，90 分区作为资料预留入口。"

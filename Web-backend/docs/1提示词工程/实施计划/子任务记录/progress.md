@@ -1,0 +1,8 @@
+﻿Task 1: complete (file-level review clean; tests/unit/prompts/test_prompt_models.py 5 passed)
+Task 2: complete (file-level review clean; tests/unit/prompts 19 passed)
+Task 3: complete (review clean after stale config cleanup; tests/unit/prompts 25 passed)
+Task 4: complete (review clean after terminal action trace fix; prompt/generation/app-loop tests 37 passed)
+Task 5: complete (review clean after repository invariant hardening; prompts tests 34 passed)
+Task 6: complete (review clean after provenance assertion strengthening; prompt/voice tests 48 passed)
+Task 7: complete (review clean after trace summary sanitizer; prompt/app/e2e tests 53 passed)
+Task 8: complete (full verification passed; pytest 138 passed, compile/eval/trace/deployment all green)

@@ -1,0 +1,71 @@
+# C919 发动机专项误解与纠偏
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / misconception / correction / explanation
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+misconceptions:
+  - id: "eng-mis-001-engine-domestic"
+    misconception: "C919 的发动机是国产的。"
+    correction: "C919 当前使用 CFM 国际（美法合资）LEAP-1C，国产 CJ-1000A 在研制中，预计 2027-2028 取证。"
+    explanation: >
+      C919 当前装 CFM LEAP-1C（CFM 是美国 GE 航空+法国赛峰合资），标准型 LEAP-1C28 推力 129.98 kN、延程型 LEAP-1C30 推力 137.14 kN。
+      国产 CJ-1000A（长江-1000A）由中国航发集团研制，预计 2027-2028 取证，尚不能装机运营。
+      选用成熟发动机是行业通行做法（A320neo 用 LEAP-1A 或 PW1100G，B737 MAX 用 LEAP-1B），不是 C919 独有缺陷。
+
+  - id: "eng-mis-002-bypass-more-thrust"
+    misconception: "涵道比越大，发动机推力越大。"
+    correction: "涵道比大意味着推进效率高、油耗低，但推力大小还取决于风扇直径和核心机功率。"
+    explanation: >
+      涵道比是外涵道与内涵道空气流量之比，影响的是推进效率而非推力本身。高涵道比把更多空气以较低速度加速，
+      推进效率更高、更省油。但大风扇惯量大，推力响应变慢，且发动机直径增大受离地间隙限制。
+      LEAP-1C 涵道比 11:1，标准型推力 129.98 kN、延程型 137.14 kN——推力由发动机整体设计决定，不是涵道比单一决定的。
+
+  - id: "eng-mis-003-turbofan-vs-turbojet"
+    misconception: "涡扇发动机和涡喷发动机是一回事。"
+    correction: "涡扇发动机有外涵道（大部分空气不进核心机），涡喷没有外涵道（所有空气进核心机）。"
+    explanation: >
+      涡喷发动机（Turbojet）所有空气都进入核心机燃烧，推力完全来自热气喷流，油耗高、噪音大。
+      涡扇发动机（Turbofan）前面有大风扇，大部分空气走外涵道（只加速不烧油），小部分进核心机。
+      LEAP-1C 涵道比 11:1，意味着大部分推力来自外涵道冷气流，省油且噪音低。现代客机都用涡扇，不用涡喷。
+
+  - id: "eng-mis-004-reverse-thrust-brake"
+    misconception: "反推装置就是飞机的刹车。"
+    correction: "反推是辅助减速手段，主刹车是机轮碳盘刹车；反推在湿滑跑道特别重要。"
+    explanation: >
+      着陆时反推装置打开，把发动机外涵道气流反向喷出产生反向推力，帮助减速。但反推是辅助减速，主刹车是机轮碳盘刹车
+      （C919 用 Carbenix 碳/碳盘式刹车）。反推在湿滑/冰雪跑道特别重要（机轮刹车效率低时），干跑道主要靠机轮刹车。
+      把反推等同于"飞机的刹车"是混淆了主备关系。
+
+  - id: "eng-mis-005-cj-1000a-ready"
+    misconception: "CJ-1000A 已经可以装在 C919 上飞行了。"
+    correction: "CJ-1000A 仍在研制中，预计 2027-2028 取证，目前不能装机运营。"
+    explanation: >
+      CJ-1000A（长江-1000A）是中国航发集团研制的国产大涵道比涡扇发动机，目标推力约 130 kN，用于替代 LEAP-1C。
+      但目前仍在研制中，预计 2027-2028 取证，尚不能装机运营。发动机研制周期长（通常 10-15 年），
+      需经过大量地面试车+高空台试车+试飞验证。把 CJ-1000A 说成"已可装机"是不准确的。
+
+  - id: "eng-mis-006-leap-1c-inferior"
+    misconception: "LEAP-1C 是落后发动机，C919 用它说明技术不行。"
+    correction: "LEAP-1C 与 A320neo 的 LEAP-1A、B737 MAX 的 LEAP-1B 是同代发动机，技术先进。"
+    explanation: >
+      LEAP-1C 是 CFM 国际 LEAP 系列的三种型号之一（LEAP-1A 用于 A320neo、LEAP-1B 用于 B737 MAX、LEAP-1C 用于 C919），
+      是同代发动机，技术先进：涵道比 11:1、18 片碳纤维复合材料风扇叶片、TAPS 燃烧室低 NOx 排放约 -60%。
+      C919 选用 LEAP-1C 是与 A320neo/B737 MAX 同代的选择，不是"技术不行"。
+
+  - id: "eng-mis-007-fan-blade-bird-strike"
+    misconception: "碳纤维风扇叶片遇鸟击会碎，不如金属叶片安全。"
+    correction: "碳纤维风扇叶片按 CCAR-25.901/.903 鸟击验证，包容性设计保证叶片即使损坏也不穿透机匣。"
+    explanation: >
+      LEAP-1C 用 18 片碳纤维复合材料风扇叶片，经过严格的鸟击试验验证（按 CCAR-25.901/.903）。
+      即使叶片损坏，发动机短舱有包容环（Containment Ring）保证碎片不穿透机匣伤及机身/客舱。
+      碳纤维叶片比金属叶片轻约 30%，允许更大风扇直径，是新一代涡扇的标志性技术，不是"不安全"。
+
+  - id: "eng-mis-008-taps-no-emission"
+    misconception: "TAPS 燃烧室零排放。"
+    correction: "TAPS 燃烧室降低 NOx 排放约 60%，但仍有 CO₂、H₂O 等排放，不是零排放。"
+    explanation: >
+      TAPS（Twin Annular Premixing Swirler）燃烧室让燃油与空气预先混合再燃烧，降低燃烧温度，
+      NOx 排放减少约 60%。但航空煤油燃烧必然产生 CO₂、H₂O、少量 CO/NOx/颗粒物，不是零排放。
+      把 TAPS 说成"零排放"是夸大了环保效果。真正零排放需用氢燃料或电推进，目前仍不成熟。

@@ -1,0 +1,44 @@
+# C919 结构与系统分区评测种子
+
+seeds:
+  - question: "C919 的机翼采用什么设计？有什么特点？"
+    expected_intent_type: "component_scene"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/02_structure_systems"]
+    notes: "机翼部件角色"
+
+  - question: "C919 用的是哪款发动机？推力多大？"
+    expected_intent_type: "parameter_fact"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/02_structure_systems"]
+    notes: "发动机参数"
+
+  - question: "C919 的电传飞控系统有什么特点？"
+    expected_intent_type: "system_explanation"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/02_structure_systems"]
+    notes: "飞控系统解释"
+
+  - question: "C919 的起落架是谁供应的？"
+    expected_intent_type: "component_role"
+    expected_complexity: "L1"
+    expected_evidence_partitions: ["c919/01_science/02_structure_systems"]
+    notes: "供应商信息"
+
+  - question: "C919 的航电系统是谁提供的？采用什么架构？"
+    expected_intent_type: "system_explanation"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/02_structure_systems", "c919/04_terms_graph"]
+    notes: "航电系统与供应商"
+
+  - question: "C919 的复合材料用在哪些部位？"
+    expected_intent_type: "component_role"
+    expected_complexity: "L2"
+    expected_evidence_partitions: ["c919/01_science/02_structure_systems", "c919/01_science/03_principles"]
+    notes: "材料应用部位"
+
+  - question: "C919 的客舱布局是怎样的？"
+    expected_intent_type: "component_scene"
+    expected_complexity: "L1"
+    expected_evidence_partitions: ["c919/01_science/02_structure_systems"]
+    notes: "客舱系统"

@@ -1,0 +1,112 @@
+# C919 系统依赖关系
+# 按系统层级拆分：part_of 与 depends_on 关系
+# relation_type: part_of / depends_on
+# edge_id 前缀：sysrel_
+
+relations:
+  # ========== part_of 系统归属 ==========
+  - edge_id: "sysrel_001"
+    source_node_id: "sys_leap1c"
+    target_node_id: "c919_propulsion"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "LEAP-1C 发动机是 C919 动力系统的核心部件，左右各一台"
+
+  - edge_id: "sysrel_002"
+    source_node_id: "sys_apu"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "APU 安装于 C919 尾椎，属于机载辅助动力设备"
+
+  - edge_id: "sysrel_003"
+    source_node_id: "sys_fuel"
+    target_node_id: "c919_propulsion"
+    relation_type: "part_of"
+    confidence: 0.95
+    description: "燃油系统是动力系统的组成部分，为发动机和 APU 提供燃料"
+
+  - edge_id: "sysrel_004"
+    source_node_id: "sys_oxygen"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 0.95
+    description: "氧气系统是 C919 生命保障系统的组成部分，提供旅客和机组供氧"
+
+  - edge_id: "sysrel_005"
+    source_node_id: "sys_comm_nav"
+    target_node_id: "sys_avionics"
+    relation_type: "part_of"
+    confidence: 0.95
+    description: "通信导航系统是航电系统的组成部分，集成于 IMA 架构"
+
+  - edge_id: "sysrel_006"
+    source_node_id: "sys_weather_radar"
+    target_node_id: "sys_avionics"
+    relation_type: "part_of"
+    confidence: 0.95
+    description: "气象雷达是航电系统的组成部分，提供航路气象探测"
+
+  # ========== depends_on 系统依赖 ==========
+  - edge_id: "sysrel_007"
+    source_node_id: "sys_flight_control"
+    target_node_id: "sys_hydraulic"
+    relation_type: "depends_on"
+    confidence: 0.95
+    description: "飞控系统舵面作动器由液压系统驱动，依赖液压提供作动力"
+
+  - edge_id: "sysrel_008"
+    source_node_id: "sys_ecs"
+    target_node_id: "c919_propulsion"
+    relation_type: "depends_on"
+    confidence: 0.9
+    description: "环控系统依赖发动机引气作为气源，由动力系统提供压缩空气"
+
+  - edge_id: "sysrel_009"
+    source_node_id: "sys_ice_protection"
+    target_node_id: "c919_propulsion"
+    relation_type: "depends_on"
+    confidence: 0.9
+    description: "防冰系统依赖发动机引气提供热空气，用于机翼前缘和发动机进气道防冰"
+
+  - edge_id: "sysrel_010"
+    source_node_id: "sys_hydraulic"
+    target_node_id: "sys_leap1c"
+    relation_type: "depends_on"
+    confidence: 0.9
+    description: "液压系统的发动机驱动泵由 LEAP-1C 提取轴功率驱动"
+
+  - edge_id: "sysrel_011"
+    source_node_id: "sys_electrical"
+    target_node_id: "sys_leap1c"
+    relation_type: "depends_on"
+    confidence: 0.9
+    description: "电气系统的发动机发电机由 LEAP-1C 驱动，提供主交流电源"
+
+  - edge_id: "sysrel_012"
+    source_node_id: "sys_avionics"
+    target_node_id: "sys_electrical"
+    relation_type: "depends_on"
+    confidence: 0.95
+    description: "航电系统各计算与显示模块依赖电气系统提供电源"
+
+  - edge_id: "sysrel_013"
+    source_node_id: "sys_lighting"
+    target_node_id: "sys_electrical"
+    relation_type: "depends_on"
+    confidence: 0.9
+    description: "照明系统依赖电气系统提供内外部照明电源"
+
+  - edge_id: "sysrel_014"
+    source_node_id: "sys_fire_protection"
+    target_node_id: "sys_electrical"
+    relation_type: "depends_on"
+    confidence: 0.9
+    description: "防火系统火警探测和灭火装置依赖电气系统供电"
+
+  - edge_id: "sysrel_015"
+    source_node_id: "sys_apu"
+    target_node_id: "sys_fuel"
+    relation_type: "depends_on"
+    confidence: 0.95
+    description: "APU 运行依赖燃油系统提供持续燃料供给"

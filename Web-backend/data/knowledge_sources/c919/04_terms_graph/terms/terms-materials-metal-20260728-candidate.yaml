@@ -1,0 +1,90 @@
+# C919 金属材料类术语
+# 领域：金属材料
+# 条目数：12
+# node_type 统一为 concept
+# ID 前缀：matmetal_
+
+terms:
+  - term_id: "matmetal_001"
+    canonical_name: "铝合金"
+    aliases: ["铝合金", "aluminum alloy", "铝合金材料"]
+    node_type: "concept"
+    definition: "以铝为基加入合金元素的材料，密度低强度高，C919 机身蒙皮、桁条和框大量采用铝合金"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matmetal_002"
+    canonical_name: "铝锂合金"
+    aliases: ["铝锂合金", "Al-Li alloy", "铝锂", "Al-Li"]
+    node_type: "concept"
+    definition: "加入锂的铝合金，密度更低刚度更高，C919 铝锂合金用量约 8.8% 用于机身蒙皮减重"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matmetal_003"
+    canonical_name: "2024"
+    aliases: ["2024", "2024 铝合金", "2024-T3", "杜拉铝"]
+    node_type: "concept"
+    definition: "Al-Cu-Mg 系高强铝合金，疲劳性能和断裂韧性较好，C919 机身蒙皮部分采用 2024 铝合金"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matmetal_004"
+    canonical_name: "7075"
+    aliases: ["7075", "7075 铝合金", "7075-T6", "超硬铝"]
+    node_type: "concept"
+    definition: "Al-Zn-Mg-Cu 系超高强铝合金，强度高但抗蚀性较差，C919 高应力结构件采用 7075 铝合金"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matmetal_005"
+    canonical_name: "钛合金"
+    aliases: ["钛合金", "titanium alloy", "Ti 合金"]
+    node_type: "concept"
+    definition: "以钛为基的合金，强度高密度适中耐高温耐腐蚀，C919 高温和高应力区采用钛合金"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matmetal_006"
+    canonical_name: "Ti-6Al-4V"
+    aliases: ["Ti-6Al-4V", "TC4", "Ti64", "Ti-6-4"]
+    node_type: "concept"
+    definition: "α+β 型钛合金，综合性能优异应用最广，C919 发动机挂架和接头等高承力件采用 Ti-6Al-4V"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matmetal_007"
+    canonical_name: "不锈钢"
+    aliases: ["不锈钢", "stainless steel", "不锈钢材料"]
+    node_type: "concept"
+    definition: "含铬耐腐蚀钢，强度高耐腐蚀，C919 特殊腐蚀环境和高温部位采用不锈钢"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matmetal_008"
+    canonical_name: "高温合金"
+    aliases: ["高温合金", "superalloy", "高温合金材料", "耐热合金"]
+    node_type: "concept"
+    definition: "高温下保持强度的合金，含镍基和钴基，C919 LEAP-1C 发动机热端部件采用高温合金"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matmetal_009"
+    canonical_name: "硬度"
+    aliases: ["硬度", "hardness", "材料硬度"]
+    node_type: "concept"
+    definition: "材料抵抗局部压入变形的能力，C919 选材硬度测试保证材料满足耐磨和强度要求"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matmetal_010"
+    canonical_name: "强度"
+    aliases: ["强度", "strength", "材料强度"]
+    node_type: "concept"
+    definition: "材料抵抗外力破坏的能力，含屈服强度和极限强度，C919 选材按强度设计保证结构安全"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matmetal_011"
+    canonical_name: "韧性"
+    aliases: ["韧性", "toughness", "断裂韧性", "冲击韧性"]
+    node_type: "concept"
+    definition: "材料吸收能量抵抗断裂的能力，C919 选材考虑韧性避免脆性断裂，特别是低温和高应力区"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "matmetal_012"
+    canonical_name: "疲劳"
+    aliases: ["疲劳", "fatigue", "材料疲劳", "疲劳性能"]
+    node_type: "concept"
+    definition: "材料在交变载荷下产生裂纹的性能，C919 选材疲劳性能是关键指标，机身材料需满足服役寿命"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

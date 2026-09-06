@@ -1,0 +1,76 @@
+# C919 尾流与涡流类术语
+# 领域：尾流、尾涡与诱导效应
+# 条目数：10
+# node_type 统一为 concept
+# ID 前缀：wake_
+
+terms:
+  - term_id: "wake_001"
+    canonical_name: "尾流"
+    aliases: ["尾流", "wake", "尾迹", "飞机尾流"]
+    node_type: "concept"
+    definition: "飞机飞过后在身后形成的扰动气流区域，含尾涡和发动机喷流，对后续飞机造成颠簸，C919 起飞产生尾流需保持间隔"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wake_002"
+    canonical_name: "尾涡"
+    aliases: ["尾涡", "trailing vortex", "翼尖涡", "尾流涡"]
+    node_type: "concept"
+    definition: "机翼产生升力时从翼尖拖出的两条反向旋转涡，强度与飞机重量和升力相关，C919 重型机尾涡需较大间隔"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wake_003"
+    canonical_name: "下洗"
+    aliases: ["下洗", "downwash", "下洗角", "下洗流"]
+    node_type: "concept"
+    definition: "机翼升力使气流向下偏转的现象，下洗角使有效迎角减小并产生诱导阻力，C919 翼尖小翼可减小下洗"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wake_004"
+    canonical_name: "诱导速度"
+    aliases: ["诱导速度", "induced velocity", "诱导速度场"]
+    node_type: "concept"
+    definition: "尾涡在流场中引起的附加速度，影响机翼有效迎角和下洗角，是计算诱导阻力的依据"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wake_005"
+    canonical_name: "涡强度"
+    aliases: ["涡强度", "vortex strength", "环量", "涡量大小"]
+    node_type: "concept"
+    definition: "尾涡的环量大小，等于机翼展向升力分布的积分，飞机重量越大涡强度越强，C919 满载尾涡强度较大"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wake_006"
+    canonical_name: "涡耗散"
+    aliases: ["涡耗散", "vortex decay", "涡衰减"]
+    node_type: "concept"
+    definition: "尾涡随时间和距离增加而强度减弱的过程，受大气湍流和分层影响，决定尾流间隔标准"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wake_007"
+    canonical_name: "尾流间隔"
+    aliases: ["尾流间隔", "wake separation", "尾流间隔标准"]
+    node_type: "concept"
+    definition: "为避免后机进入前机尾流而规定的最小飞行间隔，按飞机重量分类，C919 作为重型机对后机要求较大间隔"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wake_008"
+    canonical_name: "地面效应"
+    aliases: ["地面效应", "ground effect", "地效"]
+    node_type: "concept"
+    definition: "飞机接近地面飞行时尾涡受地面抑制使诱导阻力减小的现象，C919 起飞着陆阶段地效使飞机有浮起趋势"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wake_009"
+    canonical_name: "翼尖涡"
+    aliases: ["翼尖涡", "wingtip vortex", "翼梢涡"]
+    node_type: "concept"
+    definition: "机翼下表面高压气流绕过翼尖流向上表面形成的旋转涡流，是诱导阻力的主要来源，C919 翼尖小翼可减弱翼尖涡"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "wake_010"
+    canonical_name: "分离涡"
+    aliases: ["分离涡", "separated vortex", "前缘分离涡", "集中涡"]
+    node_type: "concept"
+    definition: "大迎角下气流从前缘分离形成的稳定集中涡，可为三角翼提供涡升力，C919 后掠机翼大迎角会产生分离涡但需抑制"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

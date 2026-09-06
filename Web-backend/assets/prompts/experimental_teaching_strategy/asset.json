@@ -1,0 +1,27 @@
+{
+  "template_id": "experimental_teaching_strategy",
+  "title": "Experimental teaching strategy",
+  "task_type": "experimental_teaching_strategy",
+  "status": "candidate",
+  "active_version": "v2",
+  "activation_scope": [
+    "experimental_teaching_strategy"
+  ],
+  "concept_scope": [
+    "teaching_experiment"
+  ],
+  "scene_scope": [
+    "text",
+    "scene",
+    "voice"
+  ],
+  "constraints": [
+    "facts_from_evidence_only",
+    "compare_teaching_orders",
+    "mark_as_non_runtime"
+  ],
+  "risk_boundaries": [
+    "candidate_not_runtime",
+    "no_unsourced_creativity"
+  ]
+}

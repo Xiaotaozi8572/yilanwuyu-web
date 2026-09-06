@@ -1,0 +1,83 @@
+# C919 气动设计专项类比素材库
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / concept / analogy / explanation
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+analogies:
+  - id: "aero-ana-001-lift-pressure-diff"
+    concept: "升力（Lift）"
+    analogy: "水管捏扁水流变快压力变小——上下表面压力差托起机翼"
+    explanation: >
+      机翼上表面弯、下表面平，空气流过上表面时被"挤"得跑得更快，压力变小；
+      下表面空气跑得慢，压力变大。下面压力大、上面压力小，机翼就被"托"起来——这个向上的力就是升力。
+      C919 重 70 多吨，靠机翼上下压力差就能托起来。注意：升力是压力差+气流下推动反作用力的综合效果，不是单纯伯努利原理。
+
+  - id: "aero-ana-002-drag-headwind"
+    concept: "废阻力（Parasite Drag）"
+    analogy: "骑自行车迎风冲，风把你往后推"
+    explanation: >
+      废阻力是空气撞在机头、机身、机翼上产生的"挡路"的力，就像骑自行车逆风冲，风把你往后推。
+      飞机飞得越快，废阻力越大（大致与速度平方成正比）。C919 通过机身/机翼流线设计降低废阻力。
+
+  - id: "aero-ana-003-induced-drag-pool-edge"
+    concept: "诱导阻力（Induced Drag）"
+    analogy: "水从池边翻卷——翼尖涡流偷走能量"
+    explanation: >
+      机翼下方压力高、上方压力低，到了翼尖，下方高压空气向上翻卷形成旋转涡流，偷走能量变成诱导阻力。
+      可以类比水从池子边缘翻卷形成漩涡。C919 通过翼尖小翼削弱翼尖涡，降低诱导阻力约 3-5%。
+
+  - id: "aero-ana-004-supercritical-flat-bridge"
+    concept: "超临界机翼（Supercritical Wing）"
+    analogy: "把拱桥改成平缓坡道，让气流走得顺"
+    explanation: >
+      传统机翼像拱桥，上表面弯度大，跨声速飞行时气流加速过快容易在上方"撞墙"形成激波。
+      超临界机翼上表面更平坦、下表面弯度更大，靠后缘凹形补回升力。像把"拱桥"改成"平缓坡道"，让气流流过更平顺。
+      C919 第四代超临界机翼使气动效率提升约 20%、阻力降低约 8%。
+
+  - id: "aero-ana-005-winglet-stern-flap"
+    concept: "翼尖小翼（Winglet）"
+    analogy: "船尾的挡板，挡住水流乱卷"
+    explanation: >
+      机翼下方高压空气在翼尖向上翻卷形成涡流，是诱导阻力的来源。翼尖小翼像在船尾装一块挡板，挡住水流乱卷；
+      同样地，它挡住翼尖气流向上翻卷，削弱翼尖涡。C919 融合式翼尖小翼使翼展从 33.6 米增至 35.8 米，降低诱导阻力约 3-5%。
+
+  - id: "aero-ana-006-mach-0-785-transonic"
+    concept: "跨声速巡航（Transonic Cruise）"
+    analogy: "在高速公路上接近限速——既要快又要稳"
+    explanation: >
+      C919 巡航 Mach 0.785（约 835 km/h）处于跨声速区（Mach 0.7-0.9）。虽然来流马赫数小于 1，
+      但机翼上表面局部气流可能超过声速形成激波。可以类比"在高速公路上接近限速"——既要快又要稳，
+      需通过超临界机翼把激波出现的位置往后推、强度减弱。
+
+  - id: "aero-ana-007-shock-wave-traffic-jam"
+    concept: "激波（Shock Wave）"
+    analogy: "高速公路堵车——气流"撞墙"减速"
+    explanation: >
+      跨声速飞行时，机翼上表面局部气流超过声速，结尾处从超声速减速到亚声速，会形成一道正激波。
+      激波像高速公路堵车——气流"撞墙"突然减速，机械能转化为热能损失（波阻）。
+      C919 超临界机翼把激波位置后移、强度减弱，降低波阻。
+
+  - id: "aero-ana-008-stall-umbrella-flip"
+    concept: "失速（Stall）"
+    analogy: "撑伞迎风角度太大被掀翻"
+    explanation: >
+      迎角超过临界迎角后，机翼上表面气流大面积分离，升力骤降——这就是失速。
+      可以类比撑伞迎风角度太大被掀翻。C919 电传飞控提供迎角限制（α-protection），把可用迎角限制在失速迎角以下，
+      飞行员拉杆到底也不会失速。
+
+  - id: "aero-ana-009-sweep-back-arrow"
+    concept: "后掠翼（Swept Wing）"
+    analogy: "箭头形状切开气流——延迟激波"
+    explanation: >
+      C919 机翼有后掠角，像箭头形状切开气流。后掠翼让有效气流方向相对机翼的法向分量减小，
+      降低机翼上表面局部马赫数，把阻力发散马赫数提高。后掠角越大越能提高巡航速度，但结构更重、低速升力下降。
+
+  - id: "aero-ana-010-lift-drag-ratio-mpg"
+    concept: "升阻比（L/D，Lift-to-Drag Ratio）"
+    analogy: "汽车的每加仑里程——衡量飞得省不省"
+    explanation: >
+      升阻比 L/D 是升力除以阻力的比值，可以类比汽车的每加仑里程（MPG）——衡量飞得省不省。
+      L/D 越高，每克服 1 份阻力换来更多升力，越省油。典型窄体客机巡航升阻比约 15-18，
+      C919 通过超临界机翼+翼尖小翼实现更高升阻比（气动效率提升约 20%）。

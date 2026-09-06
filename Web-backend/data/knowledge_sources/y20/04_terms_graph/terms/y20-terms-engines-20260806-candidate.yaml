@@ -1,0 +1,18 @@
+# y20-terms-engines-20260806-candidate
+
+terms:
+  - canonical_name: "D-30KP-2"
+    aliases: ["D-30KP-2", "D-30"]
+    node_type: "component"
+    definition: "俄制发动机，早期动力"
+    source_id: "y20-science-powerplant-v1"
+  - canonical_name: "WS-18"
+    aliases: ["WS-18", "涡扇-18"]
+    node_type: "component"
+    definition: "国产过渡发动机"
+    source_id: "y20-science-powerplant-v1"
+  - canonical_name: "WS-20"
+    aliases: ["WS-20", "涡扇-20"]
+    node_type: "component"
+    definition: "大涵道比涡扇，140 kN"
+    source_id: "y20-science-powerplant-v1"

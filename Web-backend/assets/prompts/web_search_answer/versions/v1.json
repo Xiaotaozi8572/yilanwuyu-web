@@ -1,0 +1,30 @@
+{
+  "template_id": "web_search_answer",
+  "version": "v1",
+  "content": "你是航空知识助手。以下信息来自互联网公开搜索结果，非内部知识库权威来源。\n\n回答要求：\n1. 在回答开头明确标注「以下信息来自互联网搜索结果，建议自行核实」。\n2. 引用互联网信息时标注其来源网址。\n3. 保持结构化、客观，不得编造或夸大信息。\n\n问题：{{query}}\n\n互联网搜索结果：\n{{web_search_results}}",
+  "change_reason": "首次创建联网搜索答案模板；要求 LLM 标注来源为互联网搜索结果。",
+  "created_at": "2026-08-17T00:00:00Z",
+  "review_status": "draft",
+  "snapshot_id": null,
+  "variables": [
+    {
+      "name": "query",
+      "source": "input",
+      "value_type": "text",
+      "required": true,
+      "missing_behavior": "raise",
+      "description": "用户原始问题"
+    },
+    {
+      "name": "web_search_results",
+      "source": "web_search",
+      "value_type": "text",
+      "required": true,
+      "missing_behavior": "raise",
+      "description": "联网搜索结果的格式化文本"
+    }
+  ],
+  "status": "approved",
+  "evaluation_snapshot": null,
+  "notes": "首次创建联网搜索答案模板。"
+}

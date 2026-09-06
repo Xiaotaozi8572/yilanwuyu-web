@@ -1,0 +1,92 @@
+# C919 电力系统内部关系
+# 描述电力系统发电、配电、应急电源的层级与功能关系
+# relation_type: part_of / provides_power_to / feeds_to
+# edge_id 前缀：relec_
+
+relations:
+  # ========== part_of 电力系统组件归属 ==========
+  - edge_id: "relec_001"
+    source_node_id: "comp_idg"
+    target_node_id: "sys_electrical"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "集成驱动发电机(IDG)安装于发动机附件齿轮箱，是主交流发电机"
+
+  - edge_id: "relec_002"
+    source_node_id: "comp_apu_generator"
+    target_node_id: "sys_electrical"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "APU 发电机由 APU 驱动，是地面与空中备用的交流电源"
+
+  - edge_id: "relec_003"
+    source_node_id: "comp_ground_power_receptacle"
+    target_node_id: "sys_electrical"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "地面电源插座位于前机身下部，连接地面电源车提供地面供电"
+
+  - edge_id: "relec_004"
+    source_node_id: "comp_primary_epdc"
+    target_node_id: "sys_electrical"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "主配电中心(EPDC)集中分配交流与直流电力至各汇流条"
+
+  - edge_id: "relec_005"
+    source_node_id: "comp_secondary_epdc"
+    target_node_id: "sys_electrical"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "二级配电中心分配电力至次要负载和远程负载"
+
+  - edge_id: "relec_006"
+    source_node_id: "comp_tru"
+    target_node_id: "sys_electrical"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "变压整流器(TRU)将交流电转换为直流电，为直流汇流条供电"
+
+  - edge_id: "relec_007"
+    source_node_id: "comp_battery"
+    target_node_id: "sys_electrical"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "蓄电池提供直流应急电源，在主电源失效时维持关键系统运行"
+
+  - edge_id: "relec_008"
+    source_node_id: "comp_rat"
+    target_node_id: "sys_electrical"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "冲压空气涡轮(RAT)在紧急情况下放出，提供应急液压与电力"
+
+  # ========== provides_power_to 电力分配 ==========
+  - edge_id: "relec_009"
+    source_node_id: "comp_idg"
+    target_node_id: "comp_primary_epdc"
+    relation_type: "provides_power_to"
+    confidence: 0.95
+    description: "IDG 发出的交流电送至主配电中心进行分配"
+
+  - edge_id: "relec_010"
+    source_node_id: "comp_apu_generator"
+    target_node_id: "comp_primary_epdc"
+    relation_type: "provides_power_to"
+    confidence: 0.95
+    description: "APU 发电机输出送至主配电中心，作为地面或备用电源"
+
+  # ========== feeds_to 电力变换与流向 ==========
+  - edge_id: "relec_011"
+    source_node_id: "comp_tru"
+    target_node_id: "comp_dc_bus"
+    relation_type: "feeds_to"
+    confidence: 0.95
+    description: "TRU 将交流转换为直流后送至直流汇流条"
+
+  - edge_id: "relec_012"
+    source_node_id: "comp_rat"
+    target_node_id: "comp_emergency_bus"
+    relation_type: "provides_power_to"
+    confidence: 0.95
+    description: "RAT 输出送至应急汇流条，维持飞控等关键系统供电"

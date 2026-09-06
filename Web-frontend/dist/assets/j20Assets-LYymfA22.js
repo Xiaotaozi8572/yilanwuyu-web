@@ -1,0 +1,1 @@
+function e(e){return`/j20-assets/${e.replace(/^\/+/,``).split(`/`).map(e=>encodeURIComponent(e)).join(`/`)}`}export{e as t};

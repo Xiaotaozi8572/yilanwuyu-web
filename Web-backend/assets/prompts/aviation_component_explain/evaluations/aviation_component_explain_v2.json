@@ -1,0 +1,20 @@
+{
+  "snapshot_id": "aviation_component_explain_v2",
+  "template_id": "aviation_component_explain",
+  "version": "v2",
+  "test_cases": [
+    "selected_component",
+    "ambiguous_scene",
+    "scene_object_mismatch"
+  ],
+  "dimension_scores": {
+    "faithfulness": 0.98,
+    "scene_alignment": 0.95,
+    "clarity": 0.9
+  },
+  "violations": [],
+  "improvements": [
+    "Selected object anchoring is easier to audit."
+  ],
+  "final_decision": "approve"
+}

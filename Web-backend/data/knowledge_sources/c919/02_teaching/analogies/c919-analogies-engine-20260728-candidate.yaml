@@ -1,0 +1,85 @@
+# C919 发动机专项类比素材库
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / concept / analogy / explanation
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+analogies:
+  - id: "eng-ana-001-turbofan-multistage-fan"
+    concept: "涡扇发动机（Turbofan）"
+    analogy: "多级风扇——外涵道冷气流+内涵道热气流"
+    explanation: >
+      涡扇发动机像一台"多级风扇"：最前面是大风扇，把大部分空气向后吹产生大部分推力（外涵道冷气流）；
+      中间是压气机把进入核心的空气压密，核心是燃烧室烧油加热气体，最后是涡轮被热气推动反过来带动前面的大风扇和压气机（内涵道热气流）。
+      C919 用 CFM LEAP-1C，涵道比 11:1，意味着大部分推力来自外涵道冷气流。
+
+  - id: "eng-ana-002-bypass-ratio-faucet"
+    concept: "涵道比（Bypass Ratio）"
+    analogy: "水龙头的水流分配——大部分走外涵道只加速不烧油"
+    explanation: >
+      涵道比是外涵道与内涵道空气流量之比。可以类比为水龙头的水流分配——
+      大部分水（空气）从外管直接流走（外涵道，只加速不烧油），小部分水（空气）走内管去加热（内涵道，进核心机燃烧）。
+      LEAP-1C 涵道比 11:1，意味着 11 份空气中约 10 份走外涵道、1 份进核心机。高涵道比省油但推力响应变慢。
+
+  - id: "eng-ana-003-compressor-syringe"
+    concept: "压气机（Compressor）"
+    analogy: "注射器捏紧——把空气压缩"
+    explanation: >
+      压气机通过多级旋转叶片+静止叶片，逐级把空气压缩。像注射器捏紧——空气被压缩，压力和温度升高。
+      LEAP-1C 有多级高压压气机+多级低压压气机，总压比约 40:1，意味着进入燃烧室的空气压力是进气口的 40 倍。
+
+  - id: "eng-ana-004-combustion-chamber-gas-stove"
+    concept: "燃烧室（Combustion Chamber）"
+    analogy: "燃气灶——燃油雾化喷入燃烧"
+    explanation: >
+      燃烧室像燃气灶：燃油喷嘴把燃油雾化喷入，与压缩空气混合后点燃，产生高温高压燃气。
+      LEAP-1C 用 TAPS（Twin Annular Premixing Swirler）燃烧室，燃油与空气预先混合再燃烧，
+      降低 NOx 排放约 60%，比传统燃烧室更清洁。
+
+  - id: "eng-ana-005-turbine-windmill"
+    concept: "涡轮（Turbine）"
+    analogy: "风车——热气吹动叶片旋转"
+    explanation: >
+      涡轮像风车：高温高压燃气从燃烧室流出，吹动涡轮叶片旋转。涡轮通过轴带动前面的压气机和风扇。
+      LEAP-1C 有高压涡轮+低压涡轮，高压涡轮驱动高压压气机，低压涡轮驱动大风扇。
+
+  - id: "eng-ana-006-carbon-fan-blade-lighter"
+    concept: "碳纤维风扇叶片（Carbon Composite Fan Blade）"
+    analogy: "比金属更轻的"羽毛"——大风扇减重"
+    explanation: >
+      LEAP-1C 用 18 片碳纤维复合材料风扇叶片，比传统金属叶片轻约 30%。
+      可以类比"比金属更轻的羽毛"——减重后允许更大风扇直径（更高涵道比），同时降低离心应力。
+      这是新一代涡扇发动机的标志性技术。
+
+  - id: "eng-ana-007-taps-low-emission"
+    concept: "TAPS 燃烧室低排放（TAPS Low Emission）"
+    analogy: "预混燃烧灶——燃油先混空气再烧，少冒烟"
+    explanation: >
+      TAPS（Twin Annular Premixing Swirler）燃烧室让燃油与空气预先混合再燃烧，
+      像预混燃烧灶——燃油先混空气再烧，燃烧更完全、温度更低，NOx 排放减少约 60%。
+      这是 LEAP 系列发动机的环保核心技术。
+
+  - id: "eng-ana-008-thrust-129-137-kn"
+    concept: "推力（Thrust）"
+    analogy: "推手推车——129.98 kN 相当于推动约 13 吨重物"
+    explanation: >
+      C919 LEAP-1C 标准型 LEAP-1C28 推力 129.98 kN，延程型 LEAP-1C30 推力 137.14 kN。
+      129.98 kN 相当于推动约 13 吨重物以 1g 加速度前进。两台发动机总推力约 260 kN，
+      足以让 70 多吨的 C919 加速到起飞速度（约 250-300 km/h）。
+
+  - id: "eng-ana-009-reverse-thrust-reverse-fan"
+    concept: "反推装置（Thrust Reverser）"
+    analogy: "把风扇气流反向吹——像"倒车"减速"
+    explanation: >
+      着陆时反推装置打开，把发动机外涵道气流反向喷出，产生反向推力帮助减速。
+      像"倒车"减速。C919 采用整体式反推短舱（窄体客机首创），反推器集成在短舱内，
+      减重降阻，反推效率高。
+
+  - id: "eng-ana-010-cj-1000a-domestic"
+    concept: "CJ-1000A 国产发动机（CJ-1000A Domestic Engine）"
+    analogy: "中国自己造的"心脏"——研制中"
+    explanation: >
+      CJ-1000A（长江-1000A）是中国航发集团研制的国产大涵道比涡扇发动机，目标推力约 130 kN，
+      用于替代 LEAP-1C。可以类比"中国自己造的心脏"——目前仍在研制，预计 2027-2028 取证，
+      尚不能装机运营。CJ-1000A 是 C919 实现完全自主的关键一环。

@@ -1,0 +1,27 @@
+{
+  "template_id": "aviation_self_check",
+  "version": "v1",
+  "change_reason": "Initial self-check prompt.",
+  "created_at": "2026-07-09T00:00:00Z",
+  "review_status": "active",
+  "snapshot_id": "aviation_self_check_v1",
+  "variables": [
+    {
+      "name": "rag_evidence",
+      "source": "evidence_package",
+      "value_type": "evidence_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Evidence used to verify the answer."
+    },
+    {
+      "name": "output_contract",
+      "source": "runtime",
+      "value_type": "json_schema_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Runtime output rules."
+    }
+  ],
+  "content": "You are an aviation answer checker.\n1. Review the drafted answer against {{rag_evidence}}.\n2. Mark which claims are supported, weak, or unsafe.\n3. Check scene references only when they are explicitly grounded.\n4. Do not add new facts while reviewing.\n5. Follow {{output_contract}} exactly."
+}

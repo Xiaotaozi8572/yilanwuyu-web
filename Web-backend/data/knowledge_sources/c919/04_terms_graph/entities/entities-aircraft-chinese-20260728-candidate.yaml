@@ -1,0 +1,136 @@
+# 中国民用机型实体
+# 中国自主研发的主要民用飞机型号
+# node_type: aircraft
+# node_id 前缀：acn_
+
+entities:
+  - node_id: "acn_arj21"
+    node_type: "aircraft"
+    canonical_name: "ARJ21"
+    aliases: ["ARJ21", "ARJ21-700", "翔凤"]
+    description: "中国自主研发的支线涡扇客机，70-90 座级，2014 年取得型号合格证，与 C919 共同构成国产民机序列"
+    specifications:
+      wingspan_m: 27.29
+      length_m: 33.46
+      height_m: 8.44
+      mtow_kg: 43500
+      range_km: 3700
+      seats: "70-90"
+      cruise_mach: 0.78
+      engines: "2× GE CF34-10A"
+    applicable_aircraft: ["arj21"]
+
+  - node_id: "acn_c909"
+    node_type: "aircraft"
+    canonical_name: "C909"
+    aliases: ["C909", "中国商飞 C909", "ARJ21 改名"]
+    description: "ARJ21 系列更名后的中国商飞支线客机品牌，延续 ARJ21-700 平台，纳入商飞 C 系列命名体系"
+    specifications:
+      wingspan_m: 27.29
+      length_m: 33.46
+      height_m: 8.44
+      mtow_kg: 43500
+      range_km: 3700
+      seats: "70-90"
+      cruise_mach: 0.78
+      engines: "2× GE CF34-10A"
+    applicable_aircraft: ["c909"]
+
+  - node_id: "acn_cr929"
+    node_type: "aircraft"
+    canonical_name: "CR929"
+    aliases: ["CR929", "中俄远程宽体客机", "C929"]
+    description: "原中俄联合研制的远程宽体客机项目，座位数 250-300，航程可达 12000km，定位与 C919 形成高低搭配"
+    specifications:
+      wingspan_m: 60.0
+      length_m: 63.3
+      height_m: 18.5
+      mtow_kg: 250000
+      range_km: 12000
+      seats: "250-300"
+      cruise_mach: 0.85
+      engines: "待定（拟选 Trent 7000 或国产 CJ-2000）"
+    applicable_aircraft: ["cr929"]
+
+  - node_id: "acn_ma60"
+    node_type: "aircraft"
+    canonical_name: "新舟 60"
+    aliases: ["MA60", "新舟60", "Modern Ark 60"]
+    description: "中国西安飞机工业集团研制的双涡桨支线客机，50-60 座级，国产民机早期型号，与 C919 同属国产民机谱系"
+    specifications:
+      wingspan_m: 29.2
+      length_m: 24.71
+      height_m: 8.85
+      mtow_kg: 21800
+      range_km: 1600
+      seats: "50-60"
+      cruise_mach: 0.5
+      engines: "2× 普惠 PW127J 涡桨"
+    applicable_aircraft: ["ma60"]
+
+  - node_id: "acn_ma700"
+    node_type: "aircraft"
+    canonical_name: "新舟 700"
+    aliases: ["MA700", "新舟700", "Modern Ark 700"]
+    description: "新舟系列新一代涡桨支线客机，70-80 座级，速度与经济性提升，面向支线航空市场"
+    specifications:
+      wingspan_m: 30.0
+      length_m: 27.5
+      height_m: 9.2
+      mtow_kg: 27500
+      range_km: 2400
+      seats: "70-80"
+      cruise_mach: 0.55
+      engines: "2× PW150C 涡桨"
+    applicable_aircraft: ["ma700"]
+
+  - node_id: "acn_y12"
+    node_type: "aircraft"
+    canonical_name: "运-12"
+    aliases: ["运-12", "Y-12", "哈飞运十二"]
+    description: "中国哈尔滨飞机制造的轻型多用途通用飞机，17-19 座，广泛用于通航、巡逻、跳伞等场景"
+    specifications:
+      wingspan_m: 19.89
+      length_m: 14.86
+      height_m: 5.58
+      mtow_kg: 5670
+      range_km: 1300
+      seats: "17-19"
+      cruise_mach: 0.32
+      engines: "2× PTA6A-27 涡桨"
+    applicable_aircraft: ["y12"]
+
+  - node_id: "acn_ag600"
+    node_type: "aircraft"
+    canonical_name: "AG600"
+    aliases: ["AG600", "鲲龙", "水陆两栖飞机"]
+    description: "中国自主研发的大型水陆两栖飞机，世界在研最大水陆两栖飞机之一，可用于森林灭火、海上救援"
+    specifications:
+      wingspan_m: 38.8
+      length_m: 37.0
+      height_m: 12.1
+      mtow_kg: 53500
+      range_km: 4500
+      seats: "50（救援）"
+      cruise_mach: 0.5
+      engines: "4× WJ-6 涡桨"
+    applicable_aircraft: ["ag600"]
+
+  - node_id: "acn_c919"
+    node_type: "aircraft"
+    canonical_name: "C919"
+    aliases: ["C919", "中国商飞 C919", "国产大飞机"]
+    description: "中国自主研发的窄体干线客机，机身宽度 3.96m，翼展 33.6m（含小翼 35.8m），巡航 Mach 0.785，铝锂合金占比 8.8%、复合材料占比 12%"
+    specifications:
+      wingspan_m: 35.8
+      fuselage_width_m: 3.96
+      length_m: 38.9
+      height_m: 11.95
+      mtow_kg: 77300
+      range_km: 4075
+      seats: "158-168"
+      cruise_mach: 0.785
+      engines: "2× LEAP-1C28（推力 129.98kN）"
+      aluminum_lithium_pct: 8.8
+      composite_pct: 12
+    applicable_aircraft: ["c919"]

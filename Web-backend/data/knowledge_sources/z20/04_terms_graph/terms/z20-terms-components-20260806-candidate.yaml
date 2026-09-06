@@ -1,0 +1,53 @@
+# z20-terms-components-20260806-candidate
+
+terms:
+  - canonical_name: "主旋翼"
+    aliases: ["主旋翼", "旋翼"]
+    node_type: "component"
+    definition: "五叶主旋翼，直径16米"
+    source_id: "z20-science-rotor-flightcontrol-v1"
+  - canonical_name: "尾桨"
+    aliases: ["尾桨"]
+    node_type: "component"
+    definition: "平衡主旋翼扭矩"
+    source_id: "z20-science-rotor-flightcontrol-v1"
+  - canonical_name: "旋翼头"
+    aliases: ["旋翼头", "桨毂"]
+    node_type: "component"
+    definition: "主旋翼桨毂"
+    source_id: "z20-science-rotor-flightcontrol-v1"
+  - canonical_name: "自动倾斜器"
+    aliases: ["自动倾斜器"]
+    node_type: "component"
+    definition: "传递飞控指令到桨叶"
+    source_id: "z20-science-rotor-flightcontrol-v1"
+  - canonical_name: "主减速器"
+    aliases: ["主减速器", "齿轮箱"]
+    node_type: "component"
+    definition: "连接发动机与旋翼"
+    source_id: "z20-science-rotor-flightcontrol-v1"
+  - canonical_name: "机身"
+    aliases: ["机身"]
+    node_type: "component"
+    definition: "机身长20米"
+    source_id: "z20-science-basic-parameters-v1"
+  - canonical_name: "尾梁"
+    aliases: ["尾梁"]
+    node_type: "component"
+    definition: "连接机身与尾桨"
+    source_id: "z20-science-rotor-flightcontrol-v1"
+  - canonical_name: "客舱"
+    aliases: ["客舱", "货舱"]
+    node_type: "component"
+    definition: "12-15人乘员舱"
+    source_id: "z20-science-basic-parameters-v1"
+  - canonical_name: "外挂钩"
+    aliases: ["外挂钩", "吊挂"]
+    node_type: "component"
+    definition: "外挂4000kg"
+    source_id: "z20-science-basic-parameters-v1"
+  - canonical_name: "绞车"
+    aliases: ["绞车", "搜救绞车"]
+    node_type: "component"
+    definition: "搜救吊救设备"
+    source_id: "z20-science-overview-v1"

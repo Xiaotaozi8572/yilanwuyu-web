@@ -1,0 +1,71 @@
+# C919 航电专项误解与纠偏
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / misconception / correction / explanation
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+misconceptions:
+  - id: "av-mis-001-ima-vs-federated"
+    misconception: "IMA 综合模块化航电就是集成在一起，没什么特别。"
+    correction: "IMA 通过分区调度（ARINC 653）实现应用隔离，是新一代航电的核心架构，与传统联邦式完全不同。"
+    explanation: >
+      传统联邦式航电每个功能有独立计算机（LRU），IMA 把多个功能集中到共享核心处理模块，每个功能作为软件应用运行在分区中。
+      关键是 ARINC 653 分区调度——时间分区+空间分区保证一个应用故障不影响其他应用。C919 用 IMA 架构（GE-AVIC 合资），
+      减重、升级方便、资源利用率高，是新一代客机（A380/B787/A350/B737 MAX/C919）的通行做法。
+
+  - id: "av-mis-002-arinc-664-just-ethernet"
+    misconception: "ARINC 664 就是普通以太网。"
+    correction: "ARINC 664 基于以太网但增加航空专用扩展（虚拟链路、双冗余、确定性调度）。"
+    explanation: >
+      ARINC 664（AFDX）基于 IEEE 802.3 以太网，但增加航空专用扩展：虚拟链路（VL）保证每个逻辑链路的带宽和时延、
+      双冗余网络保证任一故障不影响通信、全双工交换式避免冲突。普通以太网是"尽力而为"，ARINC 664 是"确定性保证"。
+      把 ARINC 664 等同于普通以太网是忽略了航空专用扩展。
+
+  - id: "av-mis-003-autopilot-vs-fbw"
+    misconception: "电传飞控就是自动驾驶。"
+    correction: "电传是操纵信号的传输方式（电信号替代机械钢索），飞行员仍是主动操纵者，不等于自动驾驶。"
+    explanation: >
+      电传操纵（Fly-By-Wire）解决"飞行员指令如何传到舵面"——侧杆产生电信号，经飞控计算机处理后驱动舵面。
+      飞行员仍是主动操纵者。电传可叠加包线保护（失速保护、过载限制）和自动配平，也能与自动驾驶仪对接，
+      但电传本身只是操纵通道。C919 采用全权限数字式电传飞控、四余度架构，但不意味着飞机会自己飞。
+
+  - id: "av-mis-004-ins-no-gps"
+    misconception: "惯性导航不需要 GPS，能自己一直准确定位。"
+    correction: "惯性导航存在随时间累积的漂移误差，需 GPS/北斗等定期校正。"
+    explanation: >
+      惯性导航系统（INS）靠陀螺仪和加速度计感知运动并积分计算位置，不依赖外部信号，抗干扰强——这是它的优势。
+      但陀螺仪有漂移、加速度计有零偏，积分后误差随时间累积（典型漂移约 1-2 海里/小时）。
+      因此实际应用中惯导需 GPS/北斗定期校正，构成"组合导航"。C919 采用惯导+卫星导航多源融合，而非纯惯导。
+
+  - id: "av-mis-005-tcas-avoid-all-collision"
+    misconception: "有 TCAS 空中防撞系统就不会相撞。"
+    correction: "TCAS 是最后兜底，不能替代空管间隔；TCAS 仅对配备应答机的飞机有效。"
+    explanation: >
+      TCAS（Traffic Alert and Collision Avoidance System）通过应答机互相探测周围飞机，距离过近时触发告警并给出避让建议。
+      但 TCAS 是最后兜底，不能替代空管间隔指令。且 TCAS 仅对配备应答机的飞机有效，对无应答机的飞机（如部分小型飞机/滑翔机）无效。
+      C919 配备 TCAS II，但空中防撞仍主要靠空管+飞行员目视+TCAS 多层保护。
+
+  - id: "av-mis-006-displays-always-correct"
+    misconception: "驾驶舱显示器显示的数据一定准确。"
+    correction: "显示器数据来自多源传感器，可能存在误差或故障；飞行员需交叉验证。"
+    explanation: >
+      驾驶舱显示器（PFD/ND/ECAM）显示的数据来自多源传感器（大气数据、惯导、GPS 等），经计算机处理后显示。
+      传感器可能漂移、计算机可能故障，显示数据不一定绝对准确。C919 采用多源传感器交叉表决，差异超阈值触发告警。
+      飞行员培训中包括"不可全信单一显示器"——需交叉验证多个数据源。
+
+  - id: "av-mis-007-soft ware-no-bug"
+    misconception: "航电软件经过严格验证，不会有 bug。"
+    correction: "航电软件按 DO-178C 验证，目标是降低 bug 概率，但不能保证零 bug。"
+    explanation: >
+      航电软件按 RTCA DO-178C 验证，按 DAL A-E 分级，DAL A（Catastrophic）要求失效概率 < 10⁻⁹/飞行小时。
+      严格验证+多重余度+故障检测，目标是把 bug 概率降到极低，但不能保证零 bug。这也是为什么航电系统采用余度设计——
+      即使有 bug，多套独立系统交叉表决可隔离故障。把航电软件说成"零 bug"是不切实际的。
+
+  - id: "av-mis-008-redundancy-no-failure"
+    misconception: "有余度设计就不会失效。"
+    correction: "余度设计降低失效概率，但不能完全消除；多重故障仍可能导致系统降级或失效。"
+    explanation: >
+      余度设计（双/三/四余度）通过多套独立系统交叉表决，降低单点故障导致的失效概率。但多重故障（如多套同时故障）
+      仍可能导致系统降级或失效。C919 飞控四余度，三套都故障仍有单通道 Direct Law；四套都故障仍有机械备份。
+      余度设计目标是"失效概率足够低"（如 < 10⁻⁹/飞行小时），不是"完全不会失效"。

@@ -1,0 +1,91 @@
+# C919 传感器与作动器关系
+# 描述传感器信号流向与作动器舵面控制关系
+# relation_type: feeds_to / controls
+# edge_id 前缀：rsensa_
+
+relations:
+  # ========== feeds_to 传感器信号流向 ==========
+  - edge_id: "rsensa_001"
+    source_node_id: "comp_aoa_sensor"
+    target_node_id: "sys_flight_control"
+    relation_type: "feeds_to"
+    confidence: 1.0
+    description: "迎角传感器测量飞机迎角，信号送至飞控计算机用于控制律输入"
+
+  - edge_id: "rsensa_002"
+    source_node_id: "comp_pitot_static"
+    target_node_id: "comp_adc"
+    relation_type: "feeds_to"
+    confidence: 1.0
+    description: "皮托管和静压孔感受的总静压送至大气数据计算机计算空速与高度"
+
+  - edge_id: "rsensa_003"
+    source_node_id: "comp_tat_sensor"
+    target_node_id: "comp_adc"
+    relation_type: "feeds_to"
+    confidence: 1.0
+    description: "总温传感器测量的总温送至大气数据计算机计算静温"
+
+  - edge_id: "rsensa_004"
+    source_node_id: "comp_sidestick_sensor"
+    target_node_id: "comp_pfc"
+    relation_type: "feeds_to"
+    confidence: 0.95
+    description: "侧杆位移传感器测量飞行员操纵输入，信号送至主飞行控制计算机"
+
+  - edge_id: "rsensa_005"
+    source_node_id: "comp_rudder_pedal_sensor"
+    target_node_id: "comp_pfc"
+    relation_type: "feeds_to"
+    confidence: 0.95
+    description: "脚蹬位移传感器测量飞行员脚蹬输入，信号送至主飞行控制计算机"
+
+  - edge_id: "rsensa_006"
+    source_node_id: "comp_accelerometer"
+    target_node_id: "comp_fcc"
+    relation_type: "feeds_to"
+    confidence: 0.95
+    description: "加速度计测量飞机三轴加速度，送至飞控计算机用于控制律反馈"
+
+  - edge_id: "rsensa_007"
+    source_node_id: "comp_gyro"
+    target_node_id: "comp_irs"
+    relation_type: "feeds_to"
+    confidence: 0.95
+    description: "陀螺仪测量飞机角速率，送至惯性基准系统计算姿态与航向"
+
+  # ========== controls 作动器驱动舵面 ==========
+  - edge_id: "rsensa_008"
+    source_node_id: "act_elevator"
+    target_node_id: "comp_elevator"
+    relation_type: "controls"
+    confidence: 1.0
+    description: "升降舵作动器驱动升降舵上下偏转，实现俯仰操纵"
+
+  - edge_id: "rsensa_009"
+    source_node_id: "act_aileron"
+    target_node_id: "comp_aileron"
+    relation_type: "controls"
+    confidence: 1.0
+    description: "副翼作动器驱动副翼差动偏转，实现滚转操纵"
+
+  - edge_id: "rsensa_010"
+    source_node_id: "act_rudder"
+    target_node_id: "comp_rudder"
+    relation_type: "controls"
+    confidence: 1.0
+    description: "方向舵作动器驱动方向舵左右偏转，实现偏航操纵"
+
+  - edge_id: "rsensa_011"
+    source_node_id: "act_spoiler"
+    target_node_id: "comp_spoiler"
+    relation_type: "controls"
+    confidence: 1.0
+    description: "扰流板作动器驱动扰流板上下偏转，实现减速与滚转辅助"
+
+  - edge_id: "rsensa_012"
+    source_node_id: "act_flap"
+    target_node_id: "comp_flap"
+    relation_type: "controls"
+    confidence: 1.0
+    description: "襟翼作动器驱动襟翼沿滑轨伸出收回，实现增升能力调整"

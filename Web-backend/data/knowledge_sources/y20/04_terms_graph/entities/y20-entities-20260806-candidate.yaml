@@ -1,0 +1,59 @@
+# 运-20 实体定义
+# 字段对齐 GraphNode
+
+entities:
+  - entity_id: "y20_aircraft"
+    node_type: "aircraft"
+    canonical_name: "运-20"
+    aliases: ["Y-20", "鲲鹏"]
+    definition: "西安飞机工业集团研制的大型战略运输机"
+    source_id: "y20-science-overview-v1"
+
+  - entity_id: "y20_cargo_hold"
+    node_type: "component"
+    canonical_name: "货舱"
+    aliases: ["货舱系统"]
+    definition: "高约 4 米的货舱段，可装 2 辆 15 式坦克或 1 辆 99A 坦克"
+    source_id: "y20-science-cargo-hold-v1"
+
+  - entity_id: "y20_powerplant"
+    node_type: "system"
+    canonical_name: "动力系统"
+    aliases: ["发动机系统"]
+    definition: "从 D-30KP-2/WS-18 到 WS-20 的四发动力体系"
+    source_id: "y20-science-powerplant-v1"
+
+  - entity_id: "y20_wing"
+    node_type: "component"
+    canonical_name: "机翼"
+    aliases: ["上单翼"]
+    definition: "后掠上单翼，翼展 50 米，支撑短距起降"
+    source_id: "y20-science-highwing-shortfield-v1"
+
+  - entity_id: "ws20_engine"
+    node_type: "component"
+    canonical_name: "WS-20 发动机"
+    aliases: ["WS-20", "涡扇-20"]
+    definition: "国产大涵道比涡扇发动机，单发推力约 140 kN"
+    source_id: "y20-science-powerplant-v1"
+
+  - entity_id: "yy20_aircraft"
+    node_type: "aircraft"
+    canonical_name: "YY-20 加油机"
+    aliases: ["YY-20", "运油-20"]
+    definition: "运-20 空中加油改型，约 90 吨燃油"
+    source_id: "y20-science-powerplant-v1"
+
+  - entity_id: "il76_aircraft"
+    node_type: "aircraft"
+    canonical_name: "伊尔-76"
+    aliases: ["Il-76"]
+    definition: "苏联/俄罗斯大型运输机"
+    source_id: "y20-science-vs-il76-v1"
+
+  - entity_id: "c17_aircraft"
+    node_type: "aircraft"
+    canonical_name: "C-17"
+    aliases: ["环球霸王III"]
+    definition: "美国大型战略战术运输机"
+    source_id: "y20-science-vs-c17-v1"

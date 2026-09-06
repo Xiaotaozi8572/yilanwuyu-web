@@ -1,0 +1,36 @@
+{
+  "template_id": "aviation_concept_correction",
+  "version": "v2",
+  "parent_version": "v1",
+  "change_reason": "Make supported versus unsupported claims explicit.",
+  "created_at": "2026-07-09T00:00:00Z",
+  "review_status": "active",
+  "snapshot_id": "aviation_concept_correction_v2",
+  "variables": [
+    {
+      "name": "rag_evidence",
+      "source": "evidence_package",
+      "value_type": "evidence_summary",
+      "required": true,
+      "missing_behavior": "clarification",
+      "description": "Reviewed evidence used to confirm or correct a claim."
+    },
+    {
+      "name": "memory_context",
+      "source": "memory_context",
+      "value_type": "learner_summary",
+      "required": false,
+      "missing_behavior": "omit",
+      "description": "Optional learner context for tone only."
+    },
+    {
+      "name": "output_contract",
+      "source": "runtime",
+      "value_type": "json_schema_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Runtime output rules."
+    }
+  ],
+  "content": "You are an aviation tutor correcting a learner-facing idea with care.\n1. Separate the challenged statement into supported, unsupported, and still-open parts using {{rag_evidence}}.\n2. Give the corrected answer first.\n3. Explain the correction with evidence-linked reasoning, not authority claims.\n4. Use {{memory_context}} only to tune tone and pacing.\n5. If the evidence does not fully resolve the challenge, state the remaining uncertainty and ask for the next helpful source or question.\n6. Follow {{output_contract}} exactly."
+}

@@ -1,0 +1,110 @@
+# C919 系统类术语
+# 按领域拆分：覆盖飞控、液压、燃油、航电等机载系统
+# node_type 统一为 system
+# ID 前缀：sys_
+
+terms:
+  - term_id: "sys_001"
+    canonical_name: "飞控系统"
+    aliases: ["飞控系统", "飞行控制系统", "电传飞控", "FBW", "Fly-By-Wire"]
+    node_type: "system"
+    definition: "C919 全权限数字式电传飞行控制系统，采用四余度架构，实现正常/降级/直接三级控制律"
+    source_ref: "c919-graph-systems-v1"
+
+  - term_id: "sys_002"
+    canonical_name: "液压系统"
+    aliases: ["液压系统", "hydraulic system", "三余度液压"]
+    node_type: "system"
+    definition: "C919 三余度液压动力系统，工作压力 3000 psi，驱动飞控舵面、起落架等关键作动器"
+    source_ref: "c919-graph-systems-v1"
+
+  - term_id: "sys_003"
+    canonical_name: "燃油系统"
+    aliases: ["燃油系统", "fuel system", "燃油供给系统"]
+    node_type: "system"
+    definition: "C919 燃油储存与供给系统，含机翼油箱和中央油箱，总容量约 19,156 升，为发动机和 APU 提供燃料"
+    source_ref: "c919-graph-systems-v1"
+
+  - term_id: "sys_004"
+    canonical_name: "航电系统"
+    aliases: ["航电系统", "avionics", "IMA", "综合模块化航电"]
+    node_type: "system"
+    definition: "C919 综合模块化航电系统，采用 AFDX 千兆以太网总线，由昂际航电提供"
+    source_ref: "c919-graph-systems-v1"
+
+  - term_id: "sys_005"
+    canonical_name: "电气系统"
+    aliases: ["电气系统", "电源系统", "electrical power system", "EPS"]
+    node_type: "system"
+    definition: "C919 电力生成与分配系统，含 115V AC 恒频发电机和 28V DC 变压整流器"
+    source_ref: "c919-graph-systems-v1"
+
+  - term_id: "sys_006"
+    canonical_name: "环控系统"
+    aliases: ["环控系统", "ECS", "环境控制系统", "空调增压系统"]
+    node_type: "system"
+    definition: "C919 客舱空调与增压系统，由发动机引气驱动，维持客舱相当于 2400 米以下高度气压"
+    source_ref: "c919-graph-systems-v1"
+
+  - term_id: "sys_007"
+    canonical_name: "防火系统"
+    aliases: ["防火系统", "fire protection system", "火警探测灭火系统"]
+    node_type: "system"
+    definition: "C919 发动机/APU/货舱火警探测与灭火系统，含火警探测器、灭火瓶和 APU 快速灭火装置"
+    source_ref: "c919-graph-systems-v1"
+
+  - term_id: "sys_008"
+    canonical_name: "照明系统"
+    aliases: ["照明系统", "lighting system", "客舱照明", "外部照明"]
+    node_type: "system"
+    definition: "C919 内外部照明系统，含 LED 情景照明、外部航行灯、防撞灯和着陆灯"
+    source_ref: "c919-graph-systems-v1"
+
+  - term_id: "sys_009"
+    canonical_name: "客舱系统"
+    aliases: ["客舱系统", "cabin system", "座舱系统", "客舱内饰"]
+    node_type: "system"
+    definition: "C919 乘客舱室与内饰系统，典型 3-3 经济舱布局，行李箱、座椅和顶板集成"
+    source_ref: "c919-graph-systems-v1"
+
+  - term_id: "sys_010"
+    canonical_name: "APU"
+    aliases: ["APU", "辅助动力装置", "auxiliary power unit", "HGT750"]
+    node_type: "system"
+    definition: "Honeywell HGT750 辅助动力装置，安装在尾椎，提供地面电源和气源，可在空中作为应急动力"
+    source_ref: "c919-graph-systems-v1"
+
+  - term_id: "sys_011"
+    canonical_name: "防冰系统"
+    aliases: ["防冰系统", "ice protection system", "防冰除冰系统"]
+    node_type: "system"
+    definition: "C919 机翼前缘和发动机进气道防冰系统，采用发动机引气热防冰方式"
+    source_ref: "c919-graph-systems-v1"
+
+  - term_id: "sys_012"
+    canonical_name: "氧气系统"
+    aliases: ["氧气系统", "oxygen system", "供氧系统"]
+    node_type: "system"
+    definition: "C919 旅客与机组供氧系统，含化学氧气发生器和机组便携式氧气瓶"
+    source_ref: "c919-graph-systems-v1"
+
+  - term_id: "sys_013"
+    canonical_name: "水废水系统"
+    aliases: ["水废水系统", "water and waste system", "饮用水系统", "污水系统"]
+    node_type: "system"
+    definition: "C919 饮用水和污水收集处理系统，为客舱厨房和盥洗室提供供水"
+    source_ref: "c919-graph-systems-v1"
+
+  - term_id: "sys_014"
+    canonical_name: "导航系统"
+    aliases: ["导航系统", "navigation system", "惯导", "IRS"]
+    node_type: "system"
+    definition: "C919 综合导航系统，含 GPS、惯导、无线电导航等，集成于航电系统中"
+    source_ref: "c919-graph-systems-v1"
+
+  - term_id: "sys_015"
+    canonical_name: "通信系统"
+    aliases: ["通信系统", "communication system", "VHF", "HF", "SATCOM"]
+    node_type: "system"
+    definition: "C919 通信系统，含 VHF/HF 电台和卫星通信，支持 ATC 数据链通信"
+    source_ref: "c919-graph-systems-v1"

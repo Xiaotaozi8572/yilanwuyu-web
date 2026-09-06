@@ -1,0 +1,26 @@
+{
+  "template_id": "aviation_component_explain",
+  "title": "Scene-bound component explanation",
+  "task_type": "component_scene",
+  "status": "active",
+  "active_version": "v2",
+  "activation_scope": [
+    "component_scene"
+  ],
+  "concept_scope": [
+    "component_role",
+    "scene_reference"
+  ],
+  "scene_scope": [
+    "scene"
+  ],
+  "constraints": [
+    "facts_from_evidence_only",
+    "anchor_to_selected_object",
+    "state_uncertainty_when_scene_is_weak"
+  ],
+  "risk_boundaries": [
+    "no_hidden_part_claims",
+    "no_operation_steps"
+  ]
+}

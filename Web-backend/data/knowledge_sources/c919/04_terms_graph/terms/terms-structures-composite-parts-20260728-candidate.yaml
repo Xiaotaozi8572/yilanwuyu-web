@@ -1,0 +1,76 @@
+# C919 复合材料构件类术语
+# 领域：复合材料构件制造
+# 条目数：10
+# node_type 统一为 concept
+# ID 前缀：compart_
+
+terms:
+  - term_id: "compart_001"
+    canonical_name: "复合材料构件"
+    aliases: ["复合材料构件", "composite part", "复合材料零件", "复合材料结构件"]
+    node_type: "concept"
+    definition: "由纤维增强树脂基复合材料制成的构件，C919 复合材料用量约 12%，用于尾翼、整流罩等"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "compart_002"
+    canonical_name: "层合板"
+    aliases: ["层合板", "laminate", "层压板"]
+    node_type: "concept"
+    definition: "多层预浸料按不同角度铺层固化成的复合材料板，C919 复合材料蒙皮和壁板多为层合板"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "compart_003"
+    canonical_name: "夹层结构"
+    aliases: ["夹层结构", "sandwich structure", "夹芯结构"]
+    node_type: "concept"
+    definition: "两面板中间夹芯材的复合结构，重量轻刚度大，C919 操纵面和整流罩采用蜂窝夹层结构"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "compart_004"
+    canonical_name: "蜂窝芯"
+    aliases: ["蜂窝芯", "honeycomb core", "蜂窝芯材", "Nomex 蜂窝"]
+    node_type: "component"
+    definition: "六边形蜂窝状芯材，常用 Nomex 芳纶纸或铝箔，C919 夹层结构采用 Nomex 蜂窝芯减重"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "compart_005"
+    canonical_name: "泡沫芯"
+    aliases: ["泡沫芯", "foam core", "泡沫芯材"]
+    node_type: "component"
+    definition: "闭孔泡沫塑料芯材，用于夹层结构，C919 部分夹层构件采用泡沫芯便于机械加工"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "compart_006"
+    canonical_name: "预浸料"
+    aliases: ["预浸料", "prepreg", "预浸渍料"]
+    node_type: "component"
+    definition: "纤维预先浸渍树脂的半成品材料，按铺层设计贴模后固化成型，C919 复合件采用碳纤维预浸料"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "compart_007"
+    canonical_name: "铺层"
+    aliases: ["铺层", "layup", "铺层设计", "铺贴"]
+    node_type: "concept"
+    definition: "按设计角度和顺序铺贴预浸料的过程，决定层合板力学性能，C919 复合件铺层经优化设计"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "compart_008"
+    canonical_name: "固化"
+    aliases: ["固化", "cure", "热压固化", "固化成型"]
+    node_type: "concept"
+    definition: "在温度和压力下使树脂交联固化的过程，C919 复合件在热压罐中按固化工艺曲线成型"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "compart_009"
+    canonical_name: "脱模"
+    aliases: ["脱模", "demolding", "脱模剂"]
+    node_type: "concept"
+    definition: "固化后将构件从模具分离的过程，需用脱模剂避免粘连，C919 复合件脱模后进行修边和无损检测"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "compart_010"
+    canonical_name: "修补"
+    aliases: ["修补", "repair", "复合材料修补", "补片修补"]
+    node_type: "concept"
+    definition: "对损伤复合材料构件进行修复的工艺，含贴补、挖补等方法，C919 维护手册规定各类损伤修补方案"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

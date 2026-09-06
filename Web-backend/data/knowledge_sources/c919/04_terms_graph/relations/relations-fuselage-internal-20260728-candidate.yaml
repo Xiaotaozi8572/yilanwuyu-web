@@ -1,0 +1,112 @@
+# C919 机身内部结构关系
+# 描述机身分段及内部构件的层级与功能关系
+# relation_type: part_of / parameter_of / depends_on
+# edge_id 前缀：rfus_
+
+relations:
+  # ========== part_of 机身分段归属 ==========
+  - edge_id: "rfus_001"
+    source_node_id: "comp_fwd_fuselage"
+    target_node_id: "comp_fuselage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "前机身是机身前段，含驾驶舱和前起落架舱，承载机组与航电设备"
+
+  - edge_id: "rfus_002"
+    source_node_id: "comp_mid_fuselage"
+    target_node_id: "comp_fuselage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "中机身是机身中段，连接中央翼盒和主起落架舱，承载客舱主体"
+
+  - edge_id: "rfus_003"
+    source_node_id: "comp_aft_fuselage"
+    target_node_id: "comp_fuselage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "后机身是机身后段，含尾椎和 APU 舱，连接垂直与水平尾翼"
+
+  - edge_id: "rfus_004"
+    source_node_id: "comp_cockpit"
+    target_node_id: "comp_fwd_fuselage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "驾驶舱位于前机身前部，承载飞行员、仪表与控制设备"
+
+  - edge_id: "rfus_005"
+    source_node_id: "comp_nose_lg_well"
+    target_node_id: "comp_fwd_fuselage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "前起落架舱位于前机身下部，收纳前起落架支柱"
+
+  - edge_id: "rfus_006"
+    source_node_id: "comp_center_wing_passage"
+    target_node_id: "comp_mid_fuselage"
+    relation_type: "part_of"
+    confidence: 0.95
+    description: "中央翼段通道贯穿中机身，是机翼与机身的主要传力通道"
+
+  - edge_id: "rfus_007"
+    source_node_id: "comp_main_lg_well"
+    target_node_id: "comp_mid_fuselage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "主起落架舱位于中机身下部，收纳左右主起落架支柱与机轮"
+
+  - edge_id: "rfus_008"
+    source_node_id: "comp_tail_cone"
+    target_node_id: "comp_aft_fuselage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "尾椎位于后机身末端，整流减阻并提供 APU 安装空间"
+
+  - edge_id: "rfus_009"
+    source_node_id: "comp_apu_compartment"
+    target_node_id: "comp_aft_fuselage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "APU 舱位于后机身尾椎内，容纳辅助动力装置及其附件"
+
+  - edge_id: "rfus_010"
+    source_node_id: "comp_cabin"
+    target_node_id: "comp_mid_fuselage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "客舱位于中机身段，承载旅客座椅与客舱服务设施"
+
+  - edge_id: "rfus_011"
+    source_node_id: "comp_cargo_hold"
+    target_node_id: "comp_mid_fuselage"
+    relation_type: "part_of"
+    confidence: 0.95
+    description: "货舱位于中机身下部，前腹与后腹分离布置用于行李与货物装载"
+
+  - edge_id: "rfus_012"
+    source_node_id: "comp_fuselage_frame"
+    target_node_id: "comp_fuselage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "机身框沿机身纵向间隔分布，维持机身截面形状并传递载荷"
+
+  - edge_id: "rfus_013"
+    source_node_id: "comp_fuselage_stringer"
+    target_node_id: "comp_fuselage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "机身桁条沿机身纵向布置，与框和蒙皮构成半硬壳结构"
+
+  - edge_id: "rfus_014"
+    source_node_id: "comp_fuselage_skin"
+    target_node_id: "comp_fuselage"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "机身蒙皮包覆机身骨架，承担气密、承力与气动外形功能"
+
+  # ========== parameter_of 机身关键参数 ==========
+  - edge_id: "rfus_015"
+    source_node_id: "param_fuselage_width_3_96m"
+    target_node_id: "comp_fuselage"
+    relation_type: "parameter_of"
+    confidence: 1.0
+    description: "C919 机身宽度 3.96 米，是机身关键几何参数，决定客舱单通道布局与舒适度"

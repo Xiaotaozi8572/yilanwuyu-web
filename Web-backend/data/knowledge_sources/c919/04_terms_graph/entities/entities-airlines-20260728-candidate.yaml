@@ -1,0 +1,75 @@
+# C919 运营航司实体
+# 运营及订单航司
+# node_type: airline
+# node_id 前缀：airline_
+
+entities:
+  - node_id: "airline_cea"
+    node_type: "airline"
+    canonical_name: "中国东方航空"
+    aliases: ["东航", "China Eastern", "MU", "中国东方航空"]
+    description: "C919 全球首家用户，2022-12-09 接收首架 B-002U 交付机，执飞上海虹桥始发航线"
+    applicable_aircraft: []
+
+  - node_id: "airline_airchina"
+    node_type: "airline"
+    canonical_name: "中国国际航空"
+    aliases: ["国航", "Air China", "CA", "中国国际航空"]
+    description: "C919 北京运营航司，2024 年接收 C919 投入北京首都始发航线运营"
+    applicable_aircraft: []
+
+  - node_id: "airline_csz"
+    node_type: "airline"
+    canonical_name: "中国南方航空"
+    aliases: ["南航", "China Southern", "CZ", "中国南方航空"]
+    description: "C919 华南运营航司，以广州白云为主基地运营 C919 干线航班"
+    applicable_aircraft: []
+
+  - node_id: "airline_tibet"
+    node_type: "airline"
+    canonical_name: "西藏航空"
+    aliases: ["西藏航空", "Tibet Airlines", "TV"]
+    description: "C919 高高原航线潜在运营航司，以拉萨贡嘎为主基地验证 C919 高原性能"
+    applicable_aircraft: []
+
+  - node_id: "airline_suparna"
+    node_type: "airline"
+    canonical_name: "Suparna Airlines"
+    aliases: ["Suparna", "金鹏航空", "Suparna Airlines"]
+    description: "C919 货运及客运订单航司，海航系成员，计划运营 C919 干线网络"
+    applicable_aircraft: []
+
+  - node_id: "airline_gallop"
+    node_type: "airline"
+    canonical_name: "GallopAir"
+    aliases: ["GallopAir", "劲航", "GallopAir Airlines"]
+    description: "C919 订单航司之一，计划将 C919 投入区域航线运营"
+    applicable_aircraft: []
+
+  - node_id: "airline_happy"
+    node_type: "airline"
+    canonical_name: "幸福航空"
+    aliases: ["幸福航空", "Joy Air", "JR"]
+    description: "国产民机运营航司，曾运营 ARJ21 及新舟系列，C919 潜在用户"
+    applicable_aircraft: []
+
+  - node_id: "airline_chengdu_air"
+    node_type: "airline"
+    canonical_name: "成都航空"
+    aliases: ["成都航空", "Chengdu Airlines", "EU"]
+    description: "国产民机首批用户，运营 ARJ21，C919 西南地区潜在运营航司"
+    applicable_aircraft: []
+
+  - node_id: "airline_china_express"
+    node_type: "airline"
+    canonical_name: "华夏航空"
+    aliases: ["华夏航空", "China Express Airlines", "G5"]
+    description: "支线航空运营商，C919-600 缩短型潜在用户，以重庆为主基地"
+    applicable_aircraft: []
+
+  - node_id: "airline_juneyao"
+    node_type: "airline"
+    canonical_name: "吉祥航空"
+    aliases: ["吉祥航空", "Juneyao Airlines", "HO"]
+    description: "上海民营航司，C919 订单航司之一，以上海浦东/虹桥为主基地"
+    applicable_aircraft: []

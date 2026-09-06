@@ -1,0 +1,81 @@
+# C919 液压专项类比素材库
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / concept / analogy / explanation
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+analogies:
+  - id: "hyd-ana-001-pascal-syringe"
+    concept: "帕斯卡定律（Pascal's Law）"
+    analogy: "注射器推小头大头出——力被放大"
+    explanation: >
+      帕斯卡定律：密闭液体中的压力可以向各个方向等值传递。压力 = 力 ÷ 面积（P=F/A）。
+      像两个注射器用管子连起来——推小注射器，大注射器被推出来，大注射器面积大所以受力大。
+      这就是液压千斤顶和飞机液压作动器的原理。C919 液压压力 3000 psi（约 200 个大气压）。
+
+  - id: "hyd-ana-002-3000psi-car-tire"
+    concept: "3000 psi 液压压力（3000 psi Hydraulic Pressure）"
+    analogy: "汽车轮胎气压的 100 倍——200 个大气压"
+    explanation: >
+      C919 液压压力 3000 psi（约 20.7 MPa），相当于 200 个大气压。汽车轮胎气压约 2-3 个大气压，
+      C919 液压是汽车轮胎的约 100 倍。高压才能产生足够力推动几吨重的舵面。由 Parker-AVIC 合资提供。
+
+  - id: "hyd-ana-003-actuator-rudder-mover"
+    concept: "液压作动器（Hydraulic Actuator）"
+    analogy: "飞机的"肌肉"——把液体压力变成机械运动"
+    explanation: >
+      液压作动器把液压能转换为机械运动，像飞机的"肌肉"。活塞在液压缸内直线运动（线性作动器），
+      或液压驱动旋转（旋转作动器）。C919 升降舵/副翼/方向舵/扰流板/起落架/反推/襟翼都用液压作动器。
+
+  - id: "hyd-ana-004-servo-valve-precise-switch"
+    concept: "电液伺服阀（Electro-Hydraulic Servo Valve）"
+    analogy: "精准开关——按电信号精确控制流量"
+    explanation: >
+      伺服阀是液压系统的"精准开关"——按电信号精确控制液压油流量和方向。飞控计算机发出电信号，
+      伺服阀把电信号转换为液压油流量，驱动作动器精确移动。响应快（毫秒级）、精度高（微米级）。
+
+  - id: "hyd-ana-005-edp-engine-pump"
+    concept: "EDP 发动机驱动泵（Engine-Driven Pump）"
+    analogy: "发动机兼职打气筒——顺便打液压油"
+    explanation: >
+      EDP 装在发动机附件齿轮箱上，发动机转动时顺便驱动液压泵。像发动机兼职打气筒——
+      不用额外动力，跟着发动机转就行。C919 两台主发动机各带一台 EDP，是主液压泵源。
+
+  - id: "hyd-ana-006-emp-electric-backup"
+    concept: "EMP 电动泵（Electric Motor Pump）"
+    analogy: "电动打气筒——备份泵源"
+    explanation: >
+      EMP 由电动机驱动，是液压系统的备份泵源。EDP 故障或发动机不工作时，EMP 接替供压。
+      像电动打气筒——不依赖发动机转速，由电气系统供电。C919 三套液压系统各配 EMP。
+
+  - id: "hyd-ana-007-rat-emergency-turbine"
+    concept: "RAT 冲压空气涡轮（Ram Air Turbine）"
+    analogy: "应急手摇发电机——靠气流驱动"
+    explanation: >
+      RAT 是紧急情况从机身放出的小型螺旋桨+发电机+液压泵，靠气流驱动。像应急手摇发电机——
+      当所有液压+电气都失效时，RAT 靠飞机前进的气流驱动，提供最低限度液压和电力。
+      C919 RAT 在三套液压系统全失效时自动放出。
+
+  - id: "hyd-ana-008-accumulator-water-tower"
+    concept: "蓄压器（Accumulator）"
+    analogy: "水塔——平时泵打水上去，需要时水流出"
+    explanation: >
+      蓄压器是液压系统的"电池"，储存液压能量。像水塔——平时泵把水打上去，需要时水靠重力流出来。
+      蓄压器内气体（氮气）+液压油隔膜分隔，泵把液压油压入压缩气体，需要时气体膨胀把油推回系统。
+      用于缓冲脉动、瞬间大流量补充、泵失效时短暂供压。
+
+  - id: "hyd-ana-009-three-systems-three-leg-stool"
+    concept: "三套液压系统（Three Hydraulic Systems）"
+    analogy: "三条腿凳子——断一条还能站"
+    explanation: >
+      C919 三套独立液压系统（A/B/C），每套独立油箱、管路、泵源。像三条腿凳子——断一条还能站。
+      任一套故障，其余接替供压；三套都故障，RAT 应急供压给关键舵面。三套系统是民机液压余度的典型设计。
+
+  - id: "hyd-ana-010-skydrol-fire-resistant-oil"
+    concept: "阻燃液压油（Fire-Resistant Hydraulic Fluid）"
+    analogy: "不是普通机油——高温不燃、低温不凝"
+    explanation: >
+      C919 液压油不是普通机油，是专用合成阻燃液压油（如 Skydrol LD-4）。高温下不燃（闪点高）、
+      低温下不凝固（-50℃ 以下保持流动性）、化学稳定不腐蚀管路。通常染红色/紫色方便识别泄漏。
+      把飞机液压油等同于机油，是低估了其工况的严苛要求。

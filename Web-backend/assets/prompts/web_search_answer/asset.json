@@ -1,0 +1,18 @@
+{
+  "template_id": "web_search_answer",
+  "title": "Web search fallback answer generation",
+  "task_type": "answer_generation",
+  "status": "active",
+  "active_version": "v2",
+  "activation_scope": [
+    "web_search_fallback"
+  ],
+  "constraints": [
+    "require_source_citation",
+    "require_disclaimer",
+    "max_answer_chars_2000"
+  ],
+  "risk_boundaries": [
+    "no_unverified_aviation_facts"
+  ]
+}

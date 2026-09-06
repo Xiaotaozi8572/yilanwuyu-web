@@ -1,0 +1,33 @@
+# j20-terms-platforms-20260806-candidate
+
+terms:
+  - canonical_name: "F-22"
+    aliases: ["F-22", "猛禽", "Raptor"]
+    node_type: "aircraft"
+    definition: "美国重型隐身制空战斗机"
+    source_id: "j20-science-vs-f22-v1"
+  - canonical_name: "F-35"
+    aliases: ["F-35", "闪电II", "Lightning II"]
+    node_type: "aircraft"
+    definition: "美国多用途五代机"
+    source_id: "j20-science-vs-f35-v1"
+  - canonical_name: "苏-57"
+    aliases: ["苏-57", "Su-57"]
+    node_type: "aircraft"
+    definition: "俄罗斯第五代战斗机"
+    source_id: "j20-science-vs-su57-v1"
+  - canonical_name: "FC-31"
+    aliases: ["FC-31", "歼-35", "鹘鹰"]
+    node_type: "aircraft"
+    definition: "中国中型第五代战斗机"
+    source_id: "j20-science-vs-j31-v1"
+  - canonical_name: "成都飞机工业集团"
+    aliases: ["成飞", "CAC"]
+    node_type: "concept"
+    definition: "歼-20研制单位"
+    source_id: "j20-science-overview-v1"
+  - canonical_name: "沈阳发动机研究所"
+    aliases: ["沈阳发动机研究所", "黎明"]
+    node_type: "concept"
+    definition: "WS-10/WS-15研制单位"
+    source_id: "j20-science-powerplant-v1"

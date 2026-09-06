@@ -1,0 +1,113 @@
+# C919 机翼内部结构关系
+# 描述机翼内部部件的层级与功能关系
+# relation_type: part_of / parameter_of / controls / depends_on
+# edge_id 前缀：rwin_
+
+relations:
+  # ========== part_of 机翼内部部件归属 ==========
+  - edge_id: "rwin_001"
+    source_node_id: "comp_flap"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "后缘襟翼安装于机翼后缘内侧，属于机翼增升装置，用于起飞着陆阶段增升"
+
+  - edge_id: "rwin_002"
+    source_node_id: "comp_aileron"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "副翼安装于机翼后缘外侧，属于机翼滚转操纵面，差动偏转产生滚转力矩"
+
+  - edge_id: "rwin_003"
+    source_node_id: "comp_slat"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "前缘缝翼安装于机翼前缘，属于机翼增升装置，抑制大迎角附面层分离"
+
+  - edge_id: "rwin_004"
+    source_node_id: "comp_spoiler"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "扰流板安装于机翼上表面，属于机翼减速和滚转辅助面，对称打开可减速"
+
+  - edge_id: "rwin_005"
+    source_node_id: "comp_winglet"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "翼尖小翼安装于机翼翼尖，属于机翼气动优化部件，降低诱导阻力"
+
+  - edge_id: "rwin_006"
+    source_node_id: "comp_center_wingbox"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "中央翼盒是机翼盒段贯穿机身中部的承力核心，属于机翼结构主承力件"
+
+  - edge_id: "rwin_007"
+    source_node_id: "comp_front_spar"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "前梁是机翼沿翼弦方向的承力主构件，承受弯曲和扭转载荷"
+
+  - edge_id: "rwin_008"
+    source_node_id: "comp_rear_spar"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "后梁是机翼沿翼弦方向的另一承力主构件，与襟翼副翼传动连接"
+
+  - edge_id: "rwin_009"
+    source_node_id: "comp_wing_rib"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "翼肋沿翼展方向间隔分布，维持机翼翼型形状并传递气动载荷"
+
+  - edge_id: "rwin_010"
+    source_node_id: "comp_wing_skin"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "机翼蒙皮包覆翼盒结构，承担蒙皮承力与气动力传递"
+
+  - edge_id: "rwin_011"
+    source_node_id: "comp_inboard_flap"
+    target_node_id: "comp_flap"
+    relation_type: "part_of"
+    confidence: 0.95
+    description: "内段襟翼属于后缘襟翼的内段，为机翼提供主要增升能力"
+
+  - edge_id: "rwin_012"
+    source_node_id: "comp_outboard_flap"
+    target_node_id: "comp_flap"
+    relation_type: "part_of"
+    confidence: 0.95
+    description: "外段襟翼属于后缘襟翼的外段，配合内段襟翼实现后缘增升"
+
+  - edge_id: "rwin_013"
+    source_node_id: "comp_flap_track"
+    target_node_id: "comp_wing"
+    relation_type: "part_of"
+    confidence: 0.95
+    description: "襟翼滑轨固定于机翼后梁下表面，为襟翼收放提供运动轨道"
+
+  # ========== parameter_of 机翼关键参数 ==========
+  - edge_id: "rwin_014"
+    source_node_id: "param_wingspan_33_6m"
+    target_node_id: "comp_wing"
+    relation_type: "parameter_of"
+    confidence: 1.0
+    description: "C919 翼展 33.6 米，是机翼的关键几何参数，决定飞机展弦比与升阻特性"
+
+  # ========== controls 操纵面对应作动 ==========
+  - edge_id: "rwin_015"
+    source_node_id: "act_aileron"
+    target_node_id: "comp_aileron"
+    relation_type: "controls"
+    confidence: 0.95
+    description: "副翼作动器驱动副翼偏转，实现飞机的滚转操纵"

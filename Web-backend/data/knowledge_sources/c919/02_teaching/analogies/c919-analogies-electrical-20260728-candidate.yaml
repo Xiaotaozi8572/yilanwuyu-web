@@ -1,0 +1,80 @@
+# C919 电气专项类比素材库
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / concept / analogy / explanation
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+analogies:
+  - id: "elec-ana-001-idg-engine-generator"
+    concept: "IDG 整体驱动发电机（Integrated Drive Generator）"
+    analogy: "发动机兼职发电机——顺便发电"
+    explanation: >
+      IDG 装在发动机附件齿轮箱上，发动机转动时顺便发电。像发动机兼职发电机——不用额外动力，
+      跟着发动机转就行。但发动机转速变化，要保持 400Hz 恒频需通过 CSD（恒速传动装置）。
+      C919 两台主发动机各带一台 IDG，单台容量约 90 kVA。由 Hamilton Sundstrand-AVIC 合资提供。
+
+  - id: "elec-ana-002-400hz-high-frequency"
+    concept: "400Hz 高频交流（400Hz High Frequency AC）"
+    analogy: "高频减小体积——同样功率发电机更小"
+    explanation: >
+      C919 主交流电是 115V/400Hz 三相交流，不是家用 220V/50Hz。为什么 400Hz？高频可以减小变压器/电机体积重量——
+      飞机对重量极敏感，同样功率的发电机 400Hz 比 50Hz 小很多。这是航空电气的通行做法（A320/B737 也用 400Hz）。
+
+  - id: "elec-ana-003-tru-ac-to-dc"
+    concept: "TRU 变压整流器（Transformer Rectifier Unit）"
+    analogy: "电源适配器——交流变直流"
+    explanation: >
+      TRU 把 115V/400Hz 交流电转换为 28V 直流电，给飞控计算机、航电、应急设备供电。
+      像电源适配器——交流变直流。C919 配 4 台 TRU，分属不同汇流条，保证余度。
+
+  - id: "elec-ana-004-270vdc-high-voltage-dc"
+    concept: "270VDC 高压直流（270VDC High Voltage DC）"
+    analogy: "高压输电——减细线缆"
+    explanation: >
+      C919 部分系统采用 270VDC 高压直流。像高压输电——P=VI，功率固定时电压升高电流减小，
+      线缆截面积可减小（损耗 I²R 减小），减重。但需更严格绝缘和断路保护。用于部分飞控作动器（EHA/EMA）和大功率负载。
+
+  - id: "elec-ana-005-bus-electrical-panel"
+    concept: "汇流条（Electrical Bus）"
+    analogy: "家里的电箱——电力的主干道"
+    explanation: >
+      汇流条是电力的"主干道"，把发电机/电源的电分配到各子系统。像家里的电箱——
+      主交流汇流条（115V/400Hz）、直流汇流条（28V）、应急汇流条、蓄电池汇流条。
+      C919 多汇流条架构实现故障切换与重构。
+
+  - id: "elec-ana-006-elmc-smart-panel"
+    concept: "ELMC 电气负载管理中心（Electrical Load Management Center）"
+    analogy: "智能电箱——自动管理负载通断"
+    explanation: >
+      ELMC 由计算机控制负载通断，像智能电箱——自动管理负载。电源不足时按优先级卸载非关键负载
+      （如厨房、娱乐），保证飞控/航电供电。故障时自动切换到备用电源，实现重构。
+
+  - id: "elec-ana-007-battery-ups"
+    concept: "蓄电池（Battery）"
+    analogy: "UPS 不间断电源——应急供电"
+    explanation: >
+      C919 用镍镉蓄电池组作为应急电源，像 UPS 不间断电源——主电源故障时应急供电约 30-60 分钟。
+      用于启动 APU、给飞控/航电不间断供电。由 TRU 通过蓄电池充电器充电，充电电流受控防止过充。
+
+  - id: "elec-ana-008-rat-emergency-generator"
+    concept: "RAT 冲压空气涡轮（Ram Air Turbine）"
+    analogy: "应急手摇发电机——靠气流驱动"
+    explanation: >
+      RAT 是紧急情况从机身放出的小型螺旋桨+发电机+液压泵，靠气流驱动。像应急手摇发电机——
+      当所有发电机故障时，RAT 靠飞机前进的气流驱动，提供最低限度电力和液压。
+      C919 RAT 在双发停车+APU 故障时自动放出，输出约 5-15 kVA，持续 30-60 分钟。
+
+  - id: "elec-ana-009-load-shedding-triage"
+    concept: "负载卸载（Load Shedding）"
+    analogy: "医院分诊——紧急时只保关键设备"
+    explanation: >
+      电源不足时 ELMC 按优先级卸载非关键负载：飞控/航电（关键）> 照明（重要）> 厨房/娱乐（非重要）。
+      像医院分诊——紧急时只保关键设备。单 IDG 故障卸载非重要，双 IDG+APU 故障仅保留关键负载。
+
+  - id: "elec-ana-010-gcu-generator-control"
+    concept: "GCU 发电机控制单元（Generator Control Unit）"
+    analogy: "发电机的"大脑"——监控保护切换"
+    explanation: >
+      GCU 是发电机的"大脑"——监控发电机电压/电流/频率，控制 GCB（发电机断路器）和 BTB（汇流条连接断路器）。
+      故障时自动切换到备用电源，实现故障隔离与重构。C919 每台 IDG 配独立 GCU，保证控制独立性。

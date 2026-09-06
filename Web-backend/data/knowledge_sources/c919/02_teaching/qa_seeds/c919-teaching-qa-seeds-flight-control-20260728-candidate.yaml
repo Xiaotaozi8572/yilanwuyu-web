@@ -1,0 +1,47 @@
+# C919 飞控专项讲解侧问答种子（非评测种子）
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / question / audience / teaching_point
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+qa_seeds:
+  - id: "fc-qa-001-fbw-meaning"
+    question: "电传操纵是什么意思？和普通飞机有什么不同？"
+    audience: "普通公众/中学生"
+    teaching_point: "电传操纵（Fly-By-Wire）用电信号替代机械钢索传递飞行员指令。侧杆→飞控计算机→液压作动器→舵面。C919 采用全权限数字式电传飞控，比机械操纵更轻、更精准、可叠加包线保护。"
+
+  - id: "fc-qa-002-quad-redundancy"
+    question: "C919 飞控的四余度是什么意思？"
+    audience: "航空爱好者/有专业兴趣的公众"
+    teaching_point: "四余度是 4 套独立计算机并行工作，像四人表决，少数服从多数。任意一套故障被其余识别隔离，不影响正常飞行。这是民机电传飞控安全冗余的典型做法，确保单点故障下仍能安全操纵。"
+
+  - id: "fc-qa-003-envelope-protection"
+    question: "什么是包线保护？C919 有吗？"
+    audience: "中学生/航空爱好者"
+    teaching_point: "包线保护是飞控计算机限制飞机不超出安全飞行范围（迎角、过载、速度）。C919 在正常控制律下提供失速保护、过载限制、速度限制。但系统降级到直接控制律时保护功能丧失，飞行员需手动操纵。"
+
+  - id: "fc-qa-004-control-laws"
+    question: "C919 飞控有几种控制律？"
+    audience: "航空爱好者/有专业兴趣的公众"
+    teaching_point: "C919 飞控有分层控制律：正常控制律（Normal Law，全功能含包线保护）→ 降级控制律（Alternate Law，部分保护丧失）→ 直接控制律（Direct Law，飞行员直接操纵舵面无保护）。故障越多降级越深，确保安全着陆。"
+
+  - id: "fc-qa-005-side-stick"
+    question: "C919 驾驶舱为什么用侧杆不用驾驶盘？"
+    audience: "普通公众/中学生"
+    teaching_point: "C919 采用侧杆（Side Stick），与空客 A320 类似。侧杆是电传操纵的人机接口，优点是精准、轻便、释放驾驶舱空间、便于观察仪表。手感由载荷机构模拟。传统驾驶盘（如波音 737）靠机械钢索，重且占空间。"
+
+  - id: "fc-qa-006-rudder-purpose"
+    question: "C919 的垂直尾翼上的方向舵是干什么用的？"
+    audience: "中学生"
+    teaching_point: "方向舵控制飞机的偏航（机头左右摆动），主要用于协调转弯、侧风着陆修正、单发失效时纠偏。C919 方向舵由液压作动器驱动，飞控计算机根据侧杆和脚踏板输入控制偏转。"
+
+  - id: "fc-qa-007-single-engine-failure"
+    question: "C919 一台发动机失效还能飞吗？"
+    audience: "普通公众/有专业兴趣的公众"
+    teaching_point: "能。C919 按 CCAR-25.121 要求具备单发失效继续飞行能力。一台失效后，另一台发动机提供推力，方向舵纠正偏航，飞行员可继续爬升、返航、单发降落。这是双发客机的强制适航要求。"
+
+  - id: "fc-qa-008-autopilot-vs-fbw"
+    question: "电传飞控是不是就是自动驾驶？"
+    audience: "中学生"
+    teaching_point: "不是。电传是操纵方式（电信号替代机械钢索），飞行员仍主动操纵；自动驾驶是飞控系统按指令自动控制飞行轨迹。电传可叠加包线保护和自动驾驶，但两者是不同概念。C919 是电传飞机，但飞行员仍是主动操纵者。"

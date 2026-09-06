@@ -1,0 +1,47 @@
+# C919 气动专项讲解侧问答种子（非评测种子）
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / question / audience / teaching_point
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+qa_seeds:
+  - id: "aero-qa-001-why-flat-wing-top"
+    question: "C919 机翼上表面为什么是平的？"
+    audience: "中学生/航空爱好者"
+    teaching_point: "这是超临界机翼的特征：上表面平坦延缓跨声速激波、降低波阻；下表面弯度大靠后缘补回升力。气动效率提升约 20%、阻力降低约 8%。"
+
+  - id: "aero-qa-002-why-winglet"
+    question: "C919 翼尖为什么要翘起来？"
+    audience: "普通公众/中学生"
+    teaching_point: "这是融合式翼尖小翼，削弱翼尖涡流、降低诱导阻力约 3-5%。翼展从 33.6 米增至 35.8 米，是在机场机位翼展限制下挤出气动收益的手段。"
+
+  - id: "aero-qa-003-mach-0785-subsonic"
+    question: "C919 巡航 Mach 0.785 是亚音速，为什么还要管激波？"
+    audience: "航空爱好者/有专业兴趣的公众"
+    teaching_point: "来流 Mach 0.785<1 但机翼上表面局部气流可超过声速形成激波——这就是跨声速。超临界机翼就是为延迟激波、降低波阻而设计。亚音速飞行不等于全机气流亚音速。"
+
+  - id: "aero-qa-004-aero-efficiency-20"
+    question: "气动效率提升 20% 是省 20% 的油吗？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "不是。气动效率提升 20% 指升阻比提升，实际燃油节省约 5-15%，还取决于发动机油耗、飞机重量、飞行剖面。把升阻比提升等同于省油比例是混淆概念。"
+
+  - id: "aero-qa-005-sweep-angle"
+    question: "C919 机翼为什么要后掠？"
+    audience: "航空爱好者"
+    teaching_point: "后掠翼降低机翼有效来流马赫数，把阻力发散马赫数提高，让飞机能在更高 Mach 数巡航不遇激波阻力发散。但后掠角过大增加结构重量、降低低速升力，是综合权衡的结果。"
+
+  - id: "aero-qa-006-stall-protection"
+    question: "C919 飞机会失速吗？怎么保护？"
+    audience: "中学生/有专业兴趣的公众"
+    teaching_point: "会失速（迎角超过临界值升力骤降），但电传飞控在正常控制律下提供迎角限制（α-protection），把可用迎角限制在失速迎角以下。降级到直接控制律时需飞行员手动避免失速。"
+
+  - id: "aero-qa-007-reynolds-number"
+    question: "雷诺数对 C919 气动设计有什么影响？"
+    audience: "有专业兴趣的公众/工程背景"
+    teaching_point: "C919 巡航雷诺数在 10⁷ 量级，影响边界层转捩位置、摩擦阻力、最大升力系数。风洞试验缩比模型雷诺数低 1-2 个数量级，需雷诺数修正外推到全尺寸。"
+
+  - id: "aero-qa-008-wingbox-material-tradeoff"
+    question: "C919 中央翼盒为什么没用复合材料？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "中央翼盒是主承力结构，复合材料减重约 15-20% 但认证风险高、损伤检测难。C919 作为首型号需积累适航经验，改回铝合金是用重量换可靠性和认证成熟度的工程权衡。"

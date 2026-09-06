@@ -1,0 +1,107 @@
+# 运-20 关系种子
+# 字段对齐 GraphEdge
+
+relations:
+  - edge_id: "y20_cargo_part_of_y20"
+    source_node_id: "y20_cargo_hold"
+    target_node_id: "y20_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+
+  - edge_id: "y20_powerplant_part_of_y20"
+    source_node_id: "y20_powerplant"
+    target_node_id: "y20_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+
+  - edge_id: "y20_wing_part_of_y20"
+    source_node_id: "y20_wing"
+    target_node_id: "y20_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+
+  - edge_id: "ws20_part_of_powerplant"
+    source_node_id: "ws20_engine"
+    target_node_id: "y20_powerplant"
+    relation_type: "part_of"
+    confidence: 1.0
+
+  - edge_id: "yy20_derives_y20"
+    source_node_id: "yy20_aircraft"
+    target_node_id: "y20_aircraft"
+    relation_type: "derives_from"
+    confidence: 0.9
+    metadata:
+      note: "YY-20 是运-20 的加油改型"
+
+  - edge_id: "y20_derives_il76_role"
+    source_node_id: "y20_aircraft"
+    target_node_id: "il76_aircraft"
+    relation_type: "derives_from"
+    confidence: 0.6
+    metadata:
+      note: "运-20 继承并替代伊尔-76 的战略运输角色"
+
+  - edge_id: "y20_payload_param_of_aircraft"
+    source_node_id: "y20_aircraft"
+    target_node_id: "y20_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "最大载重"
+      value: "66,000"
+      unit: "kg"
+
+  - edge_id: "y20_mtow_param_of_aircraft"
+    source_node_id: "y20_aircraft"
+    target_node_id: "y20_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "最大起飞重量"
+      value: "220,000"
+      unit: "kg"
+
+  - edge_id: "y20_length_param_of_aircraft"
+    source_node_id: "y20_aircraft"
+    target_node_id: "y20_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "机长"
+      value: "47"
+      unit: "m"
+
+  - edge_id: "y20_ff2013_param_of_aircraft"
+    source_node_id: "y20_aircraft"
+    target_node_id: "y20_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "首飞日期"
+      value: "2013-01-26"
+
+  - edge_id: "y20_service2016_param_of_aircraft"
+    source_node_id: "y20_aircraft"
+    target_node_id: "y20_aircraft"
+    relation_type: "parameter_of"
+    confidence: 0.9
+    metadata:
+      parameter: "服役日期"
+      value: "2016-07-06"
+
+  - edge_id: "y20_compared_il76"
+    source_node_id: "y20_aircraft"
+    target_node_id: "il76_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    metadata:
+      comparison_source: "y20-science-vs-il76-v1"
+
+  - edge_id: "y20_compared_c17"
+    source_node_id: "y20_aircraft"
+    target_node_id: "c17_aircraft"
+    relation_type: "compared_with"
+    confidence: 1.0
+    metadata:
+      comparison_source: "y20-science-vs-c17-v1"

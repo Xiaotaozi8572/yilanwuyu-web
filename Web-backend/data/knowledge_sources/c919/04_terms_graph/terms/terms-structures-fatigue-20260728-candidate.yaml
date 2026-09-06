@@ -1,0 +1,76 @@
+# C919 疲劳断裂类术语
+# 领域：疲劳与断裂力学
+# 条目数：10
+# node_type 统一为 concept
+# ID 前缀：fat_
+
+terms:
+  - term_id: "fat_001"
+    canonical_name: "高周疲劳"
+    aliases: ["高周疲劳", "high-cycle fatigue", "HCF"]
+    node_type: "concept"
+    definition: "循环次数高（>10⁵）、应力水平低的疲劳，应变主要为弹性，C919 发动机叶片等振动疲劳属高周疲劳"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fat_002"
+    canonical_name: "低周疲劳"
+    aliases: ["低周疲劳", "low-cycle fatigue", "LCF"]
+    node_type: "concept"
+    definition: "循环次数低（<10⁵）、应力水平高的疲劳，含塑性应变，C919 机身增压循环属低周疲劳"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fat_003"
+    canonical_name: "Miner法则"
+    aliases: ["Miner法则", "Miner's rule", "线性累积损伤法则", "Palmgren-Miner 法则"]
+    node_type: "concept"
+    definition: "线性疲劳累积损伤理论 Σ(ni/Ni)=1，认为各应力水平损伤线性累加，C919 疲劳分析采用 Miner 法则估算寿命"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fat_004"
+    canonical_name: "S-N曲线"
+    aliases: ["S-N曲线", "S-N curve", "应力-寿命曲线", "Wöhler 曲线"]
+    node_type: "concept"
+    definition: "应力幅与疲劳寿命关系曲线，由材料疲劳试验获得，C919 结构疲劳分析依据材料 S-N 曲线"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fat_005"
+    canonical_name: "Paris公式"
+    aliases: ["Paris公式", "Paris law", "Paris 裂纹扩展公式"]
+    node_type: "concept"
+    definition: "裂纹扩展速率与应力强度因子幅的关系 da/dN=C(ΔK)^m，C919 损伤容限分析用 Paris 公式预测裂纹扩展"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fat_006"
+    canonical_name: "裂纹扩展"
+    aliases: ["裂纹扩展", "crack growth", "裂纹扩展速率", "裂纹扩展寿命"]
+    node_type: "concept"
+    definition: "交变载荷下裂纹尺寸随循环次数增加的过程，分稳定扩展和快速断裂阶段，C919 损伤容限设计保证裂纹可检"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fat_007"
+    canonical_name: "门槛值"
+    aliases: ["门槛值", "threshold", "裂纹扩展门槛值", "ΔKth"]
+    node_type: "concept"
+    definition: "应力强度因子幅低于此值裂纹不扩展的临界值 ΔKth，C919 结构设计使小裂纹应力强度因子低于门槛值"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fat_008"
+    canonical_name: "断裂韧性"
+    aliases: ["断裂韧性", "fracture toughness", "KIC"]
+    node_type: "concept"
+    definition: "材料抵抗裂纹扩展的韧性指标 KIC，反映含裂纹材料的承载能力，C919 选材考虑断裂韧性避免脆断"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fat_009"
+    canonical_name: "应力强度因子"
+    aliases: ["应力强度因子", "stress intensity factor", "K", "K因子"]
+    node_type: "concept"
+    definition: "描述裂纹尖端应力场强度的参数 K=Yσ√(πa)，C919 断裂力学分析依据应力强度因子评估裂纹"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fat_010"
+    canonical_name: "剩余强度"
+    aliases: ["剩余强度", "residual strength", "残余强度"]
+    node_type: "concept"
+    definition: "含裂纹结构仍能承受的载荷能力，随裂纹扩展降低，C919 损伤容限设计保证两次检测间剩余强度满足要求"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

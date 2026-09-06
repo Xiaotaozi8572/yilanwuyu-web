@@ -1,0 +1,88 @@
+# z20 实体补全
+# 字段对齐 GraphNode
+
+entities:
+  - entity_id: "mi17"
+    node_type: "aircraft"
+    canonical_name: "米-17"
+    aliases: []
+    definition: "俄罗斯中型运输直升机"
+    source_id: "z20-graph-entities-extra-v1"
+
+  - entity_id: "nh90"
+    node_type: "aircraft"
+    canonical_name: "NH90"
+    aliases: []
+    definition: "欧洲中型通用直升机"
+    source_id: "z20-graph-entities-extra-v1"
+
+  - entity_id: "uh60"
+    node_type: "aircraft"
+    canonical_name: "UH-60黑鹰"
+    aliases: []
+    definition: "美国10吨级通用直升机"
+    source_id: "z20-graph-entities-extra-v1"
+
+  - entity_id: "wz10"
+    node_type: "component"
+    canonical_name: "WZ-10发动机"
+    aliases: []
+    definition: "国产涡轴，1600-2000kW"
+    source_id: "z20-graph-entities-extra-v1"
+
+  - entity_id: "z20_asw"
+    node_type: "aircraft"
+    canonical_name: "直-20反潜型"
+    aliases: []
+    definition: "舰载反潜改型"
+    source_id: "z20-graph-entities-extra-v1"
+
+  - entity_id: "z20_cabin"
+    node_type: "component"
+    canonical_name: "客舱"
+    aliases: []
+    definition: "12-15人乘员舱"
+    source_id: "z20-graph-entities-extra-v1"
+
+  - entity_id: "z20_fc"
+    node_type: "system"
+    canonical_name: "飞控系统"
+    aliases: []
+    definition: "电传飞控"
+    source_id: "z20-graph-entities-extra-v1"
+
+  - entity_id: "z20_fuel"
+    node_type: "system"
+    canonical_name: "燃油系统"
+    aliases: []
+    definition: "直升机燃油系统"
+    source_id: "z20-graph-entities-extra-v1"
+
+  - entity_id: "z20_naval"
+    node_type: "aircraft"
+    canonical_name: "直-20舰载型"
+    aliases: []
+    definition: "海军舰载型号"
+    source_id: "z20-graph-entities-extra-v1"
+
+  - entity_id: "z20_tail_rotor"
+    node_type: "component"
+    canonical_name: "尾桨"
+    aliases: []
+    definition: "平衡旋翼扭矩"
+    source_id: "z20-graph-entities-extra-v1"
+
+  - entity_id: "z20_transmission"
+    node_type: "system"
+    canonical_name: "传动系统"
+    aliases: []
+    definition: "发动机-旋翼动力分配"
+    source_id: "z20-graph-entities-extra-v1"
+
+  - entity_id: "z8"
+    node_type: "aircraft"
+    canonical_name: "直-8"
+    aliases: []
+    definition: "中国13吨级运输直升机"
+    source_id: "z20-graph-entities-extra-v1"
+

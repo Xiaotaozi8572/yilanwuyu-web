@@ -1,0 +1,52 @@
+app:
+  environment: development
+  entry_mode: cli
+  host: 127.0.0.1
+  port: 8000
+  log_level: INFO
+  max_state_loop: 3
+  trace_enabled: true
+trace:
+  persist_enabled: false
+langgraph:
+  checkpoint_path: data/processed/langgraph_checkpoints.sqlite3
+  max_resume_attempts: 1
+generation:
+  max_main_answer_chars: 800
+  max_evidence_facts: 12
+  max_evidence_chars_per_fact: 500
+  require_source_binding_for_claims: true
+  stream_low_risk_only: false
+  route_policy_version: answer_route_v1
+feedback:
+  checkpoint:
+    max_items: 256
+self_check:
+  factual_grounding_threshold: 0.85
+  scene_alignment_threshold: 0.80
+  risk_score_threshold: 0.20
+  max_retrieve_rounds: 2
+  max_rewrite_rounds: 2
+  semantic_similarity_threshold: 0.78
+  parameter_numeric_tolerance: 0.0
+  # R0: 参数事实查询的权威下限。原 reviewed_manual 要求人工审核，但当前参数
+  # 数据来自 Wikipedia/Airport Technology 交叉核对（standard 级、未人工审核），
+  # 导致参数问题全部 fail-closed 澄清。降至 standard 使参数问答可用；如需收紧
+  # 权威，应先在数据侧提升 authority_level 再回调此值。
+  high_risk_minimum_authority: standard
+  # 低风险释义 claim 的语义等价兜底：LLM 对证据做合并/措辞改写后，确定性
+  # 子串/Jaccard 匹配会误判 UNSUPPORTED，改用 BGE-M3 embedding 余弦相似度
+  # 判定（EmbeddingSemanticJudge，仅 LOW 风险、非安全、非参数 claim 生效）。
+  # embedding provider 为 mock/降级时 judge 自动不兜底，保持 fail-closed。
+  allow_semantic_judge_for_low_risk: true
+  factual_predicate_patterns: ["为", "是", "位于", "用于", "具有", "采用", "产生", "提供", "安装", "is", "are"]
+safety:
+  template_id: aviation_basic_safe
+  block_operational_steps: true
+  refusal_short_text: "不能提供可执行危险操作步骤。"
+  refusal_main_text: "我不能提供具体维修、拆卸、改装、故障处置或飞行操作步骤；可以解释相关原理和安全边界。"
+  blocked_procedure_patterns: ["拆卸步骤", "维修步骤", "改装步骤", "故障处置步骤", "飞行操作步骤"]
+  blocked_action_verbs: ["松开", "断开", "拆下", "拆卸", "旁路", "改装", "复位"]
+  ordered_procedure_patterns: ["先.*再.*", "第一步.*第二步.*", "依次.*"]
+  pure_refusal_markers: ["不能提供", "无法提供", "可以解释安全边界"]
+  safe_alternative_prompts: ["解释相关原理", "解释安全边界"]

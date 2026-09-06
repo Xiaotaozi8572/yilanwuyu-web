@@ -1,0 +1,78 @@
+# C919 辅助系统实体
+# APU 辅助动力装置及附属子系统
+# node_type: system
+# node_id 前缀：saux_
+
+entities:
+  - node_id: "saux_apu_hgt750"
+    node_type: "system"
+    canonical_name: "APU HGT750"
+    aliases: ["HGT750", "APU", "辅助动力装置 HGT750"]
+    description: "C919 机尾安装的辅助动力装置，由 Honeywell 提供 HGT750 型号，输出电力和引气"
+    specifications:
+      model: "HGT750"
+      supplier: "Honeywell"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "saux_apu_fuel"
+    node_type: "system"
+    canonical_name: "APU 燃油系统"
+    aliases: ["APU fuel system", "APU 供油"]
+    description: "向 APU 供油的子系统，C919 APU 由左机翼油箱供油，配备独立燃油控制器和滤芯"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "saux_apu_bleed"
+    node_type: "system"
+    canonical_name: "APU 引气系统"
+    aliases: ["APU bleed system", "APU 引气"]
+    description: "APU 压气机引出压缩空气的系统，C919 地面及空中可由 APU 引气供空调启动发动机"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "saux_apu_electrical"
+    node_type: "system"
+    canonical_name: "APU 电力系统"
+    aliases: ["APU electrical system", "APU 发电"]
+    description: "APU 驱动发电机输出电力的系统，C919 APU 发电机可在地面及空中为全机供电"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "saux_apu_exhaust"
+    node_type: "system"
+    canonical_name: "APU 排气系统"
+    aliases: ["APU exhaust system", "APU 排气"]
+    description: "APU 燃气排气段，C919 APU 排气经尾椎消声喷管排出，配备红外抑制设计"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "saux_apu_fire"
+    node_type: "system"
+    canonical_name: "APU 防火系统"
+    aliases: ["APU fire protection", "APU 灭火", "APU 火警"]
+    description: "APU 舱火警探测与灭火系统，C919 APU 舱设火警探测器及灭火瓶，可在驾驶舱远程灭火"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "saux_apu_intake"
+    node_type: "system"
+    canonical_name: "APU 进气系统"
+    aliases: ["APU intake system", "APU 进气门"]
+    description: "APU 进气整流段，C919 APU 进气门位于尾翼根部，工作时打开引入空气"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "saux_apu_starter"
+    node_type: "system"
+    canonical_name: "APU 启动系统"
+    aliases: ["APU starter", "APU 起动机", "APU 启动器"]
+    description: "启动 APU 的电启动系统，C919 APU 由蓄电池供电启动，达到自持转速后投入工作"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "saux_apu_panel"
+    node_type: "system"
+    canonical_name: "APU 控制面板"
+    aliases: ["APU control panel", "APU 操作面板"]
+    description: "驾驶舱及地面维护点 APU 控制面板，C919 顶部板设 APU 启停和监控按钮"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "saux_apu_monitor"
+    node_type: "system"
+    canonical_name: "APU 监控"
+    aliases: ["APU monitoring", "APU 监控系统", "APU BITE"]
+    description: "APU 状态监控与故障诊断系统，C919 APU 控制器内置 BITE 监测转速温度油量等参数"
+    applicable_aircraft: ["c919"]

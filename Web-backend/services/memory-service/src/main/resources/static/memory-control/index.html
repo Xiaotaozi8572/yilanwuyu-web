@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory control center</title>
+  <link rel="stylesheet" href="/memory-control/app.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header><h1>Memory control center</h1><p>Review and manage your saved learning memory.</p></header>
+  <main id="main" tabindex="-1">
+    <p id="status" role="status" aria-live="polite"></p>
+    <section aria-labelledby="consent-heading">
+      <h2 id="consent-heading">Memory consent</h2>
+      <form id="consent-form">
+        <label><input id="long-term-enabled" type="checkbox"> Allow long-term memory</label>
+        <fieldset id="consent-categories"><legend>Allowed categories</legend>
+          <label><input type="checkbox" name="category" value="PREFERENCE"> PREFERENCE</label>
+          <label><input type="checkbox" name="category" value="MASTERY"> MASTERY</label>
+          <label><input type="checkbox" name="category" value="MISCONCEPTION"> MISCONCEPTION</label>
+          <label><input type="checkbox" name="category" value="REFLECTION"> REFLECTION</label>
+        </fieldset>
+        <label>Retention days <input id="retention-days" type="number" min="1" required></label>
+        <button type="submit">Save consent</button>
+      </form>
+      <p id="consent-purpose">Static purpose: manage your saved learning memory choices.</p>
+      <p id="consent-retention-note">Retention is selected only when you save enabled consent. It is not returned by this API.</p>
+      <p id="consent-version"></p>
+    </section>
+    <section aria-labelledby="memory-heading">
+      <h2 id="memory-heading">Saved memories</h2>
+      <label>Type <select id="type-filter"><option value="">All types</option></select></label>
+      <label>Status <select id="status-filter"><option value="">All statuses</option></select></label>
+      <button id="reload" type="button">Reload</button>
+      <ul id="memory-list" aria-label="Saved memories"></ul>
+      <p id="forget-receipt"></p>
+    </section>
+    <section id="detail" hidden aria-labelledby="detail-heading">
+      <h2 id="detail-heading">Memory detail</h2><dl id="memory-fields"></dl>
+      <p>System or creation time: unavailable from this API.</p>
+      <details><summary>Derived projection</summary><p>No projection hint is available. Any future graph relationship is derived and rebuildable.</p></details>
+      <form id="correction-form"><h3>Correct this memory</h3><p id="current-value"></p><label>Edited value <textarea id="corrected-value" required></textarea></label><label>Reason <input id="correction-reason"></label><button type="submit">Submit correction</button></form>
+      <button id="confirm-memory" type="button">Confirm memory</button>
+      <button id="disable-memory" type="button">Disable memory</button>
+      <button id="forget-memory" type="button">Request forgetting</button>
+      <button id="back-to-list" type="button">Back to list</button>
+    </section>
+  </main>
+  <script type="module" src="/memory-control/app.js"></script>
+</body>
+</html>

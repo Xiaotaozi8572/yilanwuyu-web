@@ -1,0 +1,125 @@
+# C919 发动机部件实体
+# LEAP-1C 涡扇发动机结构分解
+# node_type: component
+# node_id 前缀：ceng_
+
+entities:
+  - node_id: "ceng_fan"
+    node_type: "component"
+    canonical_name: "风扇"
+    aliases: ["fan", "进气风扇", "前风扇"]
+    description: "发动机最前部大直径单级风扇，LEAP-1C 采用 18 片碳纤维复合材料宽弦风扇叶片，涵道比高"
+    specifications:
+      fan_blades: 18
+      blade_material: "碳纤维复合材料"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ceng_lpc"
+    node_type: "component"
+    canonical_name: "低压压气机"
+    aliases: ["low pressure compressor", "LPC", "低压压气机"]
+    description: "风扇后低压压气机段，多级转子对内涵道气流增压，由低压涡轮驱动"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ceng_hpc"
+    node_type: "component"
+    canonical_name: "高压压气机"
+    aliases: ["high pressure compressor", "HPC", "高压压气机"]
+    description: "高压压气机段，10 级转子将气流进一步压缩至高压，LEAP-1C 总压比约 40:1"
+    specifications:
+      stages: 10
+      pressure_ratio: 40
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ceng_combustor"
+    node_type: "component"
+    canonical_name: "燃烧室"
+    aliases: ["combustor", "燃烧室", "火焰筒"]
+    description: "高压压气机后燃料燃烧段，LEAP-1C 采用贫油预混旋流燃烧室技术，降低 NOx 排放"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ceng_hpt"
+    node_type: "component"
+    canonical_name: "高压涡轮"
+    aliases: ["high pressure turbine", "HPT", "高压涡轮"]
+    description: "燃烧室后高压涡轮段，2 级叶片驱动高压压气机，工作温度高，采用单晶叶片与气膜冷却"
+    specifications:
+      stages: 2
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ceng_lpt"
+    node_type: "component"
+    canonical_name: "低压涡轮"
+    aliases: ["low pressure turbine", "LPT", "低压涡轮"]
+    description: "高压涡轮后低压涡轮段，7 级叶片驱动低压转子和风扇，LEAP-1C 采用三维气动设计提升效率"
+    specifications:
+      stages: 7
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ceng_nozzle"
+    node_type: "component"
+    canonical_name: "尾喷管"
+    aliases: ["nozzle", "排气喷管", "尾喷"]
+    description: "发动机尾部排气段，加速燃气产生推力，LEAP-1C 采用分离式内外涵喷管设计"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ceng_thrust_reverser"
+    node_type: "component"
+    canonical_name: "反推装置"
+    aliases: ["thrust reverser", "反推", "推力反向器"]
+    description: "着陆时打开将外涵气流向前折转产生反向推力的装置，缩短着陆滑跑距离，C919 由短舱集成"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ceng_nacelle"
+    node_type: "component"
+    canonical_name: "短舱"
+    aliases: ["nacelle", "发动机短舱", "舱罩"]
+    description: "包裹发动机的整流罩，C919 短舱由 Nexcelle 公司提供，集成反推装置和消声衬垫"
+    specifications:
+      supplier: "Nexcelle"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ceng_intake"
+    node_type: "component"
+    canonical_name: "进气道"
+    aliases: ["intake", "进气道", "进气整流罩"]
+    description: "短舱前部进气段，整流进入风扇的气流并防止畸变，配备防冰引气系统"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ceng_fan_blade"
+    node_type: "component"
+    canonical_name: "风扇叶片"
+    aliases: ["fan blade", "宽弦风扇叶片"]
+    description: "风扇转子叶片，LEAP-1C 采用 18 片碳纤维复合材料宽弦后掠叶片，替代钛合金实现减重"
+    specifications:
+      count: 18
+      material: "碳纤维复合材料"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ceng_stator"
+    node_type: "component"
+    canonical_name: "导向器"
+    aliases: ["stator", "静子导向叶片", "NGV"]
+    description: "涡轮段固定导向叶片，整流燃气并引导气流以最佳角度冲击转子叶片，多级涡轮每级前设导向器"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ceng_rotor"
+    node_type: "component"
+    canonical_name: "转子"
+    aliases: ["rotor", "压气机转子", "涡轮转子"]
+    description: "压气机和涡轮旋转部件总成，由盘、叶片、轴组成，传递扭矩并压缩气流或输出功"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ceng_stator_vane"
+    node_type: "component"
+    canonical_name: "静子"
+    aliases: ["stator vane", "静子叶片", "压气机静子"]
+    description: "压气机固定导向叶片，整流气流并扩压，与转子叶片交替排列逐级增压"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "ceng_bearing"
+    node_type: "component"
+    canonical_name: "轴承"
+    aliases: ["bearing", "主轴承", "发动机轴承"]
+    description: "支撑高低压转子的主轴承，LEAP-1C 采用陶瓷混合球轴承，减少润滑需求并提升耐久性"
+    applicable_aircraft: ["c919"]

@@ -1,0 +1,90 @@
+# C919 液压类术语
+# 领域：液压系统
+# 条目数：12
+# node_type 统一为 system
+# ID 前缀：hyd_
+
+terms:
+  - term_id: "hyd_001"
+    canonical_name: "液压泵"
+    aliases: ["液压泵", "hydraulic pump", "液压油泵"]
+    node_type: "component"
+    definition: "将机械能转换为液压能的泵，C919 液压泵由发动机附件机匣或电动驱动"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hyd_002"
+    canonical_name: "EDP"
+    aliases: ["EDP", "Engine Driven Pump", "发动机驱动泵", "发动机液压泵"]
+    node_type: "component"
+    definition: "由发动机附件机匣驱动的液压泵，C919 每台发动机驱动一台 EDP 作为液压主源"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hyd_003"
+    canonical_name: "EMP"
+    aliases: ["EMP", "Electric Motor Pump", "电动液压泵", "电动泵"]
+    node_type: "component"
+    definition: "由电动机驱动的液压泵，作为 EDP 的备份，C919 每套液压系统配备 EMP 保证发动机失效后液压供应"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hyd_004"
+    canonical_name: "蓄压器"
+    aliases: ["蓄压器", "accumulator", "液压蓄压器"]
+    node_type: "component"
+    definition: "储存液压油和气体压力的容器，吸收脉动和提供应急能源，C919 蓄压器保证作动器瞬时大流量需求"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hyd_005"
+    canonical_name: "油箱"
+    aliases: ["油箱", "hydraulic reservoir", "液压油箱"]
+    node_type: "component"
+    definition: "储存液压油的容器，C919 液压油箱配备油量传感器和增压装置保证泵入口供油"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hyd_006"
+    canonical_name: "压力"
+    aliases: ["压力", "pressure", "液压压力", "系统压力"]
+    node_type: "concept"
+    definition: "液压系统的工作压力，C919 液压系统工作压力 3000 psi（约 20.7 MPa）"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hyd_007"
+    canonical_name: "3000psi"
+    aliases: ["3000psi", "3000 psi", "3000 磅每平方英寸"]
+    node_type: "concept"
+    definition: "民航常用液压系统工作压力，C919 液压系统采用 3000 psi 标准压力"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hyd_008"
+    canonical_name: "作动器"
+    aliases: ["作动器", "actuator", "液压作动筒", "液压缸"]
+    node_type: "component"
+    definition: "将液压能转换为直线或旋转运动的执行元件，C919 飞控舵面和起落架由液压作动器驱动"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hyd_009"
+    canonical_name: "伺服阀"
+    aliases: ["伺服阀", "servo valve", "伺服控制阀"]
+    node_type: "component"
+    definition: "精确控制液压流量和方向的小功率阀，C919 伺服阀根据飞控指令精确控制作动器"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hyd_010"
+    canonical_name: "换向阀"
+    aliases: ["换向阀", "directional valve", "方向控制阀"]
+    node_type: "component"
+    definition: "改变液压油流向的阀，C919 换向阀控制作动器伸出或缩回"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hyd_011"
+    canonical_name: "溢流阀"
+    aliases: ["溢流阀", "relief valve", "安全阀", "溢流压力阀"]
+    node_type: "component"
+    definition: "限制液压系统最高压力的安全阀，C919 溢流阀在压力超限时开启卸压保护系统"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "hyd_012"
+    canonical_name: "液压油"
+    aliases: ["液压油", "hydraulic fluid", "液压介质"]
+    node_type: "component"
+    definition: "传递液压能量的介质，C919 采用阻燃磷酸酯型航空液压油 Skydrol"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

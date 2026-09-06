@@ -1,0 +1,94 @@
+# C919 合资企业股权结构关系
+# 描述 C919 主要一级系统供应商的合资企业股权结构
+# relation_type: owned_by / produces
+# edge_id 前缀：rjv_
+
+relations:
+  # ========== AVIAGE 航电合资 ==========
+  - edge_id: "rjv_001"
+    source_node_id: "supplier_aviage"
+    target_node_id: "supplier_ge"
+    relation_type: "owned_by"
+    confidence: 1.0
+    description: "AVIAGE 系统公司由 GE 航空集团与中航工业合资成立，GE 持股 50%"
+
+  - edge_id: "rjv_002"
+    source_node_id: "supplier_aviage"
+    target_node_id: "supplier_avic"
+    relation_type: "owned_by"
+    confidence: 1.0
+    description: "AVIAGE 系统公司由 GE 与 AVIC 合资成立，AVIC 持股 50%"
+
+  # ========== Hongfei 飞控合资 ==========
+  - edge_id: "rjv_003"
+    source_node_id: "supplier_hongfei"
+    target_node_id: "supplier_honeywell"
+    relation_type: "owned_by"
+    confidence: 1.0
+    description: "Hongfei(鸿飞)公司由 Honeywell 与 AVIC 合资成立，Honeywell 持股 50%"
+
+  - edge_id: "rjv_004"
+    source_node_id: "supplier_hongfei"
+    target_node_id: "supplier_avic"
+    relation_type: "owned_by"
+    confidence: 1.0
+    description: "Hongfei 公司由 Honeywell 与 AVIC 合资成立，AVIC 持股 50%"
+
+  # ========== CFM 发动机合资 ==========
+  - edge_id: "rjv_005"
+    source_node_id: "supplier_cfm"
+    target_node_id: "supplier_ge"
+    relation_type: "owned_by"
+    confidence: 1.0
+    description: "CFM 国际由 GE 与 Safran 合资成立，GE 持股 50%"
+
+  - edge_id: "rjv_006"
+    source_node_id: "supplier_cfm"
+    target_node_id: "supplier_safran"
+    relation_type: "owned_by"
+    confidence: 1.0
+    description: "CFM 国际由 GE 与 Safran 合资成立，Safran 持股 50%"
+
+  # ========== LAMC 起落架合资 ==========
+  - edge_id: "rjv_007"
+    source_node_id: "supplier_lamc"
+    target_node_id: "supplier_liebherr"
+    relation_type: "owned_by"
+    confidence: 0.95
+    description: "LAMC(起落架合资公司)由 Liebherr 与中航起联合成立，Liebherr 主导技术"
+
+  - edge_id: "rjv_008"
+    source_node_id: "supplier_lamc"
+    target_node_id: "supplier_avic"
+    relation_type: "owned_by"
+    confidence: 0.9
+    description: "LAMC 由 Liebherr 与 AVIC 下属中航起合资成立，AVIC 持股"
+
+  # ========== produces 合资企业产品 ==========
+  - edge_id: "rjv_009"
+    source_node_id: "supplier_aviage"
+    target_node_id: "sys_avionics"
+    relation_type: "produces"
+    confidence: 1.0
+    description: "AVIAGE 系统公司生产 C919 综合模块化航电系统(IMA)"
+
+  - edge_id: "rjv_010"
+    source_node_id: "supplier_hongfei"
+    target_node_id: "sys_flight_control"
+    relation_type: "produces"
+    confidence: 1.0
+    description: "Hongfei 公司生产 C919 主飞控系统(PFCS)"
+
+  - edge_id: "rjv_011"
+    source_node_id: "supplier_cfm"
+    target_node_id: "sys_leap1c"
+    relation_type: "produces"
+    confidence: 1.0
+    description: "CFM 国际生产 LEAP-1C28 发动机供应 C919 项目"
+
+  - edge_id: "rjv_012"
+    source_node_id: "supplier_lamc"
+    target_node_id: "sys_landing_gear_system"
+    relation_type: "produces"
+    confidence: 0.95
+    description: "LAMC 生产 C919 起落架系统主体结构件与控制部件"

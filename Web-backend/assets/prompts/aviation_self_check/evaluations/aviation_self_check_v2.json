@@ -1,0 +1,20 @@
+{
+  "snapshot_id": "aviation_self_check_v2",
+  "template_id": "aviation_self_check",
+  "version": "v2",
+  "test_cases": [
+    "unsupported_claim",
+    "scene_mismatch",
+    "safety_check"
+  ],
+  "dimension_scores": {
+    "faithfulness": 0.99,
+    "risk_detection": 0.94,
+    "consistency": 0.92
+  },
+  "violations": [],
+  "improvements": [
+    "Review order is easier to audit."
+  ],
+  "final_decision": "approve"
+}

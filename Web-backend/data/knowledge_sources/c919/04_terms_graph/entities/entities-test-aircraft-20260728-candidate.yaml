@@ -1,0 +1,79 @@
+# C919 试飞原型机实体
+# 参与适航试飞及验证的 C919 原型机
+# node_type: aircraft
+# node_id 前缀：test_
+
+entities:
+  - node_id: "test_b001a"
+    node_type: "aircraft"
+    canonical_name: "B-001A"
+    aliases: ["B-001A", "C919 首架机", "101 架机"]
+    description: "C919 首架试飞原型机，2017-05-05 完成首飞，承担气动操稳及基本飞行包线试飞"
+    specifications:
+      role: "首飞及基本飞行"
+      first_flight: "2017-05-05"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "test_b001c"
+    node_type: "aircraft"
+    canonical_name: "B-001C"
+    aliases: ["B-001C", "102 架机"]
+    description: "C919 第二架试飞原型机，承担航电系统及部分性能试飞科目"
+    specifications:
+      role: "航电与性能"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "test_b001d"
+    node_type: "aircraft"
+    canonical_name: "B-001D"
+    aliases: ["B-001D", "103 架机"]
+    description: "C919 第三架试飞原型机，承担结构载荷及颤振试飞科目"
+    specifications:
+      role: "结构与载荷"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "test_b001e"
+    node_type: "aircraft"
+    canonical_name: "B-001E"
+    aliases: ["B-001E", "104 架机"]
+    description: "C919 第四架试飞原型机，承担环控、燃油及部分系统试飞科目"
+    specifications:
+      role: "环控与燃油系统"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "test_b001f"
+    node_type: "aircraft"
+    canonical_name: "B-001F"
+    aliases: ["B-001F", "105 架机"]
+    description: "C919 第五架试飞原型机，承担发动机及推进系统试飞，验证 LEAP-1C 性能"
+    specifications:
+      role: "发动机与推进"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "test_b001g"
+    node_type: "aircraft"
+    canonical_name: "B-001G"
+    aliases: ["B-001G", "106 架机"]
+    description: "C919 第六架试飞原型机，承担高温高寒高原极端环境试飞科目"
+    specifications:
+      role: "极端环境"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "test_b001j"
+    node_type: "aircraft"
+    canonical_name: "B-001J"
+    aliases: ["B-001J", "107 架机"]
+    description: "C919 第七架试飞原型机，承担客运功能验证及航线演示试飞"
+    specifications:
+      role: "客运功能验证"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "test_b002u"
+    node_type: "aircraft"
+    canonical_name: "B-002U"
+    aliases: ["B-002U", "201 架机", "首架交付机"]
+    description: "C919 首架生产型交付用机，2022-12-09 交付首家航司投入商业运营"
+    specifications:
+      role: "首架交付"
+      delivery_date: "2022-12-09"
+    applicable_aircraft: ["c919"]

@@ -1,0 +1,26 @@
+{
+  "template_id": "aviation_quiz_reinforcement",
+  "title": "Quiz reinforcement prompt",
+  "task_type": "quiz_reinforcement",
+  "status": "active",
+  "active_version": "v2",
+  "activation_scope": [
+    "quiz_reinforcement"
+  ],
+  "concept_scope": [
+    "retrieval_practice"
+  ],
+  "scene_scope": [
+    "text",
+    "scene"
+  ],
+  "constraints": [
+    "facts_from_evidence_only",
+    "ask_one_check_question",
+    "adapt_difficulty_cautiously"
+  ],
+  "risk_boundaries": [
+    "no_trick_questions_without_support",
+    "no_unsourced_feedback"
+  ]
+}

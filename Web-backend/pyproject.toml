@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yilan-ai-tutor"
+version = "0.1.0"
+description = "Evidence-grounded aviation science tutor prototype."
+requires-python = ">=3.11"
+license = {text = "Proprietary"}
+authors = [{name = "翼览无余团队"}]
+dependencies = [
+    "cryptography==49.0.0",
+    "grpcio==1.82.1",
+    "protobuf==7.35.1",
+    "pypdf>=6.14.2",
+    "websockets==15.0.1",
+    "langgraph==1.2.9",
+    "langgraph-checkpoint-sqlite==3.1.0",
+    "httpx[http2]>=0.28.1",
+    "sentence-transformers>=5.6.0",
+    "structlog>=26.1.0",
+    "jieba>=0.42.1",
+    "faster-whisper>=1.0.3,<2",
+    "edge-tts>=7.2,<8",
+]
+
+[project.scripts]
+yilan = "app.cli:main"
+
+[project.optional-dependencies]
+memory-ai = [
+    "sentence-transformers==5.6.0",
+]
+
+[dependency-groups]
+dev = [
+    "grpcio-tools==1.82.1",
+    "pytest==9.0.3",
+    "pytest-asyncio>=1.4.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q --import-mode=importlib"
+asyncio_mode = "auto"
+markers = ["integration: requires network or model download"]

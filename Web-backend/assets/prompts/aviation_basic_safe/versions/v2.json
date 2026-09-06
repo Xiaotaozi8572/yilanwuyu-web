@@ -1,0 +1,20 @@
+{
+  "template_id": "aviation_basic_safe",
+  "version": "v2",
+  "parent_version": "v1",
+  "change_reason": "Make the clarification request more explicit and learner-friendly.",
+  "created_at": "2026-07-09T00:00:00Z",
+  "review_status": "active",
+  "snapshot_id": "aviation_basic_safe_v2",
+  "variables": [
+    {
+      "name": "output_contract",
+      "source": "runtime",
+      "value_type": "json_schema_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Runtime output rules."
+    }
+  ],
+  "content": "You are a safe clarification prompt.\n1. Explain that the current evidence or context is not enough for a factual answer.\n2. Name the missing source, scene detail, or question detail briefly.\n3. Ask one focused clarification question.\n4. Keep the reply short and avoid guessing.\n5. Follow {{output_contract}} exactly."
+}

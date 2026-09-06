@@ -1,0 +1,450 @@
+{
+  "suite": "rag_refactor",
+  "case_count": 8,
+  "passed_count": 8,
+  "pass_rate": 1.0,
+  "latency_ms": 588,
+  "knowledge_database_scope": "temporary",
+  "memory_database_scope": "temporary",
+  "cases": [
+    {
+      "case_id": "c919_wing_lift_definition",
+      "name": "C919 机翼升力定义",
+      "query": "C919 升力",
+      "expected_channels": [
+        "keyword",
+        "dense"
+      ],
+      "actual_channels": [
+        "keyword",
+        "dense"
+      ],
+      "expected_gate": "confident",
+      "actual_gate": "confident",
+      "required_evidence_types": [
+        "definition"
+      ],
+      "actual_required_evidence_types": [
+        "definition"
+      ],
+      "prohibited_claims": [
+        "C919 机翼升力来自发动机推力"
+      ],
+      "prohibited_claims_observed": [],
+      "evidence_ids": [
+        "ev_chunk_a47ada8c690c"
+      ],
+      "missing_codes": [],
+      "contradiction_codes": [],
+      "audit_summary": {
+        "complexity": "L1",
+        "channels": [
+          "keyword",
+          "dense"
+        ],
+        "channel_hit_counts": {
+          "keyword": 1,
+          "vector_store": 1
+        },
+        "rrf_ranks": {
+          "chunk_a47ada8c690c": {
+            "keyword": 1,
+            "dense": 1
+          }
+        },
+        "rerank_feature_totals": {
+          "query_relevance": 0.976739,
+          "scene_match": 1.0,
+          "source_authority": 0.8,
+          "modality_support": 1.0,
+          "claim_support": 1.0,
+          "freshness_version": 1.0,
+          "pedagogical_fit": 1.0,
+          "weighted_total": 0.963022
+        },
+        "source_authority_labels": [
+          "project_reviewed"
+        ],
+        "gate": "confident",
+        "missing_codes": [],
+        "contradiction_codes": [],
+        "replan_differences": [],
+        "latency_ms": 5
+      },
+      "passed": true
+    },
+    {
+      "case_id": "c919_engine_bypass_definition",
+      "name": "C919 发动机涵道比",
+      "query": "C919 涵道比",
+      "expected_channels": [
+        "keyword",
+        "dense"
+      ],
+      "actual_channels": [
+        "keyword",
+        "dense"
+      ],
+      "expected_gate": "confident",
+      "actual_gate": "confident",
+      "required_evidence_types": [
+        "definition"
+      ],
+      "actual_required_evidence_types": [
+        "definition"
+      ],
+      "prohibited_claims": [
+        "C919 涵道比具体数值为 5"
+      ],
+      "prohibited_claims_observed": [],
+      "evidence_ids": [
+        "ev_chunk_78bb4f1156e4",
+        "ev_chunk_914aa6e8b699",
+        "ev_chunk_7dfcfb22c033"
+      ],
+      "missing_codes": [],
+      "contradiction_codes": [],
+      "audit_summary": {
+        "complexity": "L1",
+        "channels": [
+          "keyword",
+          "dense"
+        ],
+        "channel_hit_counts": {
+          "vector_store": 3,
+          "keyword": 0
+        },
+        "rrf_ranks": {
+          "chunk_78bb4f1156e4": {
+            "dense": 1
+          },
+          "chunk_914aa6e8b699": {
+            "dense": 2
+          },
+          "chunk_7dfcfb22c033": {
+            "dense": 3
+          }
+        },
+        "rerank_feature_totals": {
+          "query_relevance": 1.331532,
+          "scene_match": 3.0,
+          "source_authority": 2.4,
+          "modality_support": 1.5,
+          "claim_support": 3.0,
+          "freshness_version": 3.0,
+          "pedagogical_fit": 3.0,
+          "weighted_total": 2.25946
+        },
+        "source_authority_labels": [
+          "project_reviewed"
+        ],
+        "gate": "confident",
+        "missing_codes": [],
+        "contradiction_codes": [],
+        "replan_differences": [],
+        "latency_ms": 7
+      },
+      "passed": true
+    },
+    {
+      "case_id": "ag600_hull_scene_binding",
+      "name": "AG600 船型机身场景绑定",
+      "query": "这个船型机身有什么特点",
+      "expected_channels": [
+        "scene",
+        "keyword"
+      ],
+      "actual_channels": [
+        "scene",
+        "keyword"
+      ],
+      "expected_gate": "confident",
+      "actual_gate": "confident",
+      "required_evidence_types": [
+        "definition"
+      ],
+      "actual_required_evidence_types": [
+        "definition"
+      ],
+      "prohibited_claims": [
+        "该场景对象属于 C919 发动机"
+      ],
+      "prohibited_claims_observed": [],
+      "evidence_ids": [
+        "ev_chunk_445e02a94629"
+      ],
+      "missing_codes": [],
+      "contradiction_codes": [],
+      "audit_summary": {
+        "complexity": "L2",
+        "channels": [
+          "scene",
+          "keyword"
+        ],
+        "channel_hit_counts": {
+          "scene": 1,
+          "keyword": 0
+        },
+        "rrf_ranks": {
+          "chunk_445e02a94629": {
+            "scene": 1
+          }
+        },
+        "rerank_feature_totals": {
+          "query_relevance": 1.0,
+          "scene_match": 1.0,
+          "source_authority": 0.8,
+          "modality_support": 0.5,
+          "claim_support": 1.0,
+          "freshness_version": 1.0,
+          "pedagogical_fit": 1.0,
+          "weighted_total": 0.92
+        },
+        "source_authority_labels": [
+          "project_reviewed"
+        ],
+        "gate": "confident",
+        "missing_codes": [],
+        "contradiction_codes": [],
+        "replan_differences": [],
+        "latency_ms": 8
+      },
+      "passed": true
+    },
+    {
+      "case_id": "lift_thrust_comparison",
+      "name": "升力与推力对比",
+      "query": "升力与推力有什么区别",
+      "expected_channels": [
+        "keyword",
+        "dense",
+        "graph"
+      ],
+      "actual_channels": [
+        "keyword",
+        "dense",
+        "graph"
+      ],
+      "expected_gate": "weak",
+      "actual_gate": "weak",
+      "required_evidence_types": [
+        "comparison"
+      ],
+      "actual_required_evidence_types": [
+        "comparison"
+      ],
+      "prohibited_claims": [
+        "升力与推力完全相同"
+      ],
+      "prohibited_claims_observed": [],
+      "evidence_ids": [
+        "ev_chunk_a47ada8c690c"
+      ],
+      "missing_codes": [
+        "missing_reviewed_comparison_evidence"
+      ],
+      "contradiction_codes": [],
+      "audit_summary": {
+        "complexity": "L4",
+        "channels": [
+          "keyword",
+          "dense",
+          "graph"
+        ],
+        "channel_hit_counts": {
+          "keyword": 1,
+          "vector_store": 1
+        },
+        "rrf_ranks": {
+          "chunk_a47ada8c690c": {
+            "keyword": 1,
+            "dense": 1
+          }
+        },
+        "rerank_feature_totals": {
+          "query_relevance": 0.877027,
+          "scene_match": 1.0,
+          "source_authority": 0.8,
+          "modality_support": 1.0,
+          "claim_support": 1.0,
+          "freshness_version": 1.0,
+          "pedagogical_fit": 1.0,
+          "weighted_total": 0.933108
+        },
+        "source_authority_labels": [
+          "project_reviewed"
+        ],
+        "gate": "weak",
+        "missing_codes": [
+          "missing_reviewed_comparison_evidence"
+        ],
+        "contradiction_codes": [],
+        "replan_differences": [],
+        "latency_ms": 9
+      },
+      "passed": true
+    },
+    {
+      "case_id": "missing_reviewed_parameter",
+      "name": "缺少审核参数",
+      "query": "C919 发动机推力参数是多少",
+      "expected_channels": [
+        "keyword",
+        "dense"
+      ],
+      "actual_channels": [
+        "keyword",
+        "dense"
+      ],
+      "expected_gate": "weak",
+      "actual_gate": "weak",
+      "required_evidence_types": [
+        "parameter"
+      ],
+      "actual_required_evidence_types": [
+        "parameter"
+      ],
+      "prohibited_claims": [
+        "C919 发动机推力为 100 kN"
+      ],
+      "prohibited_claims_observed": [],
+      "evidence_ids": [
+        "ev_chunk_95b252596938"
+      ],
+      "missing_codes": [
+        "missing_reviewed_parameter_value"
+      ],
+      "contradiction_codes": [],
+      "audit_summary": {
+        "complexity": "L1",
+        "channels": [
+          "keyword",
+          "dense"
+        ],
+        "channel_hit_counts": {
+          "vector_store": 1,
+          "keyword": 0
+        },
+        "rrf_ranks": {
+          "chunk_95b252596938": {
+            "dense": 1
+          }
+        },
+        "rerank_feature_totals": {
+          "query_relevance": 0.68313,
+          "scene_match": 1.0,
+          "source_authority": 0.8,
+          "modality_support": 0.5,
+          "claim_support": 1.0,
+          "freshness_version": 1.0,
+          "pedagogical_fit": 1.0,
+          "weighted_total": 0.824939
+        },
+        "source_authority_labels": [
+          "project_reviewed"
+        ],
+        "gate": "weak",
+        "missing_codes": [
+          "missing_reviewed_parameter_value"
+        ],
+        "contradiction_codes": [],
+        "replan_differences": [],
+        "latency_ms": 7
+      },
+      "passed": true
+    },
+    {
+      "case_id": "conflicting_parameter_sources",
+      "name": "冲突参数来源",
+      "query": "C919 涵道比参数冲突",
+      "expected_channels": [
+        "keyword",
+        "dense"
+      ],
+      "actual_channels": [
+        "keyword",
+        "dense"
+      ],
+      "expected_gate": "conflict",
+      "actual_gate": "conflict",
+      "required_evidence_types": [
+        "parameter"
+      ],
+      "actual_required_evidence_types": [
+        "parameter"
+      ],
+      "prohibited_claims": [
+        "任意选择一个冲突参数作为事实"
+      ],
+      "prohibited_claims_observed": [],
+      "evidence_ids": [
+        "ev_conflict_a",
+        "ev_conflict_b"
+      ],
+      "missing_codes": [],
+      "contradiction_codes": [
+        "c919_bypass_ratio"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "low_confidence_voice",
+      "name": "低置信语音",
+      "query": "解释机翼",
+      "expected_channels": [
+        "voice_normalization"
+      ],
+      "actual_channels": [
+        "voice_normalization"
+      ],
+      "expected_gate": "not_run",
+      "actual_gate": "not_run",
+      "required_evidence_types": [
+        "clarification"
+      ],
+      "actual_required_evidence_types": [
+        "clarification"
+      ],
+      "prohibited_claims": [
+        "在低置信转写上直接输出航空事实"
+      ],
+      "prohibited_claims_observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "fact_challenge_targeted_retrieval",
+      "name": "事实挑战后的定向补检索",
+      "query": "你说的涵道比不对，请核验",
+      "expected_channels": [
+        "keyword",
+        "dense"
+      ],
+      "actual_channels": [
+        "keyword",
+        "dense"
+      ],
+      "expected_gate": "not_run",
+      "actual_gate": "not_run",
+      "required_evidence_types": [
+        "verification"
+      ],
+      "actual_required_evidence_types": [
+        "verification"
+      ],
+      "prohibited_claims": [
+        "重复原计划并声称已完成核验"
+      ],
+      "prohibited_claims_observed": [],
+      "replan_differences": [
+        "query_variants",
+        "retrieval_budget"
+      ],
+      "passed": true
+    }
+  ],
+  "capability_boundary": {
+    "embedding_profile": "offline_mock",
+    "visual": "PDF text/layout trace only; no OCR or visual embedding",
+    "graph": "bounded reviewed graph traversal; not GraphRAG"
+  }
+}

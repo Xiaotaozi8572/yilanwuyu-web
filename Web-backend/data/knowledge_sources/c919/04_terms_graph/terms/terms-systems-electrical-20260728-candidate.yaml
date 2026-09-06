@@ -1,0 +1,90 @@
+# C919 电气类术语
+# 领域：电气系统
+# 条目数：12
+# node_type 统一为 system
+# ID 前缀：elec_
+
+terms:
+  - term_id: "elec_001"
+    canonical_name: "发电机"
+    aliases: ["发电机", "generator", "交流发电机"]
+    node_type: "component"
+    definition: "将机械能转换为电能的装置，C919 发电机由发动机附件机匣驱动产生交流电"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "elec_002"
+    canonical_name: "IDG"
+    aliases: ["IDG", "Integrated Drive Generator", "整体驱动发电机", "组合驱动发电机"]
+    node_type: "component"
+    definition: "带恒速传动装置的发电机，输出恒频交流电，C919 每台发动机配备一台 IDG 提供 115V/400Hz 交流电"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "elec_003"
+    canonical_name: "变压整流器"
+    aliases: ["变压整流器", "TRU", "Transformer Rectifier Unit"]
+    node_type: "component"
+    definition: "将交流电转换为直流电的装置，C919 TRU 将 115V 交流转换为 28V 直流供直流负载"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "elec_004"
+    canonical_name: "汇流条"
+    aliases: ["汇流条", "busbar", "bus", "汇流排"]
+    node_type: "component"
+    definition: "汇集和分配电能的导体，C919 电气系统含交流汇流条和直流汇流条，按重要性分级供电"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "elec_005"
+    canonical_name: "270VDC"
+    aliases: ["270VDC", "270V 直流", "270 伏直流"]
+    node_type: "concept"
+    definition: "高压直流供电体制，可减线缆重量，C919 部分系统采用 270VDC 高压直流供电提高效率"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "elec_006"
+    canonical_name: "蓄电池"
+    aliases: ["蓄电池", "battery", "电瓶", "电池组"]
+    node_type: "component"
+    definition: "储存电能的装置，C919 蓄电池在应急时为关键负载供电，并提供 APU 启动电源"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "elec_007"
+    canonical_name: "RAT"
+    aliases: ["RAT", "Ram Air Turbine", "冲压空气涡轮", "应急风扇"]
+    node_type: "component"
+    definition: "靠飞机前进气流驱动的应急发电机，C919 RAT 在主电源失效时自动释放提供应急电力和液压"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "elec_008"
+    canonical_name: "EPU"
+    aliases: ["EPU", "Electric Power Unit", "电力单元", "应急电力单元"]
+    node_type: "component"
+    definition: "应急电力供应单元，C919 EPU 在主电源失效时为飞控等关键系统提供应急电力"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "elec_009"
+    canonical_name: "配电"
+    aliases: ["配电", "power distribution", "电气分配"]
+    node_type: "system"
+    definition: "将电能分配到各负载的功能，C919 配电中心按负载优先级和供电状态自动管理配电"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "elec_010"
+    canonical_name: "断路器"
+    aliases: ["断路器", "circuit breaker", "CB", "空气开关"]
+    node_type: "component"
+    definition: "保护电路的开关元件，过流时自动跳闸，C919 驾驶舱配备断路器面板便于机组管理"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "elec_011"
+    canonical_name: "逆变器"
+    aliases: ["逆变器", "inverter", "DC/AC 逆变器"]
+    node_type: "component"
+    definition: "将直流电转换为交流电的装置，C919 逆变器将蓄电池直流转换为交流供特定负载"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "elec_012"
+    canonical_name: "接地"
+    aliases: ["接地", "grounding", "搭铁", "接地系统"]
+    node_type: "concept"
+    definition: "电气系统参考零电位和雷电防护的接地连接，C919 机身作为接地基准，各设备通过搭铁线接地"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

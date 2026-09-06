@@ -1,0 +1,118 @@
+# C919 机身部件实体
+# 机身结构分解及舱段部件
+# node_type: component
+# node_id 前缀：cfuse_
+
+entities:
+  - node_id: "cfuse_forward"
+    node_type: "component"
+    canonical_name: "前机身"
+    aliases: ["forward fuselage", "前段机身"]
+    description: "机身前部驾驶舱及前客舱段，包含机头雷达罩、风挡、前起落架舱，机身宽度 3.96m"
+    specifications:
+      fuselage_width_m: 3.96
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cfuse_center"
+    node_type: "component"
+    canonical_name: "中机身"
+    aliases: ["center fuselage", "中段机身"]
+    description: "机身中部与中央翼盒交贯的承力段，承受机翼传递载荷，含主客舱和中央油箱区域"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cfuse_aft"
+    node_type: "component"
+    canonical_name: "后机身"
+    aliases: ["aft fuselage", "后段机身"]
+    description: "机身后部尾段，连接垂直尾翼和水平尾翼，含后货舱及辅助动力装置（APU）舱"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cfuse_pressure_bulkhead"
+    node_type: "component"
+    canonical_name: "气密框"
+    aliases: ["pressure bulkhead", "气密隔框", "增压隔框"]
+    description: "机身前后端的密封隔框，承受增压载荷，与机身蒙皮共同构成气密客舱压力边界"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cfuse_stringer"
+    node_type: "component"
+    canonical_name: "机身桁条"
+    aliases: ["fuselage stringer", "机身长桁"]
+    description: "机身蒙皮内侧纵向加强构件，C919 部分桁条采用铝锂合金（全机铝锂合金占比 8.8%）"
+    specifications:
+      aluminum_lithium_pct: 8.8
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cfuse_skin"
+    node_type: "component"
+    canonical_name: "机身蒙皮"
+    aliases: ["fuselage skin", "机身蒙皮"]
+    description: "机身外表面板材，与桁条框构成半硬壳结构，C919 机身蒙皮大量采用铝锂合金减重"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cfuse_floor_beam"
+    node_type: "component"
+    canonical_name: "地板梁"
+    aliases: ["floor beam", "地板纵梁"]
+    description: "客舱地板支撑梁，横向跨越机身连接两侧机身框，承受座椅及旅客载荷"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cfuse_passenger_door"
+    node_type: "component"
+    canonical_name: "客舱门"
+    aliases: ["passenger door", "登机门"]
+    description: "机身左侧前部及后部登机门，采用嵌入式塞式密封门，增压时利用压差密封"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cfuse_cargo_door"
+    node_type: "component"
+    canonical_name: "货舱门"
+    aliases: ["cargo door", "腹舱货舱门"]
+    description: "机身右侧下部货舱门，向外开启，供行李货物装卸，前腹舱及后腹舱各设一处"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cfuse_emergency_exit"
+    node_type: "component"
+    canonical_name: "紧急出口"
+    aliases: ["emergency exit", "应急出口"]
+    description: "机身两侧客舱中段应急逃生出口，C919 按适航要求布置多组紧急出口，配应急滑梯"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cfuse_windshield"
+    node_type: "component"
+    canonical_name: "风挡"
+    aliases: ["windshield", "驾驶舱风挡", "风挡玻璃"]
+    description: "驾驶舱正面多层电加温玻璃，C919 采用 6 块式风挡布局，具备鸟撞抗冲击能力"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cfuse_cabin"
+    node_type: "component"
+    canonical_name: "客舱"
+    aliases: ["cabin", "旅客舱"]
+    description: "机身增压段旅客乘坐空间，机身宽度 3.96m，标准布置 158-168 座，3-3 布局"
+    specifications:
+      fuselage_width_m: 3.96
+      seats: "158-168"
+      layout: "3-3"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cfuse_cargo_hold"
+    node_type: "component"
+    canonical_name: "货舱"
+    aliases: ["cargo hold", "腹舱"]
+    description: "机身下部行李货舱，分前后两段，增压舱下方，配备滚棒输送系统便于集装箱装卸"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cfuse_cockpit"
+    node_type: "component"
+    canonical_name: "驾驶舱"
+    aliases: ["cockpit", "flight deck"]
+    description: "机身前部机组操作舱，C919 采用侧杆操纵、全玻璃座舱布局，2 人制机组"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "cfuse_radome"
+    node_type: "component"
+    canonical_name: "雷达罩"
+    aliases: ["radome", "机头雷达罩"]
+    description: "机身最前端气象雷达整流罩，采用透波复合材料，保护内部气象雷达天线"
+    applicable_aircraft: ["c919"]

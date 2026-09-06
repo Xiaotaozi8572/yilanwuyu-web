@@ -1,0 +1,27 @@
+{
+  "template_id": "aviation_basic_safe",
+  "title": "Clarification-safe prompt",
+  "task_type": "clarification",
+  "status": "active",
+  "active_version": "v2",
+  "activation_scope": [
+    "clarification",
+    "fallback"
+  ],
+  "concept_scope": [
+    "missing_context"
+  ],
+  "scene_scope": [
+    "text",
+    "scene"
+  ],
+  "constraints": [
+    "do_not_guess_facts",
+    "ask_for_missing_context",
+    "stay_brief"
+  ],
+  "risk_boundaries": [
+    "no_unsupported_facts",
+    "no_real_provider_claims"
+  ]
+}

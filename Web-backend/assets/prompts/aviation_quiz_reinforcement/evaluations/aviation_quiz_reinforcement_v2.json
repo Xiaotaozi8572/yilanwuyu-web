@@ -1,0 +1,20 @@
+{
+  "snapshot_id": "aviation_quiz_reinforcement_v2",
+  "template_id": "aviation_quiz_reinforcement",
+  "version": "v2",
+  "test_cases": [
+    "single_fact_recall",
+    "thin_evidence",
+    "weak_point_focus"
+  ],
+  "dimension_scores": {
+    "faithfulness": 0.97,
+    "clarity": 0.9,
+    "pedagogy": 0.92
+  },
+  "violations": [],
+  "improvements": [
+    "Hinting behavior is now more consistent."
+  ],
+  "final_decision": "approve"
+}

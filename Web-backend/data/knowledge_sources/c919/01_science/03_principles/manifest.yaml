@@ -1,0 +1,486 @@
+partition: "c919/01_science/03_principles"
+partition_owner: "科普证据组"
+sources:
+  - source_id: "c919-science-aerodynamics-v1"
+    source_type: "text"
+    title: "气动原理：C919 的超临界机翼与气动设计"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "aerodynamics"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-aerodynamics-principle-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与气动技术通用资料，2026-07 访问"
+      verification: "Wikipedia 综合资料与气动理论交叉核对"
+      stale: false
+
+  - source_id: "c919-science-flight-mechanics-v1"
+    source_type: "text"
+    title: "飞行力学：C919 的飞行阶段与力学原理"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "flight_mechanics"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-flight-mechanics-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 性能参数与飞行力学知识，2026-07 访问"
+      verification: "Wikipedia 综合资料与飞行力学理论交叉核对"
+      stale: false
+
+  - source_id: "c919-science-engine-principle-v1"
+    source_type: "text"
+    title: "涡扇发动机原理：C919 的 LEAP-1C 动力装置"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "engine_principle"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-engine-principle-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与 CFM International 公开资料，2026-07 访问"
+      verification: "LEAP 系列涵道比和发动机参数经 CFM 公开资料核对"
+      stale: false
+
+  - source_id: "c919-science-composite-material-v1"
+    source_type: "text"
+    title: "复合材料原理：C919 中的先进材料应用"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "composite_material"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-composite-material-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与复合材料技术公开资料，2026-07 访问"
+      verification: "复合材料占比数据经 Wikipedia 与行业资料交叉核对"
+      stale: false
+
+  - source_id: "c919-science-fly-by-wire-v1"
+    source_type: "text"
+    title: "电传操纵原理：C919 的飞行控制系统"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "fly_by_wire"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-fly-by-wire-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与飞控技术通用知识，2026-07 访问"
+      verification: "四余度电传架构经供应商公开资料核对"
+      stale: false
+
+  - source_id: "c919-science-airworthiness-v1"
+    source_type: "text"
+    title: "适航理念：C919 的适航审定基线"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "airworthiness_concept"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-airworthiness-concept-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "CAAC CCAR-25 部适航标准（法律公开信息）；Wikipedia 取证时间线，2026-07 访问"
+      verification: "CCAR-25 为公开法定标准，取证日期经 Wikipedia 与新华社报道交叉核对"
+      stale: false
+
+  - source_id: "c919-science-aero-windtunnel-v1"
+    source_type: "text"
+    title: "C919 气动设计与风洞试验历程"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "aerodynamics"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-aerodynamics-wind-tunnel-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "COMAC 公开报道与 CARDC 中国空气动力研究与发展中心公开资料，2026-07 访问"
+      verification: "风洞试验流程基于通用民机研制经验"
+      stale: false
+
+  - source_id: "c919-science-fc-laws-v1"
+    source_type: "text"
+    title: "C919 飞控控制律详解"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "fly_by_wire"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-flight-control-laws-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与电传飞控通用设计原理，2026-07 访问"
+      verification: "控制律分层设计为现代电传飞控通用架构"
+      stale: false
+
+  - source_id: "c919-science-lift-coefficient-aoa-v1"
+    source_type: "text"
+    title: "C919 升力系数与迎角关系：升力公式、临界迎角、失速机理"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "aerodynamics"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-lift-coefficient-aoa-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与空气动力学通用原理，2026-07-29 访问"
+      verification: "巡航 Mach 0.785、升限 12,200 m、载荷 20.4 吨、超临界机翼数据经 Wikipedia 核对"
+      stale: false
+
+  - source_id: "c919-science-drag-breakdown-v1"
+    source_type: "text"
+    title: "C919 阻力分解与减阻设计：寄生阻力、诱导阻力、激波阻力、翼尖小翼"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "aerodynamics"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-drag-breakdown-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与空气动力学通用原理，2026-07-29 访问"
+      verification: "翼展 33.6m/35.8m、超临界机翼气动效率 +20%/阻力 -8% 经 Wikipedia 核对"
+      stale: false
+
+  - source_id: "c919-science-turbofan-cycle-v1"
+    source_type: "text"
+    title: "C919 涡扇发动机热力循环：布雷顿循环、涵道比、热效率"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "engine_principle"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-turbofan-thermodynamic-cycle-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与 CFM International 公开资料，2026-07-29 访问"
+      verification: "LEAP-1C 推力数据、短舱 Nexcelle、CJ-1000A 时间线经 Wikipedia 核对"
+      stale: false
+
+  - source_id: "c919-science-composite-mechanics-v1"
+    source_type: "text"
+    title: "C919 复合材料力学基础：各向异性、铺层设计、疲劳特性"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "composite_material"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-composite-mechanics-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与复合材料力学通用原理，2026-07-29 访问"
+      verification: "复合材料 12%、铝锂合金 8.8%、中央翼盒材料调整经 Wikipedia 核对"
+      stale: false
+
+  - source_id: "c919-science-fbw-control-laws-v1"
+    source_type: "text"
+    title: "C919 电传操纵控制律设计：正常/直接/备用模式、包线保护"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "fly_by_wire"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-fbw-control-laws-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与电传飞控通用设计原理，2026-07-29 访问"
+      verification: "飞控供应商 Hongfei、电传操纵、超临界机翼数据经 Wikipedia 核对"
+      stale: false
+
+  - source_id: "c919-science-airworthiness-process-v1"
+    source_type: "text"
+    title: "C919 适航审定流程与方法：TC/PC/AC、符合性方法 M0-M9"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "airworthiness_concept"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-airworthiness-process-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与 CAAC CCAR-25 部适航标准，2026-07-29 访问"
+      verification: "TC/TIA 日期、试飞 4200 小时、原型机首飞日期经 Wikipedia 核对"
+      stale: false
+
+  - source_id: "c919-science-fatigue-damage-tolerance-v1"
+    source_type: "text"
+    title: "C919 结构疲劳与损伤容限设计：S-N 曲线、检查间隔、裂纹扩展"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "fatigue_damage_tolerance"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-fatigue-damage-tolerance-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与结构力学通用原理，2026-07-29 访问"
+      verification: "材料占比、中央翼盒调整、已交付 37 架经 Wikipedia 核对"
+      stale: false
+
+  - source_id: "c919-science-supercritical-airfoil-physics-v1"
+    source_type: "text"
+    title: "C919 超临界翼型物理：上表面平坦与激波控制"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "supercritical_airfoil"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-supercritical-airfoil-physics-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与 NASA 超临界翼型研究资料，2026-07-29 访问"
+      verification: "超临界翼型效率 +20%/阻力 -8%、巡航 Ma 0.785 来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-winglet-aerodynamics-v1"
+    source_type: "text"
+    title: "C919 翼尖小翼气动：诱导阻力降低 3-5%"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "winglet_aerodynamics"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-winglet-aerodynamics-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与 NASA 翼尖小翼研究资料，2026-07-29 访问"
+      verification: "翼展 35.8 m、诱导阻力 3-5% 来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-engine-bypass-ratio-v1"
+    source_type: "text"
+    title: "C919 涵道比与效率：LEAP-1C 与推进效率公式"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "engine_bypass_ratio"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-engine-bypass-ratio-efficiency-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与 CFM International LEAP-1C 资料，2026-07-29 访问"
+      verification: "LEAP-1C 涵道比 11:1、18 片风扇叶片、TAPS NOx -50% 来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-stall-speed-margin-v1"
+    source_type: "text"
+    title: "C919 失速速度与速度裕度"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "stall_margin"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-stall-speed-margin-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与 CCAR-25 部适航标准，2026-07-29 访问"
+      verification: "巡航 Ma 0.785、升限 12,200 m、试飞 4200 小时来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-mach-number-effects-v1"
+    source_type: "text"
+    title: "C919 马赫数效应：压缩性与阻力发散"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "mach_number_effects"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-mach-number-effects-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与空气动力学通用原理，2026-07-29 访问"
+      verification: "巡航 Ma 0.785、巡航速度 835 km/h、升限 12,200 m 来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-aluminum-lithium-v1"
+    source_type: "text"
+    title: "C919 铝锂合金特性：密度降低与刚度提升"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "aluminum_lithium_alloy"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-aluminum-lithium-alloy-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与美铝/加铝公开材料资料，2026-07-29 访问"
+      verification: "铝锂合金占比 8.8%、复合材料 12% 来自 Wikipedia"
+      stale: false
+
+  - source_id: "c919-science-fbw-redundancy-v1"
+    source_type: "text"
+    title: "C919 电传操纵余度：三余度与包线保护"
+    authority_level: "standard"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "science_fact_evidence"
+    aircraft: "c919"
+    concept: "fbw_redundancy"
+    knowledge_type: "principle_explanation"
+    original_uri: "https://en.wikipedia.org/wiki/Comac_C919"
+    files:
+      - path: "c919-fly-by-wire-redundancy-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "科普证据组"
+      content_nature: "principle_explanation"
+      source_statement: "Wikipedia Comac C919 与 CCAR-25 部适航标准，2026-07-29 访问"
+      verification: "Hongfei 飞控供应商、4,200 试飞小时来自 Wikipedia"
+      stale: false

@@ -1,0 +1,90 @@
+# C919 稳定性与操纵类术语
+# 领域：飞机稳定性与操纵性
+# 条目数：12
+# node_type 统一为 concept
+# ID 前缀：stab_
+
+terms:
+  - term_id: "stab_001"
+    canonical_name: "纵向稳定性"
+    aliases: ["纵向稳定性", "longitudinal stability", "俯仰稳定性"]
+    node_type: "concept"
+    definition: "飞机保持或恢复俯仰平衡的能力，由重心与焦点的相对位置决定，C919 设计为静稳定构型并辅以飞控增稳"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "stab_002"
+    canonical_name: "横向稳定性"
+    aliases: ["横向稳定性", "lateral stability", "滚转稳定性"]
+    node_type: "concept"
+    definition: "飞机保持或恢复滚转平衡的能力，主要由上反角和后掠角提供，C919 通过机翼上反角保证横向静稳定"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "stab_003"
+    canonical_name: "航向稳定性"
+    aliases: ["航向稳定性", "directional stability", "风标稳定性"]
+    node_type: "concept"
+    definition: "飞机保持或恢复航向平衡的能力，主要由垂直尾翼提供，C919 垂尾面积设计保证足够的航向静稳定裕度"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "stab_004"
+    canonical_name: "静稳定"
+    aliases: ["静稳定", "static stability", "静稳定性"]
+    node_type: "concept"
+    definition: "受扰动后初始恢复趋势的特性，重心在焦点之前为纵向静稳定，C919 飞控允许放宽静稳定度以提升气动效率"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "stab_005"
+    canonical_name: "动稳定"
+    aliases: ["动稳定", "dynamic stability", "动稳定性"]
+    node_type: "concept"
+    definition: "受扰动后随时间振荡收敛回到平衡状态的特性，阻尼是动稳定的关键，C919 通过飞控控制律增强动稳定性"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "stab_006"
+    canonical_name: "阻尼"
+    aliases: ["阻尼", "damping", "气动阻尼"]
+    node_type: "concept"
+    definition: "抑制振荡的力矩作用，C919 偏航阻尼器和俯仰阻尼通过飞控主动提供阻尼，改善乘坐品质"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "stab_007"
+    canonical_name: "俯仰"
+    aliases: ["俯仰", "pitch", "俯仰运动"]
+    node_type: "concept"
+    definition: "绕飞机横轴的转动运动，由升降舵控制，C919 通过电传操纵系统实现俯仰精确控制"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "stab_008"
+    canonical_name: "滚转"
+    aliases: ["滚转", "roll", "滚转运动"]
+    node_type: "concept"
+    definition: "绕飞机纵轴的转动运动，由副翼和扰流板控制，C919 滚转操纵通过副翼和内侧扰流板协同实现"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "stab_009"
+    canonical_name: "偏航"
+    aliases: ["偏航", "yaw", "偏航运动"]
+    node_type: "concept"
+    definition: "绕飞机立轴的转动运动，由方向舵控制，C919 偏航阻尼器抑制荷兰滚振荡"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "stab_010"
+    canonical_name: "重心"
+    aliases: ["重心", "center of gravity", "CG"]
+    node_type: "concept"
+    definition: "飞机质量合力的作用点，重心位置影响稳定性和操纵性，C919 通过配载管理保证重心在许用范围内"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "stab_011"
+    canonical_name: "焦点"
+    aliases: ["焦点", "neutral point", "气动中心", "中性点"]
+    node_type: "concept"
+    definition: "整机俯仰力矩系数不随迎角变化的参考点，重心与焦点距离决定静稳定裕度，C919 焦点位置由风洞试验和计算确定"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "stab_012"
+    canonical_name: "操纵余量"
+    aliases: ["操纵余量", "control margin", "操纵裕度"]
+    node_type: "concept"
+    definition: "操纵面剩余可用偏转量与所需量的比值，C919 飞控包线保护保证在所有飞行阶段具备足够的操纵余量"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

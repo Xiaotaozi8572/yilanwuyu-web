@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  offline-mock:
+    name: Offline mock closed loop
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --frozen --group dev
+
+      - name: Compile all sources
+        run: uv run python -m compileall -q src scripts
+
+      - name: Run tests
+        run: uv run python -m pytest tests -q
+
+      - name: Run offline text smoke eval
+        run: uv run python scripts/run_eval.py --suite text_smoke
+
+      - name: Validate mock deployment
+        run: uv run python scripts/validate_deployment.py --profile mock
+
+      - name: Check for secrets
+        run: uv run python scripts/check_secrets.py --all

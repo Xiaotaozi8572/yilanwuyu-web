@@ -1,0 +1,60 @@
+evals:
+  default_suite: text_smoke
+  required_pass_rate: 1.0
+  latency_budget_ms: 5000
+  output_dir: tmp/eval_reports
+  trace_output_dir: tmp/eval_traces
+  suites: [text_smoke, rag_refactor, voice_smoke]
+  rag_refactor_cases:
+    c919_wing_lift_definition:
+      name: C919 机翼升力定义
+      expected_channels: [keyword, dense]
+      expected_gate: confident
+      required_evidence_types: [definition]
+      prohibited_claims: [C919 机翼升力来自发动机推力]
+    c919_engine_bypass_definition:
+      name: C919 发动机涵道比
+      expected_channels: [keyword, dense]
+      expected_gate: confident
+      required_evidence_types: [definition]
+      prohibited_claims: [C919 涵道比具体数值为 5]
+    ag600_hull_scene_binding:
+      name: AG600 船型机身场景绑定
+      expected_channels: [keyword]
+      expected_gate: confident
+      required_evidence_types: [definition]
+      prohibited_claims: [该场景对象属于 C919 发动机]
+    lift_thrust_comparison:
+      name: 升力与推力对比
+      expected_channels: [keyword, dense]
+      expected_gate: weak
+      required_evidence_types: [comparison]
+      prohibited_claims: [升力与推力完全相同]
+    missing_reviewed_parameter:
+      name: 缺少审核参数
+      expected_channels: [keyword, dense]
+      expected_gate: weak
+      required_evidence_types: [parameter]
+      prohibited_claims: [C919 发动机推力为 100 kN]
+    conflicting_parameter_sources:
+      name: 冲突参数来源
+      expected_channels: [keyword, dense]
+      expected_gate: conflict
+      required_evidence_types: [parameter]
+      prohibited_claims: [任意选择一个冲突参数作为事实]
+    low_confidence_voice:
+      name: 低置信语音
+      expected_channels: [voice_normalization]
+      expected_gate: not_run
+      required_evidence_types: [clarification]
+      prohibited_claims: [在低置信转写上直接输出航空事实]
+    fact_challenge_targeted_retrieval:
+      name: 事实挑战后的定向补检索
+      expected_channels: [keyword, dense]
+      expected_gate: not_run
+      required_evidence_types: [verification]
+      prohibited_claims: [重复原计划并声称已完成核验]
+deployment:
+  required_files: [configs/app.yaml, configs/providers.yaml, configs/rag.yaml, configs/prompts.yaml, configs/voice.yaml]
+  required_env: [YILAN_ENV]
+  mock_profile_allowed: true

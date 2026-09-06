@@ -1,0 +1,92 @@
+# C919 结构整体关系
+# 描述主结构与飞机整体的层级与依赖关系
+# relation_type: part_of / depends_on / parameter_of
+# edge_id 前缀：rstr_
+
+relations:
+  # ========== part_of 主结构归属 C919 ==========
+  - edge_id: "rstr_001"
+    source_node_id: "comp_wing"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "机翼是 C919 的主要气动结构部件，产生升力并储存燃油"
+
+  - edge_id: "rstr_002"
+    source_node_id: "comp_fuselage"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "机身是 C919 的主体结构，承载乘客、货物和各系统"
+
+  - edge_id: "rstr_003"
+    source_node_id: "comp_empennage"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "尾翼是 C919 尾部的翼面组合，提供航向与俯仰稳定性"
+
+  - edge_id: "rstr_004"
+    source_node_id: "comp_landing_gear"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "起落架是 C919 的地面支撑装置，承担地面运行与着陆冲击"
+
+  - edge_id: "rstr_005"
+    source_node_id: "comp_engine_pylon"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "发动机吊舱吊挂是 C919 机翼下表面安装发动机的承力结构"
+
+  - edge_id: "rstr_006"
+    source_node_id: "sys_leap1c"
+    target_node_id: "c919_aircraft"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "两台 LEAP-1C 发动机通过吊挂安装于机翼下方，是 C919 的动力装置"
+
+  # ========== depends_on 结构传力依赖 ==========
+  - edge_id: "rstr_007"
+    source_node_id: "comp_wing"
+    target_node_id: "comp_center_wingbox"
+    relation_type: "depends_on"
+    confidence: 1.0
+    description: "左右机翼的载荷通过中央翼盒传递至机身，是机翼-机身主传力通道"
+
+  - edge_id: "rstr_008"
+    source_node_id: "comp_fuselage"
+    target_node_id: "comp_center_wingbox"
+    relation_type: "depends_on"
+    confidence: 1.0
+    description: "机身载荷通过中央翼盒与机翼结构协调，形成整体传力路线"
+
+  - edge_id: "rstr_009"
+    source_node_id: "comp_empennage"
+    target_node_id: "comp_aft_fuselage"
+    relation_type: "depends_on"
+    confidence: 1.0
+    description: "尾翼结构依赖后机身提供支撑连接，载荷传递至后机身框"
+
+  - edge_id: "rstr_010"
+    source_node_id: "comp_landing_gear"
+    target_node_id: "comp_mid_fuselage"
+    relation_type: "depends_on"
+    confidence: 0.95
+    description: "主起落架依靠中机身/机翼根部结构提供支撑，传递地面载荷"
+
+  - edge_id: "rstr_011"
+    source_node_id: "sys_leap1c"
+    target_node_id: "comp_engine_pylon"
+    relation_type: "depends_on"
+    confidence: 1.0
+    description: "发动机通过吊挂结构将推力传递至机翼，吊挂是发动机-机翼传力关键"
+
+  # ========== parameter_of C919 整体参数 ==========
+  - edge_id: "rstr_012"
+    source_node_id: "param_cruise_mach_0_785"
+    target_node_id: "c919_aircraft"
+    relation_type: "parameter_of"
+    confidence: 1.0
+    description: "C919 巡航马赫数 0.785，是飞机关键运行参数，决定巡航效率与航程"

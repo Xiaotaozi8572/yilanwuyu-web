@@ -1,0 +1,20 @@
+{
+  "snapshot_id": "barge_in_feedback_prompt_v2",
+  "template_id": "barge_in_feedback_prompt",
+  "version": "v2",
+  "test_cases": [
+    "interrupt_to_shorten",
+    "interrupt_to_simplify",
+    "interrupt_without_new_facts"
+  ],
+  "dimension_scores": {
+    "rewrite_control": 0.95,
+    "brevity": 0.94,
+    "faithfulness": 0.98
+  },
+  "violations": [],
+  "improvements": [
+    "Interruption recovery is more compact."
+  ],
+  "final_decision": "approve"
+}

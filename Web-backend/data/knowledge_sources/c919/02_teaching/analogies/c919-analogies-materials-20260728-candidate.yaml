@@ -1,0 +1,81 @@
+# C919 材料专项类比素材库
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / concept / analogy / explanation
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+analogies:
+  - id: "mat-ana-001-composite-carbon-fiber-resin"
+    concept: "复合材料（Composite Material）"
+    analogy: "碳纤维+树脂的"三明治"——协同后强度远超单一材料"
+    explanation: >
+      航空复合材料主要是碳纤维（增强体）+树脂（基体）。碳纤维像面条，细但抗拉强度极高（比钢高数倍），
+      单独只是一束丝；树脂像胶水，把碳纤维固定成形状，传递载荷。两者协同后比强度远高于钢和铝合金。
+      C919 复合材料约占 12%，用于尾翼、整流罩、翼尖小翼等部位。
+
+  - id: "mat-ana-002-aluminum-lithium-lighter"
+    concept: "铝锂合金（Al-Li Alloy）"
+    analogy: "掺了轻元素的铝合金——每加 1% 锂减重 3%"
+    explanation: >
+      铝锂合金是在铝合金中加入锂元素。锂比铝轻，每加 1% 锂减重约 3%、提高刚度约 5%。
+      C919 铝锂合金占约 8.8%，主要用于机身蒙皮，比普通铝合金更轻、更强，是减重的重要手段。
+
+  - id: "mat-ana-003-aluminum-alloy-workhorse"
+    concept: "铝合金（Aluminum Alloy）"
+    analogy: "飞机材料的"主力军"——成熟可靠"
+    explanation: >
+      铝合金是飞机材料的"主力军"，成熟可靠、加工容易、成本可控。C919 铝合金占约 68%，
+      用于机身框架、机翼蒙皮、机身桁条等主体结构。虽然复合材料是亮点，但铝合金仍占主体。
+
+  - id: "mat-ana-004-titanium-high-stress"
+    concept: "钛合金（Titanium Alloy）"
+    analogy: "高强度耐高温的"硬骨头"——用于关键受力部位"
+    explanation: >
+      钛合金强度高、耐高温、抗腐蚀，但成本高、加工难。C919 钛合金占约 7%，
+      用于发动机吊架、起落架主结构、高应力紧固件等关键受力部位。像"硬骨头"撑起最关键的连接。
+
+  - id: "mat-ana-005-steel-landing-gear"
+    concept: "钢（Steel）"
+    analogy: "最"硬"的材料——用于起落架和高强紧固件"
+    explanation: >
+      钢是飞机材料中强度最高的，但密度大、重。C919 钢占约 4%，主要用于起落架主结构、
+      高强紧固件、发动机吊架关键件等。在需要"最硬"的部位用钢，其他部位用更轻的材料。
+
+  - id: "mat-ana-006-carbon-fiber-ply-direction"
+    concept: "碳纤维铺层（Carbon Fiber Ply Layup）"
+    analogy: "织布按经纬方向铺——多向铺层才能各方向都强"
+    explanation: >
+      碳纤维单向铺层只抗一个方向的力，多向铺层（0°/±45°/90°）才能各方向都强。
+      像织布按经纬方向铺，不同方向的纤维层叠加后承受各方向载荷。C919 复合材料件按载荷方向优化铺层设计。
+
+  - id: "mat-ana-007-honeycomb-core-sandwich"
+    concept: "蜂窝芯（Honeycomb Core）"
+    analogy: "蜂巢结构——轻而刚硬"
+    explanation: >
+      复合材料三明治结构的中间是蜂窝芯（Nomex 芳纶纸或铝蜂窝），像蜂巢结构——轻而刚硬。
+      蜂窝芯撑起两面的碳纤维层压板，增加厚度提升抗弯刚度，但本身重量很轻。
+      C919 整流罩、舱门等部位用蜂窝夹芯结构。
+
+  - id: "mat-ana-008-composite-not-plastic"
+    concept: "复合材料 ≠ 塑料（Composite ≠ Plastic）"
+    analogy: "碳纤维增强聚合物不是塑料瓶——强度远高于钢"
+    explanation: >
+      日常说的"塑料"是单纯聚合物，强度低。航空复合材料是碳纤维（增强体）+树脂（基体）的组合，
+      碳纤维承担主要载荷、树脂固定形状，两者协同后比强度远高于钢。把复合材料说成"塑料"会严重低估其力学性能。
+      C919 复合材料约占 12%，绝不是塑料瓶那种材料。
+
+  - id: "mat-ana-009-fatigue-life-cycle"
+    concept: "材料疲劳寿命（Fatigue Life）"
+    analogy: "回形针反复折——单次不破，多次后断"
+    explanation: >
+      飞机每次起降经历一次增压/减压循环，材料承受循环载荷。像回形针反复折——单次折不断，
+      但反复多次后会疲劳断裂。复合材料疲劳特性好于金属（不易疲劳开裂），这是 C919 尾翼用复合材料的原因之一。
+
+  - id: "mat-ana-010-central-wing-box-aluminum-choice"
+    concept: "中央翼盒材料选择（Center Wing Box Material Choice）"
+    analogy: "用成熟材料换研制风险——复合材料改回铝合金"
+    explanation: >
+      C919 中央翼盒原计划用复合材料减重，但为降低设计与认证风险最终改为铝合金。
+      这是典型的"用气动/结构收益换研制风险"取舍。复合材料中央翼盒需验证损伤容限、修理、雷击防护等，
+      风险高；铝合金成熟度高、审定风险低。C919 作为新机型，选用成熟材料是合理权衡。

@@ -1,0 +1,26 @@
+{
+  "template_id": "barge_in_feedback_prompt",
+  "title": "Barge-in feedback prompt",
+  "task_type": "barge_in_feedback",
+  "status": "active",
+  "active_version": "v2",
+  "activation_scope": [
+    "barge_in",
+    "voice_feedback"
+  ],
+  "concept_scope": [
+    "interrupted_voice_feedback"
+  ],
+  "scene_scope": [
+    "voice",
+    "scene"
+  ],
+  "constraints": [
+    "resume_from_interruption",
+    "preserve_supported_claims",
+    "keep_response_compact"
+  ],
+  "risk_boundaries": [
+    "no_new_facts_after_interrupt"
+  ]
+}

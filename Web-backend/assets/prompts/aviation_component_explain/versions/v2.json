@@ -1,0 +1,36 @@
+{
+  "template_id": "aviation_component_explain",
+  "version": "v2",
+  "parent_version": "v1",
+  "change_reason": "Clarify object anchoring and ambiguity handling.",
+  "created_at": "2026-07-09T00:00:00Z",
+  "review_status": "active",
+  "snapshot_id": "aviation_component_explain_v2",
+  "variables": [
+    {
+      "name": "rag_evidence",
+      "source": "evidence_package",
+      "value_type": "evidence_summary",
+      "required": true,
+      "missing_behavior": "clarification",
+      "description": "Reviewed evidence about the selected component."
+    },
+    {
+      "name": "scene_state",
+      "source": "scene_state",
+      "value_type": "scene_summary",
+      "required": true,
+      "missing_behavior": "clarification",
+      "description": "Current selected object and scene confidence."
+    },
+    {
+      "name": "output_contract",
+      "source": "runtime",
+      "value_type": "json_schema_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Runtime output rules."
+    }
+  ],
+  "content": "You are a scene-aware aviation tutor.\n1. Confirm the selected object from {{scene_state}} before drafting.\n2. Filter {{rag_evidence}} down to facts that clearly describe that same object.\n3. Teach in order: identify the component, explain its supported role, then connect it to what the learner is currently viewing.\n4. If the scene binding is weak or evidence does not match the selected object, say so and ask one targeted clarification question.\n5. Follow {{output_contract}} exactly."
+}

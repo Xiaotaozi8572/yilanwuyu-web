@@ -1,0 +1,74 @@
+# 直-20 术语与别名
+
+terms:
+  - canonical_name: "直-20"
+    aliases: ["Z-20", "直-20", "入云龙", "Harbin Z-20"]
+    node_type: "aircraft"
+    definition: "哈尔滨飞机工业集团研制的 10 吨级中型通用直升机"
+    source_id: "z20-science-overview-v1"
+
+  - canonical_name: "中型通用直升机"
+    aliases: ["通用直升机", "utility helicopter"]
+    node_type: "concept"
+    definition: "10 吨级、可执行多任务的通用直升机平台"
+    source_id: "z20-science-overview-v1"
+
+  - canonical_name: "主旋翼"
+    aliases: ["主旋翼", "旋翼", "main rotor"]
+    node_type: "component"
+    definition: "直升机产生升力与推力的旋转翼面，直-20 为五叶"
+    source_id: "z20-science-rotor-flightcontrol-v1"
+
+  - canonical_name: "WZ-10"
+    aliases: ["涡轴-10", "WZ-10"]
+    node_type: "component"
+    definition: "国产涡轴发动机，直-20 动力，单台 1,600-2,000 kW"
+    source_id: "z20-science-basic-parameters-v1"
+
+  - canonical_name: "电传飞控"
+    aliases: ["电传操纵", "fly-by-wire"]
+    node_type: "concept"
+    definition: "以电信号替代机械连杆的飞行控制系统"
+    source_id: "z20-science-rotor-flightcontrol-v1"
+
+  - canonical_name: "高原飞行"
+    aliases: ["高原能力", "高海拔飞行"]
+    node_type: "concept"
+    definition: "在 4,000 米以上稀薄空气环境中飞行"
+    source_id: "z20-science-high-altitude-v1"
+
+  - canonical_name: "悬停"
+    aliases: ["悬停", "hover"]
+    node_type: "concept"
+    definition: "直升机空中静止不动的飞行状态"
+    source_id: "z20-science-rotor-aerodynamics-v1"
+
+  - canonical_name: "自动旋转"
+    aliases: ["自转下滑", "autorotation"]
+    node_type: "concept"
+    definition: "发动机失效后利用旋翼转动能量下降着陆的安全方式"
+    source_id: "z20-science-rotor-aerodynamics-v1"
+
+  - canonical_name: "反潜型"
+    aliases: ["反潜直升机", "ASW"]
+    node_type: "aircraft"
+    definition: "直-20 舰载反潜改型，可从航母/驱逐舰起降"
+    source_id: "z20-science-utility-platform-v1"
+
+  - canonical_name: "哈尔滨飞机工业集团"
+    aliases: ["哈飞", "HAIG"]
+    node_type: "concept"
+    definition: "直-20 研制单位，中国航空工业集团成员企业"
+    source_id: "z20-science-overview-v1"
+
+  - canonical_name: "UH-60 黑鹰"
+    aliases: ["UH-60", "黑鹰", "Black Hawk"]
+    node_type: "aircraft"
+    definition: "美国西科斯基 10 吨级通用直升机"
+    source_id: "z20-science-vs-uh60-v1"
+
+  - canonical_name: "米-17"
+    aliases: ["Mi-17", "米17"]
+    node_type: "aircraft"
+    definition: "俄罗斯米里设计局中型运输直升机"
+    source_id: "z20-science-vs-mi17-v1"

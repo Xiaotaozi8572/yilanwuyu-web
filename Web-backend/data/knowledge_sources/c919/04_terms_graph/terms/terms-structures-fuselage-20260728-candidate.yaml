@@ -1,0 +1,90 @@
+# C919 机身结构类术语
+# 领域：机身结构与传力
+# 条目数：12
+# node_type 统一为 component
+# ID 前缀：fuse_
+
+terms:
+  - term_id: "fuse_001"
+    canonical_name: "机身"
+    aliases: ["机身", "fuselage", "机身结构"]
+    node_type: "component"
+    definition: "飞机主体结构，容纳驾驶舱、客舱和货舱，C919 机身宽度 3.96m，采用半硬壳式结构"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuse_002"
+    canonical_name: "前机身"
+    aliases: ["前机身", "forward fuselage", "机头段"]
+    node_type: "component"
+    definition: "机身前段含驾驶舱和雷达罩，承受增压载荷和风挡载荷，C919 前机身采用铝合金蒙皮和桁条结构"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuse_003"
+    canonical_name: "中机身"
+    aliases: ["中机身", "center fuselage", "机身中段"]
+    node_type: "component"
+    definition: "机身中段含中央翼盒连接区和客舱主体，承受机翼传来的弯矩和剪力，C919 中机身是传力关键段"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuse_004"
+    canonical_name: "后机身"
+    aliases: ["后机身", "aft fuselage", "机身尾段"]
+    node_type: "component"
+    definition: "机身后段含尾翼连接区和 APU 舱，承受尾翼载荷和面积律收缩，C919 后机身按面积律修形降低波阻"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuse_005"
+    canonical_name: "气密舱"
+    aliases: ["气密舱", "pressure cabin", "增压舱", "气密机身"]
+    node_type: "component"
+    definition: "机身内可增压的密封舱段，维持客舱压力高于外界，C919 气密舱增压压差约 0.06 MPa，保证高空客舱高度 2400m"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuse_006"
+    canonical_name: "框"
+    aliases: ["框", "frame", "隔框", "机身框"]
+    node_type: "component"
+    definition: "机身环形骨架构件，维持机身截面形状并承受增压和集中载荷，C919 框间距优化设计平衡重量和强度"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuse_007"
+    canonical_name: "桁条"
+    aliases: ["桁条", "stringer", "长桁", "纵梁"]
+    node_type: "component"
+    definition: "机身纵向骨架构件，连接蒙皮和框，承受纵向弯曲应力和增压环向应力，C919 桁条采用铝合金挤压型材"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuse_008"
+    canonical_name: "蒙皮"
+    aliases: ["蒙皮", "skin", "机身蒙皮"]
+    node_type: "component"
+    definition: "机身外表面板件，承受剪流、增压和气动力，C919 机身蒙皮采用铝合金板材，部分区域使用铝锂合金减重"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuse_009"
+    canonical_name: "长桁"
+    aliases: ["长桁", "longeron", "主纵梁"]
+    node_type: "component"
+    definition: "机身较强的纵向构件，承受主要弯矩，与桁条协同传力，C919 长桁在开口和集中载荷区加强"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuse_010"
+    canonical_name: "地板梁"
+    aliases: ["地板梁", "floor beam", "地板横梁"]
+    node_type: "component"
+    definition: "支撑客舱地板的横向梁，将地板载荷传给机身侧壁，C919 地板梁采用铝合金或复合材料"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuse_011"
+    canonical_name: "客舱"
+    aliases: ["客舱", "passenger cabin", "客舱段"]
+    node_type: "component"
+    definition: "机身内乘客舱段，C919 客舱标准双通道布局 168 座，全经济舱可达 190 座，机身宽度 3.96m"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuse_012"
+    canonical_name: "货舱"
+    aliases: ["货舱", "cargo hold", "货舱段", "下货舱"]
+    node_type: "component"
+    definition: "机身下部货物舱段，C919 下货舱可装载标准集装箱和散货，配备滚毯和限动网"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

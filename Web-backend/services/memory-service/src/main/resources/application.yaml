@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: memory-service
+  flyway:
+    enabled: true
+  data:
+    redis:
+      connect-timeout: PT1S
+      timeout: PT1S
+
+memory:
+  security:
+    subject-hmac-key: "${MEMORY_SUBJECT_HMAC_KEY:}"
+    jwt:
+      issuer: "${MEMORY_AUTH_ISSUER:}"
+      audience: "${MEMORY_AUTH_AUDIENCE:}"
+      jwk-set-uri: "${MEMORY_AUTH_JWK_SET_URI:}"
+    maximum-request-bytes: 16384
+    maximum-trace-bytes: 512
+    maximum-fresh-auth-age: "${MEMORY_SECURITY_MAXIMUM_FRESH_AUTH_AGE:}"
+  source-material-security:
+    mode: "${MEMORY_SOURCE_MATERIAL_MODE:disabled}"
+    master-key: "${MEMORY_SOURCE_MATERIAL_MASTER_KEY:}"
+  redis:
+    stream-prefix: "memory:v1:"
+    publisher-batch-size: 100
+    claim-idle: PT1M
+    publisher-interval: PT1S
+  neo4j:
+    enabled: "${MEMORY_NEO4J_ENABLED:false}"
+    uri: "${MEMORY_NEO4J_URI:}"
+    circuit-open-duration: PT30S
+  context-cache:
+    hmac-key: "${MEMORY_CONTEXT_CACHE_HMAC_KEY:}"
+    ttl: PT30S
+    l1-maximum-items: 512
+    maximum-value-bytes: 16384
+  authority-cutover:
+    hmac-key: "${MEMORY_AUTHORITY_CUTOVER_HMAC_KEY:}"

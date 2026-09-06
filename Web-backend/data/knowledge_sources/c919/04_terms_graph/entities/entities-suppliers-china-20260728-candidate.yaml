@@ -1,0 +1,89 @@
+# C919 中国供应商实体
+# 参与C919项目的中方供应商与制造单位
+# node_type: supplier
+# node_id 前缀：supcn_
+
+entities:
+  - node_id: "supcn_avic"
+    node_type: "supplier"
+    canonical_name: "中国航空工业集团"
+    aliases: ["AVIC", "中航工业", "中国航空工业"]
+    description: "中国航空工业集团，C919 主要中机供应商体系总协调，下属多单位承担机身机翼制造"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supcn_comac"
+    node_type: "supplier"
+    canonical_name: "中国商用飞机有限责任公司"
+    aliases: ["COMAC", "中国商飞", "商飞"]
+    description: "C919 主制造商和总集成商，负责设计、总装、试验和适航取证，总部位于上海"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supcn_avic_xac"
+    node_type: "supplier"
+    canonical_name: "中航西飞"
+    aliases: ["中航西飞", "AVIC XAC", "西安飞机工业"]
+    description: "中航工业西安飞机工业集团，承担 C919 机翼和中央翼盒制造，机翼总装单位"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supcn_avic_sac"
+    node_type: "supplier"
+    canonical_name: "中航沈飞"
+    aliases: ["中航沈飞", "AVIC SAC", "沈阳飞机工业"]
+    description: "中航工业沈阳飞机工业集团，承担 C919 后机身前段、垂直尾翼等部件制造"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supcn_hongdu"
+    node_type: "supplier"
+    canonical_name: "洪都航空"
+    aliases: ["洪都航空", "HAIG", "江西洪都"]
+    description: "江西洪都航空工业集团，承担 C919 前机身及中后机身装配制造"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supcn_avic_emech"
+    node_type: "supplier"
+    canonical_name: "中航机电"
+    aliases: ["中航机电", "AVIC EMech", "航空机电系统"]
+    description: "中航工业机电系统公司，承担 C919 液压、燃油、起落架等机电系统配套"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supcn_avic_optoelec"
+    node_type: "supplier"
+    canonical_name: "中航光电"
+    aliases: ["中航光电", "AVIC Optoelec", "中航光电科技"]
+    description: "中航光电科技股份有限公司，为 C919 提供电连接器及光缆组件"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supcn_avic_avionics"
+    node_type: "supplier"
+    canonical_name: "中航电子"
+    aliases: ["中航电子", "AVIC Avionics", "航空电子系统"]
+    description: "中航工业航电系统公司，承担 C919 部分航电系统配套及合资公司参与方"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supcn_jiatai"
+    node_type: "supplier"
+    canonical_name: "嘉泰"
+    aliases: ["嘉泰", "Jiatai", "嘉泰科技"]
+    description: "嘉泰科技，为 C919 提供客舱内装及座椅等内饰配套产品"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supcn_guilin_lanyu"
+    node_type: "supplier"
+    canonical_name: "中化桂林蓝宇"
+    aliases: ["桂林蓝宇", "中化桂林蓝宇", "蓝宇航空轮胎"]
+    description: "中化桂林蓝宇航空轮胎，为 C919 提供国产航空轮胎备选方案，子午线轮胎研发"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supcn_avic_photoelec"
+    node_type: "supplier"
+    canonical_name: "AVIC 光电"
+    aliases: ["AVIC 光电", "中航工业光电所", "洛阳光电所"]
+    description: "中航工业洛阳光电所，为 C919 提供平视显示器和光电传感器等航电产品"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supcn_china_aeroengine"
+    node_type: "supplier"
+    canonical_name: "中国航发"
+    aliases: ["中国航发", "AECC", "中国航空发动机集团"]
+    description: "中国航空发动机集团，承担 CJ-1000A 国产大涵道比涡扇发动机研制，为 C919 国产动力"
+    applicable_aircraft: ["c919"]

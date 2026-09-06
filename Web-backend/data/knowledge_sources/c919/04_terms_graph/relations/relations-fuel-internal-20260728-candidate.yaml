@@ -1,0 +1,92 @@
+# C919 燃油系统内部关系
+# 描述燃油系统油箱、泵、阀及计量装置的层级与功能关系
+# relation_type: part_of / feeds_to / provides_power_to / parameter_of
+# edge_id 前缀：rfuel_
+
+relations:
+  # ========== part_of 燃油系统组件归属 ==========
+  - edge_id: "rfuel_001"
+    source_node_id: "comp_center_tank"
+    target_node_id: "sys_fuel"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "中央油箱位于机身中央翼盒内，是燃油系统的辅助储油容器"
+
+  - edge_id: "rfuel_002"
+    source_node_id: "comp_left_wing_tank"
+    target_node_id: "sys_fuel"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "左机翼油箱位于左机翼盒段内，是燃油系统的主要储油容器"
+
+  - edge_id: "rfuel_003"
+    source_node_id: "comp_right_wing_tank"
+    target_node_id: "sys_fuel"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "右机翼油箱位于右机翼盒段内，是燃油系统的主要储油容器"
+
+  - edge_id: "rfuel_004"
+    source_node_id: "comp_fuel_pump"
+    target_node_id: "sys_fuel"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "燃油泵安装于油箱内，将燃油加压输送至发动机和 APU"
+
+  - edge_id: "rfuel_005"
+    source_node_id: "comp_fuel_filter"
+    target_node_id: "sys_fuel"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "燃油滤过滤燃油中的杂质和水分，保护发动机燃油喷嘴"
+
+  - edge_id: "rfuel_006"
+    source_node_id: "comp_fuel_flow_meter"
+    target_node_id: "sys_fuel"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "燃油流量计测量供往发动机的燃油流量，反馈至 FMS 与指示系统"
+
+  - edge_id: "rfuel_007"
+    source_node_id: "comp_refuel_defuel_valve"
+    target_node_id: "sys_fuel"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "加油/抽油阀位于机翼加油口，控制地面加油与抽油作业"
+
+  - edge_id: "rfuel_008"
+    source_node_id: "comp_jettison_pump"
+    target_node_id: "sys_fuel"
+    relation_type: "part_of"
+    confidence: 0.95
+    description: "输油泵/放油泵用于应急放油或油箱间转输，调整飞机重心"
+
+  - edge_id: "rfuel_009"
+    source_node_id: "comp_fuel_quantity_probe"
+    target_node_id: "sys_fuel"
+    relation_type: "part_of"
+    confidence: 1.0
+    description: "油量传感器(电容式探针)安装于油箱内，测量油箱油量"
+
+  # ========== feeds_to 燃油流向 ==========
+  - edge_id: "rfuel_010"
+    source_node_id: "comp_center_tank"
+    target_node_id: "comp_left_wing_tank"
+    relation_type: "feeds_to"
+    confidence: 0.9
+    description: "中央油箱燃油通过转输泵送至左右机翼油箱，按消耗顺序管理"
+
+  - edge_id: "rfuel_011"
+    source_node_id: "comp_fuel_quantity_probe"
+    target_node_id: "comp_fuel_quantity_indicator"
+    relation_type: "feeds_to"
+    confidence: 0.95
+    description: "油量传感器信号送至油量指示器，供飞行员监控油量"
+
+  # ========== provides_power_to 燃油供能 ==========
+  - edge_id: "rfuel_012"
+    source_node_id: "comp_fuel_pump"
+    target_node_id: "sys_leap1c"
+    relation_type: "provides_power_to"
+    confidence: 0.95
+    description: "燃油泵将燃油供至发动机燃烧室，为发动机运行提供燃料能量"

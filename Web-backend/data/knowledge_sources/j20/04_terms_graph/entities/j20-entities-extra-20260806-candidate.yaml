@@ -1,0 +1,130 @@
+# j20 实体补全
+# 字段对齐 GraphNode
+
+entities:
+  - entity_id: "f22"
+    node_type: "aircraft"
+    canonical_name: "F-22"
+    aliases: []
+    definition: "美国重型隐身制空机"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "f35"
+    node_type: "aircraft"
+    canonical_name: "F-35"
+    aliases: []
+    definition: "美国多用途五代机"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "fc31"
+    node_type: "aircraft"
+    canonical_name: "FC-31"
+    aliases: []
+    definition: "中国中型五代机"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "j20_canard"
+    node_type: "component"
+    canonical_name: "鸭翼"
+    aliases: []
+    definition: "全动鸭翼"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "j20_datalink"
+    node_type: "system"
+    canonical_name: "数据链"
+    aliases: []
+    definition: "平台间数据共享"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "j20_dsi"
+    node_type: "component"
+    canonical_name: "DSI进气道"
+    aliases: []
+    definition: "无隔道超声速进气道"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "j20_eo"
+    node_type: "system"
+    canonical_name: "光电系统"
+    aliases: []
+    definition: "EOTS/IRST被动探测"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "j20_main_bay"
+    node_type: "component"
+    canonical_name: "主弹舱"
+    aliases: []
+    definition: "内埋中远程导弹舱"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "j20_main_wing"
+    node_type: "component"
+    canonical_name: "主翼"
+    aliases: []
+    definition: "后掠大三角主翼"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "j20_radar"
+    node_type: "system"
+    canonical_name: "雷达系统"
+    aliases: []
+    definition: "Type 1475 AESA雷达"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "j20_side_bay"
+    node_type: "component"
+    canonical_name: "侧弹舱"
+    aliases: []
+    definition: "格斗弹内埋舱"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "j20_twin_tail"
+    node_type: "component"
+    canonical_name: "双垂尾"
+    aliases: []
+    definition: "双外倾全动垂尾"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "j20s"
+    node_type: "aircraft"
+    canonical_name: "歼-20S"
+    aliases: []
+    definition: "双座型"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "pl10"
+    node_type: "component"
+    canonical_name: "PL-10"
+    aliases: []
+    definition: "近距格斗空空导弹"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "pl15"
+    node_type: "component"
+    canonical_name: "PL-15"
+    aliases: []
+    definition: "中远程空空导弹"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "su57"
+    node_type: "aircraft"
+    canonical_name: "苏-57"
+    aliases: []
+    definition: "俄罗斯五代机"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "ws10c"
+    node_type: "component"
+    canonical_name: "WS-10C发动机"
+    aliases: []
+    definition: "现役主力，142-147 kN"
+    source_id: "j20-graph-entities-extra-v1"
+
+  - entity_id: "ws15"
+    node_type: "component"
+    canonical_name: "WS-15发动机"
+    aliases: []
+    definition: "终极动力，约180 kN"
+    source_id: "j20-graph-entities-extra-v1"
+

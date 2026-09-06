@@ -1,0 +1,20 @@
+{
+  "snapshot_id": "aviation_feedback_rewrite_v2",
+  "template_id": "aviation_feedback_rewrite",
+  "version": "v2",
+  "test_cases": [
+    "simplify_request",
+    "shorten_request",
+    "format_transform"
+  ],
+  "dimension_scores": {
+    "faithfulness": 0.98,
+    "rewrite_control": 0.94,
+    "clarity": 0.91
+  },
+  "violations": [],
+  "improvements": [
+    "Preserve-versus-change planning reduces drift."
+  ],
+  "final_decision": "approve"
+}

@@ -1,0 +1,101 @@
+# C919 美国供应商实体
+# 参与C919项目的美方供应商
+# node_type: supplier
+# node_id 前缀：supus_
+
+entities:
+  - node_id: "supus_ge"
+    node_type: "supplier"
+    canonical_name: "通用电气"
+    aliases: ["GE", "General Electric", "通用电气"]
+    description: "通用电气公司，CFM 国际合资方之一，为 C919 提供 LEAP-1C 发动机核心机及发电机部件"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supus_honeywell"
+    node_type: "supplier"
+    canonical_name: "霍尼韦尔"
+    aliases: ["Honeywell", "霍尼韦尔", "Honeywell Aerospace"]
+    description: "霍尼韦尔航空航天，为 C919 提供 APU（HGT750）、气象雷达、EGPWS、飞控软件等"
+    specifications:
+      products: "APU HGT750, 气象雷达, EGPWS"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supus_cfm"
+    node_type: "supplier"
+    canonical_name: "CFM 国际"
+    aliases: ["CFM", "CFM International", "CFMI"]
+    description: "GE 与赛峰合资的发动机公司，为 C919 提供唯一装机动力 LEAP-1C28（推力 129.98kN）及 LEAP-1C30（推力 137.14kN）"
+    specifications:
+      engines: "LEAP-1C28, LEAP-1C30"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supus_collins"
+    node_type: "supplier"
+    canonical_name: "柯林斯航空航天"
+    aliases: ["Collins", "Collins Aerospace", "罗克韦尔柯林斯"]
+    description: "柯林斯航空航天，为 C919 提供 IMA 核心处理平台、客舱系统及多类航电设备"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supus_moog"
+    node_type: "supplier"
+    canonical_name: "穆格"
+    aliases: ["Moog", "穆格", "Moog Inc."]
+    description: "穆格公司，为 C919 提供飞控作动器及电液伺服阀，舵面驱动的关键供应商"
+    specifications:
+      products: "飞控作动器, 电液伺服阀"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supus_hamilton"
+    node_type: "supplier"
+    canonical_name: "汉胜"
+    aliases: ["Hamilton Sundstrand", "汉胜", "Hamilton Sundstrand"]
+    description: "汉胜公司（联合技术旗下），为 C919 提供 IDG 集成驱动发电机、APU 启动系统等电气设备"
+    specifications:
+      products: "IDG, APU 启动系统"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supus_parker"
+    node_type: "supplier"
+    canonical_name: "派克汉尼汾"
+    aliases: ["Parker", "Parker Hannifin", "派克"]
+    description: "派克汉尼汾公司，为 C919 提供燃油系统、液压油箱及加油阀组件"
+    specifications:
+      products: "燃油系统, 液压油箱"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supus_elbit"
+    node_type: "supplier"
+    canonical_name: "埃尔比特系统"
+    aliases: ["Elbit", "Elbit Systems", "埃尔比特"]
+    description: "埃尔比特系统公司，为 C919 提供平视显示器（HUD）及部分显示系统"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supus_rtx"
+    node_type: "supplier"
+    canonical_name: "雷神技术"
+    aliases: ["RTX", "Raytheon Technologies", "联合技术"]
+    description: "雷神技术公司，C919 多家子公司（Collins、Hamilton Sundstrand）的母公司"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supus_ge_aerospace"
+    node_type: "supplier"
+    canonical_name: "GE 航空航天"
+    aliases: ["GE Aerospace", "GE 航空", "GE Aviation"]
+    description: "GE 航空航天业务部门，为 C919 提供发动机核心机及电气系统部件，CFM 合资方"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supus_safran_usa"
+    node_type: "supplier"
+    canonical_name: "赛峰美国"
+    aliases: ["Safran USA", "赛峰美国", "Safran USA Inc."]
+    description: "赛峰集团美国业务公司，作为 CFM 合资方参与 C919 发动机及短舱配套"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supus_michelin_usa"
+    node_type: "supplier"
+    canonical_name: "米其林美国"
+    aliases: ["Michelin USA", "米其林", "Michelin Aircraft Tire"]
+    description: "米其林美国航空轮胎公司，为 C919 提供子午线航空轮胎，具备防爆胎设计"
+    specifications:
+      products: "子午线航空轮胎"
+    applicable_aircraft: ["c919"]

@@ -1,0 +1,90 @@
+# C919 燃油类术语
+# 领域：燃油系统
+# 条目数：12
+# node_type 统一为 system
+# ID 前缀：fuel_
+
+terms:
+  - term_id: "fuel_001"
+    canonical_name: "油箱"
+    aliases: ["油箱", "fuel tank", "燃油箱"]
+    node_type: "component"
+    definition: "储存燃油的容器，C919 燃油系统含机翼油箱和中央油箱，总容量约 19,156 升"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuel_002"
+    canonical_name: "中央油箱"
+    aliases: ["中央油箱", "center tank", "中央翼油箱"]
+    node_type: "component"
+    definition: "位于中央翼盒内的油箱，C919 中央油箱在机身段中央翼盒内，容量较大用于远程飞行"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuel_003"
+    canonical_name: "机翼油箱"
+    aliases: ["机翼油箱", "wing tank", "左右机翼油箱"]
+    node_type: "component"
+    definition: "位于机翼内部的油箱，C919 左右机翼油箱利用翼盒空间储油，燃油重量还可减轻机翼弯矩"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuel_004"
+    canonical_name: "通气"
+    aliases: ["通气", "ventilation", "油箱通气", "通气系统"]
+    node_type: "system"
+    definition: "维持油箱内压力平衡的通气系统，C919 油箱通气管通至机翼外侧通气口防止超压或真空"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuel_005"
+    canonical_name: "加油"
+    aliases: ["加油", "refueling", "压力加油"]
+    node_type: "system"
+    definition: "向油箱加注燃油的过程，C919 采用压力加油系统，单点加油口可同时向各油箱加油"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuel_006"
+    canonical_name: "抽油"
+    aliases: ["抽油", "defueling", "放油"]
+    node_type: "system"
+    definition: "从油箱抽出燃油的过程，C919 抽油系统用于维修时排空油箱或紧急放油减重"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuel_007"
+    canonical_name: "输油"
+    aliases: ["输油", "fuel transfer", "燃油转输"]
+    node_type: "system"
+    definition: "油箱间转移燃油的过程，C919 输油系统按消耗顺序管理燃油，维持重心在许用范围"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuel_008"
+    canonical_name: "油泵"
+    aliases: ["油泵", "fuel pump", "燃油增压泵", "输油泵"]
+    node_type: "component"
+    definition: "输送燃油的泵，C919 每个油箱配备交流电动燃油增压泵保证发动机供油"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuel_009"
+    canonical_name: "油量测量"
+    aliases: ["油量测量", "fuel quantity measurement", "油量指示"]
+    node_type: "system"
+    definition: "测量油箱燃油量的系统，C919 采用电容式油量传感器和密度补偿精确测量燃油量"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuel_010"
+    canonical_name: "惰性气体"
+    aliases: ["惰性气体", "inert gas", "氮气惰化", "OBIGGS"]
+    node_type: "system"
+    definition: "向油箱空间充入氮气降低氧含量防止着火的系统，C919 采用机载制氮惰化系统提高安全性"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuel_011"
+    canonical_name: "燃油"
+    aliases: ["燃油", "fuel", "航空燃油"]
+    node_type: "concept"
+    definition: "为发动机提供能量的液体燃料，C919 使用 Jet A-1 航空煤油作为发动机燃料"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fuel_012"
+    canonical_name: "航空煤油"
+    aliases: ["航空煤油", "aviation kerosene", "Jet A-1", "Jet A"]
+    node_type: "concept"
+    definition: "石油炼制的航空燃气涡轮发动机燃料，C919 使用 Jet A-1 航空煤油，闪点高、冰点低、热值高"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

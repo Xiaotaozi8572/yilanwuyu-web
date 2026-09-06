@@ -1,0 +1,119 @@
+# C919 供应商与系统关系
+# 描述一级系统供应商与对应机载系统的供应关系
+# relation_type: supplies / produces
+# edge_id 前缀：rsups_
+
+relations:
+  # ========== CFM 发动机 ==========
+  - edge_id: "rsups_001"
+    source_node_id: "supplier_cfm"
+    target_node_id: "sys_leap1c"
+    relation_type: "supplies"
+    confidence: 1.0
+    description: "CFM 国际(CFM International)供应 C919 选用 LEAP-1C28 涡扇发动机"
+
+  - edge_id: "rsups_002"
+    source_node_id: "supplier_cfm"
+    target_node_id: "sys_leap1c"
+    relation_type: "produces"
+    confidence: 1.0
+    description: "CFM 国际是 LEAP-1C 发动机的生产厂商"
+
+  # ========== Honeywell 飞控 ==========
+  - edge_id: "rsups_003"
+    source_node_id: "supplier_honeywell"
+    target_node_id: "sys_flight_control"
+    relation_type: "supplies"
+    confidence: 0.95
+    description: "Honeywell 通过与 AVIC 合资的 Hongfei 公司供应 C919 飞控系统"
+
+  # ========== AVIAGE 航电 ==========
+  - edge_id: "rsups_004"
+    source_node_id: "supplier_aviage"
+    target_node_id: "sys_avionics"
+    relation_type: "supplies"
+    confidence: 1.0
+    description: "AVIAGE 系统公司(GE-AVIC 合资)供应 C919 综合模块化航电系统"
+
+  - edge_id: "rsups_005"
+    source_node_id: "supplier_aviage"
+    target_node_id: "sys_avionics"
+    relation_type: "produces"
+    confidence: 1.0
+    description: "AVIAGE 系统公司是 C919 航电系统的主制造商"
+
+  # ========== Liebherr 起落架与环控 ==========
+  - edge_id: "rsups_006"
+    source_node_id: "supplier_liebherr"
+    target_node_id: "sys_landing_gear_system"
+    relation_type: "supplies"
+    confidence: 1.0
+    description: "Liebherr 起落架公司(LAMC)供应 C919 起落架系统"
+
+  - edge_id: "rsups_007"
+    source_node_id: "supplier_liebherr"
+    target_node_id: "sys_ecs"
+    relation_type: "supplies"
+    confidence: 0.95
+    description: "Liebherr 供应 C919 环控系统，含空调组件与增压系统"
+
+  # ========== Honeywell APU 与辅助 ==========
+  - edge_id: "rsups_008"
+    source_node_id: "supplier_honeywell"
+    target_node_id: "sys_apu"
+    relation_type: "supplies"
+    confidence: 1.0
+    description: "Honeywell 供应 C919 辅助动力装置(APU)"
+
+  - edge_id: "rsups_009"
+    source_node_id: "supplier_honeywell"
+    target_node_id: "sys_auxiliary_power"
+    relation_type: "supplies"
+    confidence: 0.95
+    description: "Honeywell 供应 C919 辅助动力系统整体解决方案"
+
+  # ========== AVIC 液压 ==========
+  - edge_id: "rsups_010"
+    source_node_id: "supplier_avic"
+    target_node_id: "sys_hydraulic"
+    relation_type: "supplies"
+    confidence: 0.9
+    description: "AVIC 下属单位承担 C919 液压系统部分组件供应"
+
+  # ========== Moog 飞控作动 ==========
+  - edge_id: "rsups_011"
+    source_node_id: "supplier_moog"
+    target_node_id: "act_flight_control"
+    relation_type: "supplies"
+    confidence: 0.95
+    description: "Moog 供应 C919 飞控作动器，含主飞行控制作动器"
+
+  # ========== 电气与燃油系统 ==========
+  - edge_id: "rsups_012"
+    source_node_id: "supplier_hamilton"
+    target_node_id: "sys_electrical"
+    relation_type: "supplies"
+    confidence: 0.9
+    description: "Hamilton Sundstrand 供应 C919 电力系统，含 IDG 与配电中心"
+
+  - edge_id: "rsups_013"
+    source_node_id: "supplier_parker"
+    target_node_id: "sys_fuel"
+    relation_type: "supplies"
+    confidence: 0.9
+    description: "Parker 供应 C919 燃油系统，含油箱附件与输油管路"
+
+  # ========== Honeywell 航电子系统 ==========
+  - edge_id: "rsups_014"
+    source_node_id: "supplier_honeywell"
+    target_node_id: "sys_weather_radar"
+    relation_type: "supplies"
+    confidence: 0.9
+    description: "Honeywell 供应 C919 气象雷达"
+
+  - edge_id: "rsups_015"
+    source_node_id: "supplier_honeywell"
+    target_node_id: "sys_egpws"
+    relation_type: "supplies"
+    confidence: 0.9
+    description: "Honeywell 供应 C919 近地警告系统(EGPWS)"

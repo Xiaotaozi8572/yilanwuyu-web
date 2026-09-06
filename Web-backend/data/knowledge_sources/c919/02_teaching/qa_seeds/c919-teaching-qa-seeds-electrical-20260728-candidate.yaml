@@ -1,0 +1,47 @@
+# C919 电气专项讲解侧问答种子（非评测种子）
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / question / audience / teaching_point
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+qa_seeds:
+  - id: "elec-qa-001-voltage-level"
+    question: "C919 用多少伏的电？和家用一样吗？"
+    audience: "中学生/有专业兴趣的公众"
+    teaching_point: "C919 主交流电源 230V AC（变频 360-800 Hz），高于传统 115V AC 和家用 220V/50Hz。高电压可减小电流、线缆更细减重。还有 28V 直流电供部分航电。电压等级选择是减重与效率的工程权衡。"
+
+  - id: "elec-qa-002-power-source"
+    question: "C919 的电从哪里来？"
+    audience: "普通公众/中学生"
+    teaching_point: "主要来自发动机驱动的发电机（每台发动机一台），APU 也有发电机。地面停靠时可外接地面电源（GPU, 400Hz 115V AC）。所有主电源失效时，RAT（冲压空气涡轮）自动放出提供应急电力，蓄电池也可供电约 30-60 分钟。"
+
+  - id: "elec-qa-003-battery-purpose"
+    question: "C919 的蓄电池是干什么用的？"
+    audience: "中学生"
+    teaching_point: "飞机蓄电池是航空级镍镉或锂电池，用于所有主电源失效时为关键航电和飞控应急供电（约 30-60 分钟）。不是用来启动发动机的——主发启动由 APU 引气驱动空气启动机完成。蓄电池是最后的电力兜底。"
+
+  - id: "elec-qa-004-apu-electric"
+    question: "APU 是发电机吗？"
+    audience: "普通公众/中学生"
+    teaching_point: "APU（辅助动力装置）是尾部的小型燃气涡轮，同时输出电力和压缩空气。地面时供电供气启动主发、开空调照明；空中主发故障时应急供电供气。不只是发电机，也不产生推力，是飞机的充电宝+气源。"
+
+  - id: "elec-qa-005-rat"
+    question: "什么是 RAT？C919 有吗？"
+    audience: "航空爱好者/有专业兴趣的公众"
+    teaching_point: "RAT（冲压空气涡轮）是可收放的小涡轮，所有主电源失效时自动放出，靠飞机前进气流驱动涡轮发电和驱动液压泵。C919 配备 RAT 作为最后应急动力源。RAT 不产生推力，只提供最低限度电力和液压。"
+
+  - id: "elec-qa-006-ground-power"
+    question: "C919 停在机场时电从哪来？"
+    audience: "普通公众"
+    teaching_point: "停靠时主发动机关闭（省油防损），APU 也常关闭（降噪减排）。此时外接地面电源（GPU 400Hz 115V AC）或廊桥电源接口供电，地面空调车供冷暖气。外接电源是航班地面过站的标准操作。"
+
+  - id: "elec-qa-007-lightning"
+    question: "C919 被雷击会断电吗？"
+    audience: "普通公众/中学生"
+    teaching_point: "不会。C919 按 CCAR-25.581 设计雷电防护：机身蒙皮作为法拉第笼引导雷电流沿外表面流过、电气系统有浪涌保护和电磁屏蔽。通过了雷电全机试验验证雷击后电气系统不中断。民机平均年遭雷击 1-2 次仍安全飞行。"
+
+  - id: "elec-qa-008-wiring"
+    question: "C919 全机有多少线缆？"
+    audience: "有专业兴趣的公众"
+    teaching_point: "C919 全机线缆总长达数十公里，重量数百公斤甚至上吨。航空线缆采用镀银铜或铝合金导体、PTFE/聚酰亚胺绝缘，要求阻燃、低烟无毒、耐高温 200℃以上、耐振动。线束走线需考虑电磁兼容（EMC）。远比家用电线严格。"

@@ -1,0 +1,20 @@
+{
+  "template_id": "spoken_answer_style_prompt",
+  "version": "v2",
+  "parent_version": "v1",
+  "change_reason": "Clarify pacing and short-sentence style.",
+  "created_at": "2026-07-09T00:00:00Z",
+  "review_status": "active",
+  "snapshot_id": "spoken_answer_style_prompt_v2",
+  "variables": [
+    {
+      "name": "output_contract",
+      "source": "runtime",
+      "value_type": "json_schema_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Runtime spoken output rules."
+    }
+  ],
+  "content": "You are preparing a spoken aviation tutoring answer.\n1. Open with the direct answer in one short sentence.\n2. Add two or three short follow-up sentences that keep the supported claims intact.\n3. Pause the flow naturally by separating ideas instead of adding detail.\n4. End with one optional check question only when it helps the learner.\n5. Follow {{output_contract}} exactly."
+}

@@ -1,0 +1,36 @@
+{
+  "template_id": "aviation_feedback_rewrite",
+  "version": "v2",
+  "parent_version": "v1",
+  "change_reason": "Strengthen preserve-versus-change planning.",
+  "created_at": "2026-07-09T00:00:00Z",
+  "review_status": "active",
+  "snapshot_id": "aviation_feedback_rewrite_v2",
+  "variables": [
+    {
+      "name": "rag_evidence",
+      "source": "evidence_package",
+      "value_type": "evidence_summary",
+      "required": true,
+      "missing_behavior": "clarification",
+      "description": "Evidence lock for the current answer."
+    },
+    {
+      "name": "memory_context",
+      "source": "memory_context",
+      "value_type": "learner_summary",
+      "required": false,
+      "missing_behavior": "omit",
+      "description": "Optional style preferences."
+    },
+    {
+      "name": "output_contract",
+      "source": "runtime",
+      "value_type": "json_schema_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Runtime output rules."
+    }
+  ],
+  "content": "You are rewriting an aviation tutoring answer after feedback.\n1. Treat {{rag_evidence}} as the locked fact boundary.\n2. Make a preserve-versus-change plan before drafting: keep supported claims, adjust explanation style, and retain safety caveats.\n3. Use {{memory_context}} only to tune tone and pacing.\n4. If the requested rewrite needs unsupported detail, say what cannot be added.\n5. Produce the revised answer in a compact teaching order.\n6. Follow {{output_contract}} exactly."
+}

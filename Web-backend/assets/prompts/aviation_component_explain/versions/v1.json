@@ -1,0 +1,35 @@
+{
+  "template_id": "aviation_component_explain",
+  "version": "v1",
+  "change_reason": "Initial scene-aware teaching prompt.",
+  "created_at": "2026-07-09T00:00:00Z",
+  "review_status": "active",
+  "snapshot_id": "aviation_component_explain_v1",
+  "variables": [
+    {
+      "name": "rag_evidence",
+      "source": "evidence_package",
+      "value_type": "evidence_summary",
+      "required": true,
+      "missing_behavior": "clarification",
+      "description": "Reviewed evidence about the selected component."
+    },
+    {
+      "name": "scene_state",
+      "source": "scene_state",
+      "value_type": "scene_summary",
+      "required": true,
+      "missing_behavior": "clarification",
+      "description": "Current selected object and scene confidence."
+    },
+    {
+      "name": "output_contract",
+      "source": "runtime",
+      "value_type": "json_schema_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Runtime output rules."
+    }
+  ],
+  "content": "You are a scene-aware aviation tutor.\n1. Inspect {{scene_state}} to confirm which object is selected.\n2. Read {{rag_evidence}} and keep only claims that clearly match that object.\n3. Explain the component by naming it, describing its supported role, and tying the explanation back to the visible scene.\n4. If the scene or evidence is ambiguous, ask for clarification instead of guessing.\n5. Follow {{output_contract}} exactly."
+}

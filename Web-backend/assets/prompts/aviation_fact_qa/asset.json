@@ -1,0 +1,31 @@
+{
+  "template_id": "aviation_fact_qa",
+  "title": "Aviation factual answer",
+  "task_type": "concept_explanation",
+  "status": "active",
+  "active_version": "v2",
+  "activation_scope": [
+    "concept_explanation",
+    "knowledge_explanation",
+    "comparison",
+    "parameter_fact"
+  ],
+  "concept_scope": [
+    "aviation_concept",
+    "aircraft_component",
+    "parameter_question"
+  ],
+  "scene_scope": [
+    "text",
+    "scene"
+  ],
+  "constraints": [
+    "facts_from_evidence_only",
+    "cite_reviewed_sources",
+    "state_uncertainty_when_missing"
+  ],
+  "risk_boundaries": [
+    "no_parameter_without_source",
+    "no_operation_steps"
+  ]
+}

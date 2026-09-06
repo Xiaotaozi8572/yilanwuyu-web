@@ -1,0 +1,20 @@
+{
+  "snapshot_id": "aviation_basic_safe_v2",
+  "template_id": "aviation_basic_safe",
+  "version": "v2",
+  "test_cases": [
+    "missing_evidence",
+    "missing_scene",
+    "missing_parameter_source"
+  ],
+  "dimension_scores": {
+    "safety": 1.0,
+    "clarity": 0.93,
+    "brevity": 0.9
+  },
+  "violations": [],
+  "improvements": [
+    "Clarifying questions are more targeted."
+  ],
+  "final_decision": "approve"
+}

@@ -1,0 +1,1848 @@
+partition: "c919/02_teaching"
+partition_owner: "教学设计组"
+sources:
+  - source_id: "c919-teaching-explanation-plan-public-v1"
+    source_type: "text"
+    title: "C919 科普讲解计划（面向普通公众）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-public-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "20 分钟公众讲解骨架，含开场/型号定位/基本参数/技术亮点/首飞取证/商业运营/结尾七段及时长建议"
+
+  - source_id: "c919-teaching-explanation-plan-student-v1"
+    source_type: "text"
+    title: "C919 科普讲解计划（面向中学生）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-student-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "45 分钟中学生讲解计划，含 9 个互动思考题与伯努利原理动手演示"
+
+  - source_id: "c919-teaching-aerodynamics-intro-v1"
+    source_type: "text"
+    title: "C919 气动原理与机翼设计 · 入门版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-aerodynamics-intro-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "入门档，用日常语言解释升力/阻力，不涉及公式"
+
+  - source_id: "c919-teaching-aerodynamics-intermediate-v1"
+    source_type: "text"
+    title: "C919 气动原理与机翼设计 · 进阶版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-aerodynamics-intermediate-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "进阶档，引入升阻比、迎角、失速、激波阻力等概念"
+
+  - source_id: "c919-teaching-aerodynamics-advanced-v1"
+    source_type: "text"
+    title: "C919 气动原理与机翼设计 · 深入版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-aerodynamics-advanced-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "深入档，涉及超临界翼型物理机制、激波阻力发散、雷诺数效应与工程权衡"
+
+  - source_id: "c919-teaching-analogies-v1"
+    source_type: "structured"
+    title: "C919 科普类比素材库"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "analogies/c919-analogies-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "10 条类比素材，含涵道比/电传操纵/复合材料/超临界机翼/涡扇发动机/适航认证/MTOW/燃油效率等"
+      analogy_count: 10
+
+  - source_id: "c919-teaching-misconceptions-v1"
+    source_type: "structured"
+    title: "C919 常见误解与纠偏"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "misconceptions/c919-misconceptions-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "10 条常见误解及客观纠偏，覆盖国产化/抄袭/复合材料/电传/涵道比/发动机/适航等"
+      misconception_count: 10
+
+  - source_id: "c919-teaching-qa-seeds-v1"
+    source_type: "structured"
+    title: "C919 讲解侧问答种子（非评测种子）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "qa_seeds/c919-teaching-qa-seeds-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "15 条讲解侧问答种子，含 audience 与 teaching_point，非评测题库"
+      qa_count: 15
+
+  - source_id: "c919-teaching-explanation-plan-structure-v1"
+    source_type: "text"
+    title: "C919 结构与系统讲解计划（面向普通公众）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-structure-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "25 分钟结构与系统讲解骨架，含机身/机翼/起落架/发动机/航电五模块及时长建议"
+
+  - source_id: "c919-teaching-explanation-plan-propulsion-v1"
+    source_type: "text"
+    title: "C919 动力系统讲解计划（面向航空爱好者）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-propulsion-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "30 分钟动力系统讲解计划，含涡扇原理/LEAP-1C 技术特点/涵道比/CJ-1000A/供应链风险"
+
+  - source_id: "c919-teaching-explanation-plan-history-v1"
+    source_type: "text"
+    title: "C919 研制历程讲解计划（面向中学生）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-history-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "35 分钟研制历程讲解计划，含立项/下线/首飞/取证/交付/商业首航 6 段及 6 个互动思考题"
+
+  - source_id: "c919-teaching-engine-principle-intro-v1"
+    source_type: "text"
+    title: "C919 发动机原理 · 入门版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-engine-principle-intro-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "入门档，用风扇/吹风机/水龙头类比解释涡扇发动机与涵道比，不涉及公式"
+
+  - source_id: "c919-teaching-engine-principle-intermediate-v1"
+    source_type: "text"
+    title: "C919 发动机原理 · 进阶版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-engine-principle-intermediate-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "进阶档，引入布雷顿循环、压气机/燃烧室/涡轮功能及 LEAP-1C 推力参数 129.98 kN/137.14 kN"
+
+  - source_id: "c919-teaching-engine-principle-advanced-v1"
+    source_type: "text"
+    title: "C919 发动机原理 · 深入版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-engine-principle-advanced-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "深入档，涉及推进效率公式、TAPS 燃烧室低排放机理、复合材料风扇叶片、CJ-1000A 技术路线"
+
+  - source_id: "c919-teaching-materials-intro-v1"
+    source_type: "text"
+    title: "C919 材料与结构 · 入门版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-materials-intro-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "入门档，用三明治类比复合材料，讲铝合金/钛合金/复合材料用途，无术语"
+
+  - source_id: "c919-teaching-materials-intermediate-v1"
+    source_type: "text"
+    title: "C919 材料与结构 · 进阶版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-materials-intermediate-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "进阶档，引入铝锂合金 8.8%/复合材料 12% 应用部位与超临界机翼设计原理"
+
+  - source_id: "c919-teaching-materials-advanced-v1"
+    source_type: "text"
+    title: "C919 材料与结构 · 深入版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-materials-advanced-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "深入档，涉及碳纤维铺层设计、疲劳寿命评估、损伤容限（CCAR-25.571）、中央翼盒材料权衡"
+
+  - source_id: "c919-teaching-analogies-systems-v1"
+    source_type: "structured"
+    title: "C919 系统专项类比素材库"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "analogies/c919-analogies-systems-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "10 条系统专项类比，含超临界机翼/涵道比/电传/APU/翼尖小翼/适航/惯导/复合材料/涡扇/余度管理"
+      analogy_count: 10
+
+  - source_id: "c919-teaching-misconceptions-systems-v1"
+    source_type: "structured"
+    title: "C919 系统专项误解与纠偏"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "misconceptions/c919-misconceptions-systems-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条系统专项误解纠偏，覆盖超临界机翼/涵道比/电传/APU/复合材料/翼尖小翼/惯导/航空轮胎"
+      misconception_count: 8
+
+  - source_id: "c919-teaching-qa-seeds-advanced-v1"
+    source_type: "structured"
+    title: "C919 进阶讲解侧问答种子（非评测种子）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "qa_seeds/c919-teaching-qa-seeds-advanced-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "12 条进阶讲解侧问答种子，覆盖气动效率/材料选择/系统集成/适航/发动机/国产化，非评测题库"
+      qa_count: 12
+
+  # ========== explanation_plans（20 条追加） ==========
+
+  - source_id: "c919-teaching-explanation-plan-aerodynamics-v1"
+    source_type: "text"
+    title: "C919 气动原理讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-aerodynamics-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "气动原理讲解骨架，含超临界机翼/翼尖小翼/升阻比/激波阻力及时长建议"
+
+  - source_id: "c919-teaching-explanation-plan-atc-v1"
+    source_type: "text"
+    title: "C919 空管视角讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-atc-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "面向空管人员的讲解计划，含通信导航监视/间隔标准/C919 性能特征"
+
+  - source_id: "c919-teaching-explanation-plan-cabin-v1"
+    source_type: "text"
+    title: "C919 客舱体验讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-cabin-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "客舱体验讲解骨架，含座椅宽度/行李架/客舱压力高度/噪声/空调系统"
+
+  - source_id: "c919-teaching-explanation-plan-certification-v1"
+    source_type: "text"
+    title: "C919 适航取证讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-certification-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "适航取证讲解骨架，含 CCAR-25/TC/PC/AC/持续适航/试飞科目"
+
+  - source_id: "c919-teaching-explanation-plan-child-v1"
+    source_type: "text"
+    title: "C919 儿童科普讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-child-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "面向儿童的科普讲解，用简单类比和互动问题解释飞行原理"
+
+  - source_id: "c919-teaching-explanation-plan-college-students-v1"
+    source_type: "text"
+    title: "C919 大学生讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-college-students-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "面向大学生的讲解计划，含技术深度/工程权衡/产业链分析"
+
+  - source_id: "c919-teaching-explanation-plan-composite-v1"
+    source_type: "text"
+    title: "C919 复合材料讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-composite-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "复合材料讲解骨架，含碳纤维/铝锂合金/钛合金/材料权衡"
+
+  - source_id: "c919-teaching-explanation-plan-electrical-v1"
+    source_type: "text"
+    title: "C919 电气系统讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-electrical-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "电气系统讲解骨架，含 230V 变频/发电机/APU/RAT/蓄电池/多电飞机"
+
+  - source_id: "c919-teaching-explanation-plan-engineer-v1"
+    source_type: "text"
+    title: "C919 工程师讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-engineer-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "面向工程师的深度讲解，含系统架构/余度设计/适航验证/工程权衡"
+
+  - source_id: "c919-teaching-explanation-plan-fuel-system-v1"
+    source_type: "text"
+    title: "C919 燃油系统讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-fuel-system-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "燃油系统讲解骨架，含机翼油箱/增压泵/重心管理/惰化系统"
+
+  - source_id: "c919-teaching-explanation-plan-hydraulic-v1"
+    source_type: "text"
+    title: "C919 液压系统讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-hydraulic-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "液压系统讲解骨架，含三套系统/3000 psi/液压油/作动器/刹车"
+
+  - source_id: "c919-teaching-explanation-plan-investor-v1"
+    source_type: "text"
+    title: "C919 投资者讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-investor-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "面向投资者的讲解，含市场定位/订单/成本/供应链风险/国产化路径"
+
+  - source_id: "c919-teaching-explanation-plan-maintenance-v1"
+    source_type: "text"
+    title: "C919 维修人员讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-maintenance-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "面向维修人员的讲解，含航线维护/定检/复合材料修理/液压油监测"
+
+  - source_id: "c919-teaching-explanation-plan-manufacturing-v1"
+    source_type: "text"
+    title: "C919 制造工艺讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-manufacturing-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "制造工艺讲解骨架，含总装/部件对接/复合材料铺层/质量控制"
+
+  - source_id: "c919-teaching-explanation-plan-media-v1"
+    source_type: "text"
+    title: "C919 媒体讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-media-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "面向媒体的讲解口径，含核心数据/避免误导/客观表述/供应链风险"
+
+  - source_id: "c919-teaching-explanation-plan-museum-v1"
+    source_type: "text"
+    title: "C919 博物馆讲解员讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-museum-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "面向博物馆讲解员的讲解，含历史脉络/型号定位/技术亮点/互动问答"
+
+  - source_id: "c919-teaching-explanation-plan-pilot-v1"
+    source_type: "text"
+    title: "C919 飞行员讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-pilot-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "面向飞行员的讲解，含电传飞控/控制律/侧杆/包线保护/单发失效"
+
+  - source_id: "c919-teaching-explanation-plan-supplier-v1"
+    source_type: "text"
+    title: "C919 供应商体系讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-supplier-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "供应商体系讲解骨架，含国内外供应商/合资模式/国产化率/供应链风险"
+
+  - source_id: "c919-teaching-explanation-plan-teacher-v1"
+    source_type: "text"
+    title: "C919 教师讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-teacher-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "面向教师的讲解，含教学要点/课堂活动设计/思考题/延伸阅读"
+
+  - source_id: "c919-teaching-explanation-plan-testing-v1"
+    source_type: "text"
+    title: "C919 试验试飞讲解计划"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "explanation_plans/c919-explanation-plan-testing-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "试验试飞讲解骨架，含静力试验/疲劳试验/试飞科目/6 架原型机"
+
+  # ========== difficulty_tiers（30 条追加） ==========
+
+  - source_id: "c919-teaching-airworthiness-intro-v1"
+    source_type: "text"
+    title: "C919 适航取证 · 入门版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-airworthiness-intro-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "入门档，用汽车年检类比适航取证，讲 TC/PC/AC 三证"
+
+  - source_id: "c919-teaching-airworthiness-intermediate-v1"
+    source_type: "text"
+    title: "C919 适航取证 · 进阶版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-airworthiness-intermediate-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "进阶档，引入 CCAR-25 部/失效概率/安全性分析"
+
+  - source_id: "c919-teaching-airworthiness-advanced-v1"
+    source_type: "text"
+    title: "C919 适航取证 · 深入版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-airworthiness-advanced-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "深入档，涉及 CCAR-25.1309/FHA/SSA/10⁻⁹ 失效概率"
+
+  - source_id: "c919-teaching-apu-intro-v1"
+    source_type: "text"
+    title: "C919 辅助动力装置 · 入门版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-apu-intro-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "入门档，用充电宝类比 APU，讲供电供气启动主发"
+
+  - source_id: "c919-teaching-apu-intermediate-v1"
+    source_type: "text"
+    title: "C919 辅助动力装置 · 进阶版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-apu-intermediate-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "进阶档，引入 APU 燃气涡轮原理/引气/空中应急"
+
+  - source_id: "c919-teaching-apu-advanced-v1"
+    source_type: "text"
+    title: "C919 辅助动力装置 · 深入版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-apu-advanced-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "深入档，涉及 APU 高度包线/EGT 监控/失效诊断/ETOPS"
+
+  - source_id: "c919-teaching-avionics-intro-v1"
+    source_type: "text"
+    title: "C919 航电系统 · 入门版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-avionics-intro-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "入门档，用手机导航类比航电，讲玻璃座舱/GPS/通信"
+
+  - source_id: "c919-teaching-avionics-intermediate-v1"
+    source_type: "text"
+    title: "C919 航电系统 · 进阶版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-avionics-intermediate-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "进阶档，引入 ARINC 总线/惯导/TCAS/EGPWS"
+
+  - source_id: "c919-teaching-avionics-advanced-v1"
+    source_type: "text"
+    title: "C919 航电系统 · 深入版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-avionics-advanced-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "深入档，涉及 IMA 架构/ARINC 429&664/航电余度/DO-178C"
+
+  - source_id: "c919-teaching-cabin-intro-v1"
+    source_type: "text"
+    title: "C919 客舱系统 · 入门版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-cabin-intro-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "入门档，用坐高铁类比客舱体验，讲座椅/行李架/空调/噪声"
+
+  - source_id: "c919-teaching-cabin-intermediate-v1"
+    source_type: "text"
+    title: "C919 客舱系统 · 进阶版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-cabin-intermediate-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "进阶档，引入客舱压力高度/HEPA 过滤/氧气系统"
+
+  - source_id: "c919-teaching-cabin-advanced-v1"
+    source_type: "text"
+    title: "C919 客舱系统 · 深入版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-cabin-advanced-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "深入档，涉及 Pack 空气循环机/增压控制律/化学氧/CCAR-25.841"
+
+  - source_id: "c919-teaching-ecs-intro-v1"
+    source_type: "text"
+    title: "C919 环控系统 · 入门版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-ecs-intro-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "入门档，用家用空调类比环控，讲调温/供氧/增压"
+
+  - source_id: "c919-teaching-ecs-intermediate-v1"
+    source_type: "text"
+    title: "C919 环控系统 · 进阶版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-ecs-intermediate-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "进阶档，引入引气系统/空气循环机/水分离器/客舱压力高度"
+
+  - source_id: "c919-teaching-ecs-advanced-v1"
+    source_type: "text"
+    title: "C919 环控系统 · 深入版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-ecs-advanced-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "深入档，涉及 Pack 热力学/增压控制律/FTIS 惰化/HEPA 标准"
+
+  - source_id: "c919-teaching-electrical-intro-v1"
+    source_type: "text"
+    title: "C919 电气系统 · 入门版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-electrical-intro-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "入门档，用家用电路类比飞机电气，讲发电机/APU/蓄电池"
+
+  - source_id: "c919-teaching-electrical-intermediate-v1"
+    source_type: "text"
+    title: "C919 电气系统 · 进阶版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-electrical-intermediate-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "进阶档，引入 230V 变频/IDG/TRU/RAT/多电飞机概念"
+
+  - source_id: "c919-teaching-electrical-advanced-v1"
+    source_type: "text"
+    title: "C919 电气系统 · 深入版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-electrical-advanced-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "深入档，涉及 VF 架构/配电中心 BPCU/EMC/雷电防护/CCAR-25.1351"
+
+  - source_id: "c919-teaching-flight-control-intro-v1"
+    source_type: "text"
+    title: "C919 飞控系统 · 入门版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-flight-control-intro-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "入门档，用游戏手柄类比电传飞控，讲侧杆/液压作动器/包线保护"
+
+  - source_id: "c919-teaching-flight-control-intermediate-v1"
+    source_type: "text"
+    title: "C919 飞控系统 · 进阶版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-flight-control-intermediate-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "进阶档，引入四余度/正常控制律/降级控制律/直接控制律"
+
+  - source_id: "c919-teaching-flight-control-advanced-v1"
+    source_type: "text"
+    title: "C919 飞控系统 · 深入版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-flight-control-advanced-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "深入档，涉及全权限数字飞控/AFCCS/伺服环路/CCAR-25.1309"
+
+  - source_id: "c919-teaching-fuel-intro-v1"
+    source_type: "text"
+    title: "C919 燃油系统 · 入门版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-fuel-intro-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "入门档，用汽车油箱类比燃油系统，讲机翼油箱/加油/耗油"
+
+  - source_id: "c919-teaching-fuel-intermediate-v1"
+    source_type: "text"
+    title: "C919 燃油系统 · 进阶版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-fuel-intermediate-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "进阶档，引入结构油箱/增压泵/重心管理/Jet A-1"
+
+  - source_id: "c919-teaching-fuel-advanced-v1"
+    source_type: "text"
+    title: "C919 燃油系统 · 深入版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-fuel-advanced-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "深入档，涉及电容式油量测量/FTIS 惰化/加油抽油/CCAR-25.95"
+
+  - source_id: "c919-teaching-hydraulic-intro-v1"
+    source_type: "text"
+    title: "C919 液压系统 · 入门版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-hydraulic-intro-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "入门档，用水压机类比液压，讲三套系统/刹车/起落架收放"
+
+  - source_id: "c919-teaching-hydraulic-intermediate-v1"
+    source_type: "text"
+    title: "C919 液压系统 · 进阶版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-hydraulic-intermediate-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "进阶档，引入 3000 psi/磷酸酯液压油/EDP/ACMP/蓄压器"
+
+  - source_id: "c919-teaching-hydraulic-advanced-v1"
+    source_type: "text"
+    title: "C919 液压系统 · 深入版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-hydraulic-advanced-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "深入档，涉及伺服阀/作动器动态响应/泄漏隔离/CCAR-25.1435"
+
+  - source_id: "c919-teaching-landing-gear-intro-v1"
+    source_type: "text"
+    title: "C919 起落架 · 入门版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-landing-gear-intro-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "入门档，用自行车轮比起落架，讲前起/主起/缓冲器/轮胎"
+
+  - source_id: "c919-teaching-landing-gear-intermediate-v1"
+    source_type: "text"
+    title: "C919 起落架 · 进阶版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-landing-gear-intermediate-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "进阶档，引入油气缓冲器/收放系统/刹车防滑/200 psi 轮胎"
+
+  - source_id: "c919-teaching-landing-gear-advanced-v1"
+    source_type: "text"
+    title: "C919 起落架 · 深入版"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "difficulty_tiers/c919-landing-gear-advanced-20260728-candidate.md"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "深入档，涉及落震分析/CCAR-25.473/碳刹车盘/起落架疲劳"
+
+  # ========== analogies（10 条追加） ==========
+
+  - source_id: "c919-teaching-analogies-aerodynamics-v1"
+    source_type: "structured"
+    title: "C919 气动专项类比素材库"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "analogies/c919-analogies-aerodynamics-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "气动专项类比，含超临界机翼/翼尖小翼/升阻比/激波/后掠角等"
+      analogy_count: 8
+
+  - source_id: "c919-teaching-analogies-structures-v1"
+    source_type: "structured"
+    title: "C919 结构专项类比素材库"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "analogies/c919-analogies-structures-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "结构专项类比，含增压舱/起落架/机翼弯曲/舱门/疲劳等"
+      analogy_count: 8
+
+  - source_id: "c919-teaching-analogies-engine-v1"
+    source_type: "structured"
+    title: "C919 发动机专项类比素材库"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "analogies/c919-analogies-engine-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "发动机专项类比，含涡扇/涵道比/推力/反推/鸟击等"
+      analogy_count: 8
+
+  - source_id: "c919-teaching-analogies-materials-v1"
+    source_type: "structured"
+    title: "C919 材料专项类比素材库"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "analogies/c919-analogies-materials-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "材料专项类比，含复合材料/铝锂合金/钛合金/疲劳/回收等"
+      analogy_count: 8
+
+  - source_id: "c919-teaching-analogies-avionics-v1"
+    source_type: "structured"
+    title: "C919 航电专项类比素材库"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "analogies/c919-analogies-avionics-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "航电专项类比，含玻璃座舱/惯导/TCAS/气象雷达/通信等"
+      analogy_count: 8
+
+  - source_id: "c919-teaching-analogies-flight-control-v1"
+    source_type: "structured"
+    title: "C919 飞控专项类比素材库"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "analogies/c919-analogies-flight-control-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "飞控专项类比，含电传/四余度/包线保护/侧杆/控制律等"
+      analogy_count: 8
+
+  - source_id: "c919-teaching-analogies-hydraulic-v1"
+    source_type: "structured"
+    title: "C919 液压专项类比素材库"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "analogies/c919-analogies-hydraulic-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "液压专项类比，含液压油/三套系统/压力源/刹车/蓄压器等"
+      analogy_count: 8
+
+  - source_id: "c919-teaching-analogies-fuel-v1"
+    source_type: "structured"
+    title: "C919 燃油专项类比素材库"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "analogies/c919-analogies-fuel-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "燃油专项类比，含机翼油箱/增压泵/重心/惰化/油量测量等"
+      analogy_count: 8
+
+  - source_id: "c919-teaching-analogies-electrical-v1"
+    source_type: "structured"
+    title: "C919 电气专项类比素材库"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "analogies/c919-analogies-electrical-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "电气专项类比，含 230V 变频/发电机/蓄电池/RAT/雷电防护等"
+      analogy_count: 8
+
+  - source_id: "c919-teaching-analogies-ecs-v1"
+    source_type: "structured"
+    title: "C919 环控专项类比素材库"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "analogies/c919-analogies-ecs-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "环控专项类比，含增压/氧气/HEPA/引气/干燥/空调组件等"
+      analogy_count: 8
+
+  # ========== misconceptions（10 条追加） ==========
+
+  - source_id: "c919-teaching-misconceptions-aerodynamics-v1"
+    source_type: "structured"
+    title: "C919 气动专项误解与纠偏"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "misconceptions/c919-misconceptions-aerodynamics-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条气动专项误解纠偏，覆盖超临界机翼/翼尖小翼/升力/失速/后掠角等"
+      misconception_count: 8
+
+  - source_id: "c919-teaching-misconceptions-structures-v1"
+    source_type: "structured"
+    title: "C919 结构专项误解与纠偏"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "misconceptions/c919-misconceptions-structures-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条结构专项误解纠偏，覆盖增压舱/起落架/疲劳/舱门/舷窗等"
+      misconception_count: 8
+
+  - source_id: "c919-teaching-misconceptions-engine-v1"
+    source_type: "structured"
+    title: "C919 发动机专项误解与纠偏"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "misconceptions/c919-misconceptions-engine-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条发动机专项误解纠偏，覆盖国产发动机/涵道比/推力/省油/鸟击等"
+      misconception_count: 8
+
+  - source_id: "c919-teaching-misconceptions-materials-v1"
+    source_type: "structured"
+    title: "C919 材料专项误解与纠偏"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "misconceptions/c919-misconceptions-materials-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条材料专项误解纠偏，覆盖复合材料/铝锂合金/钛合金/修理/回收等"
+      misconception_count: 8
+
+  - source_id: "c919-teaching-misconceptions-avionics-v1"
+    source_type: "structured"
+    title: "C919 航电专项误解与纠偏"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "misconceptions/c919-misconceptions-avionics-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条航电专项误解纠偏，覆盖电传/自动驾驶/导航/通信/供应商等"
+      misconception_count: 8
+
+  - source_id: "c919-teaching-misconceptions-flight-control-v1"
+    source_type: "structured"
+    title: "C919 飞控专项误解与纠偏"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "misconceptions/c919-misconceptions-flight-control-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条飞控专项误解纠偏，覆盖电传/自动驾驶/四余度/包线保护/侧杆/黑客等"
+      misconception_count: 8
+
+  - source_id: "c919-teaching-misconceptions-hydraulic-v1"
+    source_type: "structured"
+    title: "C919 液压专项误解与纠偏"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "misconceptions/c919-misconceptions-hydraulic-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条液压专项误解纠偏，覆盖液压油/3000psi/三套系统/电传/刹车/蓄压器等"
+      misconception_count: 8
+
+  - source_id: "c919-teaching-misconceptions-fuel-v1"
+    source_type: "structured"
+    title: "C919 燃油专项误解与纠偏"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "misconceptions/c919-misconceptions-fuel-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条燃油专项误解纠偏，覆盖油箱位置/燃料型号/加油/重心/惰化/放油等"
+      misconception_count: 8
+
+  - source_id: "c919-teaching-misconceptions-electrical-v1"
+    source_type: "structured"
+    title: "C919 电气专项误解与纠偏"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "misconceptions/c919-misconceptions-electrical-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条电气专项误解纠偏，覆盖 230V/蓄电池/APU/RAT/变频/线缆/雷电等"
+      misconception_count: 8
+
+  - source_id: "c919-teaching-misconceptions-ecs-v1"
+    source_type: "structured"
+    title: "C919 环控专项误解与纠偏"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "misconceptions/c919-misconceptions-ecs-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条环控专项误解纠偏，覆盖氧气/增压/空气流通/引气/干燥/空调等"
+      misconception_count: 8
+
+  # ========== qa_seeds（10 条追加） ==========
+
+  - source_id: "c919-teaching-qa-seeds-aerodynamics-v1"
+    source_type: "structured"
+    title: "C919 气动专项讲解侧问答种子（非评测种子）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "qa_seeds/c919-teaching-qa-seeds-aerodynamics-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条气动专项问答种子，覆盖超临界机翼/翼尖小翼/激波/效率/失速等，非评测题库"
+      qa_count: 8
+
+  - source_id: "c919-teaching-qa-seeds-structures-v1"
+    source_type: "structured"
+    title: "C919 结构专项讲解侧问答种子（非评测种子）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "qa_seeds/c919-teaching-qa-seeds-structures-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条结构专项问答种子，覆盖机身宽度/增压/起落架/疲劳/舱门/撤离等，非评测题库"
+      qa_count: 8
+
+  - source_id: "c919-teaching-qa-seeds-engine-v1"
+    source_type: "structured"
+    title: "C919 发动机专项讲解侧问答种子（非评测种子）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "qa_seeds/c919-teaching-qa-seeds-engine-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条发动机专项问答种子，覆盖 LEAP-1C/CJ-1000A/涵道比/推力/省油/鸟击等，非评测题库"
+      qa_count: 8
+
+  - source_id: "c919-teaching-qa-seeds-materials-v1"
+    source_type: "structured"
+    title: "C919 材料专项讲解侧问答种子（非评测种子）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "qa_seeds/c919-teaching-qa-seeds-materials-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条材料专项问答种子，覆盖复合材料/铝锂合金/钛合金/修理/回收等，非评测题库"
+      qa_count: 8
+
+  - source_id: "c919-teaching-qa-seeds-avionics-v1"
+    source_type: "structured"
+    title: "C919 航电专项讲解侧问答种子（非评测种子）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "qa_seeds/c919-teaching-qa-seeds-avionics-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条航电专项问答种子，覆盖玻璃座舱/电传/导航/自动驾驶/TCAS/气象雷达等，非评测题库"
+      qa_count: 8
+
+  - source_id: "c919-teaching-qa-seeds-flight-control-v1"
+    source_type: "structured"
+    title: "C919 飞控专项讲解侧问答种子（非评测种子）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "qa_seeds/c919-teaching-qa-seeds-flight-control-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条飞控专项问答种子，覆盖电传/四余度/包线保护/控制律/侧杆/单发失效等，非评测题库"
+      qa_count: 8
+
+  - source_id: "c919-teaching-qa-seeds-hydraulic-v1"
+    source_type: "structured"
+    title: "C919 液压专项讲解侧问答种子（非评测种子）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "qa_seeds/c919-teaching-qa-seeds-hydraulic-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条液压专项问答种子，覆盖液压油/三套系统/压力源/刹车/起落架/蓄压器等，非评测题库"
+      qa_count: 8
+
+  - source_id: "c919-teaching-qa-seeds-fuel-v1"
+    source_type: "structured"
+    title: "C919 燃油专项讲解侧问答种子（非评测种子）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "qa_seeds/c919-teaching-qa-seeds-fuel-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条燃油专项问答种子，覆盖油箱位置/燃料/航程/供油/惰化/重心/放油等，非评测题库"
+      qa_count: 8
+
+  - source_id: "c919-teaching-qa-seeds-electrical-v1"
+    source_type: "structured"
+    title: "C919 电气专项讲解侧问答种子（非评测种子）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "qa_seeds/c919-teaching-qa-seeds-electrical-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条电气专项问答种子，覆盖电压等级/电源/蓄电池/APU/RAT/地面电源/雷电/线缆等，非评测题库"
+      qa_count: 8
+
+  - source_id: "c919-teaching-qa-seeds-ecs-v1"
+    source_type: "structured"
+    title: "C919 环控专项讲解侧问答种子（非评测种子）"
+    authority_level: "project_reviewed"
+    review_status: "candidate"
+    version: "v1"
+    applicable_aircraft: ["c919"]
+    allowed_use: "teaching_organization"
+    aircraft: "c919"
+    knowledge_type: "definition"
+    files:
+      - path: "qa_seeds/c919-teaching-qa-seeds-ecs-20260728-candidate.yaml"
+        content_role: "primary"
+    metadata:
+      owner: "教学设计组"
+      content_nature: "teaching_organization"
+      notes: "8 条环控专项问答种子，覆盖客舱压力/氧气/空气质量/温度/干燥/引气/耳朵/空调等，非评测题库"
+      qa_count: 8

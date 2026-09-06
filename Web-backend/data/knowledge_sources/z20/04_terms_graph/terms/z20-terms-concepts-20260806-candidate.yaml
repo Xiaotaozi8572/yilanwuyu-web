@@ -1,0 +1,48 @@
+# z20-terms-concepts-20260806-candidate
+
+terms:
+  - canonical_name: "旋翼升力"
+    aliases: ["旋翼升力"]
+    node_type: "concept"
+    definition: "桨叶相对气流产生升力"
+    source_id: "z20-science-rotor-aerodynamics-v1"
+  - canonical_name: "悬停"
+    aliases: ["悬停"]
+    node_type: "concept"
+    definition: "升力等于重力的空中静止"
+    source_id: "z20-science-rotor-aerodynamics-v1"
+  - canonical_name: "自动旋转"
+    aliases: ["自动旋转", "自转下滑"]
+    node_type: "concept"
+    definition: "发动机失效后的安全下降"
+    source_id: "z20-science-rotor-aerodynamics-v1"
+  - canonical_name: "地面效应"
+    aliases: ["地面效应"]
+    node_type: "concept"
+    definition: "近地悬停功率降低"
+    source_id: "z20-science-rotor-aerodynamics-v1"
+  - canonical_name: "涡环状态"
+    aliases: ["涡环状态"]
+    node_type: "concept"
+    definition: "垂直下降的危险状态"
+    source_id: "z20-science-rotor-aerodynamics-v1"
+  - canonical_name: "后行桨叶失速"
+    aliases: ["后行桨叶失速"]
+    node_type: "concept"
+    definition: "限制最大前飞速度"
+    source_id: "z20-science-rotor-aerodynamics-v1"
+  - canonical_name: "扭矩平衡"
+    aliases: ["扭矩平衡"]
+    node_type: "concept"
+    definition: "尾桨平衡旋翼反扭矩"
+    source_id: "z20-science-rotor-aerodynamics-v1"
+  - canonical_name: "高原飞行"
+    aliases: ["高原飞行", "高海拔飞行"]
+    node_type: "concept"
+    definition: "4000米以上飞行能力"
+    source_id: "z20-science-high-altitude-v1"
+  - canonical_name: "功率余量"
+    aliases: ["功率余量"]
+    node_type: "concept"
+    definition: "单发失效的应急功率"
+    source_id: "z20-science-high-altitude-v1"

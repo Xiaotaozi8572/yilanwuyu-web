@@ -1,0 +1,79 @@
+# C919 控制回路关系
+# 描述飞控闭环中计算机、传感器、作动器的控制与信号流向
+# relation_type: controls / feeds_to
+# edge_id 前缀：rloop_
+
+relations:
+  # ========== FCC 控制作动器 ==========
+  - edge_id: "rloop_001"
+    source_node_id: "comp_fcc"
+    target_node_id: "act_elevator"
+    relation_type: "controls"
+    confidence: 0.95
+    description: "FCC 通过 ACE 控制升降舵作动器，闭合俯仰控制回路"
+
+  - edge_id: "rloop_002"
+    source_node_id: "comp_fcc"
+    target_node_id: "act_aileron"
+    relation_type: "controls"
+    confidence: 0.95
+    description: "FCC 通过 ACE 控制副翼作动器，闭合滚转控制回路"
+
+  - edge_id: "rloop_003"
+    source_node_id: "comp_fcc"
+    target_node_id: "act_rudder"
+    relation_type: "controls"
+    confidence: 0.95
+    description: "FCC 通过 ACE 控制方向舵作动器，闭合偏航控制回路"
+
+  - edge_id: "rloop_004"
+    source_node_id: "comp_fcc"
+    target_node_id: "act_spoiler"
+    relation_type: "controls"
+    confidence: 0.95
+    description: "FCC 通过 ACE 控制扰流板作动器，参与减速与滚转辅助控制"
+
+  # ========== FMS 与自动驾驶 ==========
+  - edge_id: "rloop_005"
+    source_node_id: "comp_fmc"
+    target_node_id: "sys_autopilot"
+    relation_type: "feeds_to"
+    confidence: 0.95
+    description: "FMS 将飞行计划与目标速度送至自动驾驶实现横向与纵向制导"
+
+  - edge_id: "rloop_006"
+    source_node_id: "sys_autopilot"
+    target_node_id: "comp_fcc"
+    relation_type: "controls"
+    confidence: 0.95
+    description: "自动驾驶将控制指令送至 FCC，实现自动飞行控制"
+
+  # ========== 大气与惯导数据送至 FCC ==========
+  - edge_id: "rloop_007"
+    source_node_id: "comp_adc"
+    target_node_id: "comp_fcc"
+    relation_type: "feeds_to"
+    confidence: 0.95
+    description: "大气数据计算机将空速、高度等参数送至 FCC 用于控制律计算"
+
+  - edge_id: "rloop_008"
+    source_node_id: "comp_irs"
+    target_node_id: "comp_fcc"
+    relation_type: "feeds_to"
+    confidence: 0.95
+    description: "惯性基准系统将姿态、角速率送至 FCC 用于控制律反馈"
+
+  # ========== FMS 与 EGPWS 送至显示 ==========
+  - edge_id: "rloop_009"
+    source_node_id: "comp_fmc"
+    target_node_id: "comp_display_unit"
+    relation_type: "feeds_to"
+    confidence: 0.95
+    description: "FMS 飞行计划与导航信息通过显示管理计算机送至显示单元呈现"
+
+  - edge_id: "rloop_010"
+    source_node_id: "sys_egpws"
+    target_node_id: "comp_display_unit"
+    relation_type: "feeds_to"
+    confidence: 0.95
+    description: "EGPWS 地形与告警信息送至显示单元呈现给飞行员"

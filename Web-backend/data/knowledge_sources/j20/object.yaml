@@ -1,0 +1,22 @@
+# data/knowledge_sources/j20/object.yaml
+object_id: j20
+display_name: "歼-20"
+aliases:
+  - "J-20"
+  - "歼-20"
+  - "威龙"
+aircraft_family: "fighter"
+manufacturer: "AVIC 成都飞机工业（集团）"
+partition_enable:
+  01_science: true
+  02_teaching: true
+  03_multimodal: true
+  04_terms_graph: true
+  90_reference_only: false
+partition_owners:
+  01_science: "科普证据组"
+  02_teaching: "教学设计组"
+  03_multimodal: "视觉资产组"
+  04_terms_graph: "术语图谱组"
+  90_reference_only: "资料转化组"
+notes: "歼-20 为军用隐身战斗机，公开参数有限；外形尺寸等未官方公布的数据一律不收录，参数标注来源与近似性。"

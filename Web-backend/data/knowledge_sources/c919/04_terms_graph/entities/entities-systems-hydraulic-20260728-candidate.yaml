@@ -1,0 +1,92 @@
+# C919 液压系统实体
+# 液压能源及执行子系统
+# node_type: system
+# node_id 前缀：shyd_
+
+entities:
+  - node_id: "shyd_edp"
+    node_type: "system"
+    canonical_name: "发动机驱动泵"
+    aliases: ["EDP", "engine driven pump", "发动机液压泵"]
+    description: "由发动机附件齿轮箱驱动的液压柱塞泵，C919 配备左右 EDP 为两套独立液压系统供压"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "shyd_emp"
+    node_type: "system"
+    canonical_name: "电动泵"
+    aliases: ["EMP", "electric motor pump", "电动液压泵"]
+    description: "电动机驱动的备用液压泵，C919 配备交流电动泵作为 EDP 故障时的备份液压源"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "shyd_accumulator"
+    node_type: "system"
+    canonical_name: "蓄压器"
+    aliases: ["accumulator", "液压蓄压器", "储能器"]
+    description: "储存液压油压力能的气囊式容器，C919 蓄压器用于吸收脉动、补偿瞬时流量并应急供压"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "shyd_reservoir"
+    node_type: "system"
+    canonical_name: "液压油箱"
+    aliases: ["reservoir", "液压油箱", "油箱"]
+    description: "储存液压油的容器，C919 每套液压系统配备独立油箱，采用增压式设计保证泵进口供油"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "shyd_pressure_sensor"
+    node_type: "system"
+    canonical_name: "压力传感器"
+    aliases: ["pressure sensor", "液压压力传感器", "压力变送器"]
+    description: "监测液压系统压力的传感器，C919 全机液压系统各支路布点监测并向显示系统报告"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "shyd_actuator"
+    node_type: "system"
+    canonical_name: "液压作动器"
+    aliases: ["hydraulic actuator", "液压缸", "执行油缸"]
+    description: "将液压能转换为机械直线或旋转运动的执行元件，C919 舵面及起落架均由液压作动器驱动"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "shyd_servo_valve"
+    node_type: "system"
+    canonical_name: "伺服阀"
+    aliases: ["servo valve", "电液伺服阀"]
+    description: "按电信号精确控制液压油流量方向的比例阀，C919 飞控作动器采用两级电液伺服阀"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "shyd_directional_valve"
+    node_type: "system"
+    canonical_name: "换向阀"
+    aliases: ["directional valve", "方向控制阀", "电磁换向阀"]
+    description: "切换液压油路的电磁阀，C919 起落架收放等机构通过换向阀选择作动方向"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "shyd_relief_valve"
+    node_type: "system"
+    canonical_name: "溢流阀"
+    aliases: ["relief valve", "安全溢流阀", "溢流安全阀"]
+    description: "限制液压系统最高压力的安全阀，C919 液压系统压力超限时溢流阀打开回油保护"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "shyd_fluid"
+    node_type: "system"
+    canonical_name: "液压油"
+    aliases: ["hydraulic fluid", "液压油", "工作液"]
+    description: "传递压力的液压介质，C919 采用阻燃型磷酸酯液压油，工作压力 3000psi"
+    specifications:
+      fluid_type: "磷酸酯"
+      working_pressure_psi: 3000
+    applicable_aircraft: ["c919"]
+
+  - node_id: "shyd_filter"
+    node_type: "system"
+    canonical_name: "过滤器"
+    aliases: ["filter", "液压油过滤器", "滤芯"]
+    description: "过滤液压油中颗粒污染的元件，C919 液压系统设回油及压力油过滤带堵塞指示"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "shyd_ground_coupling"
+    node_type: "system"
+    canonical_name: "地面接头"
+    aliases: ["ground coupling", "地面测试接头", "地面供压接头"]
+    description: "地面维护时外接液压源或测试仪表的接头，C919 起落架舱设地面液压接头便于地面操作"
+    applicable_aircraft: ["c919"]

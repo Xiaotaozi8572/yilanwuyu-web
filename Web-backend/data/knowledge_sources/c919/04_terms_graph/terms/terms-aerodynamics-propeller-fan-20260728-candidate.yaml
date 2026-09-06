@@ -1,0 +1,76 @@
+# C919 风扇与螺旋桨类术语
+# 领域：风扇/螺旋桨气动
+# 条目数：10
+# node_type 统一为 concept
+# ID 前缀：fan_
+
+terms:
+  - term_id: "fan_001"
+    canonical_name: "风扇"
+    aliases: ["风扇", "fan", "涡扇风扇", "大风扇"]
+    node_type: "concept"
+    definition: "涡扇发动机前部的轴流式压气风扇，吸入并压缩空气产生大部分推力，C919 LEAP-1C 发动机大尺寸风扇涵道比 11:1"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fan_002"
+    canonical_name: "桨距"
+    aliases: ["桨距", "pitch", "螺距", "桨叶角"]
+    node_type: "concept"
+    definition: "螺旋桨叶角，即桨叶弦线与旋转平面的夹角，影响拉力和效率，恒速螺旋桨通过变距保持最佳桨距"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fan_003"
+    canonical_name: "桨叶"
+    aliases: ["桨叶", "blade", "螺旋桨叶"]
+    node_type: "concept"
+    definition: "螺旋桨或风扇的叶片，翼型剖面产生气动力，C919 LEAP-1C 风扇采用三维宽弦掠掠设计碳纤维复合材料桨叶"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fan_004"
+    canonical_name: "桨毂"
+    aliases: ["桨毂", "hub", "桨毂帽"]
+    node_type: "concept"
+    definition: "螺旋桨中心连接桨叶并传递功率的部件，流线型桨毂帽可降低桨毂阻力和噪声"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fan_005"
+    canonical_name: "变距"
+    aliases: ["变距", "variable pitch", "变桨距"]
+    node_type: "concept"
+    definition: "在飞行中改变螺旋桨桨叶角以适应不同飞行状态的设计，恒速变距螺旋桨可在各阶段保持最佳转速和效率"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fan_006"
+    canonical_name: "顺桨"
+    aliases: ["顺桨", "feathering", "顺桨位置"]
+    node_type: "concept"
+    definition: "发动机失效后将桨叶角调至大角度使桨叶与气流平行，减小阻力和风车阻力，C919 螺旋桨飞机具备顺桨功能"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fan_007"
+    canonical_name: "桨尖速度"
+    aliases: ["桨尖速度", "tip speed", "桨尖切向速度"]
+    node_type: "concept"
+    definition: "螺旋桨桨尖的切向速度，受超声速限制以避免波阻和噪声，C919 LEAP-1C 风扇桨尖速度通过减速齿轮和掠掠设计控制"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fan_008"
+    canonical_name: "桨扇"
+    aliases: ["桨扇", "propfan", "开式转子", "无涵道风扇"]
+    node_type: "concept"
+    definition: "介于涡扇和螺旋桨之间的推进装置，无外涵道、宽弦掠掠桨叶，燃油效率高但噪声大，C919 当前未采用桨扇构型"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fan_009"
+    canonical_name: "齿轮传动"
+    aliases: ["齿轮传动", "geared turbofan", "GTF", "减速齿轮箱"]
+    node_type: "concept"
+    definition: "在风扇与低压涡轮间设置减速齿轮箱，使风扇和涡轮各自工作在最佳转速，C919 LEAP-1C 采用齿轮传动提升效率"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"
+
+  - term_id: "fan_010"
+    canonical_name: "对转"
+    aliases: ["对转", "counter-rotation", "对转风扇", "对转桨"]
+    node_type: "concept"
+    definition: "两排转向相反的风扇或桨叶，可抵消扭矩、提高效率并降低尾涡损失，常见于军用大功率发动机"
+    source_ref: "Wikipedia Comac C919 + 航空工程通用知识"

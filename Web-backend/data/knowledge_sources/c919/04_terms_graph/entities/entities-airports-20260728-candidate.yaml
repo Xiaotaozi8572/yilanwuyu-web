@@ -1,0 +1,106 @@
+# C919 运营机场实体
+# C919 通航及运营的主要机场
+# node_type: airport
+# node_id 前缀：apt_
+
+entities:
+  - node_id: "apt_zsss"
+    node_type: "airport"
+    canonical_name: "上海虹桥国际机场"
+    aliases: ["上海虹桥", "ZSSS", "虹桥机场"]
+    description: "C919 国内主要运营枢纽，东航 C919 主运营基地，距 C919 总装线较近"
+    specifications:
+      iata: "SHA"
+      icao: "ZSSS"
+    applicable_aircraft: []
+
+  - node_id: "apt_zbaa"
+    node_type: "airport"
+    canonical_name: "北京首都国际机场"
+    aliases: ["北京首都", "ZBAA", "首都机场"]
+    description: "C919 国内运营枢纽，国航 C919 主运营基地，承担国内干线航班"
+    specifications:
+      iata: "PEK"
+      icao: "ZBAA"
+    applicable_aircraft: []
+
+  - node_id: "apt_zutf"
+    node_type: "airport"
+    canonical_name: "成都天府国际机场"
+    aliases: ["成都天府", "ZUTF", "天府机场"]
+    description: "C919 西南地区运营机场，国产民机重要通航点，川航等潜在运营基地"
+    specifications:
+      iata: "TFU"
+      icao: "ZUTF"
+    applicable_aircraft: []
+
+  - node_id: "apt_zspd"
+    node_type: "airport"
+    canonical_name: "上海浦东国际机场"
+    aliases: ["上海浦东", "ZSPD", "浦东机场"]
+    description: "C919 试飞主基地及总装交付机场，紧邻中国商飞浦东总装线"
+    specifications:
+      iata: "PVG"
+      icao: "ZSPD"
+    applicable_aircraft: []
+
+  - node_id: "apt_zlyy"
+    node_type: "airport"
+    canonical_name: "西安咸阳国际机场"
+    aliases: ["西安咸阳", "ZLXY", "咸阳机场"]
+    description: "C919 西北地区运营机场，临近西安阎良试飞院及机翼制造基地"
+    specifications:
+      iata: "XIY"
+      icao: "ZLXY"
+    applicable_aircraft: []
+
+  - node_id: "apt_zggg"
+    node_type: "airport"
+    canonical_name: "广州白云国际机场"
+    aliases: ["广州白云", "ZGGG", "白云机场"]
+    description: "C919 华南地区运营枢纽，南航 C919 主运营基地之一"
+    specifications:
+      iata: "CAN"
+      icao: "ZGGG"
+    applicable_aircraft: []
+
+  - node_id: "apt_zgsz"
+    node_type: "airport"
+    canonical_name: "深圳宝安国际机场"
+    aliases: ["深圳宝安", "ZGSZ", "宝安机场"]
+    description: "C919 华南地区运营机场，国产民机通航网络重要节点"
+    specifications:
+      iata: "SZX"
+      icao: "ZGSZ"
+    applicable_aircraft: []
+
+  - node_id: "apt_zuck"
+    node_type: "airport"
+    canonical_name: "重庆江北国际机场"
+    aliases: ["重庆江北", "ZUCK", "江北机场"]
+    description: "C919 西南地区运营机场，国产民机高高原航线中转节点"
+    specifications:
+      iata: "CKG"
+      icao: "ZUCK"
+    applicable_aircraft: []
+
+  - node_id: "apt_zpms"
+    node_type: "airport"
+    canonical_name: "昆明长水国际机场"
+    aliases: ["昆明长水", "ZPMS", "长水机场"]
+    description: "C919 西南高原地区运营机场，海拔约 2100m，验证高原适应性"
+    specifications:
+      iata: "KMG"
+      icao: "ZPMS"
+      altitude_m: 2102
+    applicable_aircraft: []
+
+  - node_id: "apt_zwww"
+    node_type: "airport"
+    canonical_name: "乌鲁木齐地窝堡国际机场"
+    aliases: ["乌鲁木齐地窝堡", "ZWWW", "地窝堡机场"]
+    description: "C919 西北疆区运营机场，国产民机西部远程航线起点"
+    specifications:
+      iata: "URC"
+      icao: "ZWWW"
+    applicable_aircraft: []

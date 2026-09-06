@@ -1,0 +1,22 @@
+# data/knowledge_sources/z20/object.yaml
+object_id: z20
+display_name: "直-20"
+aliases:
+  - "Z-20"
+  - "直-20"
+  - "入云龙"
+aircraft_family: "helicopter"
+manufacturer: "AVIC 哈尔滨飞机工业集团"
+partition_enable:
+  01_science: true
+  02_teaching: true
+  03_multimodal: true
+  04_terms_graph: true
+  90_reference_only: false
+partition_owners:
+  01_science: "科普证据组"
+  02_teaching: "教学设计组"
+  03_multimodal: "视觉资产组"
+  04_terms_graph: "术语图谱组"
+  90_reference_only: "资料转化组"
+notes: "直-20 为 10 吨级中型通用直升机，公开参数相对完整，以权威公开来源为准。"

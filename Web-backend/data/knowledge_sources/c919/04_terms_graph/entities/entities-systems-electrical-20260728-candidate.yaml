@@ -1,0 +1,96 @@
+# C919 电气系统实体
+# 电源发电、分配及应急供电
+# node_type: system
+# node_id 前缀：selec_
+
+entities:
+  - node_id: "selec_idg"
+    node_type: "system"
+    canonical_name: "集成驱动发电机"
+    aliases: ["IDG", "integrated drive generator", "恒频发电机"]
+    description: "发动机驱动的恒频交流发电机，C919 由 Hamilton Sundstrand 提供 IDG，单台容量 90kVA"
+    specifications:
+      capacity_kva: 90
+      supplier: "Hamilton Sundstrand"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "selec_tru"
+    node_type: "system"
+    canonical_name: "变压整流器"
+    aliases: ["TRU", "transformer rectifier unit", "变压整流装置"]
+    description: "将交流电转换为直流电的装置，C919 通过 TRU 为直流汇流条供电"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "selec_battery"
+    node_type: "system"
+    canonical_name: "蓄电池"
+    aliases: ["battery", "电瓶", "主蓄电池"]
+    description: "直流应急电源，C919 配备镍镉蓄电池，在发电机失效时为关键直流负载短时供电"
+    specifications:
+      battery_type: "镍镉"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "selec_rat"
+    node_type: "system"
+    canonical_name: "冲压空气涡轮"
+    aliases: ["RAT", "ram air turbine", "应急风扇"]
+    description: "紧急情况下放下利用气流发电的应急涡轮，C919 RAT 在双发失效时为关键液压电气供电"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "selec_epu"
+    node_type: "system"
+    canonical_name: "应急动力单元"
+    aliases: ["EPU", "emergency power unit", "应急电源"]
+    description: "应急情况提供电力的装置，C919 通过 RAT 及蓄电池组合实现应急供电"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "selec_main_bus"
+    node_type: "system"
+    canonical_name: "主汇流条"
+    aliases: ["main bus", "主交流汇流条", "主母线"]
+    description: "向全机主负载分配电力的汇流条，C919 左右主交流汇流条分别由左右 IDG 供电"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "selec_emergency_bus"
+    node_type: "system"
+    canonical_name: "应急汇流条"
+    aliases: ["emergency bus", "应急母线", "重要汇流条"]
+    description: "向关键飞行负载供电的汇流条，C919 应急汇流条在主电源失效时由 RAT 或蓄电池供电"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "selec_ground_power"
+    node_type: "system"
+    canonical_name: "地面电源"
+    aliases: ["ground power", "地面电源车", "外电源"]
+    description: "地面停靠时外部供电接口，C919 前起落架舱设地面电源插口接 400Hz 外电源"
+    specifications:
+      frequency_hz: 400
+    applicable_aircraft: ["c919"]
+
+  - node_id: "selec_inverter"
+    node_type: "system"
+    canonical_name: "逆变器"
+    aliases: ["inverter", "直流变交流逆变器"]
+    description: "将直流电转换为交流电的装置，C919 应急情况下由蓄电池经逆变器供交流负载"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "selec_breaker"
+    node_type: "system"
+    canonical_name: "断路器"
+    aliases: ["breaker", "断路保护器", "跳开关"]
+    description: "过流保护断路器，C919 电气负载支路设断路器在故障时切断支路保护主线"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "selec_distribution_panel"
+    node_type: "system"
+    canonical_name: "配电盘"
+    aliases: ["distribution panel", "配电中心", "PDP"]
+    description: "集中分配和保护电气负载的配电装置，C919 采用固态功率控制器实现数字化配电"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "selec_grounding"
+    node_type: "system"
+    canonical_name: "接地系统"
+    aliases: ["grounding system", "接地网络", "搭铁"]
+    description: "全机电气接地与搭铁网络，C919 通过机体结构接地并设静电放电搭铁防止雷击损伤"
+    applicable_aircraft: ["c919"]

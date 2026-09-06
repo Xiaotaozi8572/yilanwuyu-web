@@ -1,0 +1,20 @@
+{
+  "snapshot_id": "web_search_answer_v2",
+  "template_id": "web_search_answer",
+  "version": "v2",
+  "test_cases": [
+    "off_kb_query_grounding",
+    "claim_verbatim_contract",
+    "web_source_attribution"
+  ],
+  "dimension_scores": {
+    "faithfulness": 1.0,
+    "clarity": 0.9,
+    "claim_contract_compliance": 1.0
+  },
+  "violations": [],
+  "improvements": [
+    "Claims follow verbatim-copy contract; source_origin forced to web_search with empty evidence ids."
+  ],
+  "final_decision": "approve"
+}

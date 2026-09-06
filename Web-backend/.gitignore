@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / Editor
+.trae/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Testing / coverage
+.pytest_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# Worktrees / temp
+/.worktrees
+/.workbuddy/
+/tmp/
+
+# Java build output (memory-service Maven target)
+services/memory-service/target/
+*.dumpstream
+
+# Secrets
+/.env
+
+# Local databases
+/data/processed/*.sqlite3
+/data/processed/*.sqlite3-*
+.venv-review/
+
+# Backup files (T27 处置)
+*.bak-*
+
+# 运行期生成的反馈 checkpoint 数据库（不入库）
+/data/feedback.sqlite3

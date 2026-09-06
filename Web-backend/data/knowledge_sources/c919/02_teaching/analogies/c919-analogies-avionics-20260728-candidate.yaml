@@ -1,0 +1,87 @@
+# C919 航电专项类比素材库
+# 来源说明：本文件基于 01_science 已收集的 C919 公开事实派生，用于教学组织（teaching_organization），不作为科学事实证据源。数据截至 2026-07-28。
+# 字段：id / concept / analogy / explanation
+
+version: "v1"
+aircraft: "c919"
+content_nature: "teaching_organization"
+analogies:
+  - id: "av-ana-001-ima-shared-computer"
+    concept: "IMA 综合模块化航电（Integrated Modular Avionics）"
+    analogy: "一台电脑同时运行多个软件——共享计算资源"
+    explanation: >
+      传统联邦式航电每个功能有自己的独立计算机（像家里每件电器都有自己的遥控器）。
+      C919 的 IMA 把多个功能的计算集中到共享的核心处理模块，每个功能作为软件应用运行在分区中。
+      像一台电脑同时运行多个软件，硬件共享减重、升级方便、资源利用率高。由 GE-AVIC 合资提供。
+
+  - id: "av-ana-002-arinc-664-gigabit-ethernet"
+    concept: "ARINC 664 数据总线（ARINC 664 Data Bus）"
+    analogy: "千兆以太网——航电的"高速公路""
+    explanation: >
+      C919 用 ARINC 664（AFDX）作为核心航电数据总线，基于 IEEE 802.3 以太网，速率 100 Mbps。
+      像千兆以太网是航电的"高速公路"——全双工交换式，每个端点独占带宽，避免冲突。
+      双冗余网络保证任一故障不影响通信。与传统 ARINC 429（100 kbps 点对点）相比快 1000 倍。
+
+  - id: "av-ana-003-pfd-nd-ecam-display"
+    concept: "显示系统（Display System）"
+    analogy: "电脑显示器——PFD/ND/ECAM 像不同应用窗口"
+    explanation: >
+      C919 驾驶舱有 5 块 15.4 英寸液晶显示器：PFD（主飞行显示，像仪表盘）、ND（导航显示，像地图）、
+      ECAM（电子集中飞机监控，像任务管理器）。像电脑显示器上不同应用窗口，每块屏幕可以切换显示不同内容。
+      任一显示器故障，其内容可由其他显示器接替显示（可重构余度）。
+
+  - id: "av-ana-004-air-data-thermometer"
+    concept: "大气数据系统（Air Data System）"
+    analogy: "飞机的"温度计+血压计"——测速度高度"
+    explanation: >
+      大气数据系统通过皮托管（测总压）+静压孔（测静压）+迎角传感器，计算速度/高度/升降率/迎角。
+      像飞机的"温度计+血压计"——测量飞机与空气的"生命体征"。C919 配双余度大气数据计算机，
+      多源传感器交叉表决保证准确性。
+
+  - id: "av-ana-005-ins-closed-eyes-walk"
+    concept: "惯性导航系统（INS）"
+    analogy: "闭眼走路靠体感——陀螺仪+加速度计"
+    explanation: >
+      惯性导航系统靠陀螺仪和加速度计感知运动并积分计算位置/姿态，不依赖外部信号。
+      像人闭眼走路——靠身体的感觉（前庭系统）判断走了多远、转了多少弯。但惯性导航会随时间累积漂移
+      （闭眼走得越久越偏），需 GPS/北斗定期校正。C919 用惯导+卫星导航多源融合。
+
+  - id: "av-ana-006-gps-beidou-satnav"
+    concept: "卫星导航（Satellite Navigation）"
+    analogy: "手机地图导航——GPS+北斗双系统"
+    explanation: >
+      C919 配备 GPS+北斗双卫星导航系统，像手机地图导航——通过接收卫星信号计算位置。
+      卫星导航精度高、不累积漂移，但依赖外部信号（易受干扰）。与惯导融合构成组合导航：
+      惯导提供短期高精度姿态/位置，卫星导航提供长期校正。
+
+  - id: "av-ana-007-taws-terrain-alert"
+    concept: "地形避让警告系统（TAWS）"
+    analogy: "导航软件的"前方限速"提醒——防止撞地"
+    explanation: >
+      TAWS（Terrain Awareness and Warning System）通过地形数据库+飞机位置，预测飞机是否接近地形，
+      像导航软件的"前方限速"提醒。当飞机接近地形时触发告警，防止可控飞行撞地（CFIT）。
+      C919 配备 TAWS，按 CCAR-25.1421 验证。
+
+  - id: "av-ana-008-tcas-air-collision"
+    concept: "空中防撞系统（TCAS）"
+    analogy: "雷达看周围车辆——防止空中相撞"
+    explanation: >
+      TCAS（Traffic Alert and Collision Avoidance System）通过应答机互相探测周围飞机，
+      像雷达看周围车辆——当飞机距离过近时触发告警，并给出避让建议（爬升/下降）。
+      C919 配备 TCAS II，按 CCAR-25.1421 验证，是防止空中相撞的最后兜底。
+
+  - id: "av-ana-009-redundancy-three-vote"
+    concept: "航电余度管理（Avionics Redundancy）"
+    analogy: "三人表决——多套系统交叉验证"
+    explanation: >
+      C919 航电关键功能采用双余度或三余度：双余度一主一备，三余度多数表决（2oo3）。
+      像"三人表决"——多套独立系统同时计算同一个指令，通过比较输出结果判断哪套出了问题。
+      任一故障被识别并隔离，不影响正常飞行。
+
+  - id: "av-ana-010-determinism-clock-precision"
+    concept: "确定性（Determinism）"
+    analogy: "钟表精确到毫秒——给定输入必在确定时间产生输出"
+    explanation: >
+      航电系统要求"确定性"——给定相同输入，必须在确定时间内产生相同输出，无时序抖动。
+      像钟表精确到毫秒——飞控指令延迟抖动会导致操纵品质恶化。C919 通过时间触发调度+ARINC 664 VL
+      带宽保证，实现消息时延确定性，是适航审定核心要求（CCAR-25.1309）。

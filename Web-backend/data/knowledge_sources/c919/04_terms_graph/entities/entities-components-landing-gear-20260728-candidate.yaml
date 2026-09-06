@@ -1,0 +1,97 @@
+# C919 起落架部件实体
+# 起落架结构分解及附属部件
+# node_type: component
+# node_id 前缀：clg_
+
+entities:
+  - node_id: "clg_nose_gear"
+    node_type: "component"
+    canonical_name: "前起落架"
+    aliases: ["nose landing gear", "前起", "鼻轮"]
+    description: "机身前部下方起落架，承受前段载荷并实现地面转向，C919 前起落架向前收起于前机身"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "clg_main_gear"
+    node_type: "component"
+    canonical_name: "主起落架"
+    aliases: ["main landing gear", "主起", "主轮"]
+    description: "机身中部两侧主起落架，承受大部分起降冲击载荷，C919 主起落架向内收起于机身两侧"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "clg_wheel"
+    node_type: "component"
+    canonical_name: "机轮"
+    aliases: ["wheel", "起落架机轮"]
+    description: "起落架落地滚动轮，C919 前起 2 轮、主起各 2 轮共 6 轮布局，配备无内胎轮胎"
+    specifications:
+      wheel_count: 6
+      layout: "前2+主4"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "clg_brake"
+    node_type: "component"
+    canonical_name: "刹车"
+    aliases: ["brake", "机轮刹车", "碳刹车"]
+    description: "主起落架机轮刹车组件，C919 采用碳碳复合材料刹车盘，具备防滑及自动刹车功能"
+    specifications:
+      brake_material: "碳碳复合材料"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "clg_tire"
+    node_type: "component"
+    canonical_name: "轮胎"
+    aliases: ["tire", "机轮轮胎"]
+    description: "机轮外充气轮胎，C919 配备米其林（Michelin）航空子午线轮胎，具备防爆胎设计"
+    specifications:
+      supplier: "Michelin"
+      tire_type: "子午线轮胎"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "clg_strut"
+    node_type: "component"
+    canonical_name: "减震支柱"
+    aliases: ["shock strut", "oleo strut", "油气减震器"]
+    description: "起落架主承力缓冲支柱，采用油气式减震器吸收着陆冲击能量，C919 主支柱行程设计适配 3.96m 机身"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "clg_retraction"
+    node_type: "component"
+    canonical_name: "收放机构"
+    aliases: ["retraction mechanism", "起落架收放"]
+    description: "起落架液压收放系统，飞行中收起减小阻力，着陆前放下锁定，由作动筒驱动"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "clg_steering"
+    node_type: "component"
+    canonical_name: "转弯机构"
+    aliases: ["steering mechanism", "前轮转弯"]
+    description: "前起落架地面转向机构，通过液压作动控制前轮偏转，C919 支持低速大角度与高速小角度转弯"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "clg_door"
+    node_type: "component"
+    canonical_name: "起落架舱门"
+    aliases: ["gear door", "起落架舱门"]
+    description: "起落架舱开口舱门，收起后关闭减小气动阻力，C919 采用液压驱动舱门"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "clg_strut_pillar"
+    node_type: "component"
+    canonical_name: "支柱"
+    aliases: ["pillar", "起落架支柱"]
+    description: "起落架主要承力支柱结构，连接机轮与机身，承受垂直及侧向载荷"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "clg_rocker_arm"
+    node_type: "component"
+    canonical_name: "摇臂"
+    aliases: ["rocker arm", "扭力臂摇臂"]
+    description: "起落架传力连杆部件，与扭力臂配合约束支柱旋转，传递扭矩保持机轮定向"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "clg_torque_arm"
+    node_type: "component"
+    canonical_name: "扭力臂"
+    aliases: ["torque arm", "防扭臂"]
+    description: "连接支柱与轮轴的扭力约束臂，防止减震支柱活塞相对外筒旋转，保持机轮定向"
+    applicable_aircraft: ["c919"]

@@ -1,0 +1,35 @@
+{
+  "template_id": "aviation_feedback_rewrite",
+  "version": "v1",
+  "change_reason": "Initial controlled rewrite prompt.",
+  "created_at": "2026-07-09T00:00:00Z",
+  "review_status": "active",
+  "snapshot_id": "aviation_feedback_rewrite_v1",
+  "variables": [
+    {
+      "name": "rag_evidence",
+      "source": "evidence_package",
+      "value_type": "evidence_summary",
+      "required": true,
+      "missing_behavior": "clarification",
+      "description": "Evidence lock for the current answer."
+    },
+    {
+      "name": "memory_context",
+      "source": "memory_context",
+      "value_type": "learner_summary",
+      "required": false,
+      "missing_behavior": "omit",
+      "description": "Optional style preferences."
+    },
+    {
+      "name": "output_contract",
+      "source": "runtime",
+      "value_type": "json_schema_summary",
+      "required": true,
+      "missing_behavior": "error",
+      "description": "Runtime output rules."
+    }
+  ],
+  "content": "You are rewriting an aviation tutoring answer after feedback.\n1. Treat {{rag_evidence}} as the locked fact boundary.\n2. Identify which parts of the original answer can stay and which must be simplified, shortened, or reformatted.\n3. Use {{memory_context}} only to adapt tone.\n4. Preserve supported claims and safety caveats.\n5. If the requested rewrite would require new facts, say so instead of inventing them.\n6. Follow {{output_contract}} exactly."
+}

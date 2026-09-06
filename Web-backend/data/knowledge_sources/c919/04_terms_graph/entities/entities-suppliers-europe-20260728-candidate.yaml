@@ -1,0 +1,93 @@
+# C919 欧洲供应商实体
+# 参与C919项目的欧方供应商
+# node_type: supplier
+# node_id 前缀：supeu_
+
+entities:
+  - node_id: "supeu_safran"
+    node_type: "supplier"
+    canonical_name: "赛峰集团"
+    aliases: ["Safran", "赛峰", "Safran Group"]
+    description: "法国赛峰集团，CFM 国际合资方，为 C919 提供 LEAP-1C 发动机及起落架系统"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supeu_liebherr"
+    node_type: "supplier"
+    canonical_name: "利勃海尔"
+    aliases: ["Liebherr", "利勃海尔", "Liebherr Aerospace"]
+    description: "利勃海尔航空航天（德国），为 C919 提供空调组件、空气管理系统、起落架作动"
+    specifications:
+      products: "空调组件, 空气管理系统"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supeu_thales"
+    node_type: "supplier"
+    canonical_name: "泰雷兹"
+    aliases: ["Thales", "泰雷兹", "Thales Group"]
+    description: "法国泰雷兹集团，为 C919 提供航电系统、电气系统及娱乐系统部分设备"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supeu_airbus"
+    node_type: "supplier"
+    canonical_name: "空客"
+    aliases: ["Airbus", "空中客车", "空客"]
+    description: "空中客车公司，C919 的直接竞争机型 A320neo 制造商，作为对标参考而非 C919 供应商"
+    applicable_aircraft: []
+
+  - node_id: "supeu_rr"
+    node_type: "supplier"
+    canonical_name: "罗尔斯罗伊斯"
+    aliases: ["Rolls-Royce", "罗罗", "Rolls Royce"]
+    description: "英国罗尔斯罗伊斯公司，遄达系列发动机制造商，C919 备选动力潜在供应商"
+    applicable_aircraft: []
+
+  - node_id: "supeu_mtu"
+    node_type: "supplier"
+    canonical_name: "MTU 航空发动机"
+    aliases: ["MTU", "MTU Aero Engines", "MTU 航空"]
+    description: "德国 MTU 航空发动机公司，发动机零部件供应商，参与多型发动机低压涡轮部件"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supeu_gkn"
+    node_type: "supplier"
+    canonical_name: "GKN 航空航天"
+    aliases: ["GKN", "GKN Aerospace", "GKN 航空"]
+    description: "英国 GKN 航空航天公司，为 C919 提供发动机吊架结构件及复合材料部件"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supeu_nexcelle"
+    node_type: "supplier"
+    canonical_name: "Nexcelle"
+    aliases: ["Nexcelle", "奈克塞尔"]
+    description: "赛峰与 GE 合资的短舱公司，为 C919 提供集成发动机短舱及反推系统"
+    specifications:
+      products: "发动机短舱, 反推系统"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supeu_st_engineering"
+    node_type: "supplier"
+    canonical_name: "新科工程"
+    aliases: ["ST Engineering", "新科工程", "ST Engineering Aerospace"]
+    description: "新加坡新科工程，为 C919 提供机身零部件及客舱内饰改装方案"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supeu_dassault"
+    node_type: "supplier"
+    canonical_name: "达索"
+    aliases: ["Dassault", "达索航空", "Dassault Aviation"]
+    description: "法国达索航空，公务机制造商，C919 公务机改型的市场对标参考"
+    applicable_aircraft: []
+
+  - node_id: "supeu_leonardo"
+    node_type: "supplier"
+    canonical_name: "莱昂纳多"
+    aliases: ["Leonardo", "莱昂纳多", "Finmeccanica"]
+    description: "意大利莱昂纳多集团，航空结构件及航电供应商，参与 C919 部分结构件配套"
+    applicable_aircraft: ["c919"]
+
+  - node_id: "supeu_mbda"
+    node_type: "supplier"
+    canonical_name: "MBDA"
+    aliases: ["MBDA", "欧洲导弹集团"]
+    description: "欧洲导弹集团，欧洲防务供应商，列于 C919 供应商参考体系（非直接装机供应商）"
+    applicable_aircraft: []

@@ -1,0 +1,75 @@
+prompts:
+  default_template_id: aviation_fact_qa
+  clarification_template_id: aviation_basic_safe
+  asset_dir: assets/prompts
+  allowed_runtime_statuses: [active, experimental]
+  injection_order: [system_boundary, user_query, task_type, scene_state, rag_evidence, memory_context, weak_points, answer_plan, answer_outline, prompt_asset, output_contract]
+
+answer_route_policies:
+  version: answer_route_v1
+  policies:
+    concept_explanation:
+      priority: 50
+      template_id: aviation_fact_qa
+      required_evidence_types: [reviewed_text]
+      # R0: 降至 standard 与 gate_minimum_authority 保持一致。
+      # KB 中 reviewed 证据的 authority_level 均为 standard（Wikipedia 交叉核对级别），
+      # 坚持项目级 project_reviewed 会导致所有概念解释因权威性不足而返回 clarification，
+      # 使 web search 兜底在不必要的情况下被触发。如需收紧权威，应先在数据侧提升
+      # authority_level 再回调此值。
+      minimum_authority: standard
+      allow_definitive_without_evidence: false
+      missing_evidence_action: ask_clarification
+      require_visual_context: false
+      safety_mode: false
+    component_scene:
+      priority: 60
+      template_id: aviation_component_explain
+      required_evidence_types: [visual]
+      # R0: 降至 standard 与 gate_minimum_authority 保持一致（KB reviewed 证据
+      # 的 authority_level 均为 standard），否则场景类查询永远无法从 KB 直接
+      # 回答，全部落入联网兜底。
+      minimum_authority: standard
+      allow_definitive_without_evidence: false
+      missing_evidence_action: ask_clarification
+      require_visual_context: true
+      safety_mode: false
+    comparison:
+      priority: 80
+      template_id: aviation_fact_qa
+      required_evidence_types: [reviewed_text]
+      # R0: 降至 standard 与 gate_minimum_authority 保持一致，理由同上。
+      minimum_authority: standard
+      allow_definitive_without_evidence: false
+      missing_evidence_action: ask_clarification
+      require_visual_context: false
+      safety_mode: false
+    parameter_fact:
+      priority: 70
+      template_id: aviation_fact_qa
+      required_evidence_types: [structured_parameter]
+      # R0: 降至 standard 与 app.yaml 的 high_risk_minimum_authority 保持一致，
+      # 使 standard 级参数数据（Wikipedia 交叉核对）可进入参数事实回答。
+      minimum_authority: standard
+      allow_definitive_without_evidence: false
+      missing_evidence_action: ask_clarification
+      require_visual_context: false
+      safety_mode: false
+    operation_safety:
+      priority: 100
+      template_id: aviation_basic_safe
+      required_evidence_types: [reviewed_text]
+      minimum_authority: primary_regulation
+      allow_definitive_without_evidence: false
+      missing_evidence_action: safe_response
+      require_visual_context: false
+      safety_mode: true
+    clarification:
+      priority: 110
+      template_id: aviation_basic_safe
+      required_evidence_types: []
+      minimum_authority: unknown
+      allow_definitive_without_evidence: true
+      missing_evidence_action: ask_clarification
+      require_visual_context: false
+      safety_mode: false
