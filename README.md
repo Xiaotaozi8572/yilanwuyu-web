@@ -4,6 +4,7 @@
 
 项目包含航空器三维展示、驾驶舱体验、爆炸图拆解、虚拟课堂、知识问答等多个模块，
 支持 Web 与 MR（PICO）等多平台展示。
+<img width="2323" height="1280" alt="e9167155f9c2b73bac479172851758f0" src="https://github.com/user-attachments/assets/4d6f0db2-7dea-4887-b0bf-de93d17ed591" />
 
 ---
 
